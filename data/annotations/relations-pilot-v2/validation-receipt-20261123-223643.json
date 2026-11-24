@@ -1,0 +1,20 @@
+{
+  "valid": false,
+  "errors": [
+    "human review declaration missing",
+    "reviewer missing",
+    "invalid reviewed_at",
+    "Image_01898: scene not reviewed",
+    "Image_01575/h2: pending entity",
+    "Image_01575: unconfirmed head/person",
+    "Image_01720/h_background: pending entity",
+    "Image_01720/p_background: pending entity",
+    "Image_01720: pending link",
+    "Image_02097: occupant needs confirmed motorcycle"
+  ],
+  "human_review_asserted": false,
+  "training_ready": false,
+  "evaluation_scope": "selected validation pilot; not a representative accuracy estimate",
+  "confirmed_links": [],
+  "input_sha256": "13ea12ac01060b79774afd7fea0274a55286e0e897051a8e4391182c03ef1a49"
+}

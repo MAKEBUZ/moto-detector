@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "upstreamRepository": "https://github.com/Valery-Rosero/DataSetsIA",
+  "upstreamCommit": "59cce5bf75fd85e63eced06e00a5baf518062a87",
+  "sources": [
+    {
+      "id": "edgevision",
+      "provider": "mendeley",
+      "datasetId": "j82bnw7gsr",
+      "version": 1,
+      "page": "https://data.mendeley.com/datasets/j82bnw7gsr/1",
+      "download": "https://data.mendeley.com/public-api/zip/j82bnw7gsr/download/1",
+      "license": "CC-BY-4.0",
+      "licenseVerifiedOn": "2026-11-23",
+      "expectedImages": 2392,
+      "expectedBoxes": 8275,
+      "originalClassNames": [
+        "BikeWithRider",
+        "NoHelmet",
+        "Helmet"
+      ],
+      "role": "original images and annotations",
+      "status": "downloaded",
+      "archiveSha256": "fb4b86679833c5222bee846b361c75492517554cdc42e2d52c1025f77b6aa37d",
+      "archiveBytes": 1490218052
+    },
+    {
+      "id": "zacatecas_videos",
+      "provider": "mendeley",
+      "datasetId": "bmy35m25pw",
+      "version": 1,
+      "page": "https://data.mendeley.com/datasets/bmy35m25pw/1",
+      "download": "https://data.mendeley.com/public-api/zip/bmy35m25pw/download/1",
+      "license": "CC-BY-4.0",
+      "licenseVerifiedOn": "2026-11-23",
+      "expectedVideos": 32,
+      "role": "future video evaluation; driver-facing camera, not equivalent to roadside traffic camera"
+    },
+    {
+      "id": "motorcycle_helmet_od",
+      "provider": "roboflow",
+      "workspace": "projectt",
+      "project": "motorcycle-helmet-object-detection",
+      "version": 1,
+      "license": "CC BY 4.0",
+      "versionEvidence": "Roboflow API confirmed fixed version; receipt in reports",
+      "status": "downloaded",
+      "licenseVerifiedOn": "2026-11-23",
+      "archiveSha256": "7269acecabc5fe045e56f8cdcd8a765a498b67859bca8104aafd4d4d8d1e348e",
+      "archiveBytes": 213794466
+    },
+    {
+      "id": "mapua_helmet",
+      "provider": "roboflow",
+      "workspace": "mapua-university",
+      "project": "motorcycle-helmet-detection-dataset",
+      "version": 8,
+      "license": "CC BY 4.0",
+      "versionEvidence": "Roboflow API confirmed fixed version; receipt in reports",
+      "status": "downloaded",
+      "licenseVerifiedOn": "2026-11-23",
+      "archiveSha256": "4c8ede1c5b8cdb8a1efc561acf068564cd4d457c9d466a1bff8e32c94c8f81bd",
+      "archiveBytes": 200346823
+    },
+    {
+      "id": "ldrago_helmet",
+      "provider": "roboflow",
+      "workspace": "ldrago",
+      "project": "helmet-elr7r",
+      "version": 10,
+      "license": "CC BY 4.0",
+      "versionEvidence": "Roboflow API confirmed fixed version; receipt in reports",
+      "status": "downloaded",
+      "licenseVerifiedOn": "2026-11-23",
+      "archiveSha256": "27e827df7355b2f26a82f31f6ad6eadeb3721149a7a7817ac39f48f2ccf2a802",
+      "archiveBytes": 149694522
+    },
+    {
+      "id": "proper_helmet_usage",
+      "provider": "roboflow",
+      "workspace": "duusuuuu",
+      "project": "proper-helmet-usage",
+      "version": 6,
+      "license": "CC BY 4.0",
+      "versionEvidence": "Roboflow API confirmed fixed version; receipt in reports",
+      "status": "downloaded",
+      "licenseVerifiedOn": "2026-11-23",
+      "archiveSha256": "f8f059fdbb2b402237e24f1ebea0da3bcd404e0e611dff2c0306119ac16e4d21",
+      "archiveBytes": 52008333
+    },
+    {
+      "id": "helmet_violation",
+      "provider": "roboflow",
+      "workspace": "imageprocessingworkspace",
+      "project": "helmet-violation-detetction-ihuwu",
+      "version": 1,
+      "license": "CC BY 4.0",
+      "versionEvidence": "Roboflow API confirmed fixed version; receipt in reports",
+      "status": "downloaded",
+      "licenseVerifiedOn": "2026-11-23",
+      "archiveSha256": "021a62054b9076dab68814d7f80c2a8e74aa855b95029104655a3dad03c01941",
+      "archiveBytes": 17564701
+    }
+  ]
+}

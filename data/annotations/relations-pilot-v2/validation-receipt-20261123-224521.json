@@ -1,0 +1,87 @@
+{
+  "valid": true,
+  "errors": [],
+  "human_review_asserted": true,
+  "training_ready": false,
+  "evaluation_scope": "selected validation pilot; not a representative accuracy estimate",
+  "confirmed_links": [
+    {
+      "image_id": "Image_00146",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01898",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01575",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01575",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01575",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m2",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01720",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00135",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00135",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02097",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02097",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02354",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    }
+  ],
+  "input_sha256": "124b53935e448b619451c49f542f2438037adb543f64e0faecb0fdc8fdc8752a"
+}

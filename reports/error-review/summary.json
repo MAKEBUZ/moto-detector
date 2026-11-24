@@ -1,0 +1,104 @@
+{
+  "split": "val",
+  "test_used": false,
+  "detector_images": 347,
+  "classifier_examples": 628,
+  "classifier_errors": 52,
+  "threshold_metrics_iou50": {
+    "0.3": [
+      {
+        "tp": 440,
+        "fp": 93,
+        "fn": 80,
+        "precision": 0.8255159474671669,
+        "recall": 0.8461538461538461
+      },
+      {
+        "tp": 132,
+        "fn": 92,
+        "fp": 67,
+        "precision": 0.6633165829145728,
+        "recall": 0.5892857142857143
+      },
+      {
+        "tp": 235,
+        "fn": 164,
+        "fp": 111,
+        "precision": 0.6791907514450867,
+        "recall": 0.5889724310776943
+      }
+    ],
+    "0.5": [
+      {
+        "tp": 430,
+        "fp": 47,
+        "fn": 90,
+        "precision": 0.9014675052410901,
+        "recall": 0.8269230769230769
+      },
+      {
+        "tp": 113,
+        "fn": 111,
+        "fp": 26,
+        "precision": 0.8129496402877698,
+        "recall": 0.5044642857142857
+      },
+      {
+        "tp": 215,
+        "fn": 184,
+        "fp": 60,
+        "precision": 0.7818181818181819,
+        "recall": 0.5388471177944862
+      }
+    ],
+    "0.7": [
+      {
+        "tp": 409,
+        "fp": 15,
+        "fn": 111,
+        "precision": 0.964622641509434,
+        "recall": 0.7865384615384615
+      },
+      {
+        "tp": 91,
+        "fn": 133,
+        "fp": 11,
+        "precision": 0.8921568627450981,
+        "recall": 0.40625
+      },
+      {
+        "tp": 182,
+        "fn": 217,
+        "fp": 21,
+        "precision": 0.896551724137931,
+        "recall": 0.45614035087719296
+      }
+    ]
+  },
+  "head_recall_by_original_box_size": {
+    "under_24": {
+      "total": 8,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "24_to_47": {
+      "total": 52,
+      "detected": 13,
+      "recall": 0.25
+    },
+    "48_plus": {
+      "total": 563,
+      "detected": 315,
+      "recall": 0.5595026642984015
+    }
+  },
+  "association_status_counts": {
+    "candidate_requires_review": 331,
+    "unassigned": 47,
+    "conflicting_head": 26,
+    "ambiguous": 10
+  },
+  "association_accuracy": null,
+  "association_ground_truth_available": false,
+  "association_policy": "Geometric proposals only; never confirmed occupancy or counts."
+}

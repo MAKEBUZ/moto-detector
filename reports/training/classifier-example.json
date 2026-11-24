@@ -1,0 +1,12 @@
+{
+  "run": "classifier-baseline",
+  "epoch": 11,
+  "task": "classifier",
+  "image": "C:\\Users\\macab\\Desktop\\INTELIGENCI AARTIFICIAL - MOTOS\\data\\prepared\\helmet-baseline-v1\\classifier\\val\\con_casco\\035baed6563bd3c664ffef62.jpg",
+  "predictions": [],
+  "probabilities": {
+    "con_casco": 0.9148247241973877,
+    "sin_casco": 0.08517526090145111
+  },
+  "class": "con_casco"
+}

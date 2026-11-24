@@ -1,0 +1,33 @@
+{
+  "batches": [
+    {
+      "batch_id": "train-separate-v2-02",
+      "split": "train",
+      "images": 12,
+      "entities": 77,
+      "links": 28,
+      "original_hashes_verified": true,
+      "overlap_with_other_batches": false,
+      "human_reviewed": false
+    },
+    {
+      "batch_id": "val-separate-v2-01",
+      "split": "val",
+      "images": 8,
+      "entities": 47,
+      "links": 16,
+      "original_hashes_verified": true,
+      "overlap_with_other_batches": false,
+      "human_reviewed": false
+    }
+  ],
+  "classes": [
+    "motocicleta",
+    "persona_ocupante",
+    "cabeza_con_casco",
+    "cabeza_sin_casco"
+  ],
+  "training_ready": false,
+  "test_used": false,
+  "limitation": "Group and exact hash separation verified; original scene independence is not certified."
+}

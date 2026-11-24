@@ -1,0 +1,407 @@
+{
+  "summary": {
+    "confirmed_reference_links": 11,
+    "outcomes": {
+      "correct_candidate": 5,
+      "head_not_localized": 3,
+      "motorcycle_context_not_localized": 2,
+      "conflicting_head": 1
+    },
+    "both_endpoints_localized": 6,
+    "correct_candidates": 5,
+    "correct_candidate_fraction_all_reference_links": 0.45454545454545453,
+    "correct_candidate_fraction_localized_endpoints": 0.8333333333333334,
+    "localized_heads": 8,
+    "helmet_correct_on_localized_heads": 6,
+    "excluded_links": 2,
+    "other_system_heads_not_scored": 4
+  },
+  "confidence_threshold": 0.5,
+  "matching_iou": 0.5,
+  "matching": "confidence-ordered one-to-one; head class agnostic; motorcycle uses canonical rider-inclusive context",
+  "limitations": [
+    "Selected seven-image validation pilot, not representative generalization accuracy.",
+    "No independent person detector; does not evaluate the full head-person-motorcycle chain.",
+    "Rejected/uncertain references and unmatched predictions are not scored as false positives.",
+    "Original combined motorcycle context boxes are proxies, not new human-confirmed pure motorcycle boxes.",
+    "Candidates remain unconfirmed; counting remains disabled."
+  ],
+  "input_sha256": {
+    "data\\annotations\\relations-pilot-v2\\relations-pilot-reviewed.json": "124b53935e448b619451c49f542f2438037adb543f64e0faecb0fdc8fdc8752a",
+    "data\\annotations\\relations-pilot-v2\\draft.json": "33cf94cb32879e871c010a689616825f34821415a0e484dbfbb19f5feaaa7ec1",
+    "reports\\error-review\\detector-validation.jsonl": "9f31d657a6cefb5811fbd4e0139359f81773f13a3323305f358e49290d4409ea",
+    "C:\\Users\\macab\\Desktop\\INTELIGENCI AARTIFICIAL - MOTOS\\training\\evaluate_relations.py": "b5091913c725437e36d62e46f132366a81571895d497defba3edd5d8d3619bce",
+    "training\\association.py": "343604d4f9463e9f08c64021a7fc154dd86436227ea28fa147d7c9b07f379925"
+  },
+  "test_used": false,
+  "retrained": false,
+  "scenes": [
+    {
+      "image_id": "Image_00146",
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed",
+          "outcome": "correct_candidate",
+          "head_match": {
+            "prediction_index": 0,
+            "iou": 0.8807744436055558
+          },
+          "motorcycle_context_match": {
+            "prediction_index": 1,
+            "iou": 0.8119787394593511
+          },
+          "helmet_correct_if_localized": true,
+          "system_association": {
+            "head_index": 0,
+            "motorcycle_index": 1,
+            "status": "candidate_requires_review",
+            "candidates": [
+              {
+                "motorcycle_index": 1,
+                "cost": 0.209518,
+                "head_containment": 1.0
+              }
+            ]
+          }
+        }
+      ],
+      "excluded_links": [],
+      "other_system_heads_not_scored": [],
+      "occupancy_confirmed": false,
+      "counting_allowed": false
+    },
+    {
+      "image_id": "Image_01898",
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed",
+          "outcome": "correct_candidate",
+          "head_match": {
+            "prediction_index": 1,
+            "iou": 0.7890866361139584
+          },
+          "motorcycle_context_match": {
+            "prediction_index": 0,
+            "iou": 0.90945864782895
+          },
+          "helmet_correct_if_localized": true,
+          "system_association": {
+            "head_index": 1,
+            "motorcycle_index": 0,
+            "status": "candidate_requires_review",
+            "candidates": [
+              {
+                "motorcycle_index": 0,
+                "cost": 0.049203,
+                "head_containment": 1.0
+              }
+            ]
+          }
+        }
+      ],
+      "excluded_links": [],
+      "other_system_heads_not_scored": [],
+      "occupancy_confirmed": false,
+      "counting_allowed": false
+    },
+    {
+      "image_id": "Image_01575",
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed",
+          "outcome": "head_not_localized",
+          "head_match": null,
+          "motorcycle_context_match": {
+            "prediction_index": 0,
+            "iou": 0.8557018733251073
+          },
+          "helmet_correct_if_localized": null,
+          "system_association": null
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": "m1",
+          "status": "confirmed",
+          "outcome": "correct_candidate",
+          "head_match": {
+            "prediction_index": 2,
+            "iou": 0.8650675312194654
+          },
+          "motorcycle_context_match": {
+            "prediction_index": 1,
+            "iou": 0.8740767604992634
+          },
+          "helmet_correct_if_localized": false,
+          "system_association": {
+            "head_index": 2,
+            "motorcycle_index": 1,
+            "status": "candidate_requires_review",
+            "candidates": [
+              {
+                "motorcycle_index": 1,
+                "cost": 0.063717,
+                "head_containment": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "head_id": "h2",
+          "person_id": "o2",
+          "motorcycle_id": "m2",
+          "status": "confirmed",
+          "outcome": "motorcycle_context_not_localized",
+          "head_match": {
+            "prediction_index": 3,
+            "iou": 0.5937350700331625
+          },
+          "motorcycle_context_match": null,
+          "helmet_correct_if_localized": false,
+          "system_association": {
+            "head_index": 3,
+            "motorcycle_index": 1,
+            "status": "candidate_requires_review",
+            "candidates": [
+              {
+                "motorcycle_index": 1,
+                "cost": 0.279224,
+                "head_containment": 1.0
+              }
+            ]
+          }
+        }
+      ],
+      "excluded_links": [],
+      "other_system_heads_not_scored": [
+        {
+          "head_index": 4,
+          "motorcycle_index": null,
+          "status": "conflicting_head",
+          "candidates": [
+            {
+              "motorcycle_index": 0,
+              "cost": 0.108403,
+              "head_containment": 1.0
+            }
+          ]
+        },
+        {
+          "head_index": 5,
+          "motorcycle_index": null,
+          "status": "conflicting_head",
+          "candidates": []
+        }
+      ],
+      "occupancy_confirmed": false,
+      "counting_allowed": false
+    },
+    {
+      "image_id": "Image_01720",
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed",
+          "outcome": "correct_candidate",
+          "head_match": {
+            "prediction_index": 2,
+            "iou": 0.8380723399115354
+          },
+          "motorcycle_context_match": {
+            "prediction_index": 0,
+            "iou": 0.8172660172075218
+          },
+          "helmet_correct_if_localized": true,
+          "system_association": {
+            "head_index": 2,
+            "motorcycle_index": 0,
+            "status": "candidate_requires_review",
+            "candidates": [
+              {
+                "motorcycle_index": 0,
+                "cost": 0.034159,
+                "head_containment": 1.0
+              }
+            ]
+          }
+        }
+      ],
+      "excluded_links": [
+        {
+          "head_id": "h_background",
+          "person_id": "p_background",
+          "motorcycle_id": null,
+          "status": "rejected"
+        }
+      ],
+      "other_system_heads_not_scored": [
+        {
+          "head_index": 1,
+          "motorcycle_index": 0,
+          "status": "candidate_requires_review",
+          "candidates": [
+            {
+              "motorcycle_index": 0,
+              "cost": 0.203892,
+              "head_containment": 0.876457
+            }
+          ]
+        }
+      ],
+      "occupancy_confirmed": false,
+      "counting_allowed": false
+    },
+    {
+      "image_id": "Image_00135",
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed",
+          "outcome": "correct_candidate",
+          "head_match": {
+            "prediction_index": 0,
+            "iou": 0.687381059950938
+          },
+          "motorcycle_context_match": {
+            "prediction_index": 1,
+            "iou": 0.941919004190908
+          },
+          "helmet_correct_if_localized": true,
+          "system_association": {
+            "head_index": 0,
+            "motorcycle_index": 1,
+            "status": "candidate_requires_review",
+            "candidates": [
+              {
+                "motorcycle_index": 1,
+                "cost": 0.110851,
+                "head_containment": 0.975467
+              }
+            ]
+          }
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": "m1",
+          "status": "confirmed",
+          "outcome": "head_not_localized",
+          "head_match": null,
+          "motorcycle_context_match": null,
+          "helmet_correct_if_localized": null,
+          "system_association": null
+        }
+      ],
+      "excluded_links": [],
+      "other_system_heads_not_scored": [],
+      "occupancy_confirmed": false,
+      "counting_allowed": false
+    },
+    {
+      "image_id": "Image_02097",
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed",
+          "outcome": "head_not_localized",
+          "head_match": null,
+          "motorcycle_context_match": {
+            "prediction_index": 1,
+            "iou": 0.7388951431955584
+          },
+          "helmet_correct_if_localized": null,
+          "system_association": null
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": "m1",
+          "status": "confirmed",
+          "outcome": "motorcycle_context_not_localized",
+          "head_match": {
+            "prediction_index": 0,
+            "iou": 0.8492837987380247
+          },
+          "motorcycle_context_match": null,
+          "helmet_correct_if_localized": true,
+          "system_association": {
+            "head_index": 0,
+            "motorcycle_index": 1,
+            "status": "candidate_requires_review",
+            "candidates": [
+              {
+                "motorcycle_index": 1,
+                "cost": 0.312639,
+                "head_containment": 1.0
+              }
+            ]
+          }
+        }
+      ],
+      "excluded_links": [
+        {
+          "head_id": "h2",
+          "person_id": "o2",
+          "motorcycle_id": null,
+          "status": "uncertain"
+        }
+      ],
+      "other_system_heads_not_scored": [],
+      "occupancy_confirmed": false,
+      "counting_allowed": false
+    },
+    {
+      "image_id": "Image_02354",
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed",
+          "outcome": "conflicting_head",
+          "head_match": {
+            "prediction_index": 1,
+            "iou": 0.9123725486827812
+          },
+          "motorcycle_context_match": {
+            "prediction_index": 0,
+            "iou": 0.845909210927658
+          },
+          "helmet_correct_if_localized": true,
+          "system_association": {
+            "head_index": 1,
+            "motorcycle_index": null,
+            "status": "conflicting_head",
+            "candidates": []
+          }
+        }
+      ],
+      "excluded_links": [],
+      "other_system_heads_not_scored": [
+        {
+          "head_index": 2,
+          "motorcycle_index": null,
+          "status": "conflicting_head",
+          "candidates": []
+        }
+      ],
+      "occupancy_confirmed": false,
+      "counting_allowed": false
+    }
+  ]
+}

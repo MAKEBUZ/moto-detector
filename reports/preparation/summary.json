@@ -1,0 +1,64 @@
+{
+  "seed": "helmet-baseline-v1-2026-11-23",
+  "inputImages": 13303,
+  "detectorImages": 2275,
+  "classifierCrops": 4106,
+  "eligibleGroups": 93,
+  "largestGroup": 62,
+  "quarantinedImages": 11005,
+  "splits": {
+    "train": {
+      "detectorImages": 1583,
+      "detectorBoxes": [
+        2540,
+        1067,
+        1863
+      ],
+      "classifierCrops": [
+        1064,
+        1825
+      ],
+      "groups": 63
+    },
+    "val": {
+      "detectorImages": 347,
+      "detectorBoxes": [
+        520,
+        224,
+        399
+      ],
+      "classifierCrops": [
+        226,
+        402
+      ],
+      "groups": 15
+    },
+    "test": {
+      "detectorImages": 345,
+      "detectorBoxes": [
+        533,
+        224,
+        383
+      ],
+      "classifierCrops": [
+        216,
+        373
+      ],
+      "groups": 15
+    }
+  },
+  "reasonCounts": {
+    "detector_conflicting_head_labels": 49,
+    "no_eligible_crops": 26,
+    "outside_image": 67,
+    "degenerate_box": 1,
+    "source_requires_semantic_reannotation": 7301,
+    "exact_duplicate_not_selected": 3,
+    "mosaic_lineage_and_head_labels_require_review": 3607
+  },
+  "correctionCounts": {
+    "exclude_conflicting_head_crop": 106,
+    "exclude_classifier_crop_below_24px": 121
+  },
+  "status": "ready_for_baseline_training"
+}

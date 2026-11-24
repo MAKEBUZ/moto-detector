@@ -1,0 +1,7 @@
+data/sources/
+data/prepared/
+.env
+__pycache__/
+.venv/
+runs/
+data/annotations/**/review.html

@@ -1,0 +1,7 @@
+{
+  "random_initialization_reproduced": true,
+  "final_weights_verified": true,
+  "checkpoint_sha256": "085d1a73a3f808562680b8f05081bc6e790ffc5c6e68441f927beecdf2ed18ae",
+  "validation_used": false,
+  "test_used": false
+}

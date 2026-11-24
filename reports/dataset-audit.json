@@ -1,0 +1,239 @@
+{
+  "repository": "https://github.com/Valery-Rosero/DataSetsIA",
+  "commit": "59cce5bf75fd85e63eced06e00a5baf518062a87",
+  "generatedAt": "2026-11-24T01:45:34.096Z",
+  "scope": "Labels, inventory, JPEG dimensions and exact crop hashes; not full image decoding or perceptual deduplication.",
+  "classes": [
+    "motocicleta",
+    "casco_correcto",
+    "casco_mal_puesto",
+    "sin_casco"
+  ],
+  "splits": {
+    "train": {
+      "labelFiles": 10242,
+      "emptyLabels": 923,
+      "originalImages": 0,
+      "labelsWithoutOriginal": 10242,
+      "boxes": {
+        "motocicleta": 3006,
+        "casco_correcto": 14530,
+        "casco_mal_puesto": 1073,
+        "sin_casco": 7584
+      },
+      "crops": {
+        "casco_correcto": 14386,
+        "casco_mal_puesto": 1063,
+        "sin_casco": 7518
+      }
+    },
+    "val": {
+      "labelFiles": 1944,
+      "emptyLabels": 99,
+      "originalImages": 0,
+      "labelsWithoutOriginal": 1944,
+      "boxes": {
+        "motocicleta": 432,
+        "casco_correcto": 3340,
+        "casco_mal_puesto": 154,
+        "sin_casco": 1650
+      },
+      "crops": {
+        "casco_correcto": 3317,
+        "casco_mal_puesto": 153,
+        "sin_casco": 1640
+      }
+    },
+    "test": {
+      "labelFiles": 1117,
+      "emptyLabels": 128,
+      "originalImages": 0,
+      "labelsWithoutOriginal": 1117,
+      "boxes": {
+        "motocicleta": 425,
+        "casco_correcto": 1826,
+        "casco_mal_puesto": 81,
+        "sin_casco": 888
+      },
+      "crops": {
+        "casco_correcto": 1625,
+        "casco_mal_puesto": 80,
+        "sin_casco": 879
+      }
+    }
+  },
+  "sources": {
+    "edgevision": {
+      "labelFiles": 2392,
+      "boxes": {
+        "motocicleta": 3793,
+        "casco_correcto": 1671,
+        "casco_mal_puesto": 0,
+        "sin_casco": 2810
+      }
+    },
+    "helmet_violation": {
+      "labelFiles": 347,
+      "boxes": {
+        "motocicleta": 70,
+        "casco_correcto": 362,
+        "casco_mal_puesto": 1,
+        "sin_casco": 181
+      }
+    },
+    "ldrago_helmet": {
+      "labelFiles": 2258,
+      "boxes": {
+        "motocicleta": 0,
+        "casco_correcto": 2844,
+        "casco_mal_puesto": 286,
+        "sin_casco": 913
+      }
+    },
+    "mapua_helmet": {
+      "labelFiles": 3749,
+      "boxes": {
+        "motocicleta": 0,
+        "casco_correcto": 3987,
+        "casco_mal_puesto": 564,
+        "sin_casco": 1318
+      }
+    },
+    "motorcycle_helmet_od": {
+      "labelFiles": 3607,
+      "boxes": {
+        "motocicleta": 0,
+        "casco_correcto": 10398,
+        "casco_mal_puesto": 0,
+        "sin_casco": 4900
+      }
+    },
+    "proper_helmet_usage": {
+      "labelFiles": 950,
+      "boxes": {
+        "motocicleta": 0,
+        "casco_correcto": 434,
+        "casco_mal_puesto": 457,
+        "sin_casco": 0
+      }
+    }
+  },
+  "issues": [
+    {
+      "file": "datasets_casco/unificado/labels/train/helmet_violation__00000073_jpg.rf.ebfa67088cd618aaa0bbdeb622145db2.txt",
+      "line": 1,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/train/helmet_violation__00000088_jpg.rf.a88eb3e6faf57b3b388e1ca18a35d3a9.txt",
+      "line": 1,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/train/helmet_violation__00000110_jpg.rf.a76f0d175a34af05038b22568baec4d0.txt",
+      "line": 2,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/train/helmet_violation__00000115_jpg.rf.6f4739a2cab59fe43b42a662f01295af.txt",
+      "line": 2,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/train/helmet_violation__00000132_jpg.rf.d42c658c1f9668eb508cea75a68ce089.txt",
+      "line": 1,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/train/helmet_violation__12_jpg.rf.64e2b2afd73e3bae7bc493e6dfdeb081.txt",
+      "line": 7,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/train/helmet_violation__63_jpeg.rf.13ac95460857c204a363723242601fb3.txt",
+      "line": 2,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/train/helmet_violation__72_jpeg.rf.732fa58b4206d434fb64aefdaa111323.txt",
+      "line": 2,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/train/helmet_violation__augmented_image_18_jpg.rf.4f49c7cf341be7523ae90a47da0ea5e5.txt",
+      "line": 1,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/train/proper_helmet_usage__VID_20260404_222258_mp4-0063_jpg.rf.21fe023b8768413f9c4f5b3772abbe39.txt",
+      "line": 2,
+      "reason": "duplicate_box"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/val/helmet_violation__31_jpeg.rf.74c589c94478180972092d7286d5b012.txt",
+      "line": 6,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/val/helmet_violation__55_jpeg.rf.a347b5e740cd600477a18a803e3a2b36.txt",
+      "line": 3,
+      "reason": "box_outside_image"
+    },
+    {
+      "file": "datasets_casco/unificado/labels/test/helmet_violation__57_jpeg.rf.5f280ea04cf8ccc0bed5061720ee4355.txt",
+      "line": 3,
+      "reason": "box_outside_image"
+    }
+  ],
+  "cropDimensions": {
+    "unreadableHeaders": [],
+    "under12Pixels": 0,
+    "under32Pixels": 3723
+  },
+  "repeatedLabelStemsAcrossSplits": [],
+  "inferredVideoGroups": {
+    "proper_helmet_usage__VID_20260404_153134_mp4": {
+      "train": 12,
+      "val": 4
+    },
+    "proper_helmet_usage__VID_20260404_164420_mp4": {
+      "train": 7
+    },
+    "proper_helmet_usage__VID_20260404_222258_mp4": {
+      "train": 193,
+      "val": 23,
+      "test": 26
+    }
+  },
+  "inferredCrossSplitVideoGroups": {
+    "proper_helmet_usage__VID_20260404_153134_mp4": {
+      "train": 12,
+      "val": 4
+    },
+    "proper_helmet_usage__VID_20260404_222258_mp4": {
+      "train": 193,
+      "val": 23,
+      "test": 26
+    }
+  },
+  "exactDuplicateCropGroups": [
+    [
+      {
+        "file": "datasets_casco/unificado/recortes/train/casco_mal_puesto/proper_helmet_usage__VID_20260404_222258_mp4-0063_jpg.rf.21fe023b8768413f9c4f5b3772abbe39_0.jpg",
+        "split": "train",
+        "class": "casco_mal_puesto"
+      },
+      {
+        "file": "datasets_casco/unificado/recortes/train/casco_mal_puesto/proper_helmet_usage__VID_20260404_222258_mp4-0063_jpg.rf.21fe023b8768413f9c4f5b3772abbe39_1.jpg",
+        "split": "train",
+        "class": "casco_mal_puesto"
+      }
+    ]
+  ],
+  "crossSplitDuplicateCropGroups": [],
+  "conflictingClassCropGroups": [],
+  "issueCounts": {
+    "box_outside_image": 12,
+    "duplicate_box": 1
+  }
+}

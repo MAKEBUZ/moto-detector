@@ -1,0 +1,115 @@
+{
+  "head_count": 9,
+  "rpn_covered_iou50": 2,
+  "correct_head_coverage_iou50": 2,
+  "correct_head_coverage_iou50_score50": 1,
+  "oracle_correct": 1,
+  "head_ap50": {
+    "map50": 0.2524752475247525,
+    "per_class": [
+      {
+        "class_id": 2,
+        "ap50": 0.33663366336633666,
+        "ground_truth_boxes": 3
+      },
+      {
+        "class_id": 3,
+        "ap50": 0.16831683168316833,
+        "ground_truth_boxes": 6
+      }
+    ],
+    "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+  },
+  "heads": [
+    {
+      "label": 4,
+      "image_id": 0,
+      "anchor_max_iou": 0.6668897271156311,
+      "positive_anchors_overlapping_head_iou50": 1,
+      "rpn_max_iou": 0.05469915270805359,
+      "correct_class_max_iou": 0.0,
+      "correct_class_max_iou_score50": 0.0,
+      "oracle_predicted_class": 0
+    },
+    {
+      "label": 3,
+      "image_id": 0,
+      "anchor_max_iou": 0.5324900150299072,
+      "positive_anchors_overlapping_head_iou50": 6,
+      "rpn_max_iou": 0.04812841862440109,
+      "correct_class_max_iou": 0.0,
+      "correct_class_max_iou_score50": 0.0,
+      "oracle_predicted_class": 0
+    },
+    {
+      "label": 3,
+      "image_id": 1,
+      "anchor_max_iou": 0.7110629081726074,
+      "positive_anchors_overlapping_head_iou50": 2,
+      "rpn_max_iou": 0.09227333962917328,
+      "correct_class_max_iou": 0.0,
+      "correct_class_max_iou_score50": 0.0,
+      "oracle_predicted_class": 0
+    },
+    {
+      "label": 4,
+      "image_id": 2,
+      "anchor_max_iou": 0.5849456787109375,
+      "positive_anchors_overlapping_head_iou50": 1,
+      "rpn_max_iou": 0.1238245740532875,
+      "correct_class_max_iou": 0.0,
+      "correct_class_max_iou_score50": 0.0,
+      "oracle_predicted_class": 0
+    },
+    {
+      "label": 3,
+      "image_id": 2,
+      "anchor_max_iou": 0.808414876461029,
+      "positive_anchors_overlapping_head_iou50": 1,
+      "rpn_max_iou": 0.7179908156394958,
+      "correct_class_max_iou": 0.7141078114509583,
+      "correct_class_max_iou_score50": 0.0,
+      "oracle_predicted_class": 0
+    },
+    {
+      "label": 4,
+      "image_id": 2,
+      "anchor_max_iou": 0.42047119140625,
+      "positive_anchors_overlapping_head_iou50": 0,
+      "rpn_max_iou": 0.0015231946017593145,
+      "correct_class_max_iou": 0.0,
+      "correct_class_max_iou_score50": 0.0,
+      "oracle_predicted_class": 0
+    },
+    {
+      "label": 4,
+      "image_id": 3,
+      "anchor_max_iou": 0.6669820547103882,
+      "positive_anchors_overlapping_head_iou50": 2,
+      "rpn_max_iou": 0.5788700580596924,
+      "correct_class_max_iou": 0.5720469951629639,
+      "correct_class_max_iou_score50": 0.5720469951629639,
+      "oracle_predicted_class": 4
+    },
+    {
+      "label": 4,
+      "image_id": 4,
+      "anchor_max_iou": 0.5412742495536804,
+      "positive_anchors_overlapping_head_iou50": 4,
+      "rpn_max_iou": 0.17109331488609314,
+      "correct_class_max_iou": 0.12201443314552307,
+      "correct_class_max_iou_score50": 0.0,
+      "oracle_predicted_class": 0
+    },
+    {
+      "label": 4,
+      "image_id": 4,
+      "anchor_max_iou": 0.7104868292808533,
+      "positive_anchors_overlapping_head_iou50": 2,
+      "rpn_max_iou": 0.3617561161518097,
+      "correct_class_max_iou": 0.09139854460954666,
+      "correct_class_max_iou_score50": 0.0,
+      "oracle_predicted_class": 3
+    }
+  ]
+}

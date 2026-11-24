@@ -1,0 +1,154 @@
+{
+  "classifier": {
+    "result": {
+      "task": "classifier",
+      "epochs": 15,
+      "best_epoch": 11,
+      "best_validation_score": 0.9099641442298889,
+      "selection_metric": "macro_f1",
+      "initial_state_sha256": "4803c5204e9530600c0f7a006e0635d1453e89100e5f8ddfe19f4fdbab180315",
+      "final_state_sha256": "6d5a9fc3178559c293e508ebed5bbf69ce77adbd1a86a973603b15a026a2e371",
+      "test_used": false,
+      "pilot": false,
+      "seconds": 51.66
+    },
+    "config": {
+      "task": "classifier",
+      "epochs": 15,
+      "batch_size": 64,
+      "workers": 2,
+      "limit_train": null,
+      "limit_val": null,
+      "run": "classifier-baseline",
+      "dataset": "data/prepared/helmet-baseline-v1",
+      "seed": 20261123,
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "initialization": "random",
+      "pretrained": false,
+      "initial_state_sha256": "4803c5204e9530600c0f7a006e0635d1453e89100e5f8ddfe19f4fdbab180315",
+      "parameters": 294258,
+      "train_examples": 2889,
+      "validation_examples": 628,
+      "test_used": false,
+      "learning_rate": 0.001,
+      "pilot": false,
+      "source_sha256": {
+        "training\\data.py": "177157aaf311fb45b93f987e555a46ad6d382604514dff43cb876b1147a653f9",
+        "training\\metrics.py": "72f9fe3086422de1ba304bfc3b09d4ac685f142666381602ebc9ad2edfd543af",
+        "training\\models.py": "ffea7361585316cbb20377f68dbaf217bcf31ecf9c2b9c83bad2b13181d21019",
+        "training\\predict.py": "4cb361b05f7f8b0da610fcca30c1aeb6f7f2aeb1a1fd7fe47f5e9f29b0bbcc0f",
+        "training\\test_metrics.py": "9ee8c5c2de137ec4f18a9a76b93b7caff5d179d72cd2e8754f486759d440e65b",
+        "training\\train.py": "59ff8e176c474b70e4ab4b088c43f594c2b592c7ee3188bc30d2071f4277e077"
+      },
+      "dataset_lock_sha256": "1a84a23a125f4c9cba5b454acdf25db45f2cb6058d5fc9694bf407053d5448a1"
+    },
+    "best": {
+      "epoch": 11,
+      "train_loss": 0.10921691938352733,
+      "validation": {
+        "accuracy": 0.9171974658966064,
+        "macro_f1": 0.9099641442298889,
+        "precision": [
+          0.8883928656578064,
+          0.9331682920455933
+        ],
+        "recall": [
+          0.8805309534072876,
+          0.9378109574317932
+        ],
+        "f1": [
+          0.8844444751739502,
+          0.9354838132858276
+        ],
+        "confusion_matrix_true_rows": [
+          [
+            199,
+            27
+          ],
+          [
+            25,
+            377
+          ]
+        ]
+      },
+      "elapsed_seconds": 43.69
+    }
+  },
+  "detector": {
+    "result": {
+      "task": "detector",
+      "epochs": 5,
+      "best_epoch": 5,
+      "best_validation_score": 0.6912129846933258,
+      "selection_metric": "map50",
+      "initial_state_sha256": "77512249ee9b6262ec42b6cd1834bb8abd9af6033b640ed2d16506abf629b943",
+      "final_state_sha256": "47e15662230985dc96b0e01c0486f34097c653710d1d044ed082dfa695cfa24c",
+      "test_used": false,
+      "pilot": false,
+      "seconds": 252.25
+    },
+    "config": {
+      "task": "detector",
+      "epochs": 5,
+      "batch_size": 2,
+      "workers": 2,
+      "limit_train": null,
+      "limit_val": null,
+      "run": "detector-baseline",
+      "dataset": "data/prepared/helmet-baseline-v1",
+      "seed": 20261123,
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "initialization": "random",
+      "pretrained": false,
+      "initial_state_sha256": "77512249ee9b6262ec42b6cd1834bb8abd9af6033b640ed2d16506abf629b943",
+      "parameters": 7944911,
+      "train_examples": 1583,
+      "validation_examples": 347,
+      "test_used": false,
+      "learning_rate": 0.0003,
+      "pilot": false,
+      "source_sha256": {
+        "training\\data.py": "177157aaf311fb45b93f987e555a46ad6d382604514dff43cb876b1147a653f9",
+        "training\\metrics.py": "72f9fe3086422de1ba304bfc3b09d4ac685f142666381602ebc9ad2edfd543af",
+        "training\\models.py": "ffea7361585316cbb20377f68dbaf217bcf31ecf9c2b9c83bad2b13181d21019",
+        "training\\predict.py": "4cb361b05f7f8b0da610fcca30c1aeb6f7f2aeb1a1fd7fe47f5e9f29b0bbcc0f",
+        "training\\summarize.py": "54387adf4cf1cf49a93d878d0e81190f42a8219f9ea6e7c5d52996572ac9a4bd",
+        "training\\test_metrics.py": "9ee8c5c2de137ec4f18a9a76b93b7caff5d179d72cd2e8754f486759d440e65b",
+        "training\\train.py": "59ff8e176c474b70e4ab4b088c43f594c2b592c7ee3188bc30d2071f4277e077"
+      },
+      "dataset_lock_sha256": "1a84a23a125f4c9cba5b454acdf25db45f2cb6058d5fc9694bf407053d5448a1"
+    },
+    "best": {
+      "epoch": 5,
+      "train_loss": 0.43062919399931093,
+      "validation": {
+        "map50": 0.6912129846933258,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.8598775515461913,
+            "ground_truth_boxes": 520
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.6040768372540427,
+            "ground_truth_boxes": 224
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.6096845652797435,
+            "ground_truth_boxes": 399
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 252.01
+    }
+  }
+}

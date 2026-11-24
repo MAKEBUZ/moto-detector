@@ -1,0 +1,18 @@
+{
+  "reviewer": "assistant_visual_inspection",
+  "human_validated_ground_truth": false,
+  "purpose": "Qualitative error review; not a representative association accuracy estimate and not a training label override.",
+  "association_cases": [
+    {"image_id":"0014a6f32e2cd42a40c0","findings":[{"head_index":1,"motorcycle_index":0,"assessment":"reject_candidate","reason":"The head belongs to a standing person behind the motorcycle."},{"head_index":2,"motorcycle_index":0,"assessment":"visually_consistent_candidate","reason":"The head is on the visible person seated on the motorcycle."}]},
+    {"image_id":"00413001eecb8e1b1a54","findings":[{"head_index":0,"motorcycle_index":1,"assessment":"visually_consistent_candidate","reason":"Head and seated foreground body appear to belong to the same motorcycle; other distant occupants are not resolved."}]},
+    {"image_id":"006ea14aba54e1f84eaf","findings":[{"head_index":0,"motorcycle_index":1,"assessment":"reject_candidate","reason":"The motorcycle box spans multiple riders; the detected head is to the left of the central motorcycle occupant. Geometry does not establish membership."}]},
+    {"image_id":"009fc4d4303ff0658c6c","findings":[{"head_indices":[1,2],"assessment":"correct_abstention","reason":"Opposite classes overlap the same visible helmet; do not turn this into two occupants."}]}
+  ],
+  "annotation_cases": [
+    {"crop_id":"8a9e5f9e5c30191cc83c54bd","assessment":"suspected_bbox_and_label_error","reason":"The purported head crop includes almost a complete motorcycle and rider rather than an isolated helmeted head."},
+    {"crop_id":"711a4192b9d5c8ad4e5279c8","assessment":"suspected_class_error","reason":"The crop labelled with helmet appears to show hair; original annotation needs review."},
+    {"crop_id":"543597d703f1878b551c2fe1","assessment":"suspected_class_error","reason":"The crop labelled without helmet appears to show a helmet; original annotation needs review."}
+  ],
+  "dataset_modified": false,
+  "requires_annotation_review_before_dataset_v2": true
+}

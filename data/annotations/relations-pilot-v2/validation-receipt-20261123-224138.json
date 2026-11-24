@@ -1,0 +1,13 @@
+{
+  "valid": false,
+  "errors": [
+    "human review declaration missing",
+    "reviewer missing",
+    "invalid reviewed_at"
+  ],
+  "human_review_asserted": false,
+  "training_ready": false,
+  "evaluation_scope": "selected validation pilot; not a representative accuracy estimate",
+  "confirmed_links": [],
+  "input_sha256": "861ea92be45ef9edf8a92b394b6a6b383f361c9c181d3b7bf805245a778a532a"
+}

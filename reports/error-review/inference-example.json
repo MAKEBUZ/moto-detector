@@ -1,0 +1,72 @@
+{
+  "run": "detector-baseline",
+  "epoch": 5,
+  "task": "detector",
+  "image": "data/prepared/helmet-baseline-v1/detector/images/val/0014a6f32e2cd42a40c0.jpg",
+  "predictions": [
+    {
+      "class_id": 0,
+      "class": "moto_con_ocupante",
+      "score": 0.9951445460319519,
+      "box": [
+        21.338420867919922,
+        30.116092681884766,
+        334.5760192871094,
+        367.3468017578125
+      ]
+    },
+    {
+      "class_id": 2,
+      "class": "cabeza_sin_casco",
+      "score": 0.897042453289032,
+      "box": [
+        110.30966186523438,
+        23.247865676879883,
+        161.0724639892578,
+        78.83222961425781
+      ]
+    },
+    {
+      "class_id": 2,
+      "class": "cabeza_sin_casco",
+      "score": 0.8103209733963013,
+      "box": [
+        153.7357940673828,
+        53.44921112060547,
+        210.9085693359375,
+        114.40538787841797
+      ]
+    }
+  ],
+  "association": {
+    "associations": [
+      {
+        "head_index": 1,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.20391,
+            "head_containment": 0.876436
+          }
+        ]
+      },
+      {
+        "head_index": 2,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.034151,
+            "head_containment": 1.0
+          }
+        ]
+      }
+    ],
+    "occupancy_confirmed": false,
+    "counting_allowed": false,
+    "limitation": "Geometry cannot distinguish an occupant from a pedestrian behind or beside the motorcycle. No driver/passenger roles inferred."
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "source": "edgevision",
+  "version": 1,
+  "generatedAtUtc": "2026-11-24T02:03:17.0507284Z",
+  "images": 2392,
+  "xmlFiles": 2392,
+  "decodedImages": 2392,
+  "matchedXml": 2392,
+  "unifiedLabelFiles": 2392,
+  "matchingUnifiedLabels": 2392,
+  "boxesByOriginalClass": {
+    "NoHelmet": 2810,
+    "BikeWithRider": 3793,
+    "Helmet": 1672
+  },
+  "errors": [
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00177.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00364.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00421.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00442.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00464.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00566.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00652.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00652.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00706.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00713.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00743.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00754.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00811.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00888.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00948.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00952.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00955.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00956.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00958.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00959.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00960.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00960.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00973.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00973.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01007.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01012.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01034.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01035.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01036.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01037.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01038.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01039.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01039.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01040.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01041.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01042.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01044.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01045.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01045.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01046.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01047.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01047.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01048.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01050.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01051.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01052.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01053.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01055.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01056.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01056.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01057.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01057.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01059.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01059.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01060.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01060.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01069.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01070.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01082.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01107.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01332.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01337.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01349.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01402.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01436.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01457.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01560.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01577.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01708.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01716.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01812.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01990.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02080.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02080.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02091.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02104.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02179.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02187.xml",
+      "type": "invalid_original_box"
+    },
+    {
+      "file": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02189.xml",
+      "type": "invalid_original_box"
+    }
+  ],
+  "scope": "Full-resolution rendering, SHA256, dHash candidates, XML dimensions/boxes and comparison with unified labels. Scene membership remains unknown."
+}

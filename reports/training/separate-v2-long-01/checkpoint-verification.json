@@ -1,0 +1,6 @@
+{
+  "random_initialization_reproduced": true,
+  "final_weights_verified": true,
+  "pretrained": false,
+  "unit_tests_passed": 25
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01963.jpg",
+    "id": "006a997eeea6d84338a453e3",
+    "split": "train",
+    "task": "classifier",
+    "className": "con_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02317.jpg",
+    "id": "008d54db7ba1d22362dfaa90",
+    "split": "train",
+    "task": "classifier",
+    "className": "con_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00506.jpg",
+    "id": "00d8f1284342b75c6acef877",
+    "split": "train",
+    "task": "classifier",
+    "className": "con_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00879.jpg",
+    "id": "000f9553e87b31604410a884",
+    "split": "train",
+    "task": "classifier",
+    "className": "sin_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00081.jpg",
+    "id": "00178fb0c61790005f1a73d7",
+    "split": "train",
+    "task": "classifier",
+    "className": "sin_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02134.jpg",
+    "id": "00a1ccf840df424f8b5d3773",
+    "split": "train",
+    "task": "classifier",
+    "className": "sin_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01093.jpg",
+    "id": "035baed6563bd3c664ffef62",
+    "split": "val",
+    "task": "classifier",
+    "className": "con_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01088.jpg",
+    "id": "04a75f17829e30fa4be7aff5",
+    "split": "val",
+    "task": "classifier",
+    "className": "con_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01895.jpg",
+    "id": "052f5f9558d7e9c01332480e",
+    "split": "val",
+    "task": "classifier",
+    "className": "con_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01879.jpg",
+    "id": "00d6c70eacf46c6cbcc1fd83",
+    "split": "val",
+    "task": "classifier",
+    "className": "sin_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01333.jpg",
+    "id": "00f7ccf73ec1701c2f09f997",
+    "split": "val",
+    "task": "classifier",
+    "className": "sin_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00551.jpg",
+    "id": "01987cd53dc769521bb92bb6",
+    "split": "val",
+    "task": "classifier",
+    "className": "sin_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00765.jpg",
+    "id": "007772609fc77c9f036e162a",
+    "split": "test",
+    "task": "classifier",
+    "className": "con_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02191.jpg",
+    "id": "0174c9edb401e8ee3c64ccd0",
+    "split": "test",
+    "task": "classifier",
+    "className": "con_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01022.jpg",
+    "id": "01ad4401c24ea2a64edefaa0",
+    "split": "test",
+    "task": "classifier",
+    "className": "con_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00445.jpg",
+    "id": "0034c5fe05521ab8aeda7426",
+    "split": "test",
+    "task": "classifier",
+    "className": "sin_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00500.jpg",
+    "id": "00af9ea69aa041f0cb178bc4",
+    "split": "test",
+    "task": "classifier",
+    "className": "sin_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02020.jpg",
+    "id": "0114f4b3648d5f933cd0de81",
+    "split": "test",
+    "task": "classifier",
+    "className": "sin_casco"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01420.jpg",
+    "id": "001eada6b1a1c7b87985",
+    "split": "train",
+    "task": "detector"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01670.jpg",
+    "id": "004b39d41c32f044fc72",
+    "split": "train",
+    "task": "detector"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02126.jpg",
+    "id": "00533d04bd65e4ebc413",
+    "split": "train",
+    "task": "detector"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01720.jpg",
+    "id": "0014a6f32e2cd42a40c0",
+    "split": "val",
+    "task": "detector"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00135.jpg",
+    "id": "00413001eecb8e1b1a54",
+    "split": "val",
+    "task": "detector"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02097.jpg",
+    "id": "006ea14aba54e1f84eaf",
+    "split": "val",
+    "task": "detector"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00361.jpg",
+    "id": "008c4d1fe7c80920bd27",
+    "split": "test",
+    "task": "detector"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00351.jpg",
+    "id": "02572388cb8b69e60d6e",
+    "split": "test",
+    "task": "detector"
+  },
+  {
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02125.jpg",
+    "id": "025fd9974d4916b16128",
+    "split": "test",
+    "task": "detector"
+  }
+]

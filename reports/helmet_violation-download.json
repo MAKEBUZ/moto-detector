@@ -1,0 +1,20 @@
+{
+  "source": "helmet_violation",
+  "version": 1,
+  "checkedAtUtc": "2026-11-24T01:54:15.3643063Z",
+  "page": "https://universe.roboflow.com/imageprocessingworkspace/helmet-violation-detetction-ihuwu/dataset/1",
+  "license": "CC BY 4.0",
+  "declaredImages": 347,
+  "projectClasses": {
+    "0": 0,
+    "2": 0,
+    "cap": 1,
+    "helmet": 362,
+    "no_helmet": 181,
+    "motorcycle": 70,
+    "person": 145
+  },
+  "status": "downloaded",
+  "bytes": 17564701,
+  "sha256": "021a62054b9076dab68814d7f80c2a8e74aa855b95029104655a3dad03c01941"
+}

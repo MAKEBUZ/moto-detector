@@ -1,0 +1,204 @@
+{
+  "generatedAt": "2026-11-24T01:56:46.710Z",
+  "sources": {
+    "motorcycle_helmet_od": {
+      "version": 1,
+      "names": [
+        "With Helmet",
+        "Without Helmet"
+      ],
+      "images": 3607,
+      "labels": 3607,
+      "missingLabels": 0,
+      "emptyLabels": 1,
+      "originalBoxes": 15298,
+      "discardedBoxes": 0,
+      "matchingUnifiedLabels": 3607,
+      "unifiedMismatches": 0,
+      "splits": {
+        "train": 2519,
+        "val": 728,
+        "test": 360
+      }
+    },
+    "mapua_helmet": {
+      "version": 8,
+      "names": [
+        "rider",
+        "rider_full_face",
+        "rider_half_face",
+        "rider_helmet_invalid",
+        "rider_no_helmet"
+      ],
+      "images": 3749,
+      "labels": 3749,
+      "missingLabels": 0,
+      "emptyLabels": 397,
+      "originalBoxes": 5870,
+      "discardedBoxes": 1,
+      "matchingUnifiedLabels": 3749,
+      "unifiedMismatches": 0,
+      "splits": {
+        "train": 3150,
+        "val": 454,
+        "test": 145
+      }
+    },
+    "ldrago_helmet": {
+      "version": 10,
+      "names": [
+        "Helmet-Valid",
+        "Helmet-on-hand",
+        "No-Helmet-on-Rider",
+        "No-Helmet-on-passenger",
+        "Scarf",
+        "Turban"
+      ],
+      "images": 2258,
+      "labels": 2258,
+      "missingLabels": 0,
+      "emptyLabels": 681,
+      "originalBoxes": 4043,
+      "discardedBoxes": 0,
+      "matchingUnifiedLabels": 2258,
+      "unifiedMismatches": 0,
+      "splits": {
+        "train": 1694,
+        "val": 339,
+        "test": 225
+      }
+    },
+    "proper_helmet_usage": {
+      "version": 6,
+      "names": [
+        "Improper",
+        "Proper"
+      ],
+      "images": 950,
+      "labels": 950,
+      "missingLabels": 0,
+      "emptyLabels": 65,
+      "originalBoxes": 891,
+      "discardedBoxes": 0,
+      "matchingUnifiedLabels": 950,
+      "unifiedMismatches": 0,
+      "splits": {
+        "train": 760,
+        "val": 95,
+        "test": 95
+      }
+    },
+    "helmet_violation": {
+      "version": 1,
+      "names": [
+        "cap",
+        "helmet",
+        "motorcycle",
+        "no_helmet",
+        "person"
+      ],
+      "images": 347,
+      "labels": 347,
+      "missingLabels": 0,
+      "emptyLabels": 5,
+      "originalBoxes": 759,
+      "discardedBoxes": 145,
+      "matchingUnifiedLabels": 347,
+      "unifiedMismatches": 0,
+      "splits": {
+        "train": 243,
+        "val": 69,
+        "test": 35
+      }
+    }
+  },
+  "issues": [],
+  "exactDuplicateGroups": [
+    [
+      {
+        "file": "data/sources/originals/helmet_violation-v1/train/images/55_jpeg.rf.61cfa4bff75af42638da5fb31f1821fd.jpg",
+        "source": "helmet_violation",
+        "split": "train"
+      },
+      {
+        "file": "data/sources/originals/helmet_violation-v1/valid/images/55_jpeg.rf.a347b5e740cd600477a18a803e3a2b36.jpg",
+        "source": "helmet_violation",
+        "split": "val"
+      }
+    ],
+    [
+      {
+        "file": "data/sources/originals/helmet_violation-v1/train/images/6_jpg.rf.71801902c52d706feb1387f7b7b435aa.jpg",
+        "source": "helmet_violation",
+        "split": "train"
+      },
+      {
+        "file": "data/sources/originals/helmet_violation-v1/test/images/6_jpg.rf.4ddff867698db3843fad8a6710c9ae52.jpg",
+        "source": "helmet_violation",
+        "split": "test"
+      }
+    ],
+    [
+      {
+        "file": "data/sources/originals/helmet_violation-v1/train/images/gettyimages-1224204239-612x612_jpg.rf.ffe46ad234c827102165faf52a61622d.jpg",
+        "source": "helmet_violation",
+        "split": "train"
+      },
+      {
+        "file": "data/sources/originals/helmet_violation-v1/test/images/gettyimages-1224204239-612x612_jpg.rf.7b4d3f36313eeff66b54b99ed08095c7.jpg",
+        "source": "helmet_violation",
+        "split": "test"
+      }
+    ]
+  ],
+  "crossSplitDuplicateGroups": [
+    [
+      {
+        "file": "data/sources/originals/helmet_violation-v1/train/images/55_jpeg.rf.61cfa4bff75af42638da5fb31f1821fd.jpg",
+        "source": "helmet_violation",
+        "split": "train"
+      },
+      {
+        "file": "data/sources/originals/helmet_violation-v1/valid/images/55_jpeg.rf.a347b5e740cd600477a18a803e3a2b36.jpg",
+        "source": "helmet_violation",
+        "split": "val"
+      }
+    ],
+    [
+      {
+        "file": "data/sources/originals/helmet_violation-v1/train/images/6_jpg.rf.71801902c52d706feb1387f7b7b435aa.jpg",
+        "source": "helmet_violation",
+        "split": "train"
+      },
+      {
+        "file": "data/sources/originals/helmet_violation-v1/test/images/6_jpg.rf.4ddff867698db3843fad8a6710c9ae52.jpg",
+        "source": "helmet_violation",
+        "split": "test"
+      }
+    ],
+    [
+      {
+        "file": "data/sources/originals/helmet_violation-v1/train/images/gettyimages-1224204239-612x612_jpg.rf.ffe46ad234c827102165faf52a61622d.jpg",
+        "source": "helmet_violation",
+        "split": "train"
+      },
+      {
+        "file": "data/sources/originals/helmet_violation-v1/test/images/gettyimages-1224204239-612x612_jpg.rf.7b4d3f36313eeff66b54b99ed08095c7.jpg",
+        "source": "helmet_violation",
+        "split": "test"
+      }
+    ]
+  ],
+  "inferredSharedVideoGroups": {
+    "proper_helmet_usage/VID_20260404_153134_mp4": {
+      "train": 12,
+      "val": 4
+    },
+    "proper_helmet_usage/VID_20260404_222258_mp4": {
+      "train": 193,
+      "val": 23,
+      "test": 26
+    }
+  },
+  "issueCounts": {}
+}

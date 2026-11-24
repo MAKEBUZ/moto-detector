@@ -1,0 +1,13 @@
+{
+  "run": "detector-separate-v2-pilot-01",
+  "epoch": 18,
+  "task": "detector",
+  "image": "data\\prepared\\helmet-separate-v2\\images\\val\\Image_01474.jpg",
+  "predictions": [],
+  "association": {
+    "associations": [],
+    "occupancy_confirmed": false,
+    "counting_allowed": false,
+    "limitation": "Four-class association not implemented; old combined-box heuristic is incompatible."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "Ready for baseline training, not certified scene-independent evaluation or separate rider detection.",
+  "detectorImages": 2275,
+  "classifierCrops": 4106,
+  "sourceImagesUsed": 2298,
+  "groupsUsed": 93,
+  "exactCropDuplicateGroups": 0,
+  "crossSplitExactCropDuplicates": 0,
+  "knownRelationsCrossingSplits": 0,
+  "verifiedAtUtc": "2026-11-24T02:24:25.346Z"
+}

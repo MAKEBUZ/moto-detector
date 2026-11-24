@@ -1,0 +1,108 @@
+{
+  "valid": true,
+  "errors": [],
+  "human_review_asserted": true,
+  "training_ready": false,
+  "evaluation_scope": "annotation structure only; not model accuracy or dataset readiness",
+  "confirmed_links": [
+    {
+      "image_id": "Image_01416",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01416",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01416",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01426",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00419",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00419",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01140",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01140",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00033",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00033",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00051",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00051",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01670",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00880",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    }
+  ],
+  "input_sha256": "5037e88e6d3103166b566cdf81fbaf410e5704da6ccb420fe83401cce56b387b"
+}

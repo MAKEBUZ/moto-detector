@@ -1,0 +1,20 @@
+{
+  "version": "helmet-baseline-v1",
+  "seed": "helmet-baseline-v1-2026-11-23",
+  "inputsAndOutputs": {
+    "data/sources.lock.json": "3bdf54f361892c72860a5c43f9444eec995a1ec460cdda8776090d8679cb1ee0",
+    "reports/edgevision-manifest.jsonl": "aafbee75456e4f0539fb7125f37b6401f2af44392b448ccbf9d1814e64489e0a",
+    "reports/roboflow-manifest.jsonl": "aa5013c6a4084496fc18ae38720cb024dc7770c7e50dfa4bc96191ec89da226c",
+    "reports/roboflow-image-decoding.jsonl": "0e740fa6fca4e3c0806b69d2e8bae683e3be0f51c447ce4caf9692345f760429",
+    "reports/original-similarity-candidates.json": "371838217c5b31596300e99ad2f2e00a772ce2377ef5eec40a056f181a2edf2b",
+    "scripts/prepare-dataset.mjs": "029f78350e7a1a2c2ef3f7cbc3d96d3a1abdfe833c763295f1564008d5262dc0",
+    "scripts/dataset-utils.mjs": "b77a6d9e4771d798f0328f9be8f469cf2e40e2b3e3a46c16c85651cd3e3f95c0",
+    "scripts/export-classifier-crops.ps1": "bed1fd39eb36f3d433ebe4ed3f5128de8159cd2efefb623d3694de19331a11a6",
+    "data/prepared/helmet-baseline-v1/detector-manifest.jsonl": "0b615035d54aa9c32a406a892315c47d5fcb78fbc2b5697884fb3420d4539372",
+    "data/prepared/helmet-baseline-v1/classifier-manifest.jsonl": "996bcf52bbe6b86edeef5857526b7bd7d07981380764179b3b70551ca2810192",
+    "data/prepared/helmet-baseline-v1/classifier-export.jsonl": "d335b8c86217a1052c9f4b1e686db94e004b8e445e0458e899d5b980b8951a32",
+    "data/prepared/helmet-baseline-v1/groups.json": "2dc00da93fb23744b334805c5212a591742bb91efc44e5aeea0621285f498ce9",
+    "data/prepared/helmet-baseline-v1/training-contract.json": "e2dee0210f2fa72150aba329f39ae4d23809ec038df100c460f995518c3168ab"
+  },
+  "verifiedAtUtc": "2026-11-24T02:24:25.346Z"
+}

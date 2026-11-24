@@ -1,0 +1,15 @@
+{
+  "source": "motorcycle_helmet_od",
+  "version": 1,
+  "checkedAtUtc": "2026-11-24T01:53:59.9874311Z",
+  "page": "https://universe.roboflow.com/projectt/motorcycle-helmet-object-detection/dataset/1",
+  "license": "CC BY 4.0",
+  "declaredImages": 3607,
+  "projectClasses": {
+    "Without Helmet": 4900,
+    "With Helmet": 10398
+  },
+  "status": "downloaded",
+  "bytes": 213794466,
+  "sha256": "7269acecabc5fe045e56f8cdcd8a765a498b67859bca8104aafd4d4d8d1e348e"
+}

@@ -1,0 +1,11 @@
+data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00001.jpg
+data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets0_png_jpg.rf.93cc5d5bb70f4fdbb2f9a4a131727878.jpg
+data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets513_png_jpg.rf.71a17a1b19fb3c5a4bb4003dbf0ef565.jpg
+data/sources/originals/mapua_helmet-v8/train/images/image_100_jpg.rf.09bc71a5867ef8aada0db4720115ea0f.jpg
+data/sources/originals/mapua_helmet-v8/train/images/scraped1005_jpg.rf.a432a2f69fc714ca9c4ebf9995c3f8af.jpg
+data/sources/originals/ldrago_helmet-v10/train/images/07_jpg.rf.5f983d1bafabc796b25d4f0486ab1992.jpg
+data/sources/originals/ldrago_helmet-v10/train/images/VID-20240710-WA0001_mp4-0005_jpg.rf.e37563cdd156464d682657168e9c1dd4.jpg
+data/sources/originals/proper_helmet_usage-v6/train/images/Image-27925_jpg.rf.edc458b9e007bfc664a4e92c1c32269e.jpg
+data/sources/originals/proper_helmet_usage-v6/train/images/NullDataFor2mdModel_mp4-0000_jpg.rf.85f44e82744ea0a84cec7d3746a8abc7.jpg
+data/sources/originals/helmet_violation-v1/train/images/00000001_jpg.rf.4bfe940566bb1f2557eedb694eda125f.jpg
+data/sources/originals/helmet_violation-v1/train/images/81_jpg.rf.27d0e102ebcb2b5ca4240f6fe06438cf.jpg

@@ -1,0 +1,29 @@
+{
+  "initialization": "random",
+  "pretrained": false,
+  "initial_state_sha256": "bee4319d89fe9d87c13fded45354bdfdafa64f2034eec0b332eb160804347014",
+  "seed": 20261124,
+  "steps": 300,
+  "batch_size": 2,
+  "learning_rate": 0.0003,
+  "scheduler": null,
+  "augmentation": false,
+  "device": "cuda",
+  "sample_images": [
+    "Image_01306",
+    "Image_00051",
+    "Image_01737",
+    "Image_01785"
+  ],
+  "selection": "two largest source-scaled heads per class, distinct train images",
+  "all_four_classes_retained": true,
+  "validation_used": false,
+  "test_used": false,
+  "dataset_lock_sha256": "772d9156b324e1019e4dfd927b23be148a2420ab9ffcb69aa874ba9be4b5891f",
+  "source_sha256": {
+    "C:\\Users\\macab\\Desktop\\INTELIGENCI AARTIFICIAL - MOTOS\\training\\overfit_heads.py": "4765ba25e11f670fe3b442b2da90a4fc322cd3fbd8c498c4880c1de17437e47e",
+    "training\\models.py": "0b7d18aa2a8ad2affdfa08e3e651951b1d3577783a6a657f6ba77cb7bd02a11c",
+    "training\\data.py": "37dcd759fe20aab96b9da7627d84b77d8ae7cf7aa981e8c0ea62688c20e5aa9b",
+    "training\\metrics.py": "05dfb217ab77ac40adb5e8af5ce8cc1c2124611b5f52f541230d5ec0f0de3e1b"
+  }
+}

@@ -1,0 +1,966 @@
+{
+  "schema_version": 1,
+  "batch_id": "train-separate-v2-01",
+  "provenance": "existing_source_annotations_only; no model-generated labels",
+  "human_reviewed": true,
+  "training_ready": false,
+  "held_out_usage": "Train only; preserve existing groups and splits.",
+  "scenes": [
+    {
+      "image_id": "Image_01416",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01416.jpg",
+      "sha256": "4582991596677f3fe3b79ba4076e5e0b5e2ff7cd1bf88e5470eac9321a38a76f",
+      "width": 1200,
+      "height": 1600,
+      "split": "train",
+      "group_id": "10164a943516c06ac316",
+      "selection_reason": "small_heads",
+      "selection_features": {
+        "min_head_side_at_640": 4.800000000000001,
+        "max_context_iou": 0,
+        "mixed_source_labels": true
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            318.18,
+            800.11,
+            670.38,
+            1162.31
+          ],
+          "context_bbox": [
+            324,
+            722,
+            668,
+            1168
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            454,
+            743,
+            528,
+            814
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            447.25,
+            734.07,
+            649.36,
+            1031.24
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "m1",
+          "kind": "motorcycle",
+          "bbox": [
+            915.51,
+            699.05,
+            966.54,
+            750.08
+          ],
+          "context_bbox": [
+            918,
+            690,
+            964,
+            746
+          ],
+          "origin": {
+            "source_annotation_index": 2,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "m2",
+          "kind": "motorcycle",
+          "bbox": [
+            1034.58,
+            682.04,
+            1057.59,
+            711.06
+          ],
+          "context_bbox": [
+            1036,
+            682,
+            1059,
+            710
+          ],
+          "origin": {
+            "source_annotation_index": 3,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "m3",
+          "kind": "motorcycle",
+          "bbox": [
+            1077.6,
+            678.04,
+            1095.61,
+            707.06
+          ],
+          "context_bbox": [
+            1078,
+            678,
+            1092,
+            705
+          ],
+          "origin": {
+            "source_annotation_index": 4,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h1",
+          "kind": "head",
+          "bbox": [
+            934,
+            692,
+            947,
+            704
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 5,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o1",
+          "kind": "occupant",
+          "bbox": [
+            925.52,
+            689.05,
+            957.54,
+            738.07
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h2",
+          "kind": "head",
+          "bbox": [
+            372,
+            728,
+            427,
+            787
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 6,
+            "class": "NoHelmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o2",
+          "kind": "occupant",
+          "bbox": [
+            323.18,
+            706.06,
+            562.31,
+            1102.28
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": "m1",
+          "status": "confirmed"
+        },
+        {
+          "head_id": "h2",
+          "person_id": "o2",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": false
+    },
+    {
+      "image_id": "Image_01426",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01426.jpg",
+      "sha256": "535f4bd2a8263437f494dd42cdcc55dc6632cedba354648974953d58fbfb9ab4",
+      "width": 1200,
+      "height": 1600,
+      "split": "train",
+      "group_id": "433202cd35979b82a6ad",
+      "selection_reason": "small_heads",
+      "selection_features": {
+        "min_head_side_at_640": 6,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            396.22,
+            612,
+            456.26,
+            673.04
+          ],
+          "context_bbox": [
+            398,
+            600,
+            453,
+            672
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            415.23,
+            601,
+            430.24,
+            615
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            410.23,
+            600,
+            436.24,
+            656.03
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true
+    },
+    {
+      "image_id": "Image_00419",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00419.jpg",
+      "sha256": "0bf368bbb4a2ebaa81d4ed9f87252e08b80a9b1d564c76b431a76e62f734b1b8",
+      "width": 222,
+      "height": 350,
+      "split": "train",
+      "group_id": "fd8c6a1d7b2b73e230b5",
+      "selection_reason": "overlapping_contexts",
+      "selection_features": {
+        "min_head_side_at_640": 40,
+        "max_context_iou": 0.44676214196762143,
+        "mixed_source_labels": true
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            77.37,
+            123.59,
+            158.82,
+            302.58
+          ],
+          "context_bbox": [
+            49,
+            44,
+            195,
+            308
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            131,
+            45,
+            171,
+            88
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            117.91,
+            45.47,
+            193.06,
+            205.96
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h1",
+          "kind": "head",
+          "bbox": [
+            0,
+            54,
+            50,
+            135
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 2,
+            "class": "NoHelmet"
+          },
+          "review_status": "rejected"
+        },
+        {
+          "id": "o1",
+          "kind": "occupant",
+          "bbox": null,
+          "role": "unknown",
+          "review_status": "rejected"
+        },
+        {
+          "id": "h2",
+          "kind": "head",
+          "bbox": [
+            78,
+            52,
+            124,
+            102
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 3,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o2",
+          "kind": "occupant",
+          "bbox": [
+            64.05,
+            59.72,
+            150.12,
+            179.67
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "m1",
+          "kind": "motorcycle",
+          "bbox": [
+            113.47,
+            44.55,
+            193.99,
+            255.75
+          ],
+          "context_bbox": [
+            113,
+            45,
+            195,
+            255
+          ],
+          "origin": {
+            "source_annotation_index": 4,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m1",
+          "status": "confirmed"
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": null,
+          "status": "rejected"
+        },
+        {
+          "head_id": "h2",
+          "person_id": "o2",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": false
+    },
+    {
+      "image_id": "Image_01140",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01140.jpg",
+      "sha256": "0e140a5a07f8a362696a2ac77108188610a46bde176feefbdec0da2dd9837b07",
+      "width": 3072,
+      "height": 4096,
+      "split": "train",
+      "group_id": "de8edefa807ad7260360",
+      "selection_reason": "overlapping_contexts",
+      "selection_features": {
+        "min_head_side_at_640": 15.15625,
+        "max_context_iou": 0.4259313327433144,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            1047.63,
+            2452.99,
+            1549.67,
+            2893.56
+          ],
+          "context_bbox": [
+            1185,
+            2351,
+            1815,
+            2935
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "m1",
+          "kind": "motorcycle",
+          "bbox": [
+            1211.56,
+            2534.96,
+            1754.58,
+            2939.67
+          ],
+          "context_bbox": [
+            1051,
+            2375,
+            1540,
+            2901
+          ],
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            1339,
+            2378,
+            1453,
+            2475
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 2,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            1221.8,
+            2365.9,
+            1493.32,
+            2719.38
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h1",
+          "kind": "head",
+          "bbox": [
+            1506,
+            2351,
+            1636,
+            2466
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 3,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o1",
+          "kind": "occupant",
+          "bbox": [
+            1424.16,
+            2353.09,
+            1716.16,
+            2796.22
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": "m1",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true
+    },
+    {
+      "image_id": "Image_00033",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00033.jpg",
+      "sha256": "ad40ff158655d6f7b4be289b31f690dabb76a375eb6d054a7338340e0aa3e1f5",
+      "width": 2752,
+      "height": 2399,
+      "split": "train",
+      "group_id": "7eac82990d19f8586db6",
+      "selection_reason": "mixed_helmet_labels",
+      "selection_features": {
+        "min_head_side_at_640": 73.72093023255813,
+        "max_context_iou": 0,
+        "mixed_source_labels": true
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            84.9,
+            634.87,
+            2583.74,
+            2385.8
+          ],
+          "context_bbox": [
+            80,
+            84,
+            2574,
+            2399
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            812,
+            87,
+            1283,
+            550
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            803.12,
+            91,
+            1890.77,
+            1961.27
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h1",
+          "kind": "head",
+          "bbox": [
+            184,
+            311,
+            573,
+            628
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 2,
+            "class": "NoHelmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o1",
+          "kind": "occupant",
+          "bbox": [
+            100.96,
+            253.93,
+            1307.93,
+            2041.58
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true
+    },
+    {
+      "image_id": "Image_00051",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00051.jpg",
+      "sha256": "6fef0a44f3a2ef8f811c6a3249ec2e8fee101b1854e2091819c66333d035e87b",
+      "width": 2566,
+      "height": 2647,
+      "split": "train",
+      "group_id": "47452168693860cd0a91",
+      "selection_reason": "mixed_helmet_labels",
+      "selection_features": {
+        "min_head_side_at_640": 92.8447298828863,
+        "max_context_iou": 0,
+        "mixed_source_labels": true
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            72.74,
+            722.26,
+            2456.18,
+            2527.61
+          ],
+          "context_bbox": [
+            57,
+            86,
+            2566,
+            2532
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            1028,
+            161,
+            1573,
+            706
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            1016.28,
+            153.28,
+            2079.62,
+            2266.65
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h1",
+          "kind": "head",
+          "bbox": [
+            569,
+            138,
+            953,
+            551
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 2,
+            "class": "NoHelmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o1",
+          "kind": "occupant",
+          "bbox": [
+            134.79,
+            144.72,
+            1294.42,
+            1639.91
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true
+    },
+    {
+      "image_id": "Image_01670",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01670.jpg",
+      "sha256": "135cf9be235c0f4a2910dbe87ec21e37305d8b28e73070c3a2a0a101e6568979",
+      "width": 631,
+      "height": 886,
+      "split": "train",
+      "group_id": "a761db8d4469abda0795",
+      "selection_reason": "baseline_examples",
+      "selection_features": {
+        "min_head_side_at_640": 86.68171557562077,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            41.56,
+            261.3,
+            574.53,
+            842.68
+          ],
+          "context_bbox": [
+            42,
+            45,
+            576,
+            844
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            165,
+            49,
+            285,
+            180
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "NoHelmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            94.18,
+            42.44,
+            498.77,
+            733.77
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true
+    },
+    {
+      "image_id": "Image_00880",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00880.jpg",
+      "sha256": "bbdb7d777788479560698d640e276dc9a3127ee5628eecfa332ae78c6cfe5170",
+      "width": 247,
+      "height": 370,
+      "split": "train",
+      "group_id": "8b6f4966945307dd89db",
+      "selection_reason": "baseline_examples",
+      "selection_features": {
+        "min_head_side_at_640": 43,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            61.37,
+            99.61,
+            170.94,
+            302.06
+          ],
+          "context_bbox": [
+            63,
+            61,
+            171,
+            301
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            92,
+            61,
+            135,
+            106
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            61.78,
+            63.98,
+            167.64,
+            226.88
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true
+    }
+  ],
+  "reviewer": "Alejandro",
+  "reviewed_at": "2026-11-24T04:26:43.587Z"
+}

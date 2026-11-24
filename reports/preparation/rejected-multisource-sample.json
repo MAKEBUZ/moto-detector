@@ -1,0 +1,308 @@
+[
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01963.jpg",
+    "className": "con_casco",
+    "split": "train",
+    "id": "006a997eeea6d84338a453e3"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02317.jpg",
+    "className": "con_casco",
+    "split": "train",
+    "id": "008d54db7ba1d22362dfaa90"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00506.jpg",
+    "className": "con_casco",
+    "split": "train",
+    "id": "00d8f1284342b75c6acef877"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00879.jpg",
+    "className": "sin_casco",
+    "split": "train",
+    "id": "000f9553e87b31604410a884"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00081.jpg",
+    "className": "sin_casco",
+    "split": "train",
+    "id": "00178fb0c61790005f1a73d7"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02134.jpg",
+    "className": "sin_casco",
+    "split": "train",
+    "id": "00a1ccf840df424f8b5d3773"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets690_png_jpg.rf.cd0572e5352a7899bec5e06f1c0b16f7.jpg",
+    "className": "con_casco",
+    "split": "train",
+    "id": "0004e669dc592c4bb73c1965"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets624_png_jpg.rf.556f243e8fa319444c163aa3ed3c247f.jpg",
+    "className": "con_casco",
+    "split": "train",
+    "id": "001b24c15c8111e5461e0edf"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets99_png_jpg.rf.c58e142e2bba1141fc0bc5e226584aa6.jpg",
+    "className": "con_casco",
+    "split": "train",
+    "id": "001c305729e4c51bb46d2f09"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets570_png_jpg.rf.361c95b15dc393d1963b03d14f921648.jpg",
+    "className": "sin_casco",
+    "split": "train",
+    "id": "000630f5484ea465c6dcf94a"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets353_png_jpg.rf.3fd0f755728bf3aac20f483b47433038.jpg",
+    "className": "sin_casco",
+    "split": "train",
+    "id": "001c88369dc8aaa0e1737076"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets1_png_jpg.rf.2ad65d98129c6c3d6094b961ae9526dc.jpg",
+    "className": "sin_casco",
+    "split": "train",
+    "id": "0044ec06b81e3a259e092156"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01093.jpg",
+    "className": "con_casco",
+    "split": "val",
+    "id": "035baed6563bd3c664ffef62"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01088.jpg",
+    "className": "con_casco",
+    "split": "val",
+    "id": "04a75f17829e30fa4be7aff5"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01895.jpg",
+    "className": "con_casco",
+    "split": "val",
+    "id": "052f5f9558d7e9c01332480e"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01879.jpg",
+    "className": "sin_casco",
+    "split": "val",
+    "id": "00d6c70eacf46c6cbcc1fd83"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01333.jpg",
+    "className": "sin_casco",
+    "split": "val",
+    "id": "00f7ccf73ec1701c2f09f997"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00551.jpg",
+    "className": "sin_casco",
+    "split": "val",
+    "id": "01987cd53dc769521bb92bb6"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/test/images/BikesHelmets251_png_jpg.rf.15f0e23c97c7b0cb570f0a06d05fcdd3.jpg",
+    "className": "con_casco",
+    "split": "val",
+    "id": "00151a4d2cea7340d33638f7"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/valid/images/BikesHelmets336_png_jpg.rf.82183c557615661aa4dbf0ff95a28b96.jpg",
+    "className": "con_casco",
+    "split": "val",
+    "id": "004f25abab6758f23aae8f29"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets336_png_jpg.rf.40bcb9ecfdcd4f1a6e577f17a3da9dab.jpg",
+    "className": "con_casco",
+    "split": "val",
+    "id": "00565be8671753a10903fa35"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets689_png_jpg.rf.e843793c555fa24d353fc80391a01bf6.jpg",
+    "className": "sin_casco",
+    "split": "val",
+    "id": "0010df48106f30f56a3be3c3"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets154_png_jpg.rf.674313fcdca62c73e84697e72c831c2c.jpg",
+    "className": "sin_casco",
+    "split": "val",
+    "id": "00ba06dd7b96931661e92376"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/valid/images/BikesHelmets251_png_jpg.rf.3c778d801265d849bd67e3395dae5a4a.jpg",
+    "className": "sin_casco",
+    "split": "val",
+    "id": "00cae81434c1eb29ef0e2930"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00765.jpg",
+    "className": "con_casco",
+    "split": "test",
+    "id": "007772609fc77c9f036e162a"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02191.jpg",
+    "className": "con_casco",
+    "split": "test",
+    "id": "0174c9edb401e8ee3c64ccd0"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01022.jpg",
+    "className": "con_casco",
+    "split": "test",
+    "id": "01ad4401c24ea2a64edefaa0"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00445.jpg",
+    "className": "sin_casco",
+    "split": "test",
+    "id": "0034c5fe05521ab8aeda7426"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00500.jpg",
+    "className": "sin_casco",
+    "split": "test",
+    "id": "00af9ea69aa041f0cb178bc4"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02020.jpg",
+    "className": "sin_casco",
+    "split": "test",
+    "id": "0114f4b3648d5f933cd0de81"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets615_png_jpg.rf.dd52fe9c087fa8f5f0f5ba4bca87dacf.jpg",
+    "className": "con_casco",
+    "split": "test",
+    "id": "005de2bab39df3c3dd3c53fb"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets121_png_jpg.rf.6d55bba7d7872ed8dd27f8a273dd7e99.jpg",
+    "className": "con_casco",
+    "split": "test",
+    "id": "005ed44a903e23e6cc70148f"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/train/images/BikesHelmets100_png_jpg.rf.7b8f212663a0599133212ddf8c077587.jpg",
+    "className": "con_casco",
+    "split": "test",
+    "id": "00649afed60dbb741ad161e9"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/valid/images/BikesHelmets565_png_jpg.rf.83a16eb96d62b7e6cf24e8fa11dd4a37.jpg",
+    "className": "sin_casco",
+    "split": "test",
+    "id": "001b03f5c96876333bb8dcdb"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/valid/images/BikesHelmets650_png_jpg.rf.688814491e8120116bcc385167db70e8.jpg",
+    "className": "sin_casco",
+    "split": "test",
+    "id": "00c3128af2345b92f3ffc62e"
+  },
+  {
+    "task": "classifier",
+    "sourceImage": "data/sources/originals/motorcycle_helmet_od-v1/valid/images/BikesHelmets639_png_jpg.rf.b4f2146c5708f1a52937a107a5399678.jpg",
+    "className": "sin_casco",
+    "split": "test",
+    "id": "01020d84a111949559c3e071"
+  },
+  {
+    "task": "detector",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01420.jpg",
+    "split": "train",
+    "id": "001eada6b1a1c7b87985"
+  },
+  {
+    "task": "detector",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01670.jpg",
+    "split": "train",
+    "id": "004b39d41c32f044fc72"
+  },
+  {
+    "task": "detector",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02126.jpg",
+    "split": "train",
+    "id": "00533d04bd65e4ebc413"
+  },
+  {
+    "task": "detector",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01720.jpg",
+    "split": "val",
+    "id": "0014a6f32e2cd42a40c0"
+  },
+  {
+    "task": "detector",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00135.jpg",
+    "split": "val",
+    "id": "00413001eecb8e1b1a54"
+  },
+  {
+    "task": "detector",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02097.jpg",
+    "split": "val",
+    "id": "006ea14aba54e1f84eaf"
+  },
+  {
+    "task": "detector",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00361.jpg",
+    "split": "test",
+    "id": "008c4d1fe7c80920bd27"
+  },
+  {
+    "task": "detector",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00351.jpg",
+    "split": "test",
+    "id": "02572388cb8b69e60d6e"
+  },
+  {
+    "task": "detector",
+    "sourceImage": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02125.jpg",
+    "split": "test",
+    "id": "025fd9974d4916b16128"
+  }
+]

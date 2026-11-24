@@ -1,0 +1,366 @@
+[
+  {
+    "id": "8a9e5f9e5c30191cc83c54bd",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00146.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.9993264675140381
+  },
+  {
+    "id": "711a4192b9d5c8ad4e5279c8",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01898.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.9968112111091614
+  },
+  {
+    "id": "543597d703f1878b551c2fe1",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01575.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.9950838685035706
+  },
+  {
+    "id": "9993918ed2f581d2949b1726",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02095.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.9930399656295776
+  },
+  {
+    "id": "08d674021ee4e09c31044c75",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01755.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.991439700126648
+  },
+  {
+    "id": "ba471e3edeeec102317574e2",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01807.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.9890276193618774
+  },
+  {
+    "id": "d2fe3fa1dec2c4d1333a1b8a",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01897.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.9800702929496765
+  },
+  {
+    "id": "a34719407ad88706ee5f1f17",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01810.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.9674068093299866
+  },
+  {
+    "id": "be48ebcbd40ce8eba33d9ae4",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02298.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.9609986543655396
+  },
+  {
+    "id": "6509252251ccb887508072e0",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01763.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.9533913135528564
+  },
+  {
+    "id": "3e22563bfeda7f7063d9015e",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01334.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.9528328776359558
+  },
+  {
+    "id": "894d9df87a8047a97a538a76",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01719.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.9313654899597168
+  },
+  {
+    "id": "ef383743e920d115af323baf",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00156.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.9257436990737915
+  },
+  {
+    "id": "1baca37ce79054bca866b987",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01348.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.9175942540168762
+  },
+  {
+    "id": "ef2a32a3d13c6a141aa8b81d",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00731.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.9156910181045532
+  },
+  {
+    "id": "05807584ee7cb101feba28c9",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01900.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.9149051308631897
+  },
+  {
+    "id": "71a4ea9d0a664ab17bc6fdf4",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01562.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.8977092504501343
+  },
+  {
+    "id": "178602b36b88946725cff4aa",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00126.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.8882978558540344
+  },
+  {
+    "id": "bc5433016a1f7698c19c6aa9",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01887.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.8576087355613708
+  },
+  {
+    "id": "31737c97ac208a744b784a50",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00737.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.8570072650909424
+  },
+  {
+    "id": "da76193f649eab80a76a3c51",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01823.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.8547896146774292
+  },
+  {
+    "id": "64899066b122703a6bdc2a97",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01568.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.8349999189376831
+  },
+  {
+    "id": "fd3b56192444794856063137",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01759.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.8288896679878235
+  },
+  {
+    "id": "5a1969c437b6512e154011dd",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00142.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.8262599110603333
+  },
+  {
+    "id": "57627d2b852fabdedca25fb2",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00169.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.8146747946739197
+  },
+  {
+    "id": "49e9393a05b2e224548a00ea",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02285.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.7988345623016357
+  },
+  {
+    "id": "3b8f128cabe0be5d7d57f468",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01890.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.7903079390525818
+  },
+  {
+    "id": "91db565173dc459644fe7e67",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00152.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.7870610356330872
+  },
+  {
+    "id": "ac79381f2e076810053fc10f",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02099.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.7814376950263977
+  },
+  {
+    "id": "c138138610b60cb2b4b66826",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01899.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.7762706279754639
+  },
+  {
+    "id": "240aef50a90d9c77a3e02c6a",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00137.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.7581850290298462
+  },
+  {
+    "id": "c956d4f4a3b70726e4a5b0e0",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00129.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.7363563179969788
+  },
+  {
+    "id": "331cd9091dce632230ffc675",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01451.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.7329279780387878
+  },
+  {
+    "id": "f6d622798292523ac64f7fc9",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01775.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.7240609526634216
+  },
+  {
+    "id": "54d5d346bf950b36ef1f7807",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01806.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.693347156047821
+  },
+  {
+    "id": "6773d717773bfb7c5d74302e",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00131.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.656122624874115
+  },
+  {
+    "id": "f6e3c77296db94fcbc744086",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01810.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.6459144949913025
+  },
+  {
+    "id": "7729fd2c2c9febd803178e14",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02371.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.6175880432128906
+  },
+  {
+    "id": "dbf992b8e7a58b113ac4c4cb",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01565.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.6140705943107605
+  },
+  {
+    "id": "843ccdcea0cf7b6b6df6054e",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01815.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.6050108075141907
+  },
+  {
+    "id": "4c72374bd1aa303cda5159ab",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00169.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.5971802473068237
+  },
+  {
+    "id": "268e050efd5919a21d91b614",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01331.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.5966552495956421
+  },
+  {
+    "id": "6e6cc993b459df93f3c2b218",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01725.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.5918408632278442
+  },
+  {
+    "id": "2761996778ffb906d22d67a4",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01571.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.5834001302719116
+  },
+  {
+    "id": "2db3c818a4a67be859a087c1",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01346.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.5791186094284058
+  },
+  {
+    "id": "38d06c1b4cff484c103ecdbc",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00140.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.5770224928855896
+  },
+  {
+    "id": "9f77243cee2a44409c09c8b8",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00130.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.5446481108665466
+  },
+  {
+    "id": "e349e2399c48a6362e3cdb48",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01806.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.5329715609550476
+  },
+  {
+    "id": "7a0e2573ca9b8815fac6e742",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00554.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.5122007131576538
+  },
+  {
+    "id": "1102478347f987e64b52fefd",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01346.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.5097888112068176
+  },
+  {
+    "id": "f1b3818a6b67e53c2d6b83ce",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00168.jpg",
+    "true_class": 0,
+    "predicted_class": 1,
+    "confidence": 0.5038532614707947
+  },
+  {
+    "id": "d09f1e122c848988c30faf72",
+    "original": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00738.jpg",
+    "true_class": 1,
+    "predicted_class": 0,
+    "confidence": 0.5034072995185852
+  }
+]

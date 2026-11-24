@@ -1,0 +1,33 @@
+{
+  "task": "classifier",
+  "epochs": 15,
+  "batch_size": 64,
+  "workers": 2,
+  "limit_train": null,
+  "limit_val": null,
+  "run": "classifier-baseline",
+  "dataset": "data/prepared/helmet-baseline-v1",
+  "seed": 20261123,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "torch": "2.11.0+cu128",
+  "torchvision": "0.26.0+cu128",
+  "initialization": "random",
+  "pretrained": false,
+  "initial_state_sha256": "4803c5204e9530600c0f7a006e0635d1453e89100e5f8ddfe19f4fdbab180315",
+  "parameters": 294258,
+  "train_examples": 2889,
+  "validation_examples": 628,
+  "test_used": false,
+  "learning_rate": 0.001,
+  "pilot": false,
+  "source_sha256": {
+    "training\\data.py": "177157aaf311fb45b93f987e555a46ad6d382604514dff43cb876b1147a653f9",
+    "training\\metrics.py": "72f9fe3086422de1ba304bfc3b09d4ac685f142666381602ebc9ad2edfd543af",
+    "training\\models.py": "ffea7361585316cbb20377f68dbaf217bcf31ecf9c2b9c83bad2b13181d21019",
+    "training\\predict.py": "4cb361b05f7f8b0da610fcca30c1aeb6f7f2aeb1a1fd7fe47f5e9f29b0bbcc0f",
+    "training\\test_metrics.py": "9ee8c5c2de137ec4f18a9a76b93b7caff5d179d72cd2e8754f486759d440e65b",
+    "training\\train.py": "59ff8e176c474b70e4ab4b088c43f594c2b592c7ee3188bc30d2071f4277e077"
+  },
+  "dataset_lock_sha256": "1a84a23a125f4c9cba5b454acdf25db45f2cb6058d5fc9694bf407053d5448a1"
+}

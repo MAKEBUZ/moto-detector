@@ -1,0 +1,20 @@
+{
+  "source": "ldrago_helmet",
+  "version": 10,
+  "checkedAtUtc": "2026-11-24T01:54:00.1534149Z",
+  "page": "https://universe.roboflow.com/ldrago/helmet-elr7r/dataset/10",
+  "license": "CC BY 4.0",
+  "declaredImages": 2258,
+  "projectClasses": {
+    "Scarf": 71,
+    "Helmet-on-hand": 135,
+    "No-Helmet-on-Rider": 662,
+    "No-Helmet-on-passenger": 251,
+    "Helmet-Valid": 2843,
+    "shirt": 1,
+    "Turban": 82
+  },
+  "status": "downloaded",
+  "bytes": 149694522,
+  "sha256": "27e827df7355b2f26a82f31f6ad6eadeb3721149a7a7817ac39f48f2ccf2a802"
+}

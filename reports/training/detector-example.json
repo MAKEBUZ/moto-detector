@@ -1,0 +1,38 @@
+{
+  "run": "detector-baseline",
+  "epoch": 5,
+  "task": "detector",
+  "image": "C:\\Users\\macab\\Desktop\\INTELIGENCI AARTIFICIAL - MOTOS\\data\\prepared\\helmet-baseline-v1\\detector\\images\\val\\0014a6f32e2cd42a40c0.jpg",
+  "predictions": [
+    {
+      "class": "moto_con_ocupante",
+      "score": 0.9951445460319519,
+      "box": [
+        21.338420867919922,
+        30.116092681884766,
+        334.5760192871094,
+        367.3468017578125
+      ]
+    },
+    {
+      "class": "cabeza_sin_casco",
+      "score": 0.897042453289032,
+      "box": [
+        110.30966186523438,
+        23.247865676879883,
+        161.0724639892578,
+        78.83222961425781
+      ]
+    },
+    {
+      "class": "cabeza_sin_casco",
+      "score": 0.8103209733963013,
+      "box": [
+        153.7357940673828,
+        53.44921112060547,
+        210.9085693359375,
+        114.40538787841797
+      ]
+    }
+  ]
+}

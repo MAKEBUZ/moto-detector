@@ -1,0 +1,360 @@
+[
+  {
+    "image_id": "0014a6f32e2cd42a40c0",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01720.jpg",
+    "annotated_preview": "0014a6f32e2cd42a40c0.jpg",
+    "proposals": [
+      {
+        "head_index": 1,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.203892,
+            "head_containment": 0.876457
+          }
+        ]
+      },
+      {
+        "head_index": 2,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.034159,
+            "head_containment": 1.0
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "00413001eecb8e1b1a54",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00135.jpg",
+    "annotated_preview": "00413001eecb8e1b1a54.jpg",
+    "proposals": [
+      {
+        "head_index": 0,
+        "motorcycle_index": 1,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 1,
+            "cost": 0.110851,
+            "head_containment": 0.975467
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "006ea14aba54e1f84eaf",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02097.jpg",
+    "annotated_preview": "006ea14aba54e1f84eaf.jpg",
+    "proposals": [
+      {
+        "head_index": 0,
+        "motorcycle_index": 1,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 1,
+            "cost": 0.312639,
+            "head_containment": 1.0
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "009fc4d4303ff0658c6c",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02354.jpg",
+    "annotated_preview": "009fc4d4303ff0658c6c.jpg",
+    "proposals": [
+      {
+        "head_index": 1,
+        "motorcycle_index": null,
+        "status": "conflicting_head",
+        "candidates": []
+      },
+      {
+        "head_index": 2,
+        "motorcycle_index": null,
+        "status": "conflicting_head",
+        "candidates": []
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "52c5c909b76ab8b71595",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02285.jpg",
+    "annotated_preview": "52c5c909b76ab8b71595.jpg",
+    "proposals": [
+      {
+        "head_index": 3,
+        "motorcycle_index": null,
+        "status": "unassigned",
+        "candidates": []
+      },
+      {
+        "head_index": 4,
+        "motorcycle_index": 1,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 1,
+            "cost": 0.231222,
+            "head_containment": 0.810356
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "00ba9a48531648524b6c",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01461.jpg",
+    "annotated_preview": "00ba9a48531648524b6c.jpg",
+    "proposals": [],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "cbd75d30aec5b5f01763",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01707.jpg",
+    "annotated_preview": "cbd75d30aec5b5f01763.jpg",
+    "proposals": [
+      {
+        "head_index": 2,
+        "motorcycle_index": null,
+        "status": "ambiguous",
+        "candidates": [
+          {
+            "motorcycle_index": 1,
+            "cost": 0.064938,
+            "head_containment": 1.0
+          },
+          {
+            "motorcycle_index": 0,
+            "cost": 0.079369,
+            "head_containment": 1.0
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "9f7a0f1b39e62c008d53",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00126.jpg",
+    "annotated_preview": "9f7a0f1b39e62c008d53.jpg",
+    "proposals": [
+      {
+        "head_index": 2,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.116846,
+            "head_containment": 1.0
+          }
+        ]
+      },
+      {
+        "head_index": 4,
+        "motorcycle_index": 1,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 1,
+            "cost": 0.129162,
+            "head_containment": 0.858468
+          }
+        ]
+      },
+      {
+        "head_index": 7,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.122929,
+            "head_containment": 1.0
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "656048cdb721fef03fb0",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00727.jpg",
+    "annotated_preview": "656048cdb721fef03fb0.jpg",
+    "proposals": [
+      {
+        "head_index": 3,
+        "motorcycle_index": 2,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 2,
+            "cost": 0.105132,
+            "head_containment": 1.0
+          }
+        ]
+      },
+      {
+        "head_index": 4,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.0805,
+            "head_containment": 1.0
+          }
+        ]
+      },
+      {
+        "head_index": 5,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.051696,
+            "head_containment": 1.0
+          }
+        ]
+      },
+      {
+        "head_index": 6,
+        "motorcycle_index": 1,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 1,
+            "cost": 0.100764,
+            "head_containment": 1.0
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "aace55bd23191f174616",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00741.jpg",
+    "annotated_preview": "aace55bd23191f174616.jpg",
+    "proposals": [
+      {
+        "head_index": 5,
+        "motorcycle_index": 2,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 2,
+            "cost": 0.121941,
+            "head_containment": 0.969838
+          }
+        ]
+      },
+      {
+        "head_index": 6,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.046397,
+            "head_containment": 1.0
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "4d1934b9e4711598b7f6",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01465.jpg",
+    "annotated_preview": "4d1934b9e4711598b7f6.jpg",
+    "proposals": [
+      {
+        "head_index": 3,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.11231,
+            "head_containment": 0.952734
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  },
+  {
+    "image_id": "b6052c4c8378f06e51ed",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00158.jpg",
+    "annotated_preview": "b6052c4c8378f06e51ed.jpg",
+    "proposals": [
+      {
+        "head_index": 1,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.18738,
+            "head_containment": 0.847808
+          }
+        ]
+      },
+      {
+        "head_index": 3,
+        "motorcycle_index": 0,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 0,
+            "cost": 0.086385,
+            "head_containment": 0.92403
+          }
+        ]
+      },
+      {
+        "head_index": 4,
+        "motorcycle_index": 5,
+        "status": "candidate_requires_review",
+        "candidates": [
+          {
+            "motorcycle_index": 5,
+            "cost": 0.094023,
+            "head_containment": 1.0
+          }
+        ]
+      }
+    ],
+    "reviewed": false,
+    "human_links": null
+  }
+]

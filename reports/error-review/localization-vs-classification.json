@@ -1,0 +1,21 @@
+{
+  "ground_truth_heads": 623,
+  "localized_heads": 356,
+  "unmatched_predictions": 58,
+  "missed_heads": 267,
+  "wrong_helmet_class_after_localization": 32,
+  "class_agnostic_head_recall": 0.5714285714285714,
+  "confusion_among_localized_heads_true_rows": [
+    [
+      110,
+      17
+    ],
+    [
+      15,
+      214
+    ]
+  ],
+  "threshold": 0.5,
+  "iou": 0.5,
+  "test_used": false
+}

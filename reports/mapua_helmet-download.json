@@ -1,0 +1,17 @@
+{
+  "source": "mapua_helmet",
+  "version": 8,
+  "checkedAtUtc": "2026-11-24T01:53:59.9876284Z",
+  "page": "https://universe.roboflow.com/mapua-university/motorcycle-helmet-detection-dataset/dataset/8",
+  "license": "CC BY 4.0",
+  "declaredImages": 3749,
+  "projectClasses": {
+    "rider_helmet_invalid": 240,
+    "rider_no_helmet": 569,
+    "rider_full_face": 964,
+    "rider_half_face": 945
+  },
+  "status": "downloaded",
+  "bytes": 200346823,
+  "sha256": "4c8ede1c5b8cdb8a1efc561acf068564cd4d457c9d466a1bff8e32c94c8f81bd"
+}

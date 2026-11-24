@@ -1,0 +1,15 @@
+{
+  "source": "proper_helmet_usage",
+  "version": 6,
+  "checkedAtUtc": "2026-11-24T01:54:12.9549541Z",
+  "page": "https://universe.roboflow.com/duusuuuu/proper-helmet-usage/dataset/6",
+  "license": "CC BY 4.0",
+  "declaredImages": 950,
+  "projectClasses": {
+    "Proper": 437,
+    "Improper": 483
+  },
+  "status": "downloaded",
+  "bytes": 52008333,
+  "sha256": "f8f059fdbb2b402237e24f1ebea0da3bcd404e0e611dff2c0306119ac16e4d21"
+}
