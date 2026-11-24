@@ -1,0 +1,88 @@
+{
+  "split": "test",
+  "images": 8,
+  "excluded": [],
+  "classes": [
+    "motocicleta",
+    "persona_ocupante",
+    "cabeza_con_casco",
+    "cabeza_sin_casco"
+  ],
+  "metrics": {
+    "map50": 0.26551155251736686,
+    "per_class": [
+      {
+        "class_id": 0,
+        "ap50": 0.3481848204489982,
+        "ground_truth_boxes": 10
+      },
+      {
+        "class_id": 1,
+        "ap50": 0.2584158450660139,
+        "ground_truth_boxes": 11
+      },
+      {
+        "class_id": 2,
+        "ap50": 0.3811881188118812,
+        "ground_truth_boxes": 4
+      },
+      {
+        "class_id": 3,
+        "ap50": 0.07425742574257425,
+        "ground_truth_boxes": 7
+      }
+    ],
+    "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+  },
+  "operating_point": [
+    {
+      "class_id": 0,
+      "tp": 3,
+      "fp": 1,
+      "fn": 7,
+      "precision": 0.75,
+      "recall": 0.3
+    },
+    {
+      "class_id": 1,
+      "tp": 2,
+      "fp": 4,
+      "fn": 9,
+      "precision": 0.3333333333333333,
+      "recall": 0.18181818181818182
+    },
+    {
+      "class_id": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.5,
+      "recall": 0.25
+    },
+    {
+      "class_id": 3,
+      "tp": 0,
+      "fp": 1,
+      "fn": 7,
+      "precision": 0.0,
+      "recall": 0.0
+    }
+  ],
+  "confidence_threshold": 0.5,
+  "matching_iou": 0.5,
+  "head_rpn_coverage": {
+    "covered": 7,
+    "total": 11
+  },
+  "protocol_sha256": "a645b5935c5e44912920c48d1cdfdf2f308484fecc0ece35538cd515de1e2f2d",
+  "checkpoint_sha256": "b88abb7c6e02691b8cd5610573caaaa0d2b9fb93ab92b6ecb44743dfda8c748a",
+  "review_sha256": "0d9e567e2c9c729760b38305de0d31debadad3b1e4dcc3a6aa287e772dbd5f5b",
+  "source_sha256": {
+    "C:\\Users\\macab\\Desktop\\INTELIGENCI AARTIFICIAL - MOTOS\\training\\evaluate_reserved.py": "6b0da59fd795081e29c1082ab2912d0f0cbb492ab68814955ec6a5c1f545cf40",
+    "training\\models.py": "1e48572bb3b6432836e5b8d1dc30ccbf55ff34506afc8872fa3f194df988e3cb",
+    "training\\metrics.py": "05dfb217ab77ac40adb5e8af5ce8cc1c2124611b5f52f541230d5ec0f0de3e1b"
+  },
+  "training_performed": false,
+  "thresholds_tuned": false,
+  "limitation": "Small selected reserved subset, not representative traffic; now evaluated, not untouched test."
+}

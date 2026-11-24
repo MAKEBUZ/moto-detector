@@ -1,0 +1,87 @@
+{
+  "valid": true,
+  "errors": [],
+  "human_review_asserted": true,
+  "training_ready": false,
+  "evaluation_scope": "annotation structure only; not model accuracy or dataset readiness",
+  "confirmed_links": [
+    {
+      "image_id": "Image_00363",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00816",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00762",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02125",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02125",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02125",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m2",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01938",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02015",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02015",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00835",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01016",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    }
+  ],
+  "input_sha256": "0d9e567e2c9c729760b38305de0d31debadad3b1e4dcc3a6aa287e772dbd5f5b"
+}

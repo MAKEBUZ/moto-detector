@@ -1,0 +1,307 @@
+{
+  "runs": [
+    "detector-separate-v2-photo-01",
+    "detector-separate-v2-stride8-01",
+    "detector-separate-v2-proposals4-01"
+  ],
+  "best": [
+    {
+      "epoch": 105,
+      "train_loss": 0.24825044155120848,
+      "train_loss_components": {
+        "loss_classifier": 0.07717144012451171,
+        "loss_box_reg": 0.1451854184269905,
+        "loss_objectness": 0.009936191514134407,
+        "loss_rpn_box_reg": 0.015957387275993825
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.43949788041634136,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.697029708045544,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.5560113185703164,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.33663366336633666,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.16831683168316833,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 216.55
+    },
+    {
+      "epoch": 96,
+      "train_loss": 0.7461598610877991,
+      "train_loss_components": {
+        "loss_classifier": 0.2092563819885254,
+        "loss_box_reg": 0.41642688870429995,
+        "loss_objectness": 0.05528124138712883,
+        "loss_rpn_box_reg": 0.06519537217915058
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.3839108917382684,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.5742574257425742,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.4564356461609944,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.33663366336633666,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.16831683168316833,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 194.59
+    },
+    {
+      "epoch": 136,
+      "train_loss": 0.26159934103488924,
+      "train_loss_components": {
+        "loss_classifier": 0.07685922592878341,
+        "loss_box_reg": 0.13284486711025237,
+        "loss_objectness": 0.014385998770594597,
+        "loss_rpn_box_reg": 0.03750924920663237
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.4995756730584815,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.5742574257425742,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.5824611080755101,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.33663366336633666,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.504950495049505,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 314.51
+    }
+  ],
+  "last": [
+    {
+      "epoch": 150,
+      "train_loss": 0.184597649872303,
+      "train_loss_components": {
+        "loss_classifier": 0.05764927878975868,
+        "loss_box_reg": 0.11088613778352738,
+        "loss_objectness": 0.0038133558863773943,
+        "loss_rpn_box_reg": 0.012248872821219265
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.27485825645156425,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.32330540943853925,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.33058305866647475,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.445544557701243,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.0,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 317.91,
+      "head_monitor": {
+        "train": {
+          "head_count": 45,
+          "rpn_covered_iou50": 40,
+          "correct_head_coverage_iou50": 39,
+          "correct_head_coverage_iou50_score50": 39,
+          "oracle_correct": 43
+        },
+        "val": {
+          "head_count": 9,
+          "rpn_covered_iou50": 2,
+          "correct_head_coverage_iou50": 2,
+          "correct_head_coverage_iou50_score50": 0,
+          "oracle_correct": 0
+        }
+      }
+    },
+    {
+      "epoch": 150,
+      "train_loss": 0.5395878303050995,
+      "train_loss_components": {
+        "loss_classifier": 0.14307271614670752,
+        "loss_box_reg": 0.32139340937137606,
+        "loss_objectness": 0.027819845341145993,
+        "loss_rpn_box_reg": 0.04730187118984759
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.17722772467549486,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.49174917540927926,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.21716172329270014,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.0,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.0,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 303.98,
+      "head_monitor": {
+        "train": {
+          "head_count": 45,
+          "rpn_covered_iou50": 21,
+          "correct_head_coverage_iou50": 22,
+          "correct_head_coverage_iou50_score50": 19,
+          "oracle_correct": 44
+        },
+        "val": {
+          "head_count": 9,
+          "rpn_covered_iou50": 1,
+          "correct_head_coverage_iou50": 0,
+          "correct_head_coverage_iou50_score50": 0,
+          "oracle_correct": 2
+        }
+      }
+    },
+    {
+      "epoch": 150,
+      "train_loss": 0.23510822802782058,
+      "train_loss_components": {
+        "loss_classifier": 0.06243118122220039,
+        "loss_box_reg": 0.12475598335266114,
+        "loss_objectness": 0.014865753836929799,
+        "loss_rpn_box_reg": 0.033055308060720566
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.286509900990099,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.5,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.3094059405940594,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.33663366336633666,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.0,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 345.79,
+      "head_monitor": {
+        "train": {
+          "head_count": 45,
+          "rpn_covered_iou50": 39,
+          "correct_head_coverage_iou50": 40,
+          "correct_head_coverage_iou50_score50": 39,
+          "oracle_correct": 45
+        },
+        "val": {
+          "head_count": 9,
+          "rpn_covered_iou50": 3,
+          "correct_head_coverage_iou50": 1,
+          "correct_head_coverage_iou50_score50": 1,
+          "oracle_correct": 2
+        }
+      }
+    }
+  ],
+  "verified_fixed_settings": [
+    "epochs",
+    "seed",
+    "batch_size",
+    "workers",
+    "dataset_lock_sha256",
+    "initial_state_sha256",
+    "learning_rate",
+    "constant_lr",
+    "head_probe_every",
+    "classes",
+    "photometric_policy",
+    "parameters",
+    "feature_stride"
+  ],
+  "checkpoint_sha256": {
+    "best.pt": "b88abb7c6e02691b8cd5610573caaaa0d2b9fb93ab92b6ecb44743dfda8c748a",
+    "last.pt": "597ebffc9ccc6c08a0c5b7a1a3188c86821fdcabf0f9217f0800849f6a39a962"
+  },
+  "test_used": false
+}

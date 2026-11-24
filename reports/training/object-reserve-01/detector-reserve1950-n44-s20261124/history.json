@@ -1,0 +1,3722 @@
+[
+  {
+    "epoch": 1,
+    "optimizer_updates": 22,
+    "image_presentations": 44,
+    "train_loss": 1.7738809152082964,
+    "train_loss_components": {
+      "loss_classifier": 0.6193053417585113,
+      "loss_box_reg": 0.37523012930019334,
+      "loss_objectness": 0.639003414999355,
+      "loss_rpn_box_reg": 0.14034202677959745
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.0,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.0,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.0,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 4.67,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 0,
+        "correct_head_coverage_iou50": 0,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 0,
+        "correct_head_coverage_iou50": 0,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      }
+    }
+  },
+  {
+    "epoch": 2,
+    "optimizer_updates": 44,
+    "image_presentations": 88,
+    "train_loss": 1.7368583435362035,
+    "train_loss_components": {
+      "loss_classifier": 0.6131402809511531,
+      "loss_box_reg": 0.5243674943392928,
+      "loss_objectness": 0.4670516835017638,
+      "loss_rpn_box_reg": 0.13229889083992352
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.07178217821782178,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.2871287128712871,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.0,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 10.34
+  },
+  {
+    "epoch": 3,
+    "optimizer_updates": 66,
+    "image_presentations": 132,
+    "train_loss": 1.6590814915570347,
+    "train_loss_components": {
+      "loss_classifier": 0.5968484824353998,
+      "loss_box_reg": 0.5524229520550844,
+      "loss_objectness": 0.3777230368419127,
+      "loss_rpn_box_reg": 0.1320869904011488
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.14178453680902425,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.3702970330077823,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.19684111422831468,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 14.44
+  },
+  {
+    "epoch": 4,
+    "optimizer_updates": 88,
+    "image_presentations": 176,
+    "train_loss": 1.5553972287611528,
+    "train_loss_components": {
+      "loss_classifier": 0.5794057900255377,
+      "loss_box_reg": 0.5360473313749853,
+      "loss_objectness": 0.31402371756055136,
+      "loss_rpn_box_reg": 0.12592039866880936
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.14830858208755454,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.2929042931830529,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.30033003516716533,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 18.47
+  },
+  {
+    "epoch": 5,
+    "optimizer_updates": 110,
+    "image_presentations": 220,
+    "train_loss": 1.6877543844959952,
+    "train_loss_components": {
+      "loss_classifier": 0.691455910151655,
+      "loss_box_reg": 0.6045725519387898,
+      "loss_objectness": 0.26789904927665537,
+      "loss_rpn_box_reg": 0.12382687755267728
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.10918592053032158,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.2519251947650815,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.1848184873562048,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 22.62
+  },
+  {
+    "epoch": 6,
+    "optimizer_updates": 132,
+    "image_presentations": 264,
+    "train_loss": 1.4377934417941354,
+    "train_loss_components": {
+      "loss_classifier": 0.563429818911986,
+      "loss_box_reg": 0.4969583944502202,
+      "loss_objectness": 0.2558408271182667,
+      "loss_rpn_box_reg": 0.12156440791758624
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.07257307969992703,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.0957095738094632,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.19458274499024494,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 26.49
+  },
+  {
+    "epoch": 7,
+    "optimizer_updates": 154,
+    "image_presentations": 308,
+    "train_loss": 1.1737164150584827,
+    "train_loss_components": {
+      "loss_classifier": 0.45910117707469245,
+      "loss_box_reg": 0.36032338525083935,
+      "loss_objectness": 0.22917946292595429,
+      "loss_rpn_box_reg": 0.1251123844730583
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.16994637273030705,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.2904290471336629,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.38935644378756534,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 30.41
+  },
+  {
+    "epoch": 8,
+    "optimizer_updates": 176,
+    "image_presentations": 352,
+    "train_loss": 1.1250821595842189,
+    "train_loss_components": {
+      "loss_classifier": 0.4187404594638131,
+      "loss_box_reg": 0.3611783390356736,
+      "loss_objectness": 0.21752366559071976,
+      "loss_rpn_box_reg": 0.12763969346203588
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2569683502142382,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6897689741436798,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.33810442671327307,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 34.36
+  },
+  {
+    "epoch": 9,
+    "optimizer_updates": 198,
+    "image_presentations": 396,
+    "train_loss": 1.203882160511884,
+    "train_loss_components": {
+      "loss_classifier": 0.4572916091843085,
+      "loss_box_reg": 0.40129260769621894,
+      "loss_objectness": 0.21715676987713034,
+      "loss_rpn_box_reg": 0.12814119398932566
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.1271896426482956,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.19306930811098305,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.31568926248219936,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 38.53
+  },
+  {
+    "epoch": 10,
+    "optimizer_updates": 220,
+    "image_presentations": 440,
+    "train_loss": 1.257174638184634,
+    "train_loss_components": {
+      "loss_classifier": 0.46257387372580444,
+      "loss_box_reg": 0.43285741485570645,
+      "loss_objectness": 0.2370286766778339,
+      "loss_rpn_box_reg": 0.1247146692211655
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.14049762214469438,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.3249324943759654,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.23705799420281212,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 42.38,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 0,
+        "correct_head_coverage_iou50": 0,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 0,
+        "correct_head_coverage_iou50": 0,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      }
+    }
+  },
+  {
+    "epoch": 11,
+    "optimizer_updates": 242,
+    "image_presentations": 484,
+    "train_loss": 1.159241104667837,
+    "train_loss_components": {
+      "loss_classifier": 0.43087315423922107,
+      "loss_box_reg": 0.4020273875106465,
+      "loss_objectness": 0.20536896857348355,
+      "loss_rpn_box_reg": 0.12097158223729242
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2757958561772167,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6897689741436798,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.41341445056518705,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 47.43
+  },
+  {
+    "epoch": 12,
+    "optimizer_updates": 264,
+    "image_presentations": 528,
+    "train_loss": 1.1776411777192897,
+    "train_loss_components": {
+      "loss_classifier": 0.44780091738159006,
+      "loss_box_reg": 0.4183142313903028,
+      "loss_objectness": 0.19031723791902716,
+      "loss_rpn_box_reg": 0.1212087884883989
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.1564531340309889,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.34059406890727506,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.28521846721668054,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 51.58
+  },
+  {
+    "epoch": 13,
+    "optimizer_updates": 286,
+    "image_presentations": 572,
+    "train_loss": 1.109491844068874,
+    "train_loss_components": {
+      "loss_classifier": 0.38780945065346634,
+      "loss_box_reg": 0.38559284196658566,
+      "loss_objectness": 0.21846926313909618,
+      "loss_rpn_box_reg": 0.117620297241956
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.13659240961960045,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.3910891089108911,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.15528052956751076,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 55.42
+  },
+  {
+    "epoch": 14,
+    "optimizer_updates": 308,
+    "image_presentations": 616,
+    "train_loss": 1.1160104207017205,
+    "train_loss_components": {
+      "loss_classifier": 0.391988257792863,
+      "loss_box_reg": 0.4121967096897689,
+      "loss_objectness": 0.18924479288133708,
+      "loss_rpn_box_reg": 0.1225806489078836
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2516501635903179,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5247524781982498,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4818481761630219,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 59.39
+  },
+  {
+    "epoch": 15,
+    "optimizer_updates": 330,
+    "image_presentations": 660,
+    "train_loss": 1.0436853630976244,
+    "train_loss_components": {
+      "loss_classifier": 0.37020808255130594,
+      "loss_box_reg": 0.348593917759982,
+      "loss_objectness": 0.2052108303389766,
+      "loss_rpn_box_reg": 0.11967255429110744
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.23976897802388314,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6204620475816255,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3386138645139071,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 63.23
+  },
+  {
+    "epoch": 16,
+    "optimizer_updates": 352,
+    "image_presentations": 704,
+    "train_loss": 1.022702932357788,
+    "train_loss_components": {
+      "loss_classifier": 0.35115286166017706,
+      "loss_box_reg": 0.36128943697126076,
+      "loss_objectness": 0.1907223141328855,
+      "loss_rpn_box_reg": 0.11953832687471401
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.20708633627336806,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.3147314804615361,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5136138646319361,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 67.11
+  },
+  {
+    "epoch": 17,
+    "optimizer_updates": 374,
+    "image_presentations": 748,
+    "train_loss": 0.988089226863601,
+    "train_loss_components": {
+      "loss_classifier": 0.3471744548190724,
+      "loss_box_reg": 0.3321176658977162,
+      "loss_objectness": 0.19718095897273583,
+      "loss_rpn_box_reg": 0.1116161579689519
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2678396892134506,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6897689741436798,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3815897827101226,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 70.96
+  },
+  {
+    "epoch": 18,
+    "optimizer_updates": 396,
+    "image_presentations": 792,
+    "train_loss": 0.9838430244814266,
+    "train_loss_components": {
+      "loss_classifier": 0.33885398879647255,
+      "loss_box_reg": 0.36203156564046035,
+      "loss_objectness": 0.16956278681755066,
+      "loss_rpn_box_reg": 0.11339468707923185
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.22741274594670474,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5521152184741331,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3575357653126858,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 74.88
+  },
+  {
+    "epoch": 19,
+    "optimizer_updates": 418,
+    "image_presentations": 836,
+    "train_loss": 0.8936254422773015,
+    "train_loss_components": {
+      "loss_classifier": 0.30532472411339934,
+      "loss_box_reg": 0.30861054123802617,
+      "loss_objectness": 0.16659199277108366,
+      "loss_rpn_box_reg": 0.11309818318113685
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.22934155490728889,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.4525029446819041,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.46486327494725144,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 78.82
+  },
+  {
+    "epoch": 20,
+    "optimizer_updates": 440,
+    "image_presentations": 880,
+    "train_loss": 0.9544623724438928,
+    "train_loss_components": {
+      "loss_classifier": 0.3283216960050843,
+      "loss_box_reg": 0.3329224322329868,
+      "loss_objectness": 0.16776089912111108,
+      "loss_rpn_box_reg": 0.12545734974132342
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3524079727433106,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5853232416776147,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.48767498592929087,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 82.61,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 8,
+        "correct_head_coverage_iou50": 6,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 1,
+        "correct_head_coverage_iou50": 1,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      }
+    }
+  },
+  {
+    "epoch": 21,
+    "optimizer_updates": 462,
+    "image_presentations": 924,
+    "train_loss": 0.9012980095364831,
+    "train_loss_components": {
+      "loss_classifier": 0.2989953783425418,
+      "loss_box_reg": 0.33454203995114024,
+      "loss_objectness": 0.1508251503109932,
+      "loss_rpn_box_reg": 0.11693544194779613
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.26491980601360304,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.7028202774501083,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3568589466043038,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 88.01
+  },
+  {
+    "epoch": 22,
+    "optimizer_updates": 484,
+    "image_presentations": 968,
+    "train_loss": 0.8979815678163008,
+    "train_loss_components": {
+      "loss_classifier": 0.30056770281358197,
+      "loss_box_reg": 0.31621176106008614,
+      "loss_objectness": 0.1692493280226534,
+      "loss_rpn_box_reg": 0.1119527834975584
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.23518931651764577,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4407572660705831,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 91.99
+  },
+  {
+    "epoch": 23,
+    "optimizer_updates": 506,
+    "image_presentations": 1012,
+    "train_loss": 0.9734845777804201,
+    "train_loss_components": {
+      "loss_classifier": 0.3384458514099771,
+      "loss_box_reg": 0.37326036275110464,
+      "loss_objectness": 0.15468611026352103,
+      "loss_rpn_box_reg": 0.10709226652133194
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2195381191697451,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.46272342747981005,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4154290491991704,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 95.88
+  },
+  {
+    "epoch": 24,
+    "optimizer_updates": 528,
+    "image_presentations": 1056,
+    "train_loss": 0.8447984131899747,
+    "train_loss_components": {
+      "loss_classifier": 0.28782113404436543,
+      "loss_box_reg": 0.30071447078477254,
+      "loss_objectness": 0.15010121058334003,
+      "loss_rpn_box_reg": 0.10616160971535878
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2265971255036864,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5907590790550308,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.31562942295971486,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 99.76
+  },
+  {
+    "epoch": 25,
+    "optimizer_updates": 550,
+    "image_presentations": 1100,
+    "train_loss": 0.846635839478536,
+    "train_loss_components": {
+      "loss_classifier": 0.2834832404147495,
+      "loss_box_reg": 0.30282079496166925,
+      "loss_objectness": 0.14949449117888103,
+      "loss_rpn_box_reg": 0.1108373102139343
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2149297649612521,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5364136518818317,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.32330540796317675,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 103.63
+  },
+  {
+    "epoch": 26,
+    "optimizer_updates": 572,
+    "image_presentations": 1144,
+    "train_loss": 0.8972920639948412,
+    "train_loss_components": {
+      "loss_classifier": 0.29115004431117664,
+      "loss_box_reg": 0.3445213697850704,
+      "loss_objectness": 0.1460657546466047,
+      "loss_rpn_box_reg": 0.11555489080704072
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3479207459800314,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.45122092962265015,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.6038283909311389,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 107.59
+  },
+  {
+    "epoch": 27,
+    "optimizer_updates": 594,
+    "image_presentations": 1188,
+    "train_loss": 0.7916891168464314,
+    "train_loss_components": {
+      "loss_classifier": 0.25252027437090874,
+      "loss_box_reg": 0.2935071096501567,
+      "loss_objectness": 0.13420748236504468,
+      "loss_rpn_box_reg": 0.11145424504171718
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3374037426149491,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5991199229023244,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.750495047557472,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 111.44
+  },
+  {
+    "epoch": 28,
+    "optimizer_updates": 616,
+    "image_presentations": 1232,
+    "train_loss": 0.8372075842185454,
+    "train_loss_components": {
+      "loss_classifier": 0.27541048519990663,
+      "loss_box_reg": 0.3119218125939369,
+      "loss_objectness": 0.1345726695250381,
+      "loss_rpn_box_reg": 0.11530260335315358
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.27994326096360045,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5663366423975124,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5534364014568895,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 115.41
+  },
+  {
+    "epoch": 29,
+    "optimizer_updates": 638,
+    "image_presentations": 1276,
+    "train_loss": 0.8453355418010191,
+    "train_loss_components": {
+      "loss_classifier": 0.2773234569890933,
+      "loss_box_reg": 0.3051093694838611,
+      "loss_objectness": 0.15175975012508305,
+      "loss_rpn_box_reg": 0.11114298323677345
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.30855312663139683,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5941842133455938,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.6400282931799935,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 119.29
+  },
+  {
+    "epoch": 30,
+    "optimizer_updates": 660,
+    "image_presentations": 1320,
+    "train_loss": 0.7999687452207912,
+    "train_loss_components": {
+      "loss_classifier": 0.26044615933840926,
+      "loss_box_reg": 0.30426537728106434,
+      "loss_objectness": 0.12786055694926868,
+      "loss_rpn_box_reg": 0.10739665753631429
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3258441236644688,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5742574257425742,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3924854055489644,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 123.35,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 13,
+        "correct_head_coverage_iou50": 7,
+        "correct_head_coverage_iou50_score50": 2,
+        "oracle_correct": 9
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 1,
+        "correct_head_coverage_iou50": 1,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      }
+    }
+  },
+  {
+    "epoch": 31,
+    "optimizer_updates": 682,
+    "image_presentations": 1364,
+    "train_loss": 0.7332143106243827,
+    "train_loss_components": {
+      "loss_classifier": 0.23956810716878285,
+      "loss_box_reg": 0.2728589258410714,
+      "loss_objectness": 0.12046081200242043,
+      "loss_rpn_box_reg": 0.10032646260647611
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.329547929291678,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.596181051565869,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.7220106656008428,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 129.23
+  },
+  {
+    "epoch": 32,
+    "optimizer_updates": 704,
+    "image_presentations": 1408,
+    "train_loss": 0.7169690064408563,
+    "train_loss_components": {
+      "loss_classifier": 0.22965021499178626,
+      "loss_box_reg": 0.26127544485709886,
+      "loss_objectness": 0.12274244732477448,
+      "loss_rpn_box_reg": 0.1033009049397978
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.24795549451419624,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5577557742005528,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4340662038562321,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 133.6
+  },
+  {
+    "epoch": 33,
+    "optimizer_updates": 726,
+    "image_presentations": 1452,
+    "train_loss": 0.7974050627513365,
+    "train_loss_components": {
+      "loss_classifier": 0.2579859576442025,
+      "loss_box_reg": 0.2981995747170665,
+      "loss_objectness": 0.1370892282575369,
+      "loss_rpn_box_reg": 0.10413030899045142
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2349834976957576,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6188118699753639,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3211221208076666,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 137.79
+  },
+  {
+    "epoch": 34,
+    "optimizer_updates": 748,
+    "image_presentations": 1496,
+    "train_loss": 0.692261507565325,
+    "train_loss_components": {
+      "loss_classifier": 0.2195144214413383,
+      "loss_box_reg": 0.26716146685860376,
+      "loss_objectness": 0.10827034864236008,
+      "loss_rpn_box_reg": 0.09731527045369148
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.35588558873917797,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.7128712871287128,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3740374044616624,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 142.0
+  },
+  {
+    "epoch": 35,
+    "optimizer_updates": 770,
+    "image_presentations": 1540,
+    "train_loss": 0.7261447269808162,
+    "train_loss_components": {
+      "loss_classifier": 0.23754493282599884,
+      "loss_box_reg": 0.2721705131910064,
+      "loss_objectness": 0.11471084065058014,
+      "loss_rpn_box_reg": 0.10171844183721325
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2544880888544687,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6275704503059387,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.39038190511193605,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 146.3
+  },
+  {
+    "epoch": 36,
+    "optimizer_updates": 792,
+    "image_presentations": 1584,
+    "train_loss": 0.6959774778647856,
+    "train_loss_components": {
+      "loss_classifier": 0.2191740870475769,
+      "loss_box_reg": 0.2521866238252683,
+      "loss_objectness": 0.12399384159256112,
+      "loss_rpn_box_reg": 0.10062293014065786
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3530783966036126,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6489708163950703,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5950259383362119,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 150.46
+  },
+  {
+    "epoch": 37,
+    "optimizer_updates": 814,
+    "image_presentations": 1628,
+    "train_loss": 0.6681212864138864,
+    "train_loss_components": {
+      "loss_classifier": 0.203146907416257,
+      "loss_box_reg": 0.2649837556210431,
+      "loss_objectness": 0.10161754861474037,
+      "loss_rpn_box_reg": 0.0983730736611919
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.22222222468935618,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.49174917540927926,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.39713972334814546,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 154.51
+  },
+  {
+    "epoch": 38,
+    "optimizer_updates": 836,
+    "image_presentations": 1672,
+    "train_loss": 0.6960657577623021,
+    "train_loss_components": {
+      "loss_classifier": 0.21572029726071792,
+      "loss_box_reg": 0.2628828619014133,
+      "loss_objectness": 0.1128838240084323,
+      "loss_rpn_box_reg": 0.10457878784191879
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.33035471961639895,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5594059435447843,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4253792715544748,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 158.43
+  },
+  {
+    "epoch": 39,
+    "optimizer_updates": 858,
+    "image_presentations": 1716,
+    "train_loss": 0.7264796536077153,
+    "train_loss_components": {
+      "loss_classifier": 0.22497430409897456,
+      "loss_box_reg": 0.2864879491654309,
+      "loss_objectness": 0.11261395195668394,
+      "loss_rpn_box_reg": 0.10240344779396598
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2146240614059538,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5747524853980187,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.28374376022579645,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 162.51
+  },
+  {
+    "epoch": 40,
+    "optimizer_updates": 880,
+    "image_presentations": 1760,
+    "train_loss": 0.6750461432066831,
+    "train_loss_components": {
+      "loss_classifier": 0.2026980471881953,
+      "loss_box_reg": 0.2579925327815793,
+      "loss_objectness": 0.10834479619833556,
+      "loss_rpn_box_reg": 0.10601076974787495
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2082154680006575,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.4594059474397414,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.37345592456288856,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 166.56,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 12,
+        "correct_head_coverage_iou50": 10,
+        "correct_head_coverage_iou50_score50": 2,
+        "oracle_correct": 22
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 1,
+        "correct_head_coverage_iou50": 0,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      }
+    }
+  },
+  {
+    "epoch": 41,
+    "optimizer_updates": 902,
+    "image_presentations": 1804,
+    "train_loss": 0.6826228187842802,
+    "train_loss_components": {
+      "loss_classifier": 0.20896412364461206,
+      "loss_box_reg": 0.2709334607828747,
+      "loss_objectness": 0.09986260516399686,
+      "loss_rpn_box_reg": 0.10286262771114707
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2601512218318363,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.508151625642682,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.30803081776836133,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0561056122331336,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 172.02
+  },
+  {
+    "epoch": 42,
+    "optimizer_updates": 924,
+    "image_presentations": 1848,
+    "train_loss": 0.648964447053996,
+    "train_loss_components": {
+      "loss_classifier": 0.19805331358855421,
+      "loss_box_reg": 0.25644622912461107,
+      "loss_objectness": 0.1013303143395619,
+      "loss_rpn_box_reg": 0.09313458458266476
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.23803630463852743,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5247524781982498,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4273927403558599,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 176.09
+  },
+  {
+    "epoch": 43,
+    "optimizer_updates": 946,
+    "image_presentations": 1892,
+    "train_loss": 0.6397716971960935,
+    "train_loss_components": {
+      "loss_classifier": 0.1928434476933696,
+      "loss_box_reg": 0.2674828005785292,
+      "loss_objectness": 0.087496490302411,
+      "loss_rpn_box_reg": 0.09194895244118842
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.44615292187669486,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5521152184741331,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5968529027287323,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.4673267346207458,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 180.11
+  },
+  {
+    "epoch": 44,
+    "optimizer_updates": 968,
+    "image_presentations": 1936,
+    "train_loss": 0.6634971797466278,
+    "train_loss_components": {
+      "loss_classifier": 0.20602425221692433,
+      "loss_box_reg": 0.2733143859288909,
+      "loss_objectness": 0.08770457976921038,
+      "loss_rpn_box_reg": 0.09645396928218278
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.4025241787923445,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6128928136117388,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3866428322721236,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.4422442376023472,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 184.29
+  },
+  {
+    "epoch": 45,
+    "optimizer_updates": 990,
+    "image_presentations": 1980,
+    "train_loss": 0.6169888776811686,
+    "train_loss_components": {
+      "loss_classifier": 0.1802668801762841,
+      "loss_box_reg": 0.2575148665769534,
+      "loss_objectness": 0.08879636651413007,
+      "loss_rpn_box_reg": 0.09041076483712955
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.24160080034248899,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5106082074712999,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.45579499389865613,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 188.25
+  },
+  {
+    "epoch": 46,
+    "optimizer_updates": 1012,
+    "image_presentations": 2024,
+    "train_loss": 0.6615812250159003,
+    "train_loss_components": {
+      "loss_classifier": 0.20223484459248456,
+      "loss_box_reg": 0.27433532679622824,
+      "loss_objectness": 0.08957680162381042,
+      "loss_rpn_box_reg": 0.09543425242670557
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2084197750923657,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.33399340923469845,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4515951656469024,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.04809052548786201,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 192.08
+  },
+  {
+    "epoch": 47,
+    "optimizer_updates": 1034,
+    "image_presentations": 2068,
+    "train_loss": 0.5803614116527818,
+    "train_loss_components": {
+      "loss_classifier": 0.17458435808393089,
+      "loss_box_reg": 0.2431856705383821,
+      "loss_objectness": 0.07603845169598406,
+      "loss_rpn_box_reg": 0.08655292782085863
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2249756240756205,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.4498199858877919,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.45008251041469005,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 195.98
+  },
+  {
+    "epoch": 48,
+    "optimizer_updates": 1056,
+    "image_presentations": 2112,
+    "train_loss": 0.6400118998505853,
+    "train_loss_components": {
+      "loss_classifier": 0.19555383954535832,
+      "loss_box_reg": 0.26709314943714574,
+      "loss_objectness": 0.09609873084859415,
+      "loss_rpn_box_reg": 0.0812661829616197
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.31376611072994254,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.7128712871287128,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3238409611553249,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.04582744209778191,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.17252475253795044,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 199.94
+  },
+  {
+    "epoch": 49,
+    "optimizer_updates": 1078,
+    "image_presentations": 2156,
+    "train_loss": 0.6213098622181199,
+    "train_loss_components": {
+      "loss_classifier": 0.18867736512964423,
+      "loss_box_reg": 0.24854811636561697,
+      "loss_objectness": 0.0952286593277346,
+      "loss_rpn_box_reg": 0.0888557374604385
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.22224186773937527,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5742574257425742,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.31471004521492685,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 203.8
+  },
+  {
+    "epoch": 50,
+    "optimizer_updates": 1100,
+    "image_presentations": 2200,
+    "train_loss": 0.5719718445431102,
+    "train_loss_components": {
+      "loss_classifier": 0.16545777022838593,
+      "loss_box_reg": 0.2398892343044281,
+      "loss_objectness": 0.07839163392782211,
+      "loss_rpn_box_reg": 0.08823320633647116
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2013201335869213,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5445544572159795,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.2607260771317057,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 207.74,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 4,
+        "correct_head_coverage_iou50": 2,
+        "correct_head_coverage_iou50_score50": 2,
+        "oracle_correct": 27
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 0,
+        "correct_head_coverage_iou50": 0,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 1
+      }
+    }
+  },
+  {
+    "epoch": 51,
+    "optimizer_updates": 1122,
+    "image_presentations": 2244,
+    "train_loss": 0.6035293780944564,
+    "train_loss_components": {
+      "loss_classifier": 0.1696847885508429,
+      "loss_box_reg": 0.25220942395654594,
+      "loss_objectness": 0.0865853013978763,
+      "loss_rpn_box_reg": 0.09504985517229546
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.48519778222140697,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5971397250005515,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.6753345722019082,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.5,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 213.03
+  },
+  {
+    "epoch": 52,
+    "optimizer_updates": 1144,
+    "image_presentations": 2288,
+    "train_loss": 0.5841111127625812,
+    "train_loss_components": {
+      "loss_classifier": 0.164491620761427,
+      "loss_box_reg": 0.24364741603759202,
+      "loss_objectness": 0.07991931807588447,
+      "loss_rpn_box_reg": 0.0960527449761602
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3960396061734398,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.7683168325093713,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3108910971348829,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 217.09
+  },
+  {
+    "epoch": 53,
+    "optimizer_updates": 1166,
+    "image_presentations": 2332,
+    "train_loss": 0.5615550631826575,
+    "train_loss_components": {
+      "loss_classifier": 0.16236440227790314,
+      "loss_box_reg": 0.23997577533803202,
+      "loss_objectness": 0.07300654426217079,
+      "loss_rpn_box_reg": 0.08620833711359989
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.32534544745294175,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6608910891089109,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4721738690196878,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 221.02
+  },
+  {
+    "epoch": 54,
+    "optimizer_updates": 1188,
+    "image_presentations": 2376,
+    "train_loss": 0.6218116415495222,
+    "train_loss_components": {
+      "loss_classifier": 0.18752033017914405,
+      "loss_box_reg": 0.26375143839554355,
+      "loss_objectness": 0.08173167163675482,
+      "loss_rpn_box_reg": 0.08880820430137894
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.4397139721872783,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6897689741436798,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5641364195559284,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 224.86
+  },
+  {
+    "epoch": 55,
+    "optimizer_updates": 1210,
+    "image_presentations": 2420,
+    "train_loss": 0.592517763376236,
+    "train_loss_components": {
+      "loss_classifier": 0.175343165343458,
+      "loss_box_reg": 0.2521953135728836,
+      "loss_objectness": 0.07567844607613304,
+      "loss_rpn_box_reg": 0.08930083402347835
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.28650990158024403,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6732673290932533,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.47277227722772275,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 228.88
+  },
+  {
+    "epoch": 56,
+    "optimizer_updates": 1232,
+    "image_presentations": 2464,
+    "train_loss": 0.5518302524631674,
+    "train_loss_components": {
+      "loss_classifier": 0.15376794981685551,
+      "loss_box_reg": 0.23453944684429603,
+      "loss_objectness": 0.076857679692859,
+      "loss_rpn_box_reg": 0.0866651873696934
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2317185311919392,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.4891089159663361,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4377652088014206,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 232.88
+  },
+  {
+    "epoch": 57,
+    "optimizer_updates": 1254,
+    "image_presentations": 2508,
+    "train_loss": 0.5414375906640833,
+    "train_loss_components": {
+      "loss_classifier": 0.15019858459180052,
+      "loss_box_reg": 0.2297477312386036,
+      "loss_objectness": 0.06910460052842443,
+      "loss_rpn_box_reg": 0.09238666888665069
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.49511630080714086,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6793493717023642,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.7961653364766942,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 236.87
+  },
+  {
+    "epoch": 58,
+    "optimizer_updates": 1276,
+    "image_presentations": 2552,
+    "train_loss": 0.5723786652088165,
+    "train_loss_components": {
+      "loss_classifier": 0.16321922754022208,
+      "loss_box_reg": 0.25132122940637847,
+      "loss_objectness": 0.06976810453290289,
+      "loss_rpn_box_reg": 0.0880701024169949
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3398514884238196,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.4891089159663361,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.36534654267943734,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 240.88
+  },
+  {
+    "epoch": 59,
+    "optimizer_updates": 1298,
+    "image_presentations": 2596,
+    "train_loss": 0.54191819307479,
+    "train_loss_components": {
+      "loss_classifier": 0.16316016255454582,
+      "loss_box_reg": 0.23582123219966888,
+      "loss_objectness": 0.06330882097509774,
+      "loss_rpn_box_reg": 0.07962797715497966
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.5513240653689545,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6178217919746248,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5874744695011932,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 1.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 244.78
+  },
+  {
+    "epoch": 60,
+    "optimizer_updates": 1320,
+    "image_presentations": 2640,
+    "train_loss": 0.5122816196896813,
+    "train_loss_components": {
+      "loss_classifier": 0.1485920138657093,
+      "loss_box_reg": 0.22632906315001575,
+      "loss_objectness": 0.05625507260926745,
+      "loss_rpn_box_reg": 0.08110547082668002
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3564775180403549,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5693069306930693,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.47789027018122154,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.04207920792079208,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 248.78,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 52,
+        "correct_head_coverage_iou50": 51,
+        "correct_head_coverage_iou50_score50": 45,
+        "oracle_correct": 80
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 1,
+        "correct_head_coverage_iou50": 2,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 1
+      }
+    }
+  },
+  {
+    "epoch": 61,
+    "optimizer_updates": 1342,
+    "image_presentations": 2684,
+    "train_loss": 0.5434023080901667,
+    "train_loss_components": {
+      "loss_classifier": 0.15913670814850114,
+      "loss_box_reg": 0.2417052567682483,
+      "loss_objectness": 0.06075708441097628,
+      "loss_rpn_box_reg": 0.08180325950326567
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.38699120061822456,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5364136518818317,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.6749174872247299,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 254.11
+  },
+  {
+    "epoch": 62,
+    "optimizer_updates": 1364,
+    "image_presentations": 2728,
+    "train_loss": 0.5351396345279433,
+    "train_loss_components": {
+      "loss_classifier": 0.155494960532947,
+      "loss_box_reg": 0.23883065987717023,
+      "loss_objectness": 0.05220891603014686,
+      "loss_rpn_box_reg": 0.08860510884022171
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2714167851032597,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.66501649594543,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.42065064446760875,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 258.11
+  },
+  {
+    "epoch": 63,
+    "optimizer_updates": 1386,
+    "image_presentations": 2772,
+    "train_loss": 0.5095178105614402,
+    "train_loss_components": {
+      "loss_classifier": 0.14937250011346556,
+      "loss_box_reg": 0.22693075984716415,
+      "loss_objectness": 0.056390842592174355,
+      "loss_rpn_box_reg": 0.07682370267469775
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.28424092566612924,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6435643605666586,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.40924092625627423,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.08415841584158416,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 262.08
+  },
+  {
+    "epoch": 64,
+    "optimizer_updates": 1408,
+    "image_presentations": 2816,
+    "train_loss": 0.4957118034362793,
+    "train_loss_components": {
+      "loss_classifier": 0.14185957187278705,
+      "loss_box_reg": 0.2217904231087728,
+      "loss_objectness": 0.05131089577282017,
+      "loss_rpn_box_reg": 0.08075091623785821
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.24284928653499868,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.47854786049021353,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.32453245396661284,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 265.92
+  },
+  {
+    "epoch": 65,
+    "optimizer_updates": 1430,
+    "image_presentations": 2860,
+    "train_loss": 0.526773685758764,
+    "train_loss_components": {
+      "loss_classifier": 0.1446262552318248,
+      "loss_box_reg": 0.23385720801624385,
+      "loss_objectness": 0.0601898588409478,
+      "loss_rpn_box_reg": 0.08810036709870804
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2660301756298188,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6435643564356436,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.30834512161736444,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.1122112244662672,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 269.79
+  },
+  {
+    "epoch": 66,
+    "optimizer_updates": 1452,
+    "image_presentations": 2904,
+    "train_loss": 0.4914060526273467,
+    "train_loss_components": {
+      "loss_classifier": 0.13686436109922148,
+      "loss_box_reg": 0.21533595872196284,
+      "loss_objectness": 0.05905585050244223,
+      "loss_rpn_box_reg": 0.08014987768944014
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2524513659795912,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.518976906148514,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4908285577698509,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 273.56
+  },
+  {
+    "epoch": 67,
+    "optimizer_updates": 1474,
+    "image_presentations": 2948,
+    "train_loss": 0.5356173718517477,
+    "train_loss_components": {
+      "loss_classifier": 0.15143775601278653,
+      "loss_box_reg": 0.24276690252802588,
+      "loss_objectness": 0.06253946437077089,
+      "loss_rpn_box_reg": 0.0788732511414723
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.23865511607710677,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.4636963697353212,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.49092409457310593,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 277.5
+  },
+  {
+    "epoch": 68,
+    "optimizer_updates": 1496,
+    "image_presentations": 2992,
+    "train_loss": 0.5056398463520136,
+    "train_loss_components": {
+      "loss_classifier": 0.14776196754114193,
+      "loss_box_reg": 0.23294741761955348,
+      "loss_objectness": 0.05376924015581608,
+      "loss_rpn_box_reg": 0.0711612271737646
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3723184830038854,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6512651301846646,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.40319031831061486,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.266501651837094,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 281.38
+  },
+  {
+    "epoch": 69,
+    "optimizer_updates": 1518,
+    "image_presentations": 3036,
+    "train_loss": 0.5121195126663555,
+    "train_loss_components": {
+      "loss_classifier": 0.14902410554614934,
+      "loss_box_reg": 0.22724791751666504,
+      "loss_objectness": 0.060103110122409736,
+      "loss_rpn_box_reg": 0.07574438108977946
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.37376237778675436,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6897689741436798,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3003300419538328,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 285.2
+  },
+  {
+    "epoch": 70,
+    "optimizer_updates": 1540,
+    "image_presentations": 3080,
+    "train_loss": 0.5095681758089499,
+    "train_loss_components": {
+      "loss_classifier": 0.14617617800831795,
+      "loss_box_reg": 0.22927273183383726,
+      "loss_objectness": 0.056762479076331314,
+      "loss_rpn_box_reg": 0.07735677893188866
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.4691595961846928,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6608910891089109,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5523809589961968,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.6633663366336634,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 289.16,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 57,
+        "correct_head_coverage_iou50": 61,
+        "correct_head_coverage_iou50_score50": 51,
+        "oracle_correct": 72
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 2,
+        "correct_head_coverage_iou50": 2,
+        "correct_head_coverage_iou50_score50": 2,
+        "oracle_correct": 2
+      }
+    }
+  },
+  {
+    "epoch": 71,
+    "optimizer_updates": 1562,
+    "image_presentations": 3124,
+    "train_loss": 0.49407593499530444,
+    "train_loss_components": {
+      "loss_classifier": 0.14038825712420724,
+      "loss_box_reg": 0.21818276968869296,
+      "loss_objectness": 0.06154414478012107,
+      "loss_rpn_box_reg": 0.07396075620569965
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.35281117599789463,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6138613879090489,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5449080685577771,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.08415841584158416,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 294.3
+  },
+  {
+    "epoch": 72,
+    "optimizer_updates": 1584,
+    "image_presentations": 3168,
+    "train_loss": 0.4972605434331027,
+    "train_loss_components": {
+      "loss_classifier": 0.1423476477238265,
+      "loss_box_reg": 0.2316694533960386,
+      "loss_objectness": 0.051197289446876806,
+      "loss_rpn_box_reg": 0.07204615616832268
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.4399064944522216,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6512651301846646,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3855885639049039,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.5544554520361494,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 298.13
+  },
+  {
+    "epoch": 73,
+    "optimizer_updates": 1606,
+    "image_presentations": 3212,
+    "train_loss": 0.4677038165656003,
+    "train_loss_components": {
+      "loss_classifier": 0.136082656850869,
+      "loss_box_reg": 0.21656893684782766,
+      "loss_objectness": 0.044473444619639355,
+      "loss_rpn_box_reg": 0.0705787790092555
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.36202610756206044,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6512651301846646,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4602056366972404,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 302.02
+  },
+  {
+    "epoch": 74,
+    "optimizer_updates": 1628,
+    "image_presentations": 3256,
+    "train_loss": 0.4781040982766585,
+    "train_loss_components": {
+      "loss_classifier": 0.135745993392034,
+      "loss_box_reg": 0.2096524333411997,
+      "loss_objectness": 0.05217472015118057,
+      "loss_rpn_box_reg": 0.08053094453432343
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.4646335457368652,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5183089812203209,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.6719083700439717,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.5,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 306.01
+  },
+  {
+    "epoch": 75,
+    "optimizer_updates": 1650,
+    "image_presentations": 3300,
+    "train_loss": 0.48540969599377026,
+    "train_loss_components": {
+      "loss_classifier": 0.1430938338691538,
+      "loss_box_reg": 0.2296184003353119,
+      "loss_objectness": 0.04316931912167506,
+      "loss_rpn_box_reg": 0.06952815062620422
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.31336633728282287,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.2871287128712871,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.29306930952733107,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 310.43
+  },
+  {
+    "epoch": 76,
+    "optimizer_updates": 1672,
+    "image_presentations": 3344,
+    "train_loss": 0.4786567139354619,
+    "train_loss_components": {
+      "loss_classifier": 0.1300557768819007,
+      "loss_box_reg": 0.22735510190779512,
+      "loss_objectness": 0.045193361372432926,
+      "loss_rpn_box_reg": 0.07605247875802558
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.313737625385275,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6435643564356436,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5272277292638722,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.08415841584158416,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 314.72
+  },
+  {
+    "epoch": 77,
+    "optimizer_updates": 1694,
+    "image_presentations": 3388,
+    "train_loss": 0.502358849753033,
+    "train_loss_components": {
+      "loss_classifier": 0.14897927404804664,
+      "loss_box_reg": 0.22912261973727832,
+      "loss_objectness": 0.04968466338786212,
+      "loss_rpn_box_reg": 0.07457229088653218
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.314218923892125,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.594059408891319,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.4944994549940128,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 318.58
+  },
+  {
+    "epoch": 78,
+    "optimizer_updates": 1716,
+    "image_presentations": 3432,
+    "train_loss": 0.4531916352835568,
+    "train_loss_components": {
+      "loss_classifier": 0.13244973351670938,
+      "loss_box_reg": 0.2029100705615499,
+      "loss_objectness": 0.0440473977307027,
+      "loss_rpn_box_reg": 0.0737844391048632
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.38829758291197297,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5584158466594054,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.48982398993898146,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 322.97
+  },
+  {
+    "epoch": 79,
+    "optimizer_updates": 1738,
+    "image_presentations": 3476,
+    "train_loss": 0.46170882948420267,
+    "train_loss_components": {
+      "loss_classifier": 0.12434495088051666,
+      "loss_box_reg": 0.21040944213216956,
+      "loss_objectness": 0.055365054233169016,
+      "loss_rpn_box_reg": 0.07158938189968467
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.3506806933938867,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.5742574257425742,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.49183168446663583,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 327.45
+  },
+  {
+    "epoch": 80,
+    "optimizer_updates": 1760,
+    "image_presentations": 3520,
+    "train_loss": 0.5407502962784334,
+    "train_loss_components": {
+      "loss_classifier": 0.1682037189602852,
+      "loss_box_reg": 0.2584266198629683,
+      "loss_objectness": 0.043231051838533444,
+      "loss_rpn_box_reg": 0.07088891105641695
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.18425271254364806,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.44130127677823056,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.1273927417131934,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 331.44,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 35,
+        "correct_head_coverage_iou50": 37,
+        "correct_head_coverage_iou50_score50": 23,
+        "oracle_correct": 53
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 0,
+        "correct_head_coverage_iou50": 1,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      }
+    }
+  },
+  {
+    "epoch": 81,
+    "optimizer_updates": 1782,
+    "image_presentations": 3564,
+    "train_loss": 0.45062551071698015,
+    "train_loss_components": {
+      "loss_classifier": 0.12101604637097228,
+      "loss_box_reg": 0.20735844038426876,
+      "loss_objectness": 0.04807255230844021,
+      "loss_rpn_box_reg": 0.07417846930382604
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.37550267872243825,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.7617938276564721,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.5719000555501126,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 336.61
+  },
+  {
+    "epoch": 82,
+    "optimizer_updates": 1804,
+    "image_presentations": 3608,
+    "train_loss": 0.44158982959660614,
+    "train_loss_components": {
+      "loss_classifier": 0.1233459822833538,
+      "loss_box_reg": 0.19568249142982744,
+      "loss_objectness": 0.05057609716260975,
+      "loss_rpn_box_reg": 0.0719852709761736
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.37458745685249273,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6897689741436798,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.499999993508405,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0561056122331336,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.2524752475247525,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 340.67
+  },
+  {
+    "epoch": 83,
+    "optimizer_updates": 1826,
+    "image_presentations": 3652,
+    "train_loss": 0.44570127535950055,
+    "train_loss_components": {
+      "loss_classifier": 0.11701246672733263,
+      "loss_box_reg": 0.20532718673348427,
+      "loss_objectness": 0.052420764822851525,
+      "loss_rpn_box_reg": 0.07094085737216202
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.41269992402579525,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.7128712871287128,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.26466108224179485,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 344.76
+  },
+  {
+    "epoch": 84,
+    "optimizer_updates": 1848,
+    "image_presentations": 3696,
+    "train_loss": 0.43597264181483875,
+    "train_loss_components": {
+      "loss_classifier": 0.12172513641417027,
+      "loss_box_reg": 0.20345960184931755,
+      "loss_objectness": 0.04300530415705659,
+      "loss_rpn_box_reg": 0.06778259767981415
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.22648514851485146,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.2871287128712871,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.28217821782178215,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 348.62
+  },
+  {
+    "epoch": 85,
+    "optimizer_updates": 1870,
+    "image_presentations": 3740,
+    "train_loss": 0.4225625361908566,
+    "train_loss_components": {
+      "loss_classifier": 0.11757748777216132,
+      "loss_box_reg": 0.19514288804070515,
+      "loss_objectness": 0.04611617462201552,
+      "loss_rpn_box_reg": 0.06372598816894672
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.4073844903914055,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.7425742597863225,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.3820132067297945,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 352.65
+  },
+  {
+    "epoch": 86,
+    "optimizer_updates": 1892,
+    "image_presentations": 3784,
+    "train_loss": 0.4432495317675851,
+    "train_loss_components": {
+      "loss_classifier": 0.13135782070457935,
+      "loss_box_reg": 0.21143836798993024,
+      "loss_objectness": 0.03765614351935007,
+      "loss_rpn_box_reg": 0.06279720272868872
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.33845915896172574,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.7293729363101544,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.220503302493898,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.06732673367651382,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.33663366336633666,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 356.83
+  },
+  {
+    "epoch": 87,
+    "optimizer_updates": 1914,
+    "image_presentations": 3828,
+    "train_loss": 0.4380367025732994,
+    "train_loss_components": {
+      "loss_classifier": 0.12333728135986761,
+      "loss_box_reg": 0.2052409164607525,
+      "loss_objectness": 0.04573332704603672,
+      "loss_rpn_box_reg": 0.06372517336752605
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.21344884846470144,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.3702970330077823,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.31518152916785513,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.16831683168316833,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 360.86
+  },
+  {
+    "epoch": 88,
+    "optimizer_updates": 1936,
+    "image_presentations": 3872,
+    "train_loss": 0.4725538194179535,
+    "train_loss_components": {
+      "loss_classifier": 0.15077601339329372,
+      "loss_box_reg": 0.21693640303882686,
+      "loss_objectness": 0.04108765501190315,
+      "loss_rpn_box_reg": 0.06375374654519626
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.1551155120429426,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.42244224471620995,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.19801980345556053,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 364.77
+  },
+  {
+    "epoch": 89,
+    "optimizer_updates": 1950,
+    "image_presentations": 3900,
+    "train_loss": 0.4091870454805238,
+    "train_loss_components": {
+      "loss_classifier": 0.11538078529494149,
+      "loss_box_reg": 0.20408804821116583,
+      "loss_objectness": 0.03305795828678778,
+      "loss_rpn_box_reg": 0.056660253853936283
+    },
+    "learning_rate": 0.0003,
+    "validation": {
+      "map50": 0.2978312130464186,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6897689741436798,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.43422914436548066,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.06732673367651382,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.0,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "elapsed_seconds": 367.79,
+    "head_monitor": {
+      "train": {
+        "head_count": 89,
+        "rpn_covered_iou50": 65,
+        "correct_head_coverage_iou50": 69,
+        "correct_head_coverage_iou50_score50": 63,
+        "oracle_correct": 82
+      },
+      "val": {
+        "head_count": 9,
+        "rpn_covered_iou50": 2,
+        "correct_head_coverage_iou50": 1,
+        "correct_head_coverage_iou50_score50": 0,
+        "oracle_correct": 0
+      }
+    }
+  }
+]

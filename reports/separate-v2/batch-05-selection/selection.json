@@ -1,0 +1,65 @@
+{
+  "method": "Visual screening of deterministic source-image contact sheet and helmet crops; no trained model used; categories are review prompts, not confirmed labels",
+  "selected": [
+    {
+      "image_id": "Image_02333",
+      "reason": "helmet_face_visible",
+      "review_focus": "Dos cascos con rostro visible; revisar visor, no confundir el rostro con ausencia de casco."
+    },
+    {
+      "image_id": "Image_00645",
+      "reason": "helmet_visor",
+      "review_focus": "Casco frontal con visor oscuro; verificar clase."
+    },
+    {
+      "image_id": "Image_00874",
+      "reason": "helmet_rear_control",
+      "review_focus": "Casco visto desde atrás como contraste frente a cabello."
+    },
+    {
+      "image_id": "Image_01504",
+      "reason": "rear_view",
+      "review_focus": "Ocupantes vistos desde atrás/lateral; separar cabezas y personas."
+    },
+    {
+      "image_id": "Image_00924",
+      "reason": "rear_view",
+      "review_focus": "Vista trasera elevada; revisar cabello y límite de la cabeza."
+    },
+    {
+      "image_id": "Image_01917",
+      "reason": "rear_occlusion",
+      "review_focus": "Dos ocupantes desde atrás; posible oclusión entre cabezas y cuerpos."
+    },
+    {
+      "image_id": "Image_02129",
+      "reason": "multiple_occupants",
+      "review_focus": "Dos ocupantes en vista lateral; separar cajas y vínculos."
+    },
+    {
+      "image_id": "Image_01829",
+      "reason": "occluded_occupants",
+      "review_focus": "Vista trasera oblicua; conductor parcialmente oculto por pasajero."
+    },
+    {
+      "image_id": "Image_00247",
+      "reason": "overlapping_occupants",
+      "review_focus": "Dos motos y pasajero parcialmente oculto; verificar cobertura."
+    },
+    {
+      "image_id": "Image_01491",
+      "reason": "small_distant_heads",
+      "review_focus": "Escena distante y oscura; confirmar cabezas pequeñas y todas las motos visibles."
+    },
+    {
+      "image_id": "Image_01995",
+      "reason": "blurred_head",
+      "review_focus": "Cabeza desenfocada; marcar incierto si el casco no se puede resolver."
+    },
+    {
+      "image_id": "Image_01026",
+      "reason": "small_distant_heads",
+      "review_focus": "Escena amplia con cabezas pequeñas; verificar objetos faltantes."
+    }
+  ]
+}

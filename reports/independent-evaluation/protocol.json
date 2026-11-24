@@ -1,0 +1,38 @@
+{
+  "status": "awaiting human annotations; no inference performed",
+  "checkpoint": "runs\\detector-separate-v2-proposals4-01\\best.pt",
+  "checkpoint_sha256": "b88abb7c6e02691b8cd5610573caaaa0d2b9fb93ab92b6ecb44743dfda8c748a",
+  "selected_epoch": 136,
+  "feature_stride": 8,
+  "proposal_multiplier": 4,
+  "batch_sha256": "24a8cf792223dac7bd94688d5ce72ebe62047be9a8c2fb41b1f78acff5e9f72f",
+  "images": [
+    "Image_00363",
+    "Image_00816",
+    "Image_00762",
+    "Image_02125",
+    "Image_01938",
+    "Image_02015",
+    "Image_00835",
+    "Image_01016"
+  ],
+  "classes": [
+    "motocicleta",
+    "persona_ocupante",
+    "cabeza_con_casco",
+    "cabeza_sin_casco"
+  ],
+  "confidence_threshold": 0.5,
+  "matching_iou": 0.5,
+  "metrics": [
+    "AP50 per class and mean",
+    "precision/recall per class at score 0.5, IoU 0.5; one-to-one matching",
+    "head RPN coverage as diagnostic, not detection recall"
+  ],
+  "exclusions": "Exclude whole image if human coverage incomplete or labels uncertain; report all exclusions before scoring",
+  "selection": "Deterministic image hash, one image per unused original test group; at most five heads and four original bike contexts; not representative traffic sampling",
+  "tuning_allowed": false,
+  "training_allowed": false,
+  "no_group_or_exact_hash_overlap_with_prior_batches": true,
+  "limitation": "Original group separation does not certify independent scenes; only eight selected images; no negative-scene precision estimate."
+}

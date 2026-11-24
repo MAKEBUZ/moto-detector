@@ -52,7 +52,10 @@ def main():
     p.add_argument('--constant-lr', action='store_true')
     p.add_argument('--photometric', action='store_true')
     p.add_argument('--feature-stride', type=int, choices=[8,16], default=16)
+    p.add_argument('--proposal-multiplier', type=int, choices=[1,4], default=1)
     p.add_argument('--head-probe-every', type=int, default=0)
+    p.add_argument('--max-updates', type=int, help='Stop after exactly this many optimizer updates; requires constant LR and sufficient epochs')
+    p.add_argument('--rpn-object-reserve', action='store_true', help='Reserve one existing positive anchor per GT object; log actual selections')
     a = p.parse_args()
     if a.photometric and (not a.separate_classes or a.workers != 0):
         p.error('Photometric controlled experiment requires separate classes and workers=0')
@@ -60,6 +63,10 @@ def main():
         p.error('Head monitoring requires separate classes and a nonnegative interval')
     if a.epochs < 1:
         p.error('epochs must be positive')
+    if a.rpn_object_reserve and not a.separate_classes:
+        p.error('Object reservation requires the reviewed four-class detector')
+    if a.max_updates is not None and (a.max_updates < 1 or not a.constant_lr):
+        p.error('max-updates requires a positive limit and constant-lr')
     out = Path('runs') / a.run
     if out.exists():
         raise RuntimeError('Run already exists. Use a new run name; no implicit resume.')
@@ -86,9 +93,14 @@ def main():
         torch.cuda.manual_seed_all(a.seed)
     forbid_external_weights()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = HelmetCNN() if a.task == 'classifier' else build_detector(num_classes=len(classes)+1, feature_stride=a.feature_stride)
+    model = HelmetCNN() if a.task == 'classifier' else build_detector(num_classes=len(classes)+1, feature_stride=a.feature_stride, proposal_multiplier=a.proposal_multiplier)
     initial = fingerprint(model)
     model.to(device)
+    reservation = None
+    if a.rpn_object_reserve:
+        from rpn_object_sampler import install_object_sampler
+        reservation = install_object_sampler(model, a.seed + 1000000)
+        assert fingerprint(model) == initial
     train = SeparateHelmetDataset(a.dataset, 'train', a.limit_train, photometric=a.photometric, photo_seed=a.seed) if a.separate_classes else HelmetDataset(a.dataset, a.task, 'train', a.limit_train)
     val = SeparateHelmetDataset(a.dataset, 'val', a.limit_val, augment=False) if a.separate_classes else HelmetDataset(a.dataset, a.task, 'val', a.limit_val, augment=False)
     batch = a.batch_size or (64 if a.task == 'classifier' else 2)
@@ -97,6 +109,8 @@ def main():
     if a.task == 'detector':
         kwargs['collate_fn'] = collate_detection
     loader = DataLoader(train, batch_size=batch, shuffle=True, **kwargs)
+    if a.max_updates is not None and a.max_updates > len(loader) * a.epochs:
+        raise ValueError('Epoch budget cannot reach requested updates')
     validation = DataLoader(val, batch_size=batch, shuffle=False, **kwargs)
     lr = .001 if a.task == 'classifier' else .0003
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=.0001)
@@ -127,6 +141,8 @@ def main():
         subprocess.run([str(Path('.venv/Scripts/python.exe').resolve()), '-m', 'pip', 'freeze'], stdout=requirements, check=True)
     print(json.dumps(config), flush=True)
     history, best, best_epoch = [], -1., 0
+    selection_log = (out/'rpn-selections.jsonl').open('x', encoding='utf-8') if reservation else None
+    updates = presentations = 0
     start = time.time()
     for epoch in range(1, a.epochs + 1):
         model.train(); total, seen = 0., 0; component_totals = {}
@@ -143,11 +159,24 @@ def main():
                 raise RuntimeError('Nonfinite loss; stopping instead of writing a misleading model.')
             loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(), 5.); optimizer.step()
             total += float(loss.detach()) * size; seen += size
+            updates += 1; presentations += size
+            if reservation:
+                assert len(reservation.records) == size
+                for entry in reservation.records:
+                    row = train.rows[entry['image_index']]
+                    entry.update({'update': updates, 'epoch': epoch, 'image_id': row['image_id']})
+                    for obj in entry['objects']:
+                        obj['entity_id'] = row['annotations'][obj['gt_index']]['entity_id']
+                    selection_log.write(json.dumps(entry)+'\n')
+                reservation.records.clear()
+            if a.max_updates is not None and updates == a.max_updates:
+                break
+        reached_limit = a.max_updates is not None and updates == a.max_updates
         metrics = evaluate(model, validation, device, a.task, tuple(range(1, len(classes)+1)))
         score = metrics['macro_f1' if a.task == 'classifier' else 'map50']
-        record = {'epoch': epoch, 'train_loss': total / seen, 'train_loss_components': {k:v/seen for k,v in component_totals.items()},
+        record = {'epoch': epoch, 'optimizer_updates': updates, 'image_presentations': presentations, 'train_loss': total / seen, 'train_loss_components': {k:v/seen for k,v in component_totals.items()},
                   'learning_rate': optimizer.param_groups[0]['lr'], 'validation': metrics, 'elapsed_seconds': round(time.time() - start, 2)}
-        if a.head_probe_every and (epoch == 1 or epoch % a.head_probe_every == 0 or epoch == a.epochs):
+        if a.head_probe_every and (epoch == 1 or epoch % a.head_probe_every == 0 or epoch == a.epochs or reached_limit):
             # Preserve RNG state so monitoring does not alter training sampling.
             with torch.random.fork_rng(devices=[0] if device.type == 'cuda' else []):
                 diagnostics = {split: probe(model, samples, device) for split, samples in probe_samples.items()}
@@ -155,13 +184,18 @@ def main():
             record['head_monitor'] = {split: {k:v for k,v in report.items() if k not in ('heads','head_ap50')} for split,report in diagnostics.items()}
         history.append(record); print(json.dumps(record), flush=True)
         checkpoint = {'model': model.state_dict(), 'optimizer': optimizer.state_dict(), 'epoch': epoch,
+                      'optimizer_updates': updates, 'image_presentations': presentations,
                       'config': config, 'validation': metrics, 'initial_state_sha256': initial}
         torch.save(checkpoint, out / 'last.pt')
         if score > best:
             best, best_epoch = score, epoch; torch.save(checkpoint, out / 'best.pt')
         if scheduler is not None: scheduler.step()
         (out / 'history.json').write_text(json.dumps(history, indent=2))
-    result = {'task': a.task, 'epochs': a.epochs, 'best_epoch': best_epoch, 'best_validation_score': best,
+        if selection_log: selection_log.flush()
+        if reached_limit: break
+    if a.max_updates is not None: assert updates == a.max_updates
+    if selection_log: selection_log.close()
+    result = {'task': a.task, 'epochs': epoch, 'optimizer_updates': updates, 'image_presentations': presentations, 'final_validation': metrics, 'best_epoch': best_epoch, 'best_validation_score': best,
               'selection_metric': 'macro_f1' if a.task == 'classifier' else 'map50',
               'initial_state_sha256': initial, 'final_state_sha256': fingerprint(model),
               'test_used': False, 'pilot': config['pilot'], 'seconds': round(time.time() - start, 2)}

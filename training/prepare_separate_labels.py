@@ -9,7 +9,7 @@ CLASSES = ['motocicleta', 'persona_ocupante', 'cabeza_con_casco', 'cabeza_sin_ca
 
 
 def convert_scene(scene, expected_split='train'):
-    if expected_split not in ('train', 'val') or scene['split'] != expected_split:
+    if expected_split not in ('train', 'val', 'test') or scene['split'] != expected_split:
         raise ValueError('Only original requested split allowed')
     if scene.get('annotation_complete') is not True:
         raise ValueError('Human coverage declaration missing')
@@ -38,7 +38,7 @@ def main():
     p.add_argument('--reviewed', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True, help='New directory; never overwrite')
     p.add_argument('--canonical', type=Path, default=Path('data/annotations/train-separate-v2-01/draft.json'))
-    p.add_argument('--split', choices=['train', 'val'], default='train')
+    p.add_argument('--split', choices=['train', 'val', 'test'], default='train')
     a = p.parse_args()
     canonical = json.loads(a.canonical.read_text(encoding='utf-8'))
     batch = json.loads(a.reviewed.read_text(encoding='utf-8'))

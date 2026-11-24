@@ -23,7 +23,8 @@ class HelmetCNN(nn.Module):
         return self.head(self.features(images))
 
 
-def build_detector(num_classes=4, feature_stride=16):
+def build_detector(num_classes=4, feature_stride=16, proposal_multiplier=1):
+    if proposal_multiplier not in (1,4): raise ValueError('Proposal multiplier must be 1 or 4')
     if feature_stride not in (8,16): raise ValueError('Feature stride must be 8 or 16')
     backbone = nn.Sequential(block(3, 16), block(16, 32), block(32, 64), block(64, 128, stride=1 if feature_stride==8 else 2))
     backbone.out_channels = 128
@@ -33,8 +34,8 @@ def build_detector(num_classes=4, feature_stride=16):
                       image_mean=[.5, .5, .5], image_std=[.5, .5, .5],
                       rpn_anchor_generator=anchors,
                       box_roi_pool=MultiScaleRoIAlign(featmap_names=['0'], output_size=7, sampling_ratio=2),
-                      rpn_pre_nms_top_n_train=1000, rpn_post_nms_top_n_train=500,
-                      rpn_pre_nms_top_n_test=500, rpn_post_nms_top_n_test=200,
+                      rpn_pre_nms_top_n_train=1000*proposal_multiplier, rpn_post_nms_top_n_train=500*proposal_multiplier,
+                      rpn_pre_nms_top_n_test=500*proposal_multiplier, rpn_post_nms_top_n_test=200*proposal_multiplier,
                       box_detections_per_img=100)
 
 

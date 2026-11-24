@@ -1,0 +1,12 @@
+{
+  "task": "detector",
+  "epochs": 150,
+  "best_epoch": 75,
+  "best_validation_score": 0.47256011537986226,
+  "selection_metric": "map50",
+  "initial_state_sha256": "bee4319d89fe9d87c13fded45354bdfdafa64f2034eec0b332eb160804347014",
+  "final_state_sha256": "e072d5e4d68b9ee0c4e4e579427acd0a5eff5ea2a7822eb82492e063e33c1cba",
+  "test_used": false,
+  "pilot": true,
+  "seconds": 561.2
+}

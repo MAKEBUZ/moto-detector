@@ -1,0 +1,13 @@
+{
+  "dataset": "data\\prepared\\helmet-separate-v2-expanded-03",
+  "lock_verified": true,
+  "previous_train_rows_unchanged": true,
+  "validation_byte_identical": true,
+  "no_overlap_with_test_by_image_group_hash": true,
+  "loader_verified": {
+    "train": 44,
+    "val": 5
+  },
+  "training_started": false,
+  "pretrained_weights_used": false
+}

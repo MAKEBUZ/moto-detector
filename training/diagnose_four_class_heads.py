@@ -27,7 +27,7 @@ def main():
     ck = torch.load(checkpoint, map_location='cpu', weights_only=True)
     assert ck['config']['pretrained'] is False and ck['config']['initialization'] == 'random'
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    model = build_detector(5, ck['config'].get('feature_stride',16)); model.load_state_dict(ck['model']); model.to(device).eval()
+    model = build_detector(5, ck['config'].get('feature_stride',16), ck['config'].get('proposal_multiplier',1)); model.load_state_dict(ck['model']); model.to(device).eval()
     records = []; summary = {}
     for split in ('train', 'val'):
         ds = SeparateHelmetDataset(root, split, augment=False)

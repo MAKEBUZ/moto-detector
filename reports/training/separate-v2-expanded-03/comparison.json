@@ -1,0 +1,247 @@
+{
+  "runs": [
+    "detector-separate-v2-expanded-02",
+    "detector-separate-v2-expanded-03"
+  ],
+  "best": [
+    {
+      "epoch": 108,
+      "train_loss": 0.351664548260825,
+      "train_loss_components": {
+        "loss_classifier": 0.09862348075423921,
+        "loss_box_reg": 0.1670162552169391,
+        "loss_objectness": 0.034244298030223164,
+        "loss_rpn_box_reg": 0.051780517186437336
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.6444169433400182,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.6354235511014957,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.5635313509714486,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 1.0,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.3787128712871287,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 338.53
+    },
+    {
+      "epoch": 75,
+      "train_loss": 0.5016578205607154,
+      "train_loss_components": {
+        "loss_classifier": 0.1449279493906281,
+        "loss_box_reg": 0.2399683648889715,
+        "loss_objectness": 0.040791982488537375,
+        "loss_rpn_box_reg": 0.07596952794119716
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.47256011537986226,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.6237623774179137,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.49222065434597506,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.33663366336633666,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.4376237663892236,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 274.26
+    }
+  ],
+  "last": [
+    {
+      "epoch": 150,
+      "train_loss": 0.2858537222657885,
+      "train_loss_components": {
+        "loss_classifier": 0.08039748562233788,
+        "loss_box_reg": 0.1461885548063687,
+        "loss_objectness": 0.020319085262183633,
+        "loss_rpn_box_reg": 0.03894859869033098
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.42246975063687503,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.60176018264034,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.2564356515903284,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.16831683168316833,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.6633663366336634,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 482.13,
+      "head_monitor": {
+        "train": {
+          "head_count": 74,
+          "rpn_covered_iou50": 70,
+          "correct_head_coverage_iou50": 72,
+          "correct_head_coverage_iou50_score50": 70,
+          "oracle_correct": 74
+        },
+        "val": {
+          "head_count": 9,
+          "rpn_covered_iou50": 7,
+          "correct_head_coverage_iou50": 5,
+          "correct_head_coverage_iou50_score50": 3,
+          "oracle_correct": 1
+        }
+      }
+    },
+    {
+      "epoch": 150,
+      "train_loss": 0.3181247301399708,
+      "train_loss_components": {
+        "loss_classifier": 0.09456629035147754,
+        "loss_box_reg": 0.156525571745905,
+        "loss_objectness": 0.02014500398019498,
+        "loss_rpn_box_reg": 0.04688786795701493
+      },
+      "learning_rate": 0.0003,
+      "validation": {
+        "map50": 0.2842938167476418,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.33498350405456995,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.4655580995696606,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.16831683168316833,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.16831683168316833,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "elapsed_seconds": 558.91,
+      "head_monitor": {
+        "train": {
+          "head_count": 89,
+          "rpn_covered_iou50": 86,
+          "correct_head_coverage_iou50": 86,
+          "correct_head_coverage_iou50_score50": 84,
+          "oracle_correct": 89
+        },
+        "val": {
+          "head_count": 9,
+          "rpn_covered_iou50": 2,
+          "correct_head_coverage_iou50": 2,
+          "correct_head_coverage_iou50_score50": 0,
+          "oracle_correct": 1
+        }
+      }
+    }
+  ],
+  "fixed_settings_verified": [
+    "epochs",
+    "batch_size",
+    "workers",
+    "seed",
+    "constant_lr",
+    "learning_rate",
+    "photometric_policy",
+    "feature_stride",
+    "proposal_multiplier",
+    "head_probe_every",
+    "classes",
+    "parameters",
+    "initial_state_sha256",
+    "initialization",
+    "pretrained"
+  ],
+  "validation_byte_identical": true,
+  "optimizer_steps": [
+    2700,
+    3300
+  ],
+  "test_used": false,
+  "nohelmet_counts": {
+    "old": {
+      "0.05": {
+        "tp": 3,
+        "fp": 7,
+        "fn": 3
+      },
+      "0.5": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 6
+      }
+    },
+    "new": {
+      "0.05": {
+        "tp": 3,
+        "fp": 8,
+        "fn": 3
+      },
+      "0.5": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      }
+    }
+  },
+  "checkpoint_sha256": {
+    "best.pt": "92cc7aa86b50911a295c72a0db4bc99c3e5be008d0b49adfb2c6bfdeb13fa93c",
+    "last.pt": "5eecf1c1f082ad795ff38d9843097335edb310a341f020c6f5cacb7546f23731"
+  }
+}

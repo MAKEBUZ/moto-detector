@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "run": "detector-separate-v2-expanded-02",
+      "checkpoint": "detector-separate-v2-expanded-02-best.pt",
+      "sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+      "dataset": "helmet-separate-v2-expanded-02",
+      "criterion": "Best overall four-class validation mAP50: 64.44%"
+    },
+    {
+      "run": "detector-separate-v2-proposals4-01",
+      "checkpoint": "detector-separate-v2-proposals4-01-best.pt",
+      "sha256": "b88abb7c6e02691b8cd5610573caaaa0d2b9fb93ab92b6ecb44743dfda8c748a",
+      "dataset": "helmet-separate-v2-expanded-01",
+      "criterion": "Best recorded nohelmet validation AP50: 50.50%; not deployment accuracy"
+    }
+  ],
+  "pretrained": false,
+  "note": "Local backup. Validation repeatedly reused; neither checkpoint is validated for deployment. Original files remain untouched."
+}

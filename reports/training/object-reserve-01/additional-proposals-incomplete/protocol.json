@@ -1,0 +1,16 @@
+{
+  "training_performed": false,
+  "test_used": false,
+  "budgets": [
+    2000,
+    4000
+  ],
+  "post_nms": 800,
+  "matching": "Same decoded RPN anchor index, same image. Batch 2,2,1; frozen eval.",
+  "fp_categories": "Exclusive: duplicate nohelmet IoU>=.5; helmet IoU>=.5; nohelmet .1<=IoU<.5; other_region. Other region is not certified background.",
+  "regression": "Per-candidate maximum nohelmet IoU before/after; counterfactual replaces ONLY nohelmet boxes, retaining all candidate scores then reruns normal filtering/NMS/max100.",
+  "thresholds": [
+    0.05,
+    0.5
+  ]
+}

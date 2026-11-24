@@ -59,3 +59,11 @@ Sustituir las rutas de ejemplo por archivos existentes. Se generan resultados JS
 La inferencia del detector incluye ahora `association`: propuestas geométricas cabeza–moto, ambigüedades y conflictos. No son ocupantes confirmados y no habilitan conteo. La revisión y sus límites están documentados en `reports/error-review/README.md`.
 
 Referencias de las APIs: [instalación de PyTorch](https://pytorch.org/get-started/locally/) y el código instalado de `torchvision.models.detection.faster_rcnn.FasterRCNN`.
+
+## Reserva experimental de positivos RPN
+
+`training/train.py --rpn-object-reserve` activa la reserva de un positivo por objeto que disponga de anclas asignadas positivas. Es opcional y solo se permite en el detector de cuatro clases. Se mantiene el tamaño del muestreo y su proporción positiva, y se conservan las negativas del sorteo original. Se reparan omisiones intercambiando positivos redundantes; si no alcanza el presupuesto, se detiene explícitamente. Las reparaciones usan un RNG separado con semilla de ejecución +1000000.
+
+`rpn-selections.jsonl` registra todos los pasos e imágenes, identificadores de objetos, clases, positivos disponibles, selección habitual previa a reparar, selección final e índices de anclas. No registra coordenadas completas ni las imágenes aumentadas. Los checkpoints guardan pesos con el mismo esquema; la inferencia no necesita el sampler y no cambia por instalarlo. No hay reanudación implícita.
+
+Experimento reproducible: `training/run_fixed_updates.py --rpn-object-reserve`. Comparación: `training/report_object_reserve.py`. Requieren destinos nuevos si ya existen resultados. La reserva no se adoptó como configuración predeterminada: su mejora no fue consistente en las dos semillas y datasets evaluados. Ver `reports/training/object-reserve-01/README.md`.

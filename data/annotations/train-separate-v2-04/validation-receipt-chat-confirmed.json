@@ -1,0 +1,248 @@
+{
+  "valid": true,
+  "errors": [],
+  "human_review_asserted": true,
+  "training_ready": false,
+  "evaluation_scope": "annotation structure only; not model accuracy or dataset readiness",
+  "confirmed_links": [
+    {
+      "image_id": "Image_00334",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00334",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00523",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00523",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02169",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02169",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02169",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02169",
+      "head_id": "h4",
+      "person_id": "o4",
+      "motorcycle_id": "m2",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01183",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01183",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01183",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01183",
+      "head_id": "h3",
+      "person_id": "o3",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00980",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m2",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00980",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00980",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01364",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_01364",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00396",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00456",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00456",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m2",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00456",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00456",
+      "head_id": "h3",
+      "person_id": "o3",
+      "motorcycle_id": "m3",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02044",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02044",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_02044",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00709",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00709",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00709",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00778",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00778",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00778",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00306",
+      "head_id": "h0",
+      "person_id": "o0",
+      "motorcycle_id": "m1",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00306",
+      "head_id": "h1",
+      "person_id": "o1",
+      "motorcycle_id": "m0",
+      "status": "confirmed"
+    },
+    {
+      "image_id": "Image_00306",
+      "head_id": "h2",
+      "person_id": "o2",
+      "motorcycle_id": "m2",
+      "status": "confirmed"
+    }
+  ],
+  "input_sha256": "ba53dcc04c820768081a1fe8ef4e1d94fc5497ce2d3a780d172358511b47169f"
+}

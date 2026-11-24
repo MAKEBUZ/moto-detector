@@ -1,0 +1,20 @@
+{
+  "valid": true,
+  "images": 12,
+  "entities": 54,
+  "links": 19,
+  "source_head_classes": {
+    "con_casco": 7,
+    "sin_casco": 12
+  },
+  "no_prior_overlap": {
+    "image_id": true,
+    "group_id": true,
+    "sha256": true
+  },
+  "original_images_hash_verified": true,
+  "all_pending": true,
+  "training_started": false,
+  "pretrained_model_used": false,
+  "draft_sha256": "ef8ae41d2f1514141e12d005790be9b5203ae64fd7988e5e7de22a4b806b0657"
+}

@@ -1,0 +1,142 @@
+{
+  "dataset": "helmet-separate-v2-expanded-03",
+  "classes": [
+    "motocicleta",
+    "persona_ocupante",
+    "cabeza_con_casco",
+    "cabeza_sin_casco"
+  ],
+  "summary": {
+    "train": {
+      "images": 44,
+      "boxes": 246,
+      "links": 89,
+      "classes": {
+        "motocicleta": 68,
+        "persona_ocupante": 89,
+        "cabeza_con_casco": 36,
+        "cabeza_sin_casco": 53
+      }
+    },
+    "val": {
+      "images": 5,
+      "boxes": 25,
+      "links": 9,
+      "classes": {
+        "motocicleta": 7,
+        "persona_ocupante": 9,
+        "cabeza_con_casco": 3,
+        "cabeza_sin_casco": 6
+      }
+    }
+  },
+  "excluded": [
+    {
+      "batch_id": "train-separate-v2-01",
+      "image_id": "Image_01416",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "train-separate-v2-01",
+      "image_id": "Image_00419",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "train-separate-v2-02",
+      "image_id": "Image_00265",
+      "reason": "Unresolved entities: exclude whole image, not just their boxes"
+    },
+    {
+      "batch_id": "train-separate-v2-02",
+      "image_id": "Image_01871",
+      "reason": "Unresolved entities: exclude whole image, not just their boxes"
+    },
+    {
+      "batch_id": "train-separate-v2-02",
+      "image_id": "Image_00101",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "train-separate-v2-02",
+      "image_id": "Image_00535",
+      "reason": "Unresolved entities: exclude whole image, not just their boxes"
+    },
+    {
+      "batch_id": "val-separate-v2-01",
+      "image_id": "Image_01819",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "val-separate-v2-01",
+      "image_id": "Image_01327",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "val-separate-v2-01",
+      "image_id": "Image_00571",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "train-separate-v2-03",
+      "image_id": "Image_00677",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "train-separate-v2-04",
+      "image_id": "Image_02169",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "train-separate-v2-04",
+      "image_id": "Image_00396",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "train-separate-v2-05",
+      "image_id": "Image_01504",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "train-separate-v2-05",
+      "image_id": "Image_00924",
+      "reason": "Human coverage declaration missing"
+    },
+    {
+      "batch_id": "train-separate-v2-05",
+      "image_id": "Image_01491",
+      "reason": "Human coverage declaration missing"
+    }
+  ],
+  "source_sha256": {
+    "data\\annotations\\train-separate-v2-01\\train-separate-reviewed.json": "5037e88e6d3103166b566cdf81fbaf410e5704da6ccb420fe83401cce56b387b",
+    "data\\annotations\\train-separate-v2-01\\draft.json": "d0c5f6c089498d1a659a1a2f909ec12a82d14e2c1abd068a2ea75cc7992a86eb",
+    "data\\prepared\\helmet-separate-v2-staging-01\\train-manifest.jsonl": "31bd060065ea655035f576ef51590606baf0dffb1f0181e99d6bde084663cf3d",
+    "data\\prepared\\helmet-separate-v2-staging-01\\preparation.json": "7b905ae0b5b38fea13c0626d1286c1d243cb37743811abb9426a8f7e06dd52ef",
+    "data\\annotations\\train-separate-v2-02\\train-separate-v2-02-reviewed.json": "e279d3be7dbc71678dbdca15d41d7559b0e4d542f2009a85990cce16e6526395",
+    "data\\annotations\\train-separate-v2-02\\draft.json": "b9b5ce7b404d5b275b20cf38b3dffea8c10435d27f45f41dc1e3a1bdfa8ac749",
+    "data\\prepared\\helmet-separate-v2-staging-02\\train-manifest.jsonl": "d2bc607ee82e47a740bd19c8c1319c93d753248d51e734f563ae4b063b4c234f",
+    "data\\prepared\\helmet-separate-v2-staging-02\\preparation.json": "e68f8ef2451079a2e93a879dc66082c8af0b824ca5aef0be93ea48e6407a513a",
+    "data\\annotations\\val-separate-v2-01\\val-separate-v2-01-reviewed.json": "3422112c8fecfd53caf608b42c6bd3699286057fecd8e15217be420aafd003c2",
+    "data\\annotations\\val-separate-v2-01\\draft.json": "7d65d73ec1251a5fa66fd023e0fb13dce34b27f9fd11b2b4878bb4344eaab129",
+    "data\\prepared\\helmet-separate-v2-validation-01\\val-manifest.jsonl": "8f2b27f95448399553d262463f82dc6bf57b3f45fb85a5fad67bb3aa9005bca7",
+    "data\\prepared\\helmet-separate-v2-validation-01\\preparation.json": "d1bff8dc05645bb5322ce8ee0b45284f0fd3ee8151f69c70b49f2bd85aeb9435",
+    "data\\annotations\\train-separate-v2-03\\train-separate-v2-03-reviewed.json": "f6f9d24ae3d06805a9e0033b1e221a45dbc113cccfa3ba08f4a23b840be57efc",
+    "data\\annotations\\train-separate-v2-03\\draft.json": "9057cb6f625845bba1e60da1fcb65e96c847a6f9b4843aa69bfa487b1c0c5d63",
+    "data\\prepared\\helmet-separate-v2-staging-03\\train-manifest.jsonl": "eea88e6208948dd8585dc9645e039fef385bee79b7da1950094768fdb710a46b",
+    "data\\prepared\\helmet-separate-v2-staging-03\\preparation.json": "624c60ef1d65003c7199f0cd949ca1b8a91014cff0f984731ff810110e6891f7",
+    "data\\annotations\\train-separate-v2-04\\train-separate-v2-04-reviewed.json": "ba53dcc04c820768081a1fe8ef4e1d94fc5497ce2d3a780d172358511b47169f",
+    "data\\annotations\\train-separate-v2-04\\draft.json": "42633a6c3c2b6a7fb30ff95a4a6c4d425cdc015d705ef3bed160c43acc4f830c",
+    "data\\prepared\\helmet-separate-v2-staging-04\\train-manifest.jsonl": "d44c344f4fa2b062d35581742944462228fd7c98b8b8610ff8b67685da0e8439",
+    "data\\prepared\\helmet-separate-v2-staging-04\\preparation.json": "90ae685e9e2b46364e9409c1e8619dcb7cd157387c5b4ae9a2a6b4a7ed080034",
+    "data\\annotations\\train-separate-v2-05\\train-separate-v2-05-reviewed.json": "b87854797ae63deb6ea8e57b1b4ba3338d4597ebe4136c6e8915891917517a29",
+    "data\\annotations\\train-separate-v2-05\\draft.json": "ef8ae41d2f1514141e12d005790be9b5203ae64fd7988e5e7de22a4b806b0657",
+    "data\\prepared\\helmet-separate-v2-staging-05\\train-manifest.jsonl": "e41f05c0414b031d61cdf24e9de14ddf80e0cfe6ca1f8cb28c0015ff1abb8cda",
+    "data\\prepared\\helmet-separate-v2-staging-05\\preparation.json": "b2ab3c989c06ab06490853b48b6fc6eaea26b863cba67fca8f5238161e3cac97"
+  },
+  "group_overlap_train_val": false,
+  "exact_image_overlap": false,
+  "annotations_prepared": true,
+  "training_started": false,
+  "test_used": false,
+  "limitation": "Small human-reviewed subset; split groups do not certify independent scenes; use four-class loader and random initialization."
+}

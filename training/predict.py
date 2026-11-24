@@ -25,7 +25,7 @@ def main():
     if config['pretrained'] is not False or config['initialization'] != 'random':
         raise RuntimeError('Checkpoint does not satisfy the from-scratch contract.')
     task = config['task']
-    model = HelmetCNN() if task == 'classifier' else build_detector(config.get('num_classes_including_background', 4), config.get('feature_stride',16))
+    model = HelmetCNN() if task == 'classifier' else build_detector(config.get('num_classes_including_background', 4), config.get('feature_stride',16), config.get('proposal_multiplier',1))
     model.load_state_dict(checkpoint['model'])
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model.to(device).eval()

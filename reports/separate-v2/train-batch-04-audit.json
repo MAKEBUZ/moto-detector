@@ -1,0 +1,14 @@
+{
+  "batch": "train-separate-v2-04",
+  "images": 12,
+  "groups": 12,
+  "head_proposals": {
+    "sin_casco": 27,
+    "con_casco": 10
+  },
+  "entities": 103,
+  "relations": 37,
+  "overlap_with_prior_batches": false,
+  "human_reviewed": false,
+  "selection_uses_model_predictions": false
+}

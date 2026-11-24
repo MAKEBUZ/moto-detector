@@ -1,0 +1,18 @@
+{
+  "authorization": "User confirmed in chat: Agrega la _00709 , _00456 estan bien",
+  "changes": [
+    {
+      "image_id": "Image_00456",
+      "before": false,
+      "after": true
+    },
+    {
+      "image_id": "Image_00709",
+      "before": false,
+      "after": true
+    }
+  ],
+  "original_sha256": "56d897bce0cc011cbdd96acd9feb37d15f8d860b5e1d32ca454b10bd8f3efbcb",
+  "updated_sha256": "ba53dcc04c820768081a1fe8ef4e1d94fc5497ce2d3a780d172358511b47169f",
+  "scope": "Coverage declarations only; boxes, classes, reviewer and links unchanged"
+}
