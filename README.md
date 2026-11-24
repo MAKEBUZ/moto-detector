@@ -156,3 +156,31 @@ El repositorio fuente contiene etiquetas y recortes; las imágenes originales ya
 ### Clasificación y ajuste de las propuestas adicionales con 4000
 
 Diagnóstico congelado de los ocho modelos: las propuestas adicionales aportan 6 TP y 27 FP sin casco a confianza 0.05 (observaciones repetidas entre modelos). En 25 de esos FP la clase dominante es fondo; ninguno tenía IoU sin casco ≥0.5 antes de la regresión. El contrafactual sin ajuste de cajas sin casco no reduce los FP en ningún modelo. A confianza 0.5 aparecen un TP y un FP adicionales. Se mantiene 2000 como referencia, sin entrenamiento ni cambios de pesos. [Desglose, protocolo y limitaciones](reports/training/object-reserve-01/additional-proposals/README.md).
+
+### Revisión visual y filtros congelados
+
+El falso positivo sin casco de confianza 87.9% corresponde al asiento de una moto. Se revisaron los 27 FP adicionales y se compararon filtros de clase ganadora y posición respecto a personas, con RPN2000/4000 y los ocho checkpoints. Reducen FP pero pierden demasiados TP; no se activan por defecto ni se afirma que el detector esté listo para uso real. No hubo entrenamiento. [Informe y galerías](reports/training/object-reserve-01/visual-review/README.md). Respaldo local de los mejores resultados: rama `codex/backup-best-results-20261124`, commit `bcf424d`, checkpoints y datasets incluidos con SHA256.
+
+### Negativos difíciles pendientes de revisión
+
+Preparadas seis imágenes de seis grupos nuevos de entrenamiento: asientos, ropa y espejos/piezas. Un único JSON conserva la revisión de regiones y las cuatro clases habituales. Sin entrenamiento ni cambios de validación. [Instrucciones](data/annotations/train-hard-negatives-v2-01/LEEME.md) · [Selección y trazabilidad](reports/separate-v2/hard-negatives-selection/README.md).
+
+### Negativos difíciles revisados: dataset de 50 imágenes
+
+Las seis imágenes del lote fueron válidas y completas. Nuevo dataset `helmet-separate-v2-expanded-04`: 50 imágenes de entrenamiento y 267 cajas, con las mismas cuatro clases. Se conservan seis regiones no-cabeza como trazabilidad (tres de ropa y tres piezas), sin clases extra. Validación idéntica por SHA256: cinco imágenes y 25 cajas. No hubo entrenamiento. [Preparación y comprobaciones](docs/dataset-separado-v2-negativos-01.md).
+
+### Entrenamiento desde cero: 50 frente a 44 imágenes, dos semillas
+
+Dos entrenamientos nuevos sin pesos preentrenados, comparados con controles44 verificados:1950 actualizaciones y3900 presentaciones por ejecución; mismo detector, aumentos y muestreo original. AP50 sin casco: semilla20261124,16.83% →16.83%; semilla20261125,0% →33.66%. A confianza0.05, TP/FP/FN:1/2/5 →1/5/5 y0/6/6 →2/4/4. A0.5 ambos modelos nuevos producen1 TP,0 FP y5 FN. No demuestra mejora consistente ni preparación para uso real; también empeora con casco. Sin cambios en validación, test o modelo por defecto. [Informe, protocolo y métricas](reports/training/hard-negatives-fixed1950-01/README.md).
+
+### Auditoría congelada de negativos difíciles
+
+Comparadas las seis regiones revisadas con controles44/modelos50 y ambas semillas. En replay de20 sorteos por imagen, el RPN no selecciona anclas negativas cercanas (IoU≥0.5) en113/120 y109/120 sorteos de los modelos50. RoI sí muestrea varias donde existen propuestas, pero carece de ellas en una o dos regiones según semilla. Mejora local parcial; no demuestra generalización ni reconstruye los sorteos históricos. Pesos y buffers intactos; no hubo entrenamiento. [Informe y sensibilidad aIoU0.3](reports/training/hard-negatives-fixed1950-01/negative-region-audit/README.md).
+
+### Registro de exposición real durante entrenamiento
+
+Implementado `--log-negative-exposure`: observa las selecciones reales RPN/RoI sin cambiar el muestreador, con regiones transformadas junto a las imágenes. Dos ejecuciones completas desde cero,50 imágenes y1950 pasos, semillas20261124/20261125:936 registros por semilla. Exposición con negativos cercanos (IoU≥0.5): RPN38/468 y26/468; RoI298/468 y250/468. El espejo Image_00655 casi nunca se selecciona. AP50 sin casco final8.42% y0%; no se promueven estos modelos. Se detectó falta de reproducibilidad bit a bit en CUDA incluso al repetir sin registro; las pruebas verifican que el observador conserva selecciones, pérdidas de forward y RNG.43 pruebas pasan. [Informe y registros](reports/training/negative-exposure-02/README.md).
+
+### Reproducibilidad GPU: dos repeticiones con la misma semilla
+
+Dos procesos nuevos con semilla20261124,50 imágenes,1950 actualizaciones y muestreador original confirman falta de reproducibilidad bit a bit en la configuración actual. Entradas, orden, aumentos y etiquetas idénticos durante los1950 pasos; primera diferencia de gradientes/estado en paso1 y pérdidas/RoI en paso2. AP50 sin casco8.42% frente a4.21%; aconfianza0.05,1 TP/1 FP frente a1 TP/5 FP. No se selecciona el resultado favorable. Antes de modificar el muestreo se recomienda un control explícitamente determinista. Sin pesos preentrenados ni cambios de validación. [Informe, protocolo y trazas](reports/training/gpu-reproducibility-01/README.md).

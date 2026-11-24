@@ -44,16 +44,24 @@ class HelmetDataset(Dataset):
         image = image.resize((w, h), Image.Resampling.BILINEAR)
         boxes = torch.tensor([a['box'] for a in r['annotations']], dtype=torch.float32)
         boxes *= torch.tensor([w / old_w, h / old_h, w / old_w, h / old_h])
+        regions = None
+        if getattr(self, 'exposure_regions', False):
+            regions = torch.tensor([n['bbox'] for n in r.get('reviewed_nonhead_regions', [])], dtype=torch.float32).reshape(-1, 4)
+            regions *= torch.tensor([w / old_w, h / old_h, w / old_w, h / old_h])
         if self.augment and random.random() < .5:
             image = ImageOps.mirror(image)
             boxes[:, [0, 2]] = w - boxes[:, [2, 0]]
+            if regions is not None:
+                regions[:, [0, 2]] = w - regions[:, [2, 0]]
         if getattr(self, 'photometric', False):
             image = ImageEnhance.Brightness(image).enhance(self.photo_rng.uniform(.85, 1.15))
             image = ImageEnhance.Contrast(image).enhance(self.photo_rng.uniform(.85, 1.15))
             if self.photo_rng.random() < .25:
                 image = image.filter(ImageFilter.GaussianBlur(radius=self.photo_rng.uniform(.2, .8)))
         labels = torch.tensor([a['classId'] + 1 for a in r['annotations']], dtype=torch.int64)
-        return pil_to_tensor(image).float().div(255), {'boxes': boxes, 'labels': labels, 'image_id': torch.tensor(index)}
+        target = {'boxes': boxes, 'labels': labels, 'image_id': torch.tensor(index)}
+        if regions is not None: target['negative_regions'] = regions
+        return pil_to_tensor(image).float().div(255), target
 
 
 def collate_detection(batch):

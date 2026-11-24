@@ -1,0 +1,8 @@
+{
+  "two_step_losses": {
+    "plain": 1.7396621108055115,
+    "logged": 1.736006259918213,
+    "plain-repeat": 1.7377203106880188
+  },
+  "observation": "Identical seed does not reproduce CUDA gradients/trajectory even without observer. Direct same-input forward: same losses and CPU/CUDA RNG; gradient max difference 4.592817276716232e-06. CPU test losses/gradients/buffers/RNG exactly equal."
+}

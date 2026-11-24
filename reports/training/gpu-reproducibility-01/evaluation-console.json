@@ -1,0 +1,225 @@
+{
+  "records": [
+    {
+      "run": "detector-gpu-repro1950-s20261124-r1",
+      "dataset": "data\\prepared\\helmet-separate-v2-expanded-04",
+      "seed": 20261124,
+      "images": 50,
+      "repeat": 1,
+      "checkpoint": "last.pt",
+      "epoch": 78,
+      "optimizer_updates": 1950,
+      "image_presentations": 3900,
+      "initial_state_sha256": "bee4319d89fe9d87c13fded45354bdfdafa64f2034eec0b332eb160804347014",
+      "checkpoint_sha256": "b289f8f2bb262cc2e948ae65d627521f9cc4e058a072a4bcdf9df8868f156967",
+      "metrics": {
+        "map50": 0.37623762169686875,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.6023102314165323,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.4818481761630219,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.33663366336633666,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.08415841584158416,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "counts50": [
+        {
+          "class_id": 0,
+          "tp": 4,
+          "fp": 5,
+          "fn": 3,
+          "precision": 0.4444444444444444,
+          "recall": 0.5714285714285714
+        },
+        {
+          "class_id": 1,
+          "tp": 4,
+          "fp": 1,
+          "fn": 5,
+          "precision": 0.8,
+          "recall": 0.4444444444444444
+        },
+        {
+          "class_id": 2,
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0
+        },
+        {
+          "class_id": 3,
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        }
+      ],
+      "counts05": [
+        {
+          "class_id": 0,
+          "tp": 5,
+          "fp": 14,
+          "fn": 2,
+          "precision": 0.2631578947368421,
+          "recall": 0.7142857142857143
+        },
+        {
+          "class_id": 1,
+          "tp": 5,
+          "fp": 14,
+          "fn": 4,
+          "precision": 0.2631578947368421,
+          "recall": 0.5555555555555556
+        },
+        {
+          "class_id": 2,
+          "tp": 1,
+          "fp": 3,
+          "fn": 2,
+          "precision": 0.25,
+          "recall": 0.3333333333333333
+        },
+        {
+          "class_id": 3,
+          "tp": 1,
+          "fp": 1,
+          "fn": 5,
+          "precision": 0.5,
+          "recall": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "run": "detector-gpu-repro1950-s20261124-r2",
+      "dataset": "data\\prepared\\helmet-separate-v2-expanded-04",
+      "seed": 20261124,
+      "images": 50,
+      "repeat": 2,
+      "checkpoint": "last.pt",
+      "epoch": 78,
+      "optimizer_updates": 1950,
+      "image_presentations": 3900,
+      "initial_state_sha256": "bee4319d89fe9d87c13fded45354bdfdafa64f2034eec0b332eb160804347014",
+      "checkpoint_sha256": "09b9df57d68dd7a540ab5d48461ee4c10329c338936022130e61bd8e6e1a63bf",
+      "metrics": {
+        "map50": 0.24555044864663983,
+        "per_class": [
+          {
+            "class_id": 0,
+            "ap50": 0.3988684601712935,
+            "ground_truth_boxes": 7
+          },
+          {
+            "class_id": 1,
+            "ap50": 0.37293729481130544,
+            "ground_truth_boxes": 9
+          },
+          {
+            "class_id": 2,
+            "ap50": 0.16831683168316833,
+            "ground_truth_boxes": 3
+          },
+          {
+            "class_id": 3,
+            "ap50": 0.04207920792079208,
+            "ground_truth_boxes": 6
+          }
+        ],
+        "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+      },
+      "counts50": [
+        {
+          "class_id": 0,
+          "tp": 3,
+          "fp": 6,
+          "fn": 4,
+          "precision": 0.3333333333333333,
+          "recall": 0.42857142857142855
+        },
+        {
+          "class_id": 1,
+          "tp": 3,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.75,
+          "recall": 0.3333333333333333
+        },
+        {
+          "class_id": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.3333333333333333
+        },
+        {
+          "class_id": 3,
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        }
+      ],
+      "counts05": [
+        {
+          "class_id": 0,
+          "tp": 4,
+          "fp": 16,
+          "fn": 3,
+          "precision": 0.2,
+          "recall": 0.5714285714285714
+        },
+        {
+          "class_id": 1,
+          "tp": 5,
+          "fp": 17,
+          "fn": 4,
+          "precision": 0.22727272727272727,
+          "recall": 0.5555555555555556
+        },
+        {
+          "class_id": 2,
+          "tp": 1,
+          "fp": 6,
+          "fn": 2,
+          "precision": 0.14285714285714285,
+          "recall": 0.3333333333333333
+        },
+        {
+          "class_id": 3,
+          "tp": 1,
+          "fp": 5,
+          "fn": 5,
+          "precision": 0.16666666666666666,
+          "recall": 0.16666666666666666
+        }
+      ]
+    }
+  ],
+  "paired_deltas": [
+    {
+      "seed": 20261124,
+      "nohelmet_ap_delta_points": -4.207920792079208,
+      "nohelmet_tp50_delta": 0
+    }
+  ]
+}

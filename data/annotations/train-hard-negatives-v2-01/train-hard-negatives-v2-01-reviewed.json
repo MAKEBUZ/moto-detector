@@ -1,0 +1,644 @@
+{
+  "schema_version": 1,
+  "batch_id": "train-hard-negatives-v2-01",
+  "provenance": "existing_source_annotations_only; no model-generated labels",
+  "human_reviewed": true,
+  "training_ready": false,
+  "held_out_usage": "Original train only; preserve groups and splits.",
+  "excluded_prior_batch_ids": [
+    "relations-pilot-v2",
+    "test-separate-v2-01",
+    "train-separate-v2-01",
+    "train-separate-v2-02",
+    "train-separate-v2-03",
+    "train-separate-v2-04",
+    "train-separate-v2-05",
+    "val-separate-v2-01"
+  ],
+  "scenes": [
+    {
+      "image_id": "Image_00616",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00616.jpg",
+      "sha256": "fe76e8ff0ac2061840d406494b24031e31722d270c22a24fd99e32e78dd15c76",
+      "width": 590,
+      "height": 933,
+      "split": "train",
+      "group_id": "7bd4d10370de75aff64b",
+      "selection_reason": "Ropa oscura del hombro y torso confundida con casco; revisar todas las cabezas reales.",
+      "selection_features": {
+        "min_head_side_at_640": 78.19935691318328,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote. NEGATIVO DIFÍCIL: Ropa oscura del hombro y torso confundida con casco; revisar todas las cabezas reales. La caja magenta n0 es solo una sugerencia del modelo, no una etiqueta. No dibujar asiento/ropa/piezas como cabeza. Revisar la imagen completa.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            104.78,
+            325,
+            466.85,
+            888.28
+          ],
+          "context_bbox": [
+            104,
+            85,
+            469,
+            888
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            242,
+            88,
+            356,
+            230
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "NoHelmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            125.94,
+            84.45,
+            446.19,
+            552.28
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "hard_negative_candidates": [
+        {
+          "id": "n0",
+          "bbox": [
+            184.7017364501953,
+            197.6863250732422,
+            264.21331787109375,
+            311.1816711425781
+          ],
+          "predicted_label": 3,
+          "score": 0.815780520439148,
+          "checkpoint": "detector-separate-v2-expanded-02",
+          "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+          "decision": "background",
+          "category": "clothing"
+        }
+      ]
+    },
+    {
+      "image_id": "Image_00655",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00655.jpg",
+      "sha256": "006a4e46e0d35dab4f4749c8e8197364015e7f3a1afde1c766dc7565efaed306",
+      "width": 1657,
+      "height": 2194,
+      "split": "train",
+      "group_id": "80f4cfc6cb171cbf0038",
+      "selection_reason": "Espejo de moto confundido con cabeza sin casco; mantener casco real y ocupante.",
+      "selection_features": {
+        "min_head_side_at_640": 119.59890610756608,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote. NEGATIVO DIFÍCIL: Espejo de moto confundido con cabeza sin casco; mantener casco real y ocupante. La caja magenta n0 es solo una sugerencia del modelo, no una etiqueta. No dibujar asiento/ropa/piezas como cabeza. Revisar la imagen completa.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            37.3,
+            656.97,
+            1627.53,
+            2191.45
+          ],
+          "context_bbox": [
+            41,
+            49,
+            1631,
+            2192
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            559,
+            52,
+            969,
+            471
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            118.82,
+            61.68,
+            1225.49,
+            2020.19
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "hard_negative_candidates": [
+        {
+          "id": "n0",
+          "bbox": [
+            87.85955810546875,
+            695.6090087890625,
+            244.4206085205078,
+            866.1221923828125
+          ],
+          "predicted_label": 4,
+          "score": 0.7417502999305725,
+          "checkpoint": "detector-separate-v2-expanded-02",
+          "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+          "decision": "background",
+          "category": "motorcycle_part"
+        }
+      ]
+    },
+    {
+      "image_id": "Image_02253",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02253.jpg",
+      "sha256": "9b44e6f9269ff68b95bac3e1025b8d62c962d12ae7d88ab87c27308a997318dc",
+      "width": 518,
+      "height": 700,
+      "split": "train",
+      "group_id": "898bff3ef7e1d7726b6a",
+      "selection_reason": "Asiento y zona bajo la mochila confundidos con cabeza sin casco.",
+      "selection_features": {
+        "min_head_side_at_640": 76.8,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote. NEGATIVO DIFÍCIL: Asiento y zona bajo la mochila confundidos con cabeza sin casco. La caja magenta n0 es solo una sugerencia del modelo, no una etiqueta. No dibujar asiento/ropa/piezas como cabeza. Revisar la imagen completa.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            100.2,
+            210.19,
+            405.13,
+            630.87
+          ],
+          "context_bbox": [
+            103,
+            81,
+            406,
+            629
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            160,
+            82,
+            244,
+            173
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "NoHelmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            117.91,
+            80.19,
+            361.08,
+            543.2
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "hard_negative_candidates": [
+        {
+          "id": "n0",
+          "bbox": [
+            116.31314849853516,
+            283.80645751953125,
+            188.47853088378906,
+            361.0983581542969
+          ],
+          "predicted_label": 4,
+          "score": 0.9466056227684021,
+          "checkpoint": "detector-separate-v2-expanded-02",
+          "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+          "decision": "background",
+          "category": "clothing"
+        }
+      ]
+    },
+    {
+      "image_id": "Image_00297",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00297.jpg",
+      "sha256": "81f3218d0bd4a3eda1bf4cfc8fde40ba49cbe0776c806b3996c2e3ddd579c1f9",
+      "width": 412,
+      "height": 550,
+      "split": "train",
+      "group_id": "b720412ac598ac1015f3",
+      "selection_reason": "Espejo y mano junto al manillar confundidos con cabeza sin casco.",
+      "selection_features": {
+        "min_head_side_at_640": 63,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote. NEGATIVO DIFÍCIL: Espejo y mano junto al manillar confundidos con cabeza sin casco. La caja magenta n0 es solo una sugerencia del modelo, no una etiqueta. No dibujar asiento/ropa/piezas como cabeza. Revisar la imagen completa.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            72.14,
+            153.78,
+            324.98,
+            499.72
+          ],
+          "context_bbox": [
+            73,
+            58,
+            324,
+            498
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            173,
+            64,
+            236,
+            134
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "NoHelmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            111.3,
+            65.5,
+            294.06,
+            401.12
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "hard_negative_candidates": [
+        {
+          "id": "n0",
+          "bbox": [
+            241.5359344482422,
+            144.53018188476562,
+            314.69439697265625,
+            232.2061767578125
+          ],
+          "predicted_label": 4,
+          "score": 0.8176413774490356,
+          "checkpoint": "detector-separate-v2-expanded-02",
+          "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+          "decision": "background",
+          "category": "motorcycle_part"
+        }
+      ]
+    },
+    {
+      "image_id": "Image_02208",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02208.jpg",
+      "sha256": "91154cbf307ca65722c013529bca56af315292fb224c6ecf46cd26e6ad4f649e",
+      "width": 1575,
+      "height": 2062,
+      "split": "train",
+      "group_id": "cc27a72bb259d7bd5159",
+      "selection_reason": "Ropa oscura del torso confundida con casco; revisar casco real y limites de persona.",
+      "selection_features": {
+        "min_head_side_at_640": 103.97672162948595,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote. NEGATIVO DIFÍCIL: Ropa oscura del torso confundida con casco; revisar casco real y limites de persona. La caja magenta n0 es solo una sugerencia del modelo, no una etiqueta. No dibujar asiento/ropa/piezas como cabeza. Revisar la imagen completa.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            136.58,
+            504.06,
+            1447.19,
+            1967.67
+          ],
+          "context_bbox": [
+            140,
+            89,
+            1442,
+            1969
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            390,
+            95,
+            727,
+            430
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            288.91,
+            108.6,
+            860.17,
+            1622.13
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "hard_negative_candidates": [
+        {
+          "id": "n0",
+          "bbox": [
+            273.66552734375,
+            351.9320068359375,
+            700.9002075195312,
+            923.31640625
+          ],
+          "predicted_label": 3,
+          "score": 0.7415998578071594,
+          "checkpoint": "detector-separate-v2-expanded-02",
+          "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+          "decision": "background",
+          "category": "clothing"
+        }
+      ]
+    },
+    {
+      "image_id": "Image_02245",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02245.jpg",
+      "sha256": "687918440b294e60dcc083ce72e8706673a9e81545449ffee4d5dd845fd27150",
+      "width": 2191,
+      "height": 1151,
+      "split": "train",
+      "group_id": "eb634068e87af4c13537",
+      "selection_reason": "Asiento y pieza trasera de moto confundidos con cabeza sin casco.",
+      "selection_features": {
+        "min_head_side_at_640": 29.21040620721132,
+        "max_context_iou": 0,
+        "mixed_source_labels": true
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote. NEGATIVO DIFÍCIL: Asiento y pieza trasera de moto confundidos con cabeza sin casco. La caja magenta n0 es solo una sugerencia del modelo, no una etiqueta. No dibujar asiento/ropa/piezas como cabeza. Revisar la imagen completa.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            32.88,
+            260.78,
+            697.86,
+            1110.81
+          ],
+          "context_bbox": [
+            31,
+            69,
+            697,
+            1107
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "m1",
+          "kind": "motorcycle",
+          "bbox": [
+            1803.11,
+            235.19,
+            2086.27,
+            641.01
+          ],
+          "context_bbox": [
+            1805,
+            105,
+            2082,
+            635
+          ],
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            304,
+            71,
+            479,
+            232
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 2,
+            "class": "NoHelmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            180.86,
+            83.46,
+            643.05,
+            902.42
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h1",
+          "kind": "head",
+          "bbox": [
+            1895,
+            107,
+            2006,
+            207
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 3,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o1",
+          "kind": "occupant",
+          "bbox": [
+            1832.34,
+            107.23,
+            2075.31,
+            556.92
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": "m1",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "hard_negative_candidates": [
+        {
+          "id": "n0",
+          "bbox": [
+            136.3612823486328,
+            504.4886779785156,
+            327.5657653808594,
+            817.901611328125
+          ],
+          "predicted_label": 4,
+          "score": 0.7301339507102966,
+          "checkpoint": "detector-separate-v2-expanded-02",
+          "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+          "decision": "background",
+          "category": "motorcycle_part"
+        }
+      ]
+    }
+  ],
+  "selection_file": "reports\\separate-v2\\hard-negatives-selection\\selection.json",
+  "selection_sha256": "017ef789955955f25488dc0ade2602f958e3b4cbbe84d3aeb1751bcc14458718",
+  "hard_negative_policy": "Review hints only; no fifth class. All true objects must remain labeled. Pending/uncertain/real-head candidates require further review before preparation.",
+  "reviewer": "Alejandro",
+  "reviewed_at": "2026-11-24T22:05:40.249Z"
+}

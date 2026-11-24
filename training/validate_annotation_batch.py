@@ -38,6 +38,19 @@ def validate(batch, canonical, *, reviewed=False, verify_images=True):
             check(path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest() == ref['sha256'], f'{name}: source hash mismatch')
         if reviewed:
             check(s.get('reviewed') is True, f'{name}: scene not reviewed')
+        if 'hard_negative_candidates' in ref:
+            candidates=s.get('hard_negative_candidates', [])
+            check([r.get('id') for r in candidates]==[r['id'] for r in ref['hard_negative_candidates']], f'{name}: negative candidate inventory changed')
+            for r, original in zip(candidates, ref['hard_negative_candidates']):
+                for field in ('id','bbox','predicted_label','score','checkpoint','checkpoint_sha256'):
+                    check(r.get(field)==original[field], f'{name}: negative candidate {field} changed')
+                decision=r.get('decision');category=r.get('category')
+                check(decision in {'pending','background','real_head','uncertain'}, f'{name}: invalid negative decision')
+                check(category in {'pending','seat','clothing','motorcycle_part','other'}, f'{name}: invalid negative category')
+                if reviewed:
+                    check(decision!='pending', f'{name}: negative review pending')
+                    check(decision!='background' or category!='pending', f'{name}: negative category pending')
+                    check(decision=='background' or s.get('annotation_complete') is False, f'{name}: unresolved negative region requires incomplete coverage')
         entities = s.get('entities', [])
         check([(e.get('id'), e.get('kind')) for e in entities] == [(e['id'], e['kind']) for e in ref['entities']], f'{name}: entity inventory changed')
         ids = [e.get('id') for e in entities]

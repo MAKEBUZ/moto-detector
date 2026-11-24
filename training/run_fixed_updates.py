@@ -9,16 +9,20 @@ from pathlib import Path
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rpn-object-reserve', action='store_true')
+    parser.add_argument('--hard-negatives', action='store_true')
     args=parser.parse_args()
-    out = Path('reports/training/object-reserve-01' if args.rpn_object_reserve else 'reports/training/fixed-updates-01')
+    if args.hard_negatives and args.rpn_object_reserve: raise ValueError('Keep baseline sampler fixed')
+    out = Path('reports/training/hard-negatives-fixed1950-01') if args.hard_negatives else Path('reports/training/object-reserve-01' if args.rpn_object_reserve else 'reports/training/fixed-updates-01')
     out.mkdir(parents=True, exist_ok=False)
     datasets = ['helmet-separate-v2-expanded-02', 'helmet-separate-v2-expanded-03']
+    if args.hard_negatives: datasets = ['helmet-separate-v2-expanded-03','helmet-separate-v2-expanded-04']
     roots = [Path('data/prepared')/d for d in datasets]
     for n in ('val-manifest.jsonl','val-coco.json'):
         assert (roots[0]/n).read_bytes() == (roots[1]/n).read_bytes()
     jobs = []
     for seed in (20261124,20261125):
-        for count,root in zip((35,44),roots):
+        for count,root in zip((44,50) if args.hard_negatives else (35,44),roots):
+            if args.hard_negatives and count==44: continue
             name = f'detector-{"reserve1950" if args.rpn_object_reserve else "fixed1950"}-n{count}-s{seed}'
             assert not (Path('runs')/name).exists()
             jobs.append({'run':name,'dataset':str(root),'seed':seed,'images':count})
@@ -33,6 +37,9 @@ def main():
                 'limitations':['Two seeds are exploratory, not a statistical stability guarantee.',
                                'Same updates, but 35-image loader has one single-image batch per epoch; image presentations differ.',
                                'Validation has five repeatedly inspected images; test is not used.']}
+    if args.hard_negatives:
+        protocol['controls_reused']=[{'run':f'detector-fixed1950-n44-s{seed}','dataset':str(roots[0]),'seed':seed,'images':44,'checkpoint_sha256':hashlib.sha256((Path('runs')/f'detector-fixed1950-n44-s{seed}'/'last.pt').read_bytes()).hexdigest()} for seed in (20261124,20261125)]
+        protocol['limitations']=['Five repeatedly inspected validation images; no independent test.', 'Two seeds exploratory; both datasets use batch2 and 3900 presentations, but different per-image exposure and evaluation frequency.']
     (out/'protocol.json').write_text(json.dumps(protocol,indent=2),encoding='utf-8')
     for job in jobs:
         cmd = [str(Path('.venv/Scripts/python.exe').resolve()), 'training/train.py',

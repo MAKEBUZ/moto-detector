@@ -34,6 +34,7 @@ def main():
     parser.add_argument('--include-batch-03', action='store_true')
     parser.add_argument('--include-batch-04', action='store_true')
     parser.add_argument('--include-batch-05', action='store_true')
+    parser.add_argument('--include-hard-negatives-01', action='store_true')
     parser.add_argument('--output', type=Path, default=Path('data/prepared/helmet-separate-v2'))
     args = parser.parse_args()
     root = args.output
@@ -44,6 +45,8 @@ def main():
         sources.append(('helmet-separate-v2-staging-04', 'train-separate-v2-04', 'train-separate-v2-04-reviewed.json', 'train'))
     if args.include_batch_05:
         sources.append(('helmet-separate-v2-staging-05', 'train-separate-v2-05', 'train-separate-v2-05-reviewed.json', 'train'))
+    if args.include_hard_negatives_01:
+        sources.append(('helmet-separate-v2-hard-negatives-staging-01', 'train-hard-negatives-v2-01', 'train-hard-negatives-v2-01-reviewed.json', 'train'))
     if root.exists(): raise FileExistsError('Do not overwrite existing dataset')
     decisions = {r['image']: r for r in map(json.loads, Path('reports/preparation/image-decisions.jsonl').read_text().splitlines())}
     rows = []; excluded = []; provenance = {}
@@ -103,7 +106,7 @@ def main():
     (root/'dataset.lock.json').write_text(json.dumps({p.relative_to(root).as_posix(): sha(p) for p in sorted(root.rglob('*')) if p.is_file()}, indent=2), encoding='utf-8')
     report_dir = Path('reports/separate-v2')
     report_dir.mkdir(parents=True, exist_ok=True)
-    report_name = root.name+'-prepared.json' if args.include_batch_03 or args.include_batch_04 or args.include_batch_05 else 'prepared-dataset.json'
+    report_name = root.name+'-prepared.json' if args.include_batch_03 or args.include_batch_04 or args.include_batch_05 or args.include_hard_negatives_01 else 'prepared-dataset.json'
     (report_dir/report_name).write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 

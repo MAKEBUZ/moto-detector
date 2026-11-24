@@ -13,6 +13,9 @@ def convert_scene(scene, expected_split='train'):
         raise ValueError('Only original requested split allowed')
     if scene.get('annotation_complete') is not True:
         raise ValueError('Human coverage declaration missing')
+    if any(r.get('decision') != 'background' or r.get('category') not in {'seat', 'clothing', 'motorcycle_part', 'other'}
+           for r in scene.get('hard_negative_candidates', [])):
+        raise ValueError('Unresolved hard-negative regions: exclude whole image')
     if any(e['review_status'] in ('pending', 'uncertain') for e in scene['entities']):
         raise ValueError('Unresolved entities: exclude whole image, not just their boxes')
     if any(l['status'] in ('pending', 'uncertain') for l in scene['links']):
@@ -30,7 +33,11 @@ def convert_scene(scene, expected_split='train'):
         else: raise ValueError('Unsupported or unknown entity class')
         annotations.append({'entity_id': e['id'], 'classId': cls, 'box': e['bbox']})
     if not annotations: raise ValueError('No confirmed annotations')
-    return {k: scene[k] for k in ('image_id', 'image', 'sha256', 'width', 'height', 'split', 'group_id')} | {'annotations': annotations, 'links': [l for l in scene['links'] if l['status'] == 'confirmed']}
+    row = {k: scene[k] for k in ('image_id', 'image', 'sha256', 'width', 'height', 'split', 'group_id')} | {'annotations': annotations, 'links': [l for l in scene['links'] if l['status'] == 'confirmed']}
+    if 'hard_negative_candidates' in scene:
+        # Provenance only: these are not boxes/classes consumed by the detector.
+        row['reviewed_nonhead_regions'] = scene['hard_negative_candidates']
+    return row
 
 
 def main():

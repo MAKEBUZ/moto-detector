@@ -1,0 +1,3194 @@
+{
+  "results": [
+    {
+      "run": "detector-fixed1950-n35-s20261124",
+      "model_type": "control",
+      "images": 35,
+      "seed": 20261124,
+      "checkpoint_sha256": "8f6b2bced808183be68c072ceb40d0cbf928899033d929841aaf61cc345ac010",
+      "weights_and_buffers_unchanged": true,
+      "metrics": {
+        "regressed": {
+          "map50": 0.4401537866728141,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6401530994047032,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.37293729481130544,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.6633663366336634,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.08415841584158416,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "argmax": {
+          "map50": 0.2532725985540022,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6401530994047032,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.37293729481130544,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "person": {
+          "map50": 0.3374310143955863,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6401530994047032,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.37293729481130544,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.33663366336633666,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "combined": {
+          "map50": 0.2532725985540022,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6401530994047032,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.37293729481130544,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        }
+      },
+      "counts": {
+        "regressed": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 6,
+              "fp": 17,
+              "fn": 1,
+              "precision": 0.2608695652173913,
+              "recall": 0.8571428571428571
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 12,
+              "fn": 3,
+              "precision": 0.3333333333333333,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.5,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.25,
+              "recall": 0.16666666666666666
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 1,
+              "fp": 1,
+              "fn": 8,
+              "precision": 0.5,
+              "recall": 0.1111111111111111
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "argmax": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 6,
+              "fp": 17,
+              "fn": 1,
+              "precision": 0.2608695652173913,
+              "recall": 0.8571428571428571
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 12,
+              "fn": 3,
+              "precision": 0.3333333333333333,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 1,
+              "fp": 1,
+              "fn": 8,
+              "precision": 0.5,
+              "recall": 0.1111111111111111
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "person": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 6,
+              "fp": 17,
+              "fn": 1,
+              "precision": 0.2608695652173913,
+              "recall": 0.8571428571428571
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 12,
+              "fn": 3,
+              "precision": 0.3333333333333333,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 1,
+              "fp": 1,
+              "fn": 8,
+              "precision": 0.5,
+              "recall": 0.1111111111111111
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "combined": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 6,
+              "fp": 17,
+              "fn": 1,
+              "precision": 0.2608695652173913,
+              "recall": 0.8571428571428571
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 12,
+              "fn": 3,
+              "precision": 0.3333333333333333,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 1,
+              "fp": 1,
+              "fn": 8,
+              "precision": 0.5,
+              "recall": 0.1111111111111111
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      "nohelmet_ap_delta_points": -8.415841584158416,
+      "images_with_changed_survivors": 4
+    },
+    {
+      "run": "detector-reserve1950-n35-s20261124",
+      "model_type": "reserve",
+      "images": 35,
+      "seed": 20261124,
+      "checkpoint_sha256": "1be73cef286b719454afd57596e0694cb164be15bf05301738485dbe999f7541",
+      "weights_and_buffers_unchanged": true,
+      "metrics": {
+        "regressed": {
+          "map50": 0.37375452192408026,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6215621616580699,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.3685054309887461,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.33663366336633666,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.16831683168316833,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "argmax": {
+          "map50": 0.247516898161704,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6215621616580699,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.3685054309887461,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "person": {
+          "map50": 0.37375452192408026,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6215621616580699,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.3685054309887461,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.33663366336633666,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.16831683168316833,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "combined": {
+          "map50": 0.247516898161704,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6215621616580699,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.3685054309887461,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        }
+      },
+      "counts": {
+        "regressed": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 8,
+              "fn": 2,
+              "precision": 0.38461538461538464,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 7,
+              "fn": 4,
+              "precision": 0.4166666666666667,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.16666666666666666
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.42857142857142855
+            },
+            {
+              "class_id": 1,
+              "tp": 4,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.5714285714285714,
+              "recall": 0.4444444444444444
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "argmax": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 8,
+              "fn": 2,
+              "precision": 0.38461538461538464,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 7,
+              "fn": 4,
+              "precision": 0.4166666666666667,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.42857142857142855
+            },
+            {
+              "class_id": 1,
+              "tp": 4,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.5714285714285714,
+              "recall": 0.4444444444444444
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "person": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 8,
+              "fn": 2,
+              "precision": 0.38461538461538464,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 7,
+              "fn": 4,
+              "precision": 0.4166666666666667,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.16666666666666666
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.42857142857142855
+            },
+            {
+              "class_id": 1,
+              "tp": 4,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.5714285714285714,
+              "recall": 0.4444444444444444
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "combined": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 8,
+              "fn": 2,
+              "precision": 0.38461538461538464,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 7,
+              "fn": 4,
+              "precision": 0.4166666666666667,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.42857142857142855
+            },
+            {
+              "class_id": 1,
+              "tp": 4,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.5714285714285714,
+              "recall": 0.4444444444444444
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      "nohelmet_ap_delta_points": -16.831683168316832,
+      "images_with_changed_survivors": 2
+    },
+    {
+      "run": "detector-fixed1950-n44-s20261124",
+      "model_type": "control",
+      "images": 44,
+      "seed": 20261124,
+      "checkpoint_sha256": "8f8d75b5d9c6927dd7f02bc8e22ae78ecda5d2d08e4d2f13af354e578febb15f",
+      "weights_and_buffers_unchanged": true,
+      "metrics": {
+        "regressed": {
+          "map50": 0.3576732695397764,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.5742574257425742,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.35148515736702646,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.33663366336633666,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.16831683168316833,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "argmax": {
+          "map50": 0.3576732695397764,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.5742574257425742,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.35148515736702646,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.33663366336633666,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.16831683168316833,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "person": {
+          "map50": 0.3576732695397764,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.5742574257425742,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.35148515736702646,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.33663366336633666,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.16831683168316833,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "combined": {
+          "map50": 0.3576732695397764,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.5742574257425742,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.35148515736702646,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.33663366336633666,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.16831683168316833,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        }
+      },
+      "counts": {
+        "regressed": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 8,
+              "fn": 3,
+              "precision": 0.3333333333333333,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 9,
+              "fn": 4,
+              "precision": 0.35714285714285715,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 3,
+              "fn": 2,
+              "precision": 0.25,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 2,
+              "fn": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.16666666666666666
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 5,
+              "fn": 3,
+              "precision": 0.4444444444444444,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 3,
+              "fp": 2,
+              "fn": 6,
+              "precision": 0.6,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.16666666666666666
+            }
+          ]
+        },
+        "argmax": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 8,
+              "fn": 3,
+              "precision": 0.3333333333333333,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 9,
+              "fn": 4,
+              "precision": 0.35714285714285715,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.16666666666666666
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 5,
+              "fn": 3,
+              "precision": 0.4444444444444444,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 3,
+              "fp": 2,
+              "fn": 6,
+              "precision": 0.6,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.16666666666666666
+            }
+          ]
+        },
+        "person": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 8,
+              "fn": 3,
+              "precision": 0.3333333333333333,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 9,
+              "fn": 4,
+              "precision": 0.35714285714285715,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.3333333333333333,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 2,
+              "fn": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.16666666666666666
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 5,
+              "fn": 3,
+              "precision": 0.4444444444444444,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 3,
+              "fp": 2,
+              "fn": 6,
+              "precision": 0.6,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.16666666666666666
+            }
+          ]
+        },
+        "combined": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 8,
+              "fn": 3,
+              "precision": 0.3333333333333333,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 9,
+              "fn": 4,
+              "precision": 0.35714285714285715,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.16666666666666666
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 5,
+              "fn": 3,
+              "precision": 0.4444444444444444,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 3,
+              "fp": 2,
+              "fn": 6,
+              "precision": 0.6,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.16666666666666666
+            }
+          ]
+        }
+      },
+      "nohelmet_ap_delta_points": 0.0,
+      "images_with_changed_survivors": 3
+    },
+    {
+      "run": "detector-reserve1950-n44-s20261124",
+      "model_type": "reserve",
+      "images": 44,
+      "seed": 20261124,
+      "checkpoint_sha256": "1d8ee5c7bef2fd44fd88832a4636e1069b7abf458539fde8d0657b3afd111a86",
+      "weights_and_buffers_unchanged": true,
+      "metrics": {
+        "regressed": {
+          "map50": 0.2978312130464186,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6897689741436798,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.43422914436548066,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.06732673367651382,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "argmax": {
+          "map50": 0.28099952962729013,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6897689741436798,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.43422914436548066,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "person": {
+          "map50": 0.28099952962729013,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6897689741436798,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.43422914436548066,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "combined": {
+          "map50": 0.28099952962729013,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6897689741436798,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.43422914436548066,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        }
+      },
+      "counts": {
+        "regressed": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 6,
+              "fn": 2,
+              "precision": 0.45454545454545453,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 6,
+              "fn": 4,
+              "precision": 0.45454545454545453,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 4,
+              "fn": 2,
+              "precision": 0.2,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 3,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 3,
+              "precision": 1.0,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ]
+        },
+        "argmax": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 6,
+              "fn": 2,
+              "precision": 0.45454545454545453,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 6,
+              "fn": 4,
+              "precision": 0.45454545454545453,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 3,
+              "precision": 1.0,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ]
+        },
+        "person": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 6,
+              "fn": 2,
+              "precision": 0.45454545454545453,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 6,
+              "fn": 4,
+              "precision": 0.45454545454545453,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 3,
+              "precision": 1.0,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "combined": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 6,
+              "fn": 2,
+              "precision": 0.45454545454545453,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 6,
+              "fn": 4,
+              "precision": 0.45454545454545453,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 3,
+              "precision": 1.0,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      "nohelmet_ap_delta_points": 0.0,
+      "images_with_changed_survivors": 3
+    },
+    {
+      "run": "detector-fixed1950-n35-s20261125",
+      "model_type": "control",
+      "images": 35,
+      "seed": 20261125,
+      "checkpoint_sha256": "793e78fc0dc7e5d2d9d8ed990ce26923b8b6a7cedca59123c973ea43f2c5f218",
+      "weights_and_buffers_unchanged": true,
+      "metrics": {
+        "regressed": {
+          "map50": 0.3537403776651562,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6158415899418368,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.4624862573524513,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.33663366336633666,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "argmax": {
+          "map50": 0.269581961823572,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6158415899418368,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.4624862573524513,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "person": {
+          "map50": 0.269581961823572,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6158415899418368,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.4624862573524513,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "combined": {
+          "map50": 0.269581961823572,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.6158415899418368,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.4624862573524513,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        }
+      },
+      "counts": {
+        "regressed": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 4,
+              "fn": 2,
+              "precision": 0.5555555555555556,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 10,
+              "fn": 3,
+              "precision": 0.375,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "argmax": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 4,
+              "fn": 2,
+              "precision": 0.5555555555555556,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 10,
+              "fn": 3,
+              "precision": 0.375,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "person": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 4,
+              "fn": 2,
+              "precision": 0.5555555555555556,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 10,
+              "fn": 3,
+              "precision": 0.375,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "combined": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 4,
+              "fn": 2,
+              "precision": 0.5555555555555556,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 10,
+              "fn": 3,
+              "precision": 0.375,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      "nohelmet_ap_delta_points": 0.0,
+      "images_with_changed_survivors": 1
+    },
+    {
+      "run": "detector-reserve1950-n35-s20261125",
+      "model_type": "reserve",
+      "images": 35,
+      "seed": 20261125,
+      "checkpoint_sha256": "9d043a8bf1dc46b79aeb37fc2c37b097b5221627cfe67bebf84f8de773cd25f0",
+      "weights_and_buffers_unchanged": true,
+      "metrics": {
+        "regressed": {
+          "map50": 0.2811090807513435,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.7722772283129172,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.3521590946924568,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "argmax": {
+          "map50": 0.2811090807513435,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.7722772283129172,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.3521590946924568,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "person": {
+          "map50": 0.2811090807513435,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.7722772283129172,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.3521590946924568,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "combined": {
+          "map50": 0.2811090807513435,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.7722772283129172,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.3521590946924568,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        }
+      },
+      "counts": {
+        "regressed": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 6,
+              "fp": 10,
+              "fn": 1,
+              "precision": 0.375,
+              "recall": 0.8571428571428571
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 15,
+              "fn": 3,
+              "precision": 0.2857142857142857,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.8333333333333334,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 4,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.5714285714285714,
+              "recall": 0.4444444444444444
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "argmax": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 6,
+              "fp": 10,
+              "fn": 1,
+              "precision": 0.375,
+              "recall": 0.8571428571428571
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 15,
+              "fn": 3,
+              "precision": 0.2857142857142857,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.8333333333333334,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 4,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.5714285714285714,
+              "recall": 0.4444444444444444
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "person": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 6,
+              "fp": 10,
+              "fn": 1,
+              "precision": 0.375,
+              "recall": 0.8571428571428571
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 15,
+              "fn": 3,
+              "precision": 0.2857142857142857,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.8333333333333334,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 4,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.5714285714285714,
+              "recall": 0.4444444444444444
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "combined": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 6,
+              "fp": 10,
+              "fn": 1,
+              "precision": 0.375,
+              "recall": 0.8571428571428571
+            },
+            {
+              "class_id": 1,
+              "tp": 6,
+              "fp": 15,
+              "fn": 3,
+              "precision": 0.2857142857142857,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.8333333333333334,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 4,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.5714285714285714,
+              "recall": 0.4444444444444444
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      "nohelmet_ap_delta_points": 0.0,
+      "images_with_changed_survivors": 1
+    },
+    {
+      "run": "detector-fixed1950-n44-s20261125",
+      "model_type": "control",
+      "images": 44,
+      "seed": 20261125,
+      "checkpoint_sha256": "fed326787a00e11ac38cbc483b388ba6d92b6dbe0f062cae4fa274a87aa394bb",
+      "weights_and_buffers_unchanged": true,
+      "metrics": {
+        "regressed": {
+          "map50": 0.342264521977689,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.2479748005914216,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.6537565526985886,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.4673267346207458,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "argmax": {
+          "map50": 0.3095912541640867,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.2479748005914216,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.6537565526985886,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.33663366336633666,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "person": {
+          "map50": 0.2675120462432946,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.2479748005914216,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.6537565526985886,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.16831683168316833,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "combined": {
+          "map50": 0.22543283832250255,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.2479748005914216,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.6537565526985886,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        }
+      },
+      "counts": {
+        "regressed": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 11,
+              "fn": 3,
+              "precision": 0.26666666666666666,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 7,
+              "fp": 13,
+              "fn": 2,
+              "precision": 0.35,
+              "recall": 0.7777777777777778
+            },
+            {
+              "class_id": 2,
+              "tp": 2,
+              "fp": 3,
+              "fn": 1,
+              "precision": 0.4,
+              "recall": 0.6666666666666666
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 6,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 2,
+              "fp": 4,
+              "fn": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.2857142857142857
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 0,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.5,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ]
+        },
+        "argmax": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 11,
+              "fn": 3,
+              "precision": 0.26666666666666666,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 7,
+              "fp": 13,
+              "fn": 2,
+              "precision": 0.35,
+              "recall": 0.7777777777777778
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.5,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 2,
+              "fp": 4,
+              "fn": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.2857142857142857
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 0,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.5,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ]
+        },
+        "person": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 11,
+              "fn": 3,
+              "precision": 0.26666666666666666,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 7,
+              "fp": 13,
+              "fn": 2,
+              "precision": 0.35,
+              "recall": 0.7777777777777778
+            },
+            {
+              "class_id": 2,
+              "tp": 1,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.5,
+              "recall": 0.3333333333333333
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 2,
+              "fp": 4,
+              "fn": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.2857142857142857
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 0,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "combined": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 4,
+              "fp": 11,
+              "fn": 3,
+              "precision": 0.26666666666666666,
+              "recall": 0.5714285714285714
+            },
+            {
+              "class_id": 1,
+              "tp": 7,
+              "fp": 13,
+              "fn": 2,
+              "precision": 0.35,
+              "recall": 0.7777777777777778
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 2,
+              "fp": 4,
+              "fn": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.2857142857142857
+            },
+            {
+              "class_id": 1,
+              "tp": 5,
+              "fp": 0,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.5555555555555556
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      "nohelmet_ap_delta_points": 0.0,
+      "images_with_changed_survivors": 4
+    },
+    {
+      "run": "detector-reserve1950-n44-s20261125",
+      "model_type": "reserve",
+      "images": 44,
+      "seed": 20261125,
+      "checkpoint_sha256": "ddd3093f2ec0ffa4e739aeb9387813e2777d6ed3dbc6a281005b57bc8d123351",
+      "weights_and_buffers_unchanged": true,
+      "metrics": {
+        "regressed": {
+          "map50": 0.28416793911468863,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.5361766965672521,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.5163366440499183,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.08415841584158416,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "argmax": {
+          "map50": 0.28416793911468863,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.5361766965672521,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.5163366440499183,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.08415841584158416,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "person": {
+          "map50": 0.26312833515429257,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.5361766965672521,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.5163366440499183,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        },
+        "combined": {
+          "map50": 0.26312833515429257,
+          "per_class": [
+            {
+              "class_id": 0,
+              "ap50": 0.5361766965672521,
+              "ground_truth_boxes": 7
+            },
+            {
+              "class_id": 1,
+              "ap50": 0.5163366440499183,
+              "ground_truth_boxes": 9
+            },
+            {
+              "class_id": 2,
+              "ap50": 0.0,
+              "ground_truth_boxes": 3
+            },
+            {
+              "class_id": 3,
+              "ap50": 0.0,
+              "ground_truth_boxes": 6
+            }
+          ],
+          "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+        }
+      },
+      "counts": {
+        "regressed": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 10,
+              "fn": 2,
+              "precision": 0.3333333333333333,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 7,
+              "fp": 7,
+              "fn": 2,
+              "precision": 0.5,
+              "recall": 0.7777777777777778
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 3,
+              "fn": 3,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 3,
+              "fn": 5,
+              "precision": 0.25,
+              "recall": 0.16666666666666666
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 3,
+              "fp": 4,
+              "fn": 4,
+              "precision": 0.42857142857142855,
+              "recall": 0.42857142857142855
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 2,
+              "fn": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.16666666666666666
+            }
+          ]
+        },
+        "argmax": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 10,
+              "fn": 2,
+              "precision": 0.3333333333333333,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 7,
+              "fp": 7,
+              "fn": 2,
+              "precision": 0.5,
+              "recall": 0.7777777777777778
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 2,
+              "fn": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.16666666666666666
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 3,
+              "fp": 4,
+              "fn": 4,
+              "precision": 0.42857142857142855,
+              "recall": 0.42857142857142855
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 1,
+              "fp": 2,
+              "fn": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.16666666666666666
+            }
+          ]
+        },
+        "person": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 10,
+              "fn": 2,
+              "precision": 0.3333333333333333,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 7,
+              "fp": 7,
+              "fn": 2,
+              "precision": 0.5,
+              "recall": 0.7777777777777778
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 1,
+              "fn": 6,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 3,
+              "fp": 4,
+              "fn": 4,
+              "precision": 0.42857142857142855,
+              "recall": 0.42857142857142855
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        },
+        "combined": {
+          "0.05": [
+            {
+              "class_id": 0,
+              "tp": 5,
+              "fp": 10,
+              "fn": 2,
+              "precision": 0.3333333333333333,
+              "recall": 0.7142857142857143
+            },
+            {
+              "class_id": 1,
+              "tp": 7,
+              "fp": 7,
+              "fn": 2,
+              "precision": 0.5,
+              "recall": 0.7777777777777778
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ],
+          "0.5": [
+            {
+              "class_id": 0,
+              "tp": 3,
+              "fp": 4,
+              "fn": 4,
+              "precision": 0.42857142857142855,
+              "recall": 0.42857142857142855
+            },
+            {
+              "class_id": 1,
+              "tp": 2,
+              "fp": 1,
+              "fn": 7,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222
+            },
+            {
+              "class_id": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            {
+              "class_id": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "precision": null,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      "nohelmet_ap_delta_points": -8.415841584158416,
+      "images_with_changed_survivors": 4
+    }
+  ],
+  "intervention": "Head-only candidate gates before normal NMS: argmax across all 5 classes; center inside top40% of predicted occupant with score >=.5; combined. RPN2000 unchanged. No GT used by gates.",
+  "score_caveat": "Rejected head scores zeroed for filtering, retained scores and boxes unchanged. NMS/max100 survivors may change.",
+  "method": "Frozen eval mode, batch2 original validation order; matching IoU .5. Both 0.05 and 0.5 thresholds fixed beforehand. Standard branch exactly matches torchvision and full model outputs.",
+  "test_used": false,
+  "training_performed": false,
+  "deployment_changed": false
+}

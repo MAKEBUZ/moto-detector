@@ -1,0 +1,16 @@
+{
+  "policies": [
+    "baseline",
+    "argmax",
+    "person_top40_conf50",
+    "combined"
+  ],
+  "rpn_pre_nms": 2000,
+  "training": false,
+  "test": false,
+  "thresholds": [
+    0.05,
+    0.5
+  ],
+  "selection": "all eight models; fixed rules, no parameter sweep"
+}

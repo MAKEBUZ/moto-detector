@@ -1,0 +1,28 @@
+{
+  "selected": [
+    {
+      "image_id": "Image_00616",
+      "reason": "Ropa oscura del hombro y torso confundida con casco; revisar todas las cabezas reales."
+    },
+    {
+      "image_id": "Image_00655",
+      "reason": "Espejo de moto confundido con cabeza sin casco; mantener casco real y ocupante."
+    },
+    {
+      "image_id": "Image_02253",
+      "reason": "Asiento y zona bajo la mochila confundidos con cabeza sin casco."
+    },
+    {
+      "image_id": "Image_00297",
+      "reason": "Espejo y mano junto al manillar confundidos con cabeza sin casco."
+    },
+    {
+      "image_id": "Image_02208",
+      "reason": "Ropa oscura del torso confundida con casco; revisar casco real y limites de persona."
+    },
+    {
+      "image_id": "Image_02245",
+      "reason": "Asiento y pieza trasera de moto confundidos con cabeza sin casco."
+    }
+  ]
+}

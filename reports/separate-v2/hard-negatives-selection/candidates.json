@@ -1,0 +1,7861 @@
+[
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00276.jpg",
+    "sha256": "b2f24040161af2de0b6365a733f5af19066b71173ab6b6133e36dfd1910fbc11",
+    "width": 452,
+    "height": 708,
+    "decoded": true,
+    "dhash": "b888f159b9f8f8f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00276.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          78.0,
+          57.0,
+          366.0,
+          657.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          206.0,
+          58.0,
+          297.0,
+          168.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00277.jpg",
+    "sha256": "7d4ea172bcb123e1efb6e6daac922bd39bd9d62fd837b1245a322944fb564df8",
+    "width": 334,
+    "height": 447,
+    "decoded": true,
+    "dhash": "4152b2705030f0f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00277.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          121.0,
+          60.0,
+          179.0,
+          122.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          70.0,
+          57.0,
+          243.0,
+          391.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          230.0,
+          37.0,
+          295.0,
+          152.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          49.0,
+          23.0,
+          77.0,
+          75.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          249.0,
+          38.0,
+          271.0,
+          60.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00278.jpg",
+    "sha256": "2b29ddffea7473c7e8bfabd65135c0a042c475b5843cfd75203e2df9d0313f6b",
+    "width": 672,
+    "height": 1265,
+    "decoded": true,
+    "dhash": "bab8bd1b1c1a78f8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00278.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          45.0,
+          26.0,
+          672.0,
+          1243.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          291.0,
+          29.0,
+          478.0,
+          224.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00279.jpg",
+    "sha256": "d75fa53cf176e19042904d597e6dc1e15bcde026480d40c6b911149f37f36c5d",
+    "width": 639,
+    "height": 703,
+    "decoded": true,
+    "dhash": "dc50f170d0595960",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00279.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          99.0,
+          59.0,
+          552.0,
+          702.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          242.0,
+          60.0,
+          373.0,
+          209.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          585.0,
+          0.0,
+          624.0,
+          59.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00280.jpg",
+    "sha256": "4ebafd4b0cf5e5939f2763160cf668a7b47729fd5895f7f3328b462fb30f838d",
+    "width": 332,
+    "height": 506,
+    "decoded": true,
+    "dhash": "b1b04998f871f0f1",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00280.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          145.0,
+          69.0,
+          190.0,
+          132.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          65.0,
+          67.0,
+          252.0,
+          450.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00281.jpg",
+    "sha256": "3cf128df91b5806cb920e226cff11877189ee901e95ba3451a5c6841b436f741",
+    "width": 238,
+    "height": 312,
+    "decoded": true,
+    "dhash": "cebc51475230aa53",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00281.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          56.0,
+          62.0,
+          173.0,
+          265.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          96.0,
+          63.0,
+          134.0,
+          105.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00282.jpg",
+    "sha256": "1022dc4b4950689f1c7b636ee1b1eded58c143bb2bbe5630ca48c7f7b7f67772",
+    "width": 618,
+    "height": 672,
+    "decoded": true,
+    "dhash": "b1b4f070d8d8f171",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00282.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          108.0,
+          79.0,
+          490.0,
+          672.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          249.0,
+          84.0,
+          359.0,
+          205.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          550.0,
+          12.0,
+          598.0,
+          91.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          282.0,
+          25.0,
+          348.0,
+          87.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00283.jpg",
+    "sha256": "b35b3c8d528eefbb13def37fb0086db5399957aab2aea1fa8321f8ee2278e6e2",
+    "width": 222,
+    "height": 268,
+    "decoded": true,
+    "dhash": "b354899994995be9",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00283.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          58.0,
+          56.0,
+          146.0,
+          218.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          92.0,
+          56.0,
+          120.0,
+          90.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00284.jpg",
+    "sha256": "313e92324c643bb6abb0515fb2873bb8b4205c104cb268884d79842a17dfdb34",
+    "width": 570,
+    "height": 631,
+    "decoded": true,
+    "dhash": "9531966bf9d97833",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00284.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          72.0,
+          64.0,
+          510.0,
+          628.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          391.0,
+          48.0,
+          570.0,
+          494.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          228.0,
+          74.0,
+          310.0,
+          192.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          298.0,
+          74.0,
+          353.0,
+          152.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          487.0,
+          59.0,
+          547.0,
+          129.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          505.0,
+          51.0,
+          554.0,
+          115.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00285.jpg",
+    "sha256": "1a580d9ac091a88e6963c136148a5025cdd4f79595ee7bbf3aafa4b0e49a935a",
+    "width": 289,
+    "height": 409,
+    "decoded": true,
+    "dhash": "3df7587b6f10fa71",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00285.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          96.0,
+          12.0,
+          143.0,
+          94.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          65.0,
+          62.0,
+          206.0,
+          348.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          124.0,
+          64.0,
+          165.0,
+          113.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00286.jpg",
+    "sha256": "5a2f7411d6475722ea07b255927210f31b947daf2e6382b025f12278c508e4f0",
+    "width": 297,
+    "height": 490,
+    "decoded": true,
+    "dhash": "42726958d8f9f0f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00286.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          52.0,
+          37.0,
+          90.0,
+          81.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          52.0,
+          81.0,
+          85.0,
+          120.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          80.0,
+          54.0,
+          104.0,
+          82.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          124.0,
+          56.0,
+          173.0,
+          114.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          33.0,
+          0.0,
+          72.0,
+          73.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          8.0,
+          36.0,
+          124.0,
+          309.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          50.0,
+          55.0,
+          226.0,
+          435.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00287.jpg",
+    "sha256": "13f4fb93a570dbc8e97e1c4fef6cc1afd0204283fde8b92b73cf07b5634c33dc",
+    "width": 473,
+    "height": 606,
+    "decoded": true,
+    "dhash": "9c90d8c8d890b8f8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00287.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          45.0,
+          50.0,
+          396.0,
+          606.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          19.0,
+          211.0,
+          524.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          198.0,
+          54.0,
+          294.0,
+          165.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          59.0,
+          106.0,
+          116.0,
+          174.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          48.0,
+          22.0,
+          129.0,
+          103.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          103.0,
+          50.0,
+          151.0,
+          106.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00288.jpg",
+    "sha256": "51ffd9f633fe207c78b9373aa68ab955f1e84ea47837ac6394195fa31437bffd",
+    "width": 243,
+    "height": 253,
+    "decoded": true,
+    "dhash": "1f9139e34b399872",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00288.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          99.0,
+          58.0,
+          128.0,
+          87.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          128.0,
+          61.0,
+          152.0,
+          86.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          68.0,
+          56.0,
+          164.0,
+          197.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00289.jpg",
+    "sha256": "b6242636e0fc9703236ff0c483270a416587ccbff0a837514d00d63106ad49d8",
+    "width": 927,
+    "height": 888,
+    "decoded": true,
+    "dhash": "93d6367266cec6a0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00289.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          558.0,
+          41.0,
+          893.0,
+          688.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          49.0,
+          47.0,
+          421.0,
+          850.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          385.0,
+          94.0,
+          514.0,
+          409.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          673.0,
+          41.0,
+          788.0,
+          172.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          864.0,
+          157.0,
+          921.0,
+          267.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          417.0,
+          117.0,
+          463.0,
+          174.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          434.0,
+          97.0,
+          482.0,
+          158.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          214.0,
+          51.0,
+          335.0,
+          195.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00290.jpg",
+    "sha256": "3fd61bc5b7ab5e6589ab7d273940c2428607855e92470d8048dbe99ae153c4ba",
+    "width": 371,
+    "height": 457,
+    "decoded": true,
+    "dhash": "c06448537071e870",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00290.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          164.0,
+          79.0,
+          212.0,
+          130.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          82.0,
+          78.0,
+          283.0,
+          408.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          229.0,
+          32.0,
+          282.0,
+          107.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00291.jpg",
+    "sha256": "42c5521d5270727480f1fc681356df9ed116a906588bad43d81d4902c63580a1",
+    "width": 417,
+    "height": 603,
+    "decoded": true,
+    "dhash": "55568e59dcd8e8f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00291.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          79.0,
+          70.0,
+          327.0,
+          540.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          183.0,
+          68.0,
+          244.0,
+          149.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00292.jpg",
+    "sha256": "b723471796c4846c1d98972593d30997abc4202dac603ca0a5bf2c640799e7d5",
+    "width": 276,
+    "height": 319,
+    "decoded": true,
+    "dhash": "5005abac36ed0aca",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00292.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          128.0,
+          69.0,
+          157.0,
+          100.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          80.0,
+          66.0,
+          199.0,
+          260.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00293.jpg",
+    "sha256": "e3ef672d37ee6e2edd04a5d91283e8bb2d785ed1fe75e06745a4c192ac87925d",
+    "width": 478,
+    "height": 593,
+    "decoded": true,
+    "dhash": "9273983b3a38b9e8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00293.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          54.0,
+          68.0,
+          402.0,
+          593.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          197.0,
+          68.0,
+          273.0,
+          156.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00294.jpg",
+    "sha256": "d14c918344c79daff8f47ae4a8ccd4b1b203f19a90d27e61e8369df515007539",
+    "width": 560,
+    "height": 598,
+    "decoded": true,
+    "dhash": "ca1e5b9b1ab818e8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00294.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          86.0,
+          66.0,
+          468.0,
+          597.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          361.0,
+          19.0,
+          560.0,
+          403.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          227.0,
+          67.0,
+          323.0,
+          171.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          443.0,
+          20.0,
+          512.0,
+          86.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          311.0,
+          112.0,
+          386.0,
+          191.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          426.0,
+          80.0,
+          482.0,
+          133.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00295.jpg",
+    "sha256": "bd600a95c33c33c887c3c00e3173fc42f584c1b3162b25d37bcc9c5eb78716ea",
+    "width": 448,
+    "height": 642,
+    "decoded": true,
+    "dhash": "6073ba7139791818",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00295.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          92.0,
+          69.0,
+          359.0,
+          642.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          203.0,
+          71.0,
+          278.0,
+          168.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00296.jpg",
+    "sha256": "f324623268530a1c86b8893c4a7a1957e849612c9591f49b69ffd2bd8ec3fbd0",
+    "width": 516,
+    "height": 647,
+    "decoded": true,
+    "dhash": "c690f958b87159f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00296.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          87.0,
+          73.0,
+          402.0,
+          646.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          215.0,
+          75.0,
+          299.0,
+          155.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00297.jpg",
+    "sha256": "81f3218d0bd4a3eda1bf4cfc8fde40ba49cbe0776c806b3996c2e3ddd579c1f9",
+    "width": 412,
+    "height": 550,
+    "decoded": true,
+    "dhash": "aabebeddfa50f0f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00297.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          73.0,
+          58.0,
+          324.0,
+          498.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          173.0,
+          64.0,
+          236.0,
+          134.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00298.jpg",
+    "sha256": "1d58062215dea9d743c843cb3b9731256261b765c073b78e707c9ba87d9410b6",
+    "width": 340,
+    "height": 442,
+    "decoded": true,
+    "dhash": "9593e85af871f070",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00298.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          70.0,
+          61.0,
+          260.0,
+          388.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          138.0,
+          64.0,
+          187.0,
+          116.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00299.jpg",
+    "sha256": "0915148a7b2f15603f5b339bed81a01a6ad9237a9d0feac210bd3dc7dec124f9",
+    "width": 394,
+    "height": 550,
+    "decoded": true,
+    "dhash": "4c169d50f171f0f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00299.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          54.0,
+          64.0,
+          313.0,
+          492.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          144.0,
+          66.0,
+          204.0,
+          133.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          129.0,
+          67.0,
+          172.0,
+          125.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          62.0,
+          0.0,
+          110.0,
+          82.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00601.jpg",
+    "sha256": "3b03700efcb854e23e3c56cce98a86931abe95a1208efc5d26ff102615292879",
+    "width": 424,
+    "height": 444,
+    "decoded": true,
+    "dhash": "eace9b58595980c4",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00601.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          53.0,
+          126.0,
+          237.0,
+          414.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          220.0,
+          52.0,
+          363.0,
+          282.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          119.0,
+          150.0,
+          153.0,
+          185.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          122.0,
+          129.0,
+          159.0,
+          165.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          256.0,
+          97.0,
+          289.0,
+          119.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          246.0,
+          59.0,
+          279.0,
+          97.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          266.0,
+          58.0,
+          292.0,
+          86.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00602.jpg",
+    "sha256": "a8a09a9d80fce2ca7b24e401a146ed0abb8f4d68e6044a2c9b3d062ff0fd0174",
+    "width": 269,
+    "height": 386,
+    "decoded": true,
+    "dhash": "72ee750aa706a931",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00602.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          59.0,
+          56.0,
+          202.0,
+          359.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          170.0,
+          169.0,
+          269.0,
+          386.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          242.0,
+          171.0,
+          269.0,
+          229.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          107.0,
+          57.0,
+          145.0,
+          105.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00603.jpg",
+    "sha256": "d50c4fd3ae8e68d7e273a283a1547ed8c59d9b0adce60b754defcff457a38e9f",
+    "width": 222,
+    "height": 304,
+    "decoded": true,
+    "dhash": "d1ac2a7af9a9f3a9",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00603.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          59.0,
+          59.0,
+          159.0,
+          258.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          98.0,
+          73.0,
+          124.0,
+          104.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          105.0,
+          62.0,
+          130.0,
+          91.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00604.jpg",
+    "sha256": "cc01c09fabb792acd39dab00e69327a85729d49dbbe6750643432bf705f9c664",
+    "width": 238,
+    "height": 396,
+    "decoded": true,
+    "dhash": "d499965a1b5ab1a1",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00604.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          49.0,
+          43.0,
+          173.0,
+          348.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          98.0,
+          74.0,
+          129.0,
+          122.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          112.0,
+          49.0,
+          142.0,
+          88.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00605.jpg",
+    "sha256": "06bb953b9a15f0646e2c62ac001a4ae03486efceeeb0149dcdd518b632a7d0b8",
+    "width": 217,
+    "height": 269,
+    "decoded": true,
+    "dhash": "953cd9d64b2a283a",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00605.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          57.0,
+          62.0,
+          136.0,
+          223.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          87.0,
+          63.0,
+          118.0,
+          98.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          4.0,
+          158.0,
+          39.0,
+          197.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00606.jpg",
+    "sha256": "06e3716e063bb457377b8a8539bcc36e2311ff244117389e621e5615cdaf7026",
+    "width": 259,
+    "height": 346,
+    "decoded": true,
+    "dhash": "d4a6b66eabeb4bd2",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00606.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          55.0,
+          59.0,
+          186.0,
+          294.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          107.0,
+          59.0,
+          149.0,
+          107.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00607.jpg",
+    "sha256": "bfb8a1f6ecd2982a3d6d224e72c0f299de074bfbb29a5a80dee42c4f6ccb47c0",
+    "width": 299,
+    "height": 391,
+    "decoded": true,
+    "dhash": "a949ba08ada94ab3",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00607.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          108.0,
+          65.0,
+          162.0,
+          122.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          61.0,
+          64.0,
+          201.0,
+          344.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00608.jpg",
+    "sha256": "8d68b4c6a2572e3d00203579038696f61ea0fc292c8e4ca691c6ffdfc45cac70",
+    "width": 284,
+    "height": 417,
+    "decoded": true,
+    "dhash": "dc3cabd3c9ca5047",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00608.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          45.0,
+          53.0,
+          196.0,
+          386.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          91.0,
+          55.0,
+          142.0,
+          115.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          0.0,
+          125.0,
+          246.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00610.jpg",
+    "sha256": "932568a952bee2f4b0b86e0941f1de4e57c0fc33e10c56017fa4203c699f9921",
+    "width": 641,
+    "height": 952,
+    "decoded": true,
+    "dhash": "1070606447c7f739",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00610.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          262.0,
+          152.0,
+          352.0,
+          271.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          249.0,
+          88.0,
+          342.0,
+          194.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          125.0,
+          90.0,
+          496.0,
+          898.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00611.jpg",
+    "sha256": "08705957eb508b179df58e568915e3b13da484e0b76d8ae96a09bfff4b60cbe6",
+    "width": 376,
+    "height": 634,
+    "decoded": true,
+    "dhash": "7b378f4ccce1e9e8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00611.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          36.0,
+          47.0,
+          340.0,
+          589.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          138.0,
+          50.0,
+          214.0,
+          140.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00612.jpg",
+    "sha256": "9d24b2867cd51d6fb76c8cf25bc0413844b662a107ad16af15aaa81b7e9bc5a3",
+    "width": 795,
+    "height": 1101,
+    "decoded": true,
+    "dhash": "acbcadc5c7e32059",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00612.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          332.0,
+          147.0,
+          434.0,
+          277.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          135.0,
+          73.0,
+          600.0,
+          1002.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          294.0,
+          84.0,
+          399.0,
+          213.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00613.jpg",
+    "sha256": "2d644b3e092258225ad578541eada8a184eb7b93d114c5a34df9b9679968791e",
+    "width": 519,
+    "height": 851,
+    "decoded": true,
+    "dhash": "c4e20a88c9d4d4c0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00613.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          57.0,
+          59.0,
+          465.0,
+          803.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          189.0,
+          58.0,
+          292.0,
+          159.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00614.jpg",
+    "sha256": "bbd501f2df50de7257f78a018ec1f4f31590f8fd11f27e0e9c632fb0eb86859f",
+    "width": 601,
+    "height": 880,
+    "decoded": true,
+    "dhash": "27e0a24ac8c8d0c8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00614.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          70.0,
+          84.0,
+          496.0,
+          879.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          229.0,
+          86.0,
+          342.0,
+          221.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00615.jpg",
+    "sha256": "b951ea25f9322627a9ded468df0e5672d156abcb550142694c3fea223d74eec3",
+    "width": 442,
+    "height": 646,
+    "decoded": true,
+    "dhash": "f6f4e8c8cd6bd999",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00615.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          69.0,
+          65.0,
+          344.0,
+          644.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          172.0,
+          68.0,
+          261.0,
+          175.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00616.jpg",
+    "sha256": "fe76e8ff0ac2061840d406494b24031e31722d270c22a24fd99e32e78dd15c76",
+    "width": 590,
+    "height": 933,
+    "decoded": true,
+    "dhash": "7131e96866e83a72",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00616.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          104.0,
+          85.0,
+          469.0,
+          888.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          242.0,
+          88.0,
+          356.0,
+          230.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00617.jpg",
+    "sha256": "d51af36d1b8b096c1f48d191b7a0f0ef38ae0cb6dd934faae9d57426ea40edaf",
+    "width": 1407,
+    "height": 1520,
+    "decoded": true,
+    "dhash": "8281c49dcda08282",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00617.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          72.0,
+          559.0,
+          496.0,
+          1488.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          892.0,
+          55.0,
+          1302.0,
+          816.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          239.0,
+          563.0,
+          367.0,
+          729.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1107.0,
+          59.0,
+          1201.0,
+          161.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1061.0,
+          111.0,
+          1181.0,
+          249.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00618.jpg",
+    "sha256": "eae74043f2bbcd6e6b47a0c62ec307acb08a0c67ccd68dee6cb1f518f4a23024",
+    "width": 2342,
+    "height": 1382,
+    "decoded": true,
+    "dhash": "3a9e5898c35b3120",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00618.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          278.0,
+          619.0,
+          399.0,
+          763.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          205.0,
+          729.0,
+          336.0,
+          877.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1977.0,
+          404.0,
+          2089.0,
+          547.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1308.0,
+          54.0,
+          1412.0,
+          174.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1219.0,
+          56.0,
+          1519.0,
+          657.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1861.0,
+          406.0,
+          2192.0,
+          1145.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          87.0,
+          617.0,
+          504.0,
+          1382.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1158.0,
+          0.0,
+          1411.0,
+          372.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00619.jpg",
+    "sha256": "34b845feaf78db2620ba7ab2a130951a4f6cd73b3a14d972d127c10b0bd9d622",
+    "width": 1316,
+    "height": 957,
+    "decoded": true,
+    "dhash": "f1abe3667d3f3c0c",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00619.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          894.0,
+          319.0,
+          1247.0,
+          957.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          84.0,
+          69.0,
+          408.0,
+          568.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          149.0,
+          70.0,
+          278.0,
+          201.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          997.0,
+          320.0,
+          1140.0,
+          480.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1191.0,
+          27.0,
+          1316.0,
+          704.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1270.0,
+          28.0,
+          1315.0,
+          166.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00620.jpg",
+    "sha256": "e6834de5548d44d5a9f587e96b486faa4909dabc42f13239f80fc9d6aff1c212",
+    "width": 595,
+    "height": 886,
+    "decoded": true,
+    "dhash": "2c8c8c4c4ccce070",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00620.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          209.0,
+          95.0,
+          292.0,
+          212.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          238.0,
+          36.0,
+          332.0,
+          146.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          81.0,
+          36.0,
+          458.0,
+          814.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00621.jpg",
+    "sha256": "a2058e0cfb20b95b50b981338b9bdea844c1130c83877d956173b89ceca638e4",
+    "width": 483,
+    "height": 610,
+    "decoded": true,
+    "dhash": "003137aac4636361",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00621.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          80.0,
+          72.0,
+          400.0,
+          575.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          187.0,
+          74.0,
+          285.0,
+          186.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00622.jpg",
+    "sha256": "e3bcf755d553ad26c9db88a14311da49ce41428d4a25bcefd78a4bd8e60bf2eb",
+    "width": 482,
+    "height": 766,
+    "decoded": true,
+    "dhash": "6fedc5476371e4e4",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00622.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          66.0,
+          61.0,
+          412.0,
+          720.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          138.0,
+          62.0,
+          225.0,
+          170.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00623.jpg",
+    "sha256": "78679db0608fafd31212e9984721a59d4eaad7dfd7402590f088b3470f3ccbc1",
+    "width": 866,
+    "height": 723,
+    "decoded": true,
+    "dhash": "244e666c84888989",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00623.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          88.0,
+          305.0,
+          290.0,
+          682.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          619.0,
+          83.0,
+          761.0,
+          382.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          662.0,
+          101.0,
+          710.0,
+          154.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          138.0,
+          308.0,
+          195.0,
+          372.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          678.0,
+          84.0,
+          714.0,
+          109.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00624.jpg",
+    "sha256": "4039587db45a84c121edfd91a8c3759e18a6fd0857b384e9f2640edb49628a7c",
+    "width": 1254,
+    "height": 1197,
+    "decoded": true,
+    "dhash": "5622b62ea8991991",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00624.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          70.0,
+          589.0,
+          491.0,
+          1194.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          171.0,
+          602.0,
+          273.0,
+          701.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          958.0,
+          73.0,
+          1179.0,
+          525.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1018.0,
+          112.0,
+          1078.0,
+          192.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1026.0,
+          73.0,
+          1104.0,
+          140.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00625.jpg",
+    "sha256": "92af9d13a6b0b69b2ea9d2f30afa5a0b601289b16a1190f025574b30ec0a8447",
+    "width": 263,
+    "height": 345,
+    "decoded": true,
+    "dhash": "32ebead79b5971b9",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00625.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          74.0,
+          72.0,
+          174.0,
+          290.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          118.0,
+          73.0,
+          150.0,
+          111.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00651.jpg",
+    "sha256": "a999adff64168aeb68981e94dc864244eea93cbfaaed92cfcd9c01c3f40e9dde",
+    "width": 1188,
+    "height": 1074,
+    "decoded": true,
+    "dhash": "221e8c8c3c84bc98",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00651.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          197.0,
+          70.0,
+          355.0,
+          244.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          846.0,
+          158.0,
+          992.0,
+          330.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          695.0,
+          158.0,
+          1168.0,
+          1074.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          73.0,
+          71.0,
+          517.0,
+          1065.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00654.jpg",
+    "sha256": "6483b6627ee993b7d6172d0e10b32b787b61b8c88b94a98bc4acc780b437e3c9",
+    "width": 1580,
+    "height": 1835,
+    "decoded": true,
+    "dhash": "989c4c0a450c7d78",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00654.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          876.0,
+          983.0,
+          1481.0,
+          1835.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          60.0,
+          72.0,
+          490.0,
+          836.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          199.0,
+          127.0,
+          311.0,
+          255.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          255.0,
+          72.0,
+          354.0,
+          183.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1075.0,
+          1043.0,
+          1238.0,
+          1210.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00655.jpg",
+    "sha256": "006a4e46e0d35dab4f4749c8e8197364015e7f3a1afde1c766dc7565efaed306",
+    "width": 1657,
+    "height": 2194,
+    "decoded": true,
+    "dhash": "acac97e0c0e0a1b4",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00655.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          41.0,
+          49.0,
+          1631.0,
+          2192.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          559.0,
+          52.0,
+          969.0,
+          471.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00656.jpg",
+    "sha256": "1b9167cba523db522ca11ba718a0bb50790a7681af897b2b3178ad5c996b0b2b",
+    "width": 1729,
+    "height": 2035,
+    "decoded": true,
+    "dhash": "d0c6c49e1234f0f2",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00656.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          726.0,
+          976.0,
+          1180.0,
+          2035.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1247.0,
+          336.0,
+          1640.0,
+          1130.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          351.0,
+          305.0,
+          646.0,
+          993.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          86.0,
+          57.0,
+          386.0,
+          675.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1397.0,
+          388.0,
+          1494.0,
+          512.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          836.0,
+          1042.0,
+          1008.0,
+          1214.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          426.0,
+          313.0,
+          540.0,
+          446.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          170.0,
+          75.0,
+          271.0,
+          199.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1361.0,
+          358.0,
+          1438.0,
+          456.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00657.jpg",
+    "sha256": "e56b7902be8abd39a5c2dc7d0469fb2e6de7c16cbd64713ac8b41f11b13ef8a6",
+    "width": 1944,
+    "height": 1258,
+    "decoded": true,
+    "dhash": "022625249c2c0606",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00657.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1393.0,
+          66.0,
+          1821.0,
+          1004.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          44.0,
+          362.0,
+          482.0,
+          1257.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1485.0,
+          72.0,
+          1603.0,
+          205.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          183.0,
+          367.0,
+          320.0,
+          534.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          0.0,
+          244.0,
+          753.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1545.0,
+          122.0,
+          1668.0,
+          282.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00658.jpg",
+    "sha256": "9e88648e1ed7cf4e1b95db04823c3f4ca1484226fb22a2ad8b97096971c2c6ae",
+    "width": 1699,
+    "height": 1528,
+    "decoded": true,
+    "dhash": "9866869400460522",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00658.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          24.0,
+          699.0,
+          439.0,
+          1493.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1359.0,
+          0.0,
+          1614.0,
+          484.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          166.0,
+          706.0,
+          282.0,
+          844.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1423.0,
+          0.0,
+          1531.0,
+          62.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00659.jpg",
+    "sha256": "e6f883d0b5128c617143fd867ed843b7185719cca08f03edf918a38e61823ae5",
+    "width": 605,
+    "height": 943,
+    "decoded": true,
+    "dhash": "7f272d7463e3c1f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00659.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          118.0,
+          78.0,
+          475.0,
+          873.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          207.0,
+          80.0,
+          348.0,
+          229.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00660.jpg",
+    "sha256": "14f740c8b745d4e992e3fc8b4449b632a7c350ba5eda86fa7e72b74e929b3363",
+    "width": 1182,
+    "height": 1096,
+    "decoded": true,
+    "dhash": "4848c984ec849090",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00660.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          86.0,
+          364.0,
+          485.0,
+          1048.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          794.0,
+          50.0,
+          1123.0,
+          699.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          226.0,
+          376.0,
+          331.0,
+          509.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          897.0,
+          67.0,
+          1008.0,
+          185.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00662.jpg",
+    "sha256": "4a6833770c076dae17b89d4f2eed2689517b84b1b7e98d74949acbbd3dccaf16",
+    "width": 570,
+    "height": 922,
+    "decoded": true,
+    "dhash": "8bb0e860686040e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00662.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          101.0,
+          90.0,
+          431.0,
+          846.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          219.0,
+          91.0,
+          332.0,
+          228.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00663.jpg",
+    "sha256": "07df0101dece765c1a2d27354f13746fa40488be23e6a8ace44b118c29e9c0a3",
+    "width": 753,
+    "height": 1101,
+    "decoded": true,
+    "dhash": "c85852c3d8c8c0c0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00663.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          355.0,
+          81.0,
+          637.0,
+          712.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          88.0,
+          338.0,
+          408.0,
+          1068.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          194.0,
+          340.0,
+          312.0,
+          470.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          433.0,
+          82.0,
+          533.0,
+          199.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00664.jpg",
+    "sha256": "3123ec1a103f815f50421f92dd27c00ae6071d2e501c6d13bd4711de69ae15fa",
+    "width": 641,
+    "height": 1412,
+    "decoded": true,
+    "dhash": "5bc1cfcb3030f0f8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00664.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          221.0,
+          581.0,
+          561.0,
+          1354.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          67.0,
+          65.0,
+          335.0,
+          651.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          148.0,
+          67.0,
+          263.0,
+          187.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          343.0,
+          586.0,
+          470.0,
+          728.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00665.jpg",
+    "sha256": "1a4087c13ad543987cebdadf29a29376a96963f8125dc9653975d9460ef42002",
+    "width": 1688,
+    "height": 1765,
+    "decoded": true,
+    "dhash": "d3f286858838b9b4",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00665.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          227.0,
+          369.0,
+          326.0,
+          483.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1411.0,
+          112.0,
+          1493.0,
+          203.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1440.0,
+          60.0,
+          1500.0,
+          153.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          400.0,
+          934.0,
+          531.0,
+          1081.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          266.0,
+          932.0,
+          671.0,
+          1720.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          121.0,
+          367.0,
+          423.0,
+          958.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1317.0,
+          58.0,
+          1573.0,
+          548.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00667.jpg",
+    "sha256": "fec6bddc6ebce4f4b70ec490cd64ffadfbf60df0f927ce27a24e03f6a91b7069",
+    "width": 737,
+    "height": 1031,
+    "decoded": true,
+    "dhash": "a52555b1c8e8c3ea",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00667.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          61.0,
+          34.0,
+          716.0,
+          997.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          215.0,
+          45.0,
+          365.0,
+          210.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00668.jpg",
+    "sha256": "310e6a0217733aa997f01d732faa7e68ab824e830a05caf86bf36208665f5351",
+    "width": 534,
+    "height": 917,
+    "decoded": true,
+    "dhash": "7b373761c5e0e0f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00668.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          200.0,
+          129.0,
+          319.0,
+          256.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          222.0,
+          52.0,
+          349.0,
+          178.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          58.0,
+          50.0,
+          452.0,
+          880.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00669.jpg",
+    "sha256": "a9033de5e9bbc229dfab74edb02ec607dc28ee5024305e588a3ac1b885b5083b",
+    "width": 1571,
+    "height": 1555,
+    "decoded": true,
+    "dhash": "58c98ac286841125",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00669.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          68.0,
+          797.0,
+          437.0,
+          1502.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1218.0,
+          447.0,
+          1462.0,
+          974.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          874.0,
+          59.0,
+          1065.0,
+          445.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1294.0,
+          449.0,
+          1395.0,
+          560.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          178.0,
+          801.0,
+          301.0,
+          950.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          935.0,
+          64.0,
+          999.0,
+          139.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00670.jpg",
+    "sha256": "d2069d5db04e2b7b67f1df7e5e695f5e94117090b6db4909afd506fe5ddca7e6",
+    "width": 759,
+    "height": 1367,
+    "decoded": true,
+    "dhash": "50a0c88cdc8af870",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00670.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          375.0,
+          558.0,
+          698.0,
+          1328.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          72.0,
+          76.0,
+          355.0,
+          677.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          483.0,
+          559.0,
+          615.0,
+          709.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          169.0,
+          86.0,
+          262.0,
+          201.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00675.jpg",
+    "sha256": "bd3d41082963bd56681832443a99fa5c002c2ef46d4e86d67278bc9cb7b091f3",
+    "width": 1530,
+    "height": 1718,
+    "decoded": true,
+    "dhash": "5573a3e3c3a148c8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_00675.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          260.0,
+          898.0,
+          648.0,
+          1666.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          55.0,
+          97.0,
+          339.0,
+          570.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          476.0,
+          212.0,
+          778.0,
+          727.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1266.0,
+          41.0,
+          1460.0,
+          473.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          376.0,
+          902.0,
+          521.0,
+          1070.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          141.0,
+          108.0,
+          219.0,
+          201.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          581.0,
+          231.0,
+          670.0,
+          335.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1330.0,
+          52.0,
+          1386.0,
+          119.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01276.jpg",
+    "sha256": "3a57539a6d0b7bccb77f3876beb431917fbe608a04bedb87a0ef909c9c837c1a",
+    "width": 657,
+    "height": 1001,
+    "decoded": true,
+    "dhash": "6dd0d0d3c3b0c6c6",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01276.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          8.0,
+          44.0,
+          612.0,
+          967.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          165.0,
+          45.0,
+          299.0,
+          212.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01277.jpg",
+    "sha256": "79a3fb38ed5b27ad1b509559a56f0bff78f22570ad21167f78abe03218f16176",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "e8c2837a9c9c9e00",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01277.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          2002.0,
+          1613.0,
+          2272.0,
+          1882.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1634.0,
+          1607.0,
+          2664.0,
+          3164.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01278.jpg",
+    "sha256": "0ee74935dc9f9cf6f856ae391e49aeed5b0cd0071572dfa12ff6729749dc2a27",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "c2d0080d615a3a1c",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01278.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1506.0,
+          2168.0,
+          2603.0,
+          3861.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          2047.0,
+          2233.0,
+          2352.0,
+          2514.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1907.0,
+          2177.0,
+          2192.0,
+          2496.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01279.jpg",
+    "sha256": "86db8047a69a2aa874ff00af57e4ad7aa918ad5f09fa44be579506d6e2573ba5",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "ecf672252b2cde3d",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01279.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1636.0,
+          1658.0,
+          2555.0,
+          2947.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1894.0,
+          1673.0,
+          2163.0,
+          1917.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01280.jpg",
+    "sha256": "f3d471cd8e0c361c256636e818c217132791d5dc9ddce82b091cfb959f5c97c2",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "83a3b5a7e0a2ccbc",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01280.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          206.0,
+          2395.0,
+          1196.0,
+          3184.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          469.0,
+          2401.0,
+          662.0,
+          2567.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01281.jpg",
+    "sha256": "7b64504b18152974e32b9ecb3a26473c492b5573a9e87e40717a8c03654005c0",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "eeec7a326d19d87c",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01281.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1293.0,
+          1937.0,
+          2341.0,
+          3436.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          561.0,
+          1796.0,
+          856.0,
+          2221.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1606.0,
+          1946.0,
+          1886.0,
+          2219.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          660.0,
+          1806.0,
+          739.0,
+          1891.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01282.jpg",
+    "sha256": "8d05cab4160601df57d8fb40cd256fb8d49b2494a17936280898172d9073aa74",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "5333aad9f19818fc",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01282.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          1612.0,
+          2049.0,
+          1907.0,
+          2320.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1362.0,
+          2041.0,
+          2480.0,
+          3510.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01283.jpg",
+    "sha256": "35acc8350b73b508d349ab7f51aeffd8129cc3641abe56144c88e0a66b1b22f5",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "f7ff68e6dec7e303",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01283.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          287.0,
+          2296.0,
+          883.0,
+          2929.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          2477.0,
+          2228.0,
+          3072.0,
+          3345.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          503.0,
+          2298.0,
+          624.0,
+          2421.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          2863.0,
+          2256.0,
+          3037.0,
+          2463.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01284.jpg",
+    "sha256": "ac5508f34885934920877058386e6ffd22f1ed3054df0b8f54d4e85716889585",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "aeceed6e0dfdfcfe",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01284.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1206.0,
+          1394.0,
+          3071.0,
+          3221.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          2627.0,
+          1445.0,
+          2894.0,
+          1745.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          2067.0,
+          1404.0,
+          2476.0,
+          1796.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01285.jpg",
+    "sha256": "90e78106549a26169423b237f2a7a008e340e7347ba2a4c8249d43b8e5849d75",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "bb3b1d5b8a08bc4f",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01285.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1552.0,
+          1743.0,
+          2415.0,
+          3028.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1818.0,
+          1745.0,
+          2051.0,
+          1993.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          218.0,
+          1636.0,
+          630.0,
+          2213.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          413.0,
+          1660.0,
+          500.0,
+          1762.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          344.0,
+          1648.0,
+          431.0,
+          1754.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01286.jpg",
+    "sha256": "8d8721ce0f339203d9d62dcc1506271ef770d02278df2471da4b8720bcc855c0",
+    "width": 3072,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "8a71d84668c0c300",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01286.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          1729.0,
+          1451.0,
+          3382.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          405.0,
+          1734.0,
+          746.0,
+          2034.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01287.jpg",
+    "sha256": "1b4a2c244baa55c29a908e27cceef3eac0f7ca4a8c15b0620d4b19e9ded47028",
+    "width": 1274,
+    "height": 1460,
+    "decoded": true,
+    "dhash": "898959d9d8bcfef2",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01287.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          485.0,
+          176.0,
+          1236.0,
+          1432.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          41.0,
+          55.0,
+          598.0,
+          1037.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          232.0,
+          57.0,
+          385.0,
+          229.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          478.0,
+          135.0,
+          601.0,
+          265.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          749.0,
+          184.0,
+          955.0,
+          391.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01288.jpg",
+    "sha256": "2a2953238ab2768c7ab2e0432b5198d2055cbb3eb2f1a0a217b1730f083d3163",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "309bf63e392121e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01288.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1009.0,
+          1450.0,
+          1730.0,
+          2206.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1511.0,
+          1526.0,
+          1675.0,
+          1703.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01289.jpg",
+    "sha256": "798c627dab668427a7480dda9cc5cd1e6f45add38e92d6eff06a55694d400618",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "b8c60c7a9ebf1da7",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01289.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          1435.0,
+          555.0,
+          1910.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          1613.0,
+          834.0,
+          2361.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          607.0,
+          1616.0,
+          735.0,
+          1766.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          389.0,
+          1438.0,
+          530.0,
+          1603.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01290.jpg",
+    "sha256": "09613279fd777f554029ddc691f5f85eb1ed3e334973548cc8302f6d237976df",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "e55d87febcfbf7e5",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01290.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1087.0,
+          974.0,
+          1775.0,
+          1907.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1551.0,
+          987.0,
+          1756.0,
+          1195.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01291.jpg",
+    "sha256": "f1320bc27fb0b294f61463bceafcb43ab40117189731d2f7d9ad06c52b1a61a8",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "e3e5f604e8638b7e",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01291.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          951.0,
+          1850.0,
+          3074.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1370.0,
+          1253.0,
+          1743.0,
+          1715.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01292.jpg",
+    "sha256": "da0fbe473c55077e7ebd4fa90953fd4d1b64c506b294e2f83238918d33a229ec",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "9af82e7ef8d9fffc",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01292.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          224.0,
+          693.0,
+          2268.0,
+          2914.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1619.0,
+          853.0,
+          2117.0,
+          1368.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01293.jpg",
+    "sha256": "c8f9bf51eab6d010936f19d81bb918d97df77178b044d13b7cb0935ba24a1bde",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "9e9ec6bcfdf7dcf0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01293.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          633.0,
+          1046.0,
+          1964.0,
+          2531.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1648.0,
+          1071.0,
+          1884.0,
+          1331.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01294.jpg",
+    "sha256": "5e0bb32cb235046f46e0d58e8f7e9bd043123187e280827328e0ea2d5218d39d",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "31c242d8fffefbed",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01294.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1365.0,
+          1692.0,
+          1950.0,
+          2271.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1779.0,
+          1703.0,
+          1927.0,
+          1850.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01295.jpg",
+    "sha256": "69e1527fa03b6def7fb7a56f703d5bc23aa2f4d74fab810564a5775c27985707",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "3088f1d6fdf0615f",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01295.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          682.0,
+          1781.0,
+          1775.0,
+          2688.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1473.0,
+          1793.0,
+          1713.0,
+          2021.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01296.jpg",
+    "sha256": "8eb0bd08158087146c97aca2c188e3cfbf5143f14dc2b73ed6b985e41e04cd6d",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "a1586a9cbbf8f9ff",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01296.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          631.0,
+          1625.0,
+          1863.0,
+          2802.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1459.0,
+          1625.0,
+          1704.0,
+          1925.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          576.0,
+          1018.0,
+          1078.0,
+          1539.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          899.0,
+          1040.0,
+          1004.0,
+          1139.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01297.jpg",
+    "sha256": "f8394af35da966589442cd61f1b52b1f04fb83ebf32cd88f6a5746d0d66ce85e",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "e0f01d1df8f1effe",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01297.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          716.0,
+          1397.0,
+          1798.0,
+          2388.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1330.0,
+          1410.0,
+          1552.0,
+          1652.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01299.jpg",
+    "sha256": "3170a31a00b00ac19f98955fcdac0bb1c0b70bb8ccd854ff59456439cfb7ac0a",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "1897f8c8c7070ca3",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01299.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          35.0,
+          1404.0,
+          873.0,
+          2297.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          686.0,
+          1411.0,
+          875.0,
+          1609.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          623.0,
+          1552.0,
+          1187.0,
+          2195.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1023.0,
+          1575.0,
+          1136.0,
+          1709.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01300.jpg",
+    "sha256": "91cebe8e2e1374b961ad615fb8622e101a45fa7f8d5f0e65d2eade36a03f3e44",
+    "width": 2304,
+    "height": 4096,
+    "decoded": true,
+    "dhash": "7f43e1311d1efcb7",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_01300.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1302.0,
+          2471.0,
+          1997.0,
+          3149.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1826.0,
+          2504.0,
+          1968.0,
+          2680.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          1072.0,
+          401.0,
+          1976.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          150.0,
+          1078.0,
+          351.0,
+          1284.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02201.jpg",
+    "sha256": "0cb44878c3f7f3898b880ed9b8e48bbf58eb38214dee9f2c1ecc19623e99b007",
+    "width": 1366,
+    "height": 1301,
+    "decoded": true,
+    "dhash": "8c8ca21b91e08a94",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02201.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          11.0,
+          51.0,
+          1227.0,
+          1189.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          207.0,
+          43.0,
+          350.0,
+          209.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          422.0,
+          60.0,
+          598.0,
+          248.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02202.jpg",
+    "sha256": "13016efe9e8ccd6f8b55cb97caa213e3c1c14164a17464bfe23cdf1733628362",
+    "width": 341,
+    "height": 507,
+    "decoded": true,
+    "dhash": "1eaf0f292921f7ff",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02202.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          67.0,
+          66.0,
+          262.0,
+          426.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          297.0,
+          94.0,
+          341.0,
+          211.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          317.0,
+          96.0,
+          337.0,
+          117.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          130.0,
+          70.0,
+          193.0,
+          135.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          112.0,
+          70.0,
+          294.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02203.jpg",
+    "sha256": "9af07cf4f88c8067017646d31112777c077d948c0ea4ecef380c94a538b1a0c8",
+    "width": 1183,
+    "height": 1027,
+    "decoded": true,
+    "dhash": "193bacac88c88d9d",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02203.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          79.0,
+          74.0,
+          543.0,
+          970.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          682.0,
+          61.0,
+          1094.0,
+          576.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          169.0,
+          74.0,
+          341.0,
+          240.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          812.0,
+          64.0,
+          904.0,
+          160.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02204.jpg",
+    "sha256": "7f7d30f001bb002c313110ee15f24fd5c15745063ab6cf6554ededdfa3ecdcb7",
+    "width": 1638,
+    "height": 1279,
+    "decoded": true,
+    "dhash": "4d692b9e9fdb9b17",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02204.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          1411.0,
+          187.0,
+          1503.0,
+          266.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          246.0,
+          87.0,
+          402.0,
+          254.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          57.0,
+          81.0,
+          645.0,
+          1199.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1347.0,
+          179.0,
+          1572.0,
+          621.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02205.jpg",
+    "sha256": "ee7bccb23f946ec90bfd3655e0ed3c908e459f4840762c0afc5a2c8743981e77",
+    "width": 257,
+    "height": 394,
+    "decoded": true,
+    "dhash": "9d13a9ababb03975",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02205.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          9.0,
+          50.0,
+          213.0,
+          355.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          73.0,
+          51.0,
+          133.0,
+          115.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02206.jpg",
+    "sha256": "0024783552f8c30d5e89269a8c90b0b488256af8d753acc9bf2eb31c5c5e83f2",
+    "width": 293,
+    "height": 368,
+    "decoded": true,
+    "dhash": "95fbca7b79eb7954",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02206.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          53.0,
+          59.0,
+          229.0,
+          323.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          103.0,
+          61.0,
+          152.0,
+          112.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02207.jpg",
+    "sha256": "24c1ce32f1e1dbe5e4dd257374a076c4fed7adae59d523ebab0044308391b533",
+    "width": 1955,
+    "height": 1805,
+    "decoded": true,
+    "dhash": "8bac48d8f0e0c6fe",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02207.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          102.0,
+          135.0,
+          1799.0,
+          1683.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          526.0,
+          141.0,
+          707.0,
+          376.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          813.0,
+          192.0,
+          988.0,
+          440.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02208.jpg",
+    "sha256": "91154cbf307ca65722c013529bca56af315292fb224c6ecf46cd26e6ad4f649e",
+    "width": 1575,
+    "height": 2062,
+    "decoded": true,
+    "dhash": "d24a4446e2a390e4",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02208.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          140.0,
+          89.0,
+          1442.0,
+          1969.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          390.0,
+          95.0,
+          727.0,
+          430.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02209.jpg",
+    "sha256": "b33905b22d054c37b2a3dc5b14bdbc345b0c03d0592e0352170506f00e66bb78",
+    "width": 1918,
+    "height": 2529,
+    "decoded": true,
+    "dhash": "aac486d2d05868fe",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02209.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          148.0,
+          118.0,
+          1787.0,
+          2439.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          299.0,
+          140.0,
+          593.0,
+          498.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          579.0,
+          133.0,
+          887.0,
+          494.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02210.jpg",
+    "sha256": "27fa08fabddc1293aeca9b841b5a6c1131fa87b4d1d993628751108824005b55",
+    "width": 1762,
+    "height": 2282,
+    "decoded": true,
+    "dhash": "6cccd9d0d0d0d2de",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02210.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          472.0,
+          102.0,
+          786.0,
+          443.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          89.0,
+          94.0,
+          1612.0,
+          2223.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          333.0,
+          241.0,
+          499.0,
+          421.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02211.jpg",
+    "sha256": "227f61a68dca47ce66f93cf265f36c30f3ee4e339591d72b9bfbb5d439fa899f",
+    "width": 925,
+    "height": 1322,
+    "decoded": true,
+    "dhash": "8a2360e4f160e06c",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02211.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          136.0,
+          84.0,
+          772.0,
+          1240.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          295.0,
+          87.0,
+          487.0,
+          293.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02212.jpg",
+    "sha256": "9f6d1bf9b02eb770399cd69cf5b916b6a2ce9f8728a09c77a354266a26c55f34",
+    "width": 551,
+    "height": 786,
+    "decoded": true,
+    "dhash": "47a5a8696960e470",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02212.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          89.0,
+          62.0,
+          420.0,
+          731.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          177.0,
+          64.0,
+          290.0,
+          191.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02213.jpg",
+    "sha256": "411c89b04509dc34d2357f138a43df5aea4f58e5b98a73bc5a5a0c324ac4fd43",
+    "width": 818,
+    "height": 1338,
+    "decoded": true,
+    "dhash": "502c56f0f1e0e43c",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02213.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          66.0,
+          95.0,
+          660.0,
+          1232.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          204.0,
+          99.0,
+          381.0,
+          297.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02214.jpg",
+    "sha256": "6023c2aef5088be373fedcb9fae49354da2b98eb48287659121f2714b9a78d9b",
+    "width": 770,
+    "height": 1199,
+    "decoded": true,
+    "dhash": "ac2d0ce6f2d9f05c",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02214.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          61.0,
+          83.0,
+          718.0,
+          1067.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          212.0,
+          91.0,
+          381.0,
+          273.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02215.jpg",
+    "sha256": "059f2175b5300efa67afb19db380b3c33f7101836dc540433c6c863de294ea92",
+    "width": 1462,
+    "height": 1532,
+    "decoded": true,
+    "dhash": "e6ecbe9bb87c782e",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02215.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          417.0,
+          27.0,
+          1308.0,
+          1419.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          68.0,
+          176.0,
+          484.0,
+          874.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          165.0,
+          199.0,
+          278.0,
+          322.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          862.0,
+          96.0,
+          1082.0,
+          376.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02216.jpg",
+    "sha256": "65ba702178268dd5d04bc6ef9c33d68c8397dbe8ad41cb56fe8d2a8e0aa581be",
+    "width": 200,
+    "height": 260,
+    "decoded": true,
+    "dhash": "36341a26d692cbf4",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02216.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          47.0,
+          43.0,
+          155.0,
+          219.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          82.0,
+          44.0,
+          119.0,
+          80.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02217.jpg",
+    "sha256": "fd94e718c4fb2f9a85d46ad6b5bf2788531933f32d8332f4819e37a5307c74c9",
+    "width": 1199,
+    "height": 1296,
+    "decoded": true,
+    "dhash": "fad9d6981818781e",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02217.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          93.0,
+          173.0,
+          421.0,
+          617.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          508.0,
+          64.0,
+          1057.0,
+          1209.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          629.0,
+          72.0,
+          776.0,
+          243.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          291.0,
+          178.0,
+          363.0,
+          260.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02218.jpg",
+    "sha256": "7a3198cb44f3ef49a1ae3c1367fe6eb4672fb369c14687143ea8e4401bef9d17",
+    "width": 1510,
+    "height": 2296,
+    "decoded": true,
+    "dhash": "ed64e0f0e1e1e1c8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02218.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          136.0,
+          74.0,
+          1383.0,
+          2209.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          544.0,
+          74.0,
+          906.0,
+          444.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02219.jpg",
+    "sha256": "6c5b13cc2fa089879e03182e1a2b72b5e9d41e047252d72091839e0ccd63294b",
+    "width": 1701,
+    "height": 1457,
+    "decoded": true,
+    "dhash": "706bad85bd1c7df2",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02219.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          834.0,
+          49.0,
+          1554.0,
+          1395.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          51.0,
+          223.0,
+          426.0,
+          744.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          144.0,
+          223.0,
+          257.0,
+          336.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1013.0,
+          55.0,
+          1204.0,
+          270.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02220.jpg",
+    "sha256": "009c656360f58e8cc7d95299d3e98a4bf6f79d4262dca7c55ec7b96350afbf93",
+    "width": 1011,
+    "height": 1424,
+    "decoded": true,
+    "dhash": "d5acdcd5f1f8e0e8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02220.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          118.0,
+          72.0,
+          813.0,
+          1356.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          285.0,
+          77.0,
+          489.0,
+          302.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02222.jpg",
+    "sha256": "e629028d9178cb4d2432b84a810ac42628403243e1a9b5cc788ea6a52bcc3f9f",
+    "width": 459,
+    "height": 390,
+    "decoded": true,
+    "dhash": "f2f0f6f6717948a9",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02222.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          93.0,
+          65.0,
+          369.0,
+          327.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          42.0,
+          108.0,
+          83.0,
+          171.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          228.0,
+          68.0,
+          273.0,
+          113.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02223.jpg",
+    "sha256": "2890b1c8bca21a2da4c111ca97ad59cf9404d76e6e475a4fb862f2bed659a3ff",
+    "width": 630,
+    "height": 866,
+    "decoded": true,
+    "dhash": "bbab8de7e3e0e804",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02223.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          98.0,
+          81.0,
+          455.0,
+          738.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          241.0,
+          105.0,
+          318.0,
+          212.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          186.0,
+          98.0,
+          262.0,
+          197.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02224.jpg",
+    "sha256": "489c1bbf3823781aff90aec35b32128bd1f5786a7d24e9726ac5f555be371d6e",
+    "width": 856,
+    "height": 1066,
+    "decoded": true,
+    "dhash": "186142c35351e4e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02224.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          125.0,
+          70.0,
+          760.0,
+          979.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          217.0,
+          82.0,
+          364.0,
+          225.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          331.0,
+          80.0,
+          479.0,
+          217.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02225.jpg",
+    "sha256": "014f3bffc23df1527b765e417a48d1ee56ec666f71a915655dfdff40ee98a0ed",
+    "width": 401,
+    "height": 502,
+    "decoded": true,
+    "dhash": "34081c2468f1f47d",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02225.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          97.0,
+          77.0,
+          311.0,
+          435.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          153.0,
+          79.0,
+          224.0,
+          150.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02226.jpg",
+    "sha256": "92718b95a8b4a745eb27ed6e382b073d67656989313e98030cd4908711740f89",
+    "width": 480,
+    "height": 706,
+    "decoded": true,
+    "dhash": "389a9c96e7e34923",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02226.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          65.0,
+          25.0,
+          391.0,
+          616.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          177.0,
+          61.0,
+          270.0,
+          159.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02227.jpg",
+    "sha256": "fafa17a774c8eac65c563fc2084cb6cffd0324e3031bc93889f81e8c33624bef",
+    "width": 403,
+    "height": 797,
+    "decoded": true,
+    "dhash": "ecabc5cdcbcbeae0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02227.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          64.0,
+          126.0,
+          507.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          21.0,
+          68.0,
+          75.0,
+          124.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          69.0,
+          52.0,
+          354.0,
+          752.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          233.0,
+          66.0,
+          377.0,
+          335.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          126.0,
+          57.0,
+          229.0,
+          155.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          271.0,
+          72.0,
+          320.0,
+          117.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02228.jpg",
+    "sha256": "5346cfeb9fdd8c098e45cbfa9d19a34b6231fc221b4899bc7d9f23d4d114f8a9",
+    "width": 1993,
+    "height": 1961,
+    "decoded": true,
+    "dhash": "5a7c2c7ed4529e9c",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02228.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          93.0,
+          136.0,
+          1896.0,
+          1936.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1263.0,
+          157.0,
+          1488.0,
+          468.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02229.jpg",
+    "sha256": "eadc3f71b89ddbd43e68c4e9c38dc4355b197614cad275da1dd9b00e7535dc66",
+    "width": 722,
+    "height": 1140,
+    "decoded": true,
+    "dhash": "33d460f9f8f1e067",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02229.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          85.0,
+          85.0,
+          596.0,
+          1055.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          231.0,
+          88.0,
+          418.0,
+          265.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02230.jpg",
+    "sha256": "1008aa74a3dd612c78a284eb2bbbbf62eec0c9b5a3cf76440334fbe87d13e52d",
+    "width": 567,
+    "height": 797,
+    "decoded": true,
+    "dhash": "ecf4e76dc570e0f8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02230.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          72.0,
+          64.0,
+          438.0,
+          718.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          199.0,
+          67.0,
+          302.0,
+          178.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02231.jpg",
+    "sha256": "98a11ee59652ebfa12bcb6e1ee42fec099e8f3b07de39f677c2d49e81eab2dfa",
+    "width": 1446,
+    "height": 711,
+    "decoded": true,
+    "dhash": "28888a8ac282a10b",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02231.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          80.0,
+          59.0,
+          432.0,
+          630.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          225.0,
+          59.0,
+          304.0,
+          147.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1151.0,
+          118.0,
+          1361.0,
+          493.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1213.0,
+          118.0,
+          1287.0,
+          192.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02232.jpg",
+    "sha256": "2f8cfae28bd025b2275880fc20959ee62047a7f301da8e41fbefe2c3c053033b",
+    "width": 545,
+    "height": 760,
+    "decoded": true,
+    "dhash": "a26224e1c965f0e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02232.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          94.0,
+          87.0,
+          463.0,
+          714.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          170.0,
+          102.0,
+          259.0,
+          213.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          229.0,
+          109.0,
+          297.0,
+          208.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02233.jpg",
+    "sha256": "39b746c89bd191f5249b606ad823d19e1b6ae1478ab8e2ae063caed0046fb413",
+    "width": 540,
+    "height": 792,
+    "decoded": true,
+    "dhash": "8fb637e3e1f169f8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02233.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          82.0,
+          78.0,
+          454.0,
+          739.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          187.0,
+          81.0,
+          293.0,
+          194.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02234.jpg",
+    "sha256": "f2f6d0d4d4e3fa66937ae84d672bc349bdbaf5acdad71a69e016e407c955fcbd",
+    "width": 405,
+    "height": 513,
+    "decoded": true,
+    "dhash": "303d34a427b3e9fb",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02234.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          107.0,
+          92.0,
+          313.0,
+          442.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          166.0,
+          97.0,
+          221.0,
+          159.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02235.jpg",
+    "sha256": "32e84d20e3f2867c32bc7a6561c7fb4094a84edbebf01a8c4c68c525c5f8a75d",
+    "width": 1108,
+    "height": 1730,
+    "decoded": true,
+    "dhash": "684463e2ccc4f1e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02235.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          114.0,
+          86.0,
+          930.0,
+          1714.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          298.0,
+          94.0,
+          567.0,
+          352.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02236.jpg",
+    "sha256": "c557d45a0ac8766d1770217173295354b6335e43418c5469eceb54c6cdd65223",
+    "width": 1183,
+    "height": 797,
+    "decoded": true,
+    "dhash": "1603329092928a86",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02236.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          190.0,
+          77.0,
+          296.0,
+          180.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          524.0,
+          116.0,
+          590.0,
+          175.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          558.0,
+          104.0,
+          617.0,
+          167.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          950.0,
+          100.0,
+          1012.0,
+          157.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          899.0,
+          98.0,
+          1072.0,
+          434.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          462.0,
+          103.0,
+          662.0,
+          535.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          106.0,
+          75.0,
+          426.0,
+          737.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02237.jpg",
+    "sha256": "9d8414ece83a6358cc0ae6942da32ade3458cf45785b9d7fe03b7e8c5a15d65b",
+    "width": 1408,
+    "height": 2025,
+    "decoded": true,
+    "dhash": "751169bad9b8a4c0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02237.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          26.0,
+          126.0,
+          1327.0,
+          1975.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          470.0,
+          134.0,
+          754.0,
+          455.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          978.0,
+          134.0,
+          1407.0,
+          1288.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          666.0,
+          158.0,
+          906.0,
+          446.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1136.0,
+          134.0,
+          1377.0,
+          362.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02238.jpg",
+    "sha256": "1048bd1a273e271b74b5c3247ff0de770e2976b03ca4ef687e4be48ba49efa01",
+    "width": 498,
+    "height": 970,
+    "decoded": true,
+    "dhash": "e7e28caec3cfe8e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02238.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          37.0,
+          50.0,
+          454.0,
+          919.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          152.0,
+          52.0,
+          289.0,
+          195.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02239.jpg",
+    "sha256": "665a6bbab1fa1469fedbaf11ca109c1969a26d39604c9da526fda8a0fa547f30",
+    "width": 2583,
+    "height": 1004,
+    "decoded": true,
+    "dhash": "c205471aa1800000",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02239.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          72.0,
+          145.0,
+          595.0,
+          974.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1838.0,
+          101.0,
+          2068.0,
+          453.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          2252.0,
+          59.0,
+          2487.0,
+          524.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          198.0,
+          148.0,
+          387.0,
+          289.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          2312.0,
+          63.0,
+          2398.0,
+          147.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1917.0,
+          107.0,
+          1988.0,
+          171.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02240.jpg",
+    "sha256": "631bc8063f6695c368d8cd6541c96a1d142808793b11f2f50bada3a1e1cb9be9",
+    "width": 1660,
+    "height": 1145,
+    "decoded": true,
+    "dhash": "815b4acac6ce8680",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02240.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          1313.0,
+          69.0,
+          1432.0,
+          184.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          238.0,
+          105.0,
+          379.0,
+          242.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          359.0,
+          107.0,
+          477.0,
+          260.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          46.0,
+          99.0,
+          699.0,
+          1110.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1217.0,
+          67.0,
+          1563.0,
+          766.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02241.jpg",
+    "sha256": "7a4868cef9692240c87e4d7face35995c20ffd3055351414add0cb1abdc76da6",
+    "width": 1515,
+    "height": 883,
+    "decoded": true,
+    "dhash": "e7a7869e9e96ac1a",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02241.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          101.0,
+          154.0,
+          490.0,
+          843.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1060.0,
+          86.0,
+          1436.0,
+          687.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1380.0,
+          136.0,
+          1507.0,
+          386.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1145.0,
+          92.0,
+          1226.0,
+          170.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          244.0,
+          155.0,
+          365.0,
+          262.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1416.0,
+          138.0,
+          1470.0,
+          189.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1213.0,
+          104.0,
+          1300.0,
+          186.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02242.jpg",
+    "sha256": "7c8c630e6b3fd93872b3f1e6c4e7402aa6157b676bfa8234edc1e27a74efb33a",
+    "width": 540,
+    "height": 807,
+    "decoded": true,
+    "dhash": "2326e0e1f1d2d650",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02242.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          77.0,
+          72.0,
+          474.0,
+          753.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          196.0,
+          70.0,
+          311.0,
+          194.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02244.jpg",
+    "sha256": "d5b660ce9c50d70806d58794af89cc86667e0135c971f70e7ea88f389d9d2717",
+    "width": 2073,
+    "height": 920,
+    "decoded": true,
+    "dhash": "d81db3bc9aa2b088",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02244.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          78.0,
+          79.0,
+          546.0,
+          849.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1723.0,
+          91.0,
+          2000.0,
+          564.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1813.0,
+          112.0,
+          1914.0,
+          185.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          163.0,
+          87.0,
+          285.0,
+          218.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          257.0,
+          132.0,
+          346.0,
+          258.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02245.jpg",
+    "sha256": "687918440b294e60dcc083ce72e8706673a9e81545449ffee4d5dd845fd27150",
+    "width": 2191,
+    "height": 1151,
+    "decoded": true,
+    "dhash": "904c66429a908000",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02245.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          31.0,
+          69.0,
+          697.0,
+          1107.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1805.0,
+          105.0,
+          2082.0,
+          635.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          304.0,
+          71.0,
+          479.0,
+          232.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1895.0,
+          107.0,
+          2006.0,
+          207.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02246.jpg",
+    "sha256": "7d91d4d8296deccc3e9ac12128bf8bcee180055a4377e86a2ab61abf51760745",
+    "width": 2202,
+    "height": 980,
+    "decoded": true,
+    "dhash": "256b2935858b8b01",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02246.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          57.0,
+          176.0,
+          489.0,
+          951.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1411.0,
+          68.0,
+          1683.0,
+          548.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1817.0,
+          55.0,
+          2098.0,
+          557.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          165.0,
+          194.0,
+          299.0,
+          328.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1519.0,
+          77.0,
+          1584.0,
+          172.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1899.0,
+          55.0,
+          2021.0,
+          163.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02247.jpg",
+    "sha256": "fb11339d0ab1f813a569e464111f03f0381bf3151ae886ff70ac3c3aad63a9e0",
+    "width": 594,
+    "height": 899,
+    "decoded": true,
+    "dhash": "4be44ec6d458f1f1",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02247.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          68.0,
+          69.0,
+          477.0,
+          844.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          365.0,
+          83.0,
+          585.0,
+          544.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          216.0,
+          71.0,
+          347.0,
+          191.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          415.0,
+          86.0,
+          492.0,
+          154.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          158.0,
+          101.0,
+          263.0,
+          203.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          456.0,
+          93.0,
+          533.0,
+          175.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02248.jpg",
+    "sha256": "3014cd5290e7176a86def0a4c32d6671f285b093d2de861692754907ad45353e",
+    "width": 1569,
+    "height": 1493,
+    "decoded": true,
+    "dhash": "ccd68e9690e0c1c0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02248.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          42.0,
+          79.0,
+          949.0,
+          1493.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1179.0,
+          125.0,
+          1476.0,
+          717.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          393.0,
+          80.0,
+          633.0,
+          311.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          288.0,
+          129.0,
+          488.0,
+          312.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1312.0,
+          137.0,
+          1404.0,
+          249.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1255.0,
+          134.0,
+          1344.0,
+          217.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02249.jpg",
+    "sha256": "aa4d21e3488497503d6027b365eeaa076c9fe4c2f2c906ea10fa944bbbd50027",
+    "width": 519,
+    "height": 996,
+    "decoded": true,
+    "dhash": "eb67ccefc3cee8e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02249.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          37.0,
+          51.0,
+          468.0,
+          956.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          166.0,
+          51.0,
+          310.0,
+          206.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02250.jpg",
+    "sha256": "94ec1e9fc753618b27664680a7f388c1b3022b8a6686148997bf9d51d1ded4a6",
+    "width": 1071,
+    "height": 1768,
+    "decoded": true,
+    "dhash": "8eedc061cdc99052",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02250.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          88.0,
+          83.0,
+          992.0,
+          1731.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          357.0,
+          87.0,
+          642.0,
+          360.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02251.jpg",
+    "sha256": "22d67aa3c0e137937abfad4497d9303a671239b25bc2e9ef9f2f27e1a9db46b1",
+    "width": 1655,
+    "height": 2808,
+    "decoded": true,
+    "dhash": "c060c0c0c0c0c262",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02251.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          394.0,
+          173.0,
+          762.0,
+          606.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          690.0,
+          129.0,
+          1098.0,
+          586.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1306.0,
+          468.0,
+          1464.0,
+          622.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1131.0,
+          449.0,
+          1647.0,
+          1416.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          4.0,
+          114.0,
+          1407.0,
+          2735.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02252.jpg",
+    "sha256": "a536c38b56379bb766e50d907519d95eb0e2afea223b16720b07a9302605b9cc",
+    "width": 631,
+    "height": 920,
+    "decoded": true,
+    "dhash": "7871e071f1f8e0e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02252.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          121.0,
+          95.0,
+          521.0,
+          836.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          238.0,
+          98.0,
+          352.0,
+          218.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02253.jpg",
+    "sha256": "9b44e6f9269ff68b95bac3e1025b8d62c962d12ae7d88ab87c27308a997318dc",
+    "width": 518,
+    "height": 700,
+    "decoded": true,
+    "dhash": "d0e06bc8d9e363c0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02253.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          103.0,
+          81.0,
+          406.0,
+          629.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          160.0,
+          82.0,
+          244.0,
+          173.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02254.jpg",
+    "sha256": "801f97ce82f5af79457f42507294ccd4adb99b388d6e840e33e923924e2393ec",
+    "width": 2127,
+    "height": 1398,
+    "decoded": true,
+    "dhash": "7c2e06ae468e9800",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02254.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          138.0,
+          99.0,
+          732.0,
+          1324.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          569.0,
+          95.0,
+          1020.0,
+          843.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          112.0,
+          301.0,
+          839.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          38.0,
+          133.0,
+          201.0,
+          271.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          284.0,
+          99.0,
+          498.0,
+          317.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          711.0,
+          116.0,
+          853.0,
+          271.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1684.0,
+          104.0,
+          1806.0,
+          225.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1517.0,
+          62.0,
+          2014.0,
+          960.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1755.0,
+          112.0,
+          1881.0,
+          246.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02255.jpg",
+    "sha256": "18e6edc699d4784e26e2456f6538b69fb2b3bba84208e8944a7040c1e32082bf",
+    "width": 1531,
+    "height": 797,
+    "decoded": true,
+    "dhash": "9c929e9ebeb426c6",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02255.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1057.0,
+          65.0,
+          1436.0,
+          729.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          87.0,
+          144.0,
+          321.0,
+          605.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          767.0,
+          109.0,
+          991.0,
+          518.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          148.0,
+          147.0,
+          244.0,
+          232.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1249.0,
+          74.0,
+          1350.0,
+          182.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1198.0,
+          68.0,
+          1299.0,
+          178.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          834.0,
+          113.0,
+          910.0,
+          190.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02256.jpg",
+    "sha256": "704330b8097793cd01d171c44238d4df7cc4b28f15ef4af43e10a6c2256534f4",
+    "width": 2116,
+    "height": 1552,
+    "decoded": true,
+    "dhash": "0c242c9c9cca8c9c",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02256.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          234.0,
+          229.0,
+          388.0,
+          375.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          393.0,
+          237.0,
+          560.0,
+          393.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1559.0,
+          111.0,
+          1749.0,
+          311.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1464.0,
+          78.0,
+          1656.0,
+          283.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1256.0,
+          72.0,
+          2000.0,
+          1449.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          64.0,
+          221.0,
+          809.0,
+          1349.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02257.jpg",
+    "sha256": "8a4f58c385e560f4029ee2451625e5cd8704d6e9aad9aec67bba0d290b73c7b7",
+    "width": 1425,
+    "height": 1258,
+    "decoded": true,
+    "dhash": "9dde4726a6a4e0c0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02257.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          53.0,
+          48.0,
+          788.0,
+          1229.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1048.0,
+          101.0,
+          1314.0,
+          590.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          226.0,
+          53.0,
+          402.0,
+          224.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          364.0,
+          105.0,
+          531.0,
+          257.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1117.0,
+          103.0,
+          1213.0,
+          198.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02258.jpg",
+    "sha256": "98b89201d35ce730a21e82e829adaea82788a29ed955c8ce9b78771d83ee1794",
+    "width": 668,
+    "height": 1022,
+    "decoded": true,
+    "dhash": "e92c41f0895ad2d0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02258.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          92.0,
+          63.0,
+          565.0,
+          981.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          233.0,
+          66.0,
+          370.0,
+          187.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02259.jpg",
+    "sha256": "f810bb324776207d6b9fc4623eb335a608dd6eb82dd3b6ae7358a5197756fc04",
+    "width": 775,
+    "height": 1178,
+    "decoded": true,
+    "dhash": "b062e0c41c8cb0f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02259.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          40.0,
+          61.0,
+          713.0,
+          1132.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          193.0,
+          70.0,
+          355.0,
+          232.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          303.0,
+          92.0,
+          427.0,
+          245.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02260.jpg",
+    "sha256": "328b8d26812ee283eac9ba56a07ed514024cb185c36c271a06c1d4c1e593a37d",
+    "width": 976,
+    "height": 1421,
+    "decoded": true,
+    "dhash": "a232e474e3cb3b3a",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02260.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          32.0,
+          38.0,
+          934.0,
+          1420.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          374.0,
+          39.0,
+          618.0,
+          292.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          860.0,
+          110.0,
+          952.0,
+          194.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          824.0,
+          107.0,
+          976.0,
+          514.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02261.jpg",
+    "sha256": "df48facf0b746fea745d682d350887177acd6c0481f8ed97a0ee482ade7de4e2",
+    "width": 567,
+    "height": 781,
+    "decoded": true,
+    "dhash": "55d8e4b5dcccc9e8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02261.xml",
+    "upstreamSplit": "test",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          70.0,
+          90.0,
+          492.0,
+          734.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          248.0,
+          90.0,
+          351.0,
+          193.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          190.0,
+          98.0,
+          296.0,
+          208.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          123.0,
+          137.0,
+          211.0,
+          211.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02262.jpg",
+    "sha256": "9eb334dd5787edbf8cbce582c32fdbb4373c57cb8c6d374877469075d4d6fa4c",
+    "width": 1054,
+    "height": 1826,
+    "decoded": true,
+    "dhash": "3ca692b0b8340103",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02262.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          98.0,
+          87.0,
+          951.0,
+          1760.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          0.0,
+          216.0,
+          333.0,
+          1293.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          705.0,
+          193.0,
+          956.0,
+          738.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          297.0,
+          85.0,
+          601.0,
+          358.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          790.0,
+          201.0,
+          880.0,
+          265.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          161.0,
+          220.0,
+          299.0,
+          350.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02263.jpg",
+    "sha256": "becd093b6dd932101514c57702e988e4bdddb6b024ba588bac8f2a4809e9d11f",
+    "width": 619,
+    "height": 1070,
+    "decoded": true,
+    "dhash": "3cca961c72b0e1e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02263.xml",
+    "upstreamSplit": "val",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          73.0,
+          95.0,
+          549.0,
+          1020.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          224.0,
+          96.0,
+          400.0,
+          257.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02264.jpg",
+    "sha256": "1151145cb7fc48f10420e2cde8ba7bc205718a5a13efad80e6c3d4bbedbe6dae",
+    "width": 2228,
+    "height": 1965,
+    "decoded": true,
+    "dhash": "33c7c9cb88c842e0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02264.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          58.0,
+          66.0,
+          1144.0,
+          1962.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1806.0,
+          189.0,
+          2146.0,
+          883.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1106.0,
+          172.0,
+          1550.0,
+          1112.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1497.0,
+          169.0,
+          1783.0,
+          724.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          385.0,
+          71.0,
+          770.0,
+          463.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1219.0,
+          176.0,
+          1392.0,
+          342.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          1922.0,
+          195.0,
+          2072.0,
+          319.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02265.jpg",
+    "sha256": "009364236f937f457acfff9145ff4b35cd4b1f1ffcde66ad117071e5f457a150",
+    "width": 749,
+    "height": 1049,
+    "decoded": true,
+    "dhash": "9b34323068d8f1f0",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02265.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          67.0,
+          61.0,
+          651.0,
+          1008.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          273.0,
+          62.0,
+          444.0,
+          240.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02267.jpg",
+    "sha256": "97df77b1c639e549283149cbb7da0e7170db42457d3bd27209eccd335e25f2f4",
+    "width": 2925,
+    "height": 1210,
+    "decoded": true,
+    "dhash": "721253c28696a68e",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02267.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          209.0,
+          151.0,
+          369.0,
+          303.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          82.0,
+          140.0,
+          547.0,
+          1166.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          2030.0,
+          122.0,
+          2389.0,
+          907.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          2499.0,
+          58.0,
+          2819.0,
+          786.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          2320.0,
+          161.0,
+          2383.0,
+          277.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          2178.0,
+          121.0,
+          2314.0,
+          245.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          2606.0,
+          80.0,
+          2722.0,
+          184.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02269.jpg",
+    "sha256": "a7a1accfc97a6d41b43f848d98677db0e9fdb1e12276be056ecabdff3905f6d4",
+    "width": 764,
+    "height": 1167,
+    "decoded": true,
+    "dhash": "ee6822d3f27064f4",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02269.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "Helmet",
+        "bbox": [
+          268.0,
+          89.0,
+          420.0,
+          262.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          120.0,
+          87.0,
+          649.0,
+          1081.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02270.jpg",
+    "sha256": "2076215ce4cf4febbdab4d8d015224f44988f0b53a6569aea38b1ebf5cdd2824",
+    "width": 448,
+    "height": 695,
+    "decoded": true,
+    "dhash": "85346947c6c673e3",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02270.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          76.0,
+          58.0,
+          392.0,
+          637.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          165.0,
+          60.0,
+          283.0,
+          177.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02271.jpg",
+    "sha256": "4f540cd1fda0b604bf83b51f1d84b1c1033f2762a869cb1ab89819828d709b1d",
+    "width": 1719,
+    "height": 1369,
+    "decoded": true,
+    "dhash": "1bd5c1c7df8b3b7b",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02271.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          37.0,
+          44.0,
+          1031.0,
+          1368.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          1441.0,
+          119.0,
+          1718.0,
+          739.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          821.0,
+          101.0,
+          1018.0,
+          485.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          420.0,
+          45.0,
+          681.0,
+          315.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          725.0,
+          121.0,
+          846.0,
+          246.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          874.0,
+          105.0,
+          964.0,
+          191.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1573.0,
+          126.0,
+          1671.0,
+          223.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02272.jpg",
+    "sha256": "6e7d1ff9337fa57a8484e01b8a7e336f44cb7df70086c66924579e8a02e8c37e",
+    "width": 1709,
+    "height": 1441,
+    "decoded": true,
+    "dhash": "5ad8d98b89893a3a",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02272.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          825.0,
+          64.0,
+          1561.0,
+          1386.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          74.0,
+          211.0,
+          528.0,
+          968.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          974.0,
+          65.0,
+          1227.0,
+          312.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          237.0,
+          217.0,
+          347.0,
+          357.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          197.0,
+          221.0,
+          276.0,
+          347.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02273.jpg",
+    "sha256": "3f5c4a9d4078a3c0ea12b4c5ed93870045e29d72be51930ed1461999effe31f8",
+    "width": 1076,
+    "height": 733,
+    "decoded": true,
+    "dhash": "69ab99f9999494fc",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02273.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          73.0,
+          104.0,
+          354.0,
+          624.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          673.0,
+          74.0,
+          985.0,
+          677.0
+        ]
+      },
+      {
+        "class": "Helmet",
+        "bbox": [
+          150.0,
+          105.0,
+          257.0,
+          217.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          777.0,
+          77.0,
+          874.0,
+          183.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02274.jpg",
+    "sha256": "6bcae1e77c0a30eadda27052f106ed26ac3c08d7f71016edd0b0047bbe1b55f4",
+    "width": 1312,
+    "height": 904,
+    "decoded": true,
+    "dhash": "c6da81b0b29c9d9c",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02274.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          93.0,
+          71.0,
+          473.0,
+          818.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          751.0,
+          66.0,
+          1181.0,
+          844.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          962.0,
+          132.0,
+          1072.0,
+          245.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          875.0,
+          71.0,
+          1008.0,
+          214.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          210.0,
+          73.0,
+          317.0,
+          212.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          159.0,
+          119.0,
+          238.0,
+          204.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  },
+  {
+    "source": "edgevision",
+    "version": 1,
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02275.jpg",
+    "sha256": "fed88497e6501be4977cee5da91a073c2b8eea5c9b4798afc8edbb69b4fc8a28",
+    "width": 2057,
+    "height": 1868,
+    "decoded": true,
+    "dhash": "2c3670b2b2f8f8f8",
+    "originalXml": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/labels/voc_xml/Image_02275.xml",
+    "upstreamSplit": "train",
+    "groupId": null,
+    "groupStatus": "scene_unknown",
+    "annotations": [
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          870.0,
+          74.0,
+          1864.0,
+          1867.0
+        ]
+      },
+      {
+        "class": "BikeWithRider",
+        "bbox": [
+          52.0,
+          298.0,
+          461.0,
+          982.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          1091.0,
+          83.0,
+          1394.0,
+          419.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          168.0,
+          329.0,
+          291.0,
+          453.0
+        ]
+      },
+      {
+        "class": "NoHelmet",
+        "bbox": [
+          151.0,
+          304.0,
+          252.0,
+          424.0
+        ]
+      }
+    ],
+    "unifiedLabelsMatch": true
+  }
+]

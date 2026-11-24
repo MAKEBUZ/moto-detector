@@ -56,7 +56,13 @@ def main():
     p.add_argument('--head-probe-every', type=int, default=0)
     p.add_argument('--max-updates', type=int, help='Stop after exactly this many optimizer updates; requires constant LR and sufficient epochs')
     p.add_argument('--rpn-object-reserve', action='store_true', help='Reserve one existing positive anchor per GT object; log actual selections')
+    p.add_argument('--log-negative-exposure', action='store_true', help='Passively record actual sampler selections near reviewed nonhead regions')
+    p.add_argument('--log-reproducibility', action='store_true', help='Record passive step hashes; retain first-step model and gradients')
     a = p.parse_args()
+    if a.log_negative_exposure and (not a.separate_classes or a.rpn_object_reserve):
+        p.error('Exposure audit requires four classes and unchanged original sampler')
+    if a.log_reproducibility and (not a.separate_classes or a.rpn_object_reserve):
+        p.error('Reproducibility audit requires original four-class sampler')
     if a.photometric and (not a.separate_classes or a.workers != 0):
         p.error('Photometric controlled experiment requires separate classes and workers=0')
     if a.head_probe_every < 0 or (a.head_probe_every and not a.separate_classes):
@@ -102,7 +108,18 @@ def main():
         reservation = install_object_sampler(model, a.seed + 1000000)
         assert fingerprint(model) == initial
     train = SeparateHelmetDataset(a.dataset, 'train', a.limit_train, photometric=a.photometric, photo_seed=a.seed) if a.separate_classes else HelmetDataset(a.dataset, a.task, 'train', a.limit_train)
+    exposure = None
+    if a.log_negative_exposure:
+        from negative_exposure import ExposureObserver
+        train.exposure_regions = True
+        exposure = ExposureObserver(model)
+        assert fingerprint(model) == initial
     val = SeparateHelmetDataset(a.dataset, 'val', a.limit_val, augment=False) if a.separate_classes else HelmetDataset(a.dataset, a.task, 'val', a.limit_val, augment=False)
+    sampler_trace=[]
+    if a.log_reproducibility:
+        from reproducibility_trace import SamplerTrace, tensors_hash, rng_hashes
+        model.rpn.fg_bg_sampler=SamplerTrace(model.rpn.fg_bg_sampler,sampler_trace,'rpn')
+        model.roi_heads.fg_bg_sampler=SamplerTrace(model.roi_heads.fg_bg_sampler,sampler_trace,'roi')
     batch = a.batch_size or (64 if a.task == 'classifier' else 2)
     kwargs = {'num_workers': a.workers, 'pin_memory': device.type == 'cuda',
               'persistent_workers': a.workers > 0}
@@ -134,6 +151,10 @@ def main():
     config['source_sha256'] = {str(f): hashlib.sha256(f.read_bytes()).hexdigest()
                               for f in sorted(Path('training').glob('*.py'))}
     config['dataset_lock_sha256'] = hashlib.sha256(lock_path.read_bytes()).hexdigest()
+    config['gpu_reproducibility_settings'] = {'deterministic_algorithms':torch.are_deterministic_algorithms_enabled(),
+        'cudnn_deterministic':torch.backends.cudnn.deterministic,'cudnn_benchmark':torch.backends.cudnn.benchmark,
+        'cudnn_allow_tf32':torch.backends.cudnn.allow_tf32,'matmul_allow_tf32':torch.backends.cuda.matmul.allow_tf32,
+        'cudnn_version':torch.backends.cudnn.version(),'cuda_version':torch.version.cuda,'threads':torch.get_num_threads()}
     config['photometric_policy'] = ({'brightness':[.85,1.15],'contrast':[.85,1.15],'blur_probability':.25,'blur_radius_pixels':[.2,.8],
                                      'stage':'after 640px cap, before model transform','rng':'independent Python Random seeded with run seed'} if a.photometric else None)
     (out / 'config.json').write_text(json.dumps(config, indent=2))
@@ -142,12 +163,20 @@ def main():
     print(json.dumps(config), flush=True)
     history, best, best_epoch = [], -1., 0
     selection_log = (out/'rpn-selections.jsonl').open('x', encoding='utf-8') if reservation else None
+    exposure_log = (out/'negative-exposure.jsonl').open('x', encoding='utf-8') if exposure else None
+    trace_log = (out/'reproducibility.jsonl').open('x', encoding='utf-8') if a.log_reproducibility else None
     updates = presentations = 0
     start = time.time()
     for epoch in range(1, a.epochs + 1):
         model.train(); total, seen = 0., 0; component_totals = {}
         for images, truth in loader:
             optimizer.zero_grad(set_to_none=True)
+            if trace_log:
+                sampler_trace.clear()
+                trace={'update':updates+1,'epoch':epoch,'image_indices':[int(t['image_id']) for t in truth],
+                       'inputs_sha256':tensors_hash(images),
+                       'targets_sha256':tensors_hash([t[k] for t in truth for k in sorted(t)]),
+                       'rng_before':rng_hashes()}
             if a.task == 'classifier':
                 loss = criterion(model(images.to(device)), truth.to(device)); size = len(truth)
             else:
@@ -157,9 +186,26 @@ def main():
                     component_totals[name] = component_totals.get(name, 0.) + float(value.detach()) * size
             if not torch.isfinite(loss):
                 raise RuntimeError('Nonfinite loss; stopping instead of writing a misleading model.')
-            loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(), 5.); optimizer.step()
+            if trace_log:
+                trace.update(losses={k:float(v.detach()) for k,v in losses.items()},samplers=list(sampler_trace),rng_after_forward=rng_hashes())
+            loss.backward()
+            if trace_log and (updates<10 or (updates+1)%25==0):
+                trace['gradient_sha256']=tensors_hash([p.grad for p in model.parameters()])
+            torch.nn.utils.clip_grad_norm_(model.parameters(), 5.); optimizer.step()
+            if trace_log:
+                trace['rng_after_step']=rng_hashes()
+                if updates<10 or (updates+1)%25==0:trace['model_sha256']=fingerprint(model)
+                if updates==0:
+                    torch.save({'model':model.state_dict(),'clipped_gradients':{n:p.grad for n,p in model.named_parameters()}},out/'first-step.pt')
+                trace_log.write(json.dumps(trace)+'\n')
             total += float(loss.detach()) * size; seen += size
             updates += 1; presentations += size
+            if exposure:
+                for entry in exposure.records:
+                    row = train.rows[entry['image_index']]
+                    entry.update(update=updates, epoch=epoch, image_id=row['image_id'], region_id=row['reviewed_nonhead_regions'][entry['region_index']]['id'])
+                    exposure_log.write(json.dumps(entry)+'\n')
+                exposure.records.clear()
             if reservation:
                 assert len(reservation.records) == size
                 for entry in reservation.records:
@@ -192,9 +238,13 @@ def main():
         if scheduler is not None: scheduler.step()
         (out / 'history.json').write_text(json.dumps(history, indent=2))
         if selection_log: selection_log.flush()
+        if exposure_log: exposure_log.flush()
+        if trace_log: trace_log.flush()
         if reached_limit: break
     if a.max_updates is not None: assert updates == a.max_updates
     if selection_log: selection_log.close()
+    if exposure_log: exposure_log.close()
+    if trace_log: trace_log.close()
     result = {'task': a.task, 'epochs': epoch, 'optimizer_updates': updates, 'image_presentations': presentations, 'final_validation': metrics, 'best_epoch': best_epoch, 'best_validation_score': best,
               'selection_metric': 'macro_f1' if a.task == 'classifier' else 'map50',
               'initial_state_sha256': initial, 'final_state_sha256': fingerprint(model),

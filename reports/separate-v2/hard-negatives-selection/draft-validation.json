@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "errors": [],
+  "human_review_asserted": false,
+  "training_ready": false,
+  "evaluation_scope": "annotation structure only; not model accuracy or dataset readiness",
+  "confirmed_links": [],
+  "input_sha256": "d991478a9d7baba20c493ab805b73d35a8f80f9d597378eaaf837dcc7762a4ac"
+}

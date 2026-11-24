@@ -1,0 +1,359 @@
+[
+  {
+    "image_id": "Image_00607",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00607.jpg",
+    "group_id": "7bd4d10370de75aff64b",
+    "run": "detector-reserve1950-n44-s20261125",
+    "checkpoint_sha256": "ddd3093f2ec0ffa4e739aeb9387813e2777d6ed3dbc6a281005b57bc8d123351",
+    "box": [
+      79.30233764648438,
+      319.8810119628906,
+      122.15404510498047,
+      368.18121337890625
+    ],
+    "score": 0.8385617136955261,
+    "label": 3,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_00604",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00604.jpg",
+    "group_id": "7bd4d10370de75aff64b",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      62.88741683959961,
+      317.7947998046875,
+      101.04122161865234,
+      360.996826171875
+    ],
+    "score": 0.8376243114471436,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_00616",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00616.jpg",
+    "group_id": "7bd4d10370de75aff64b",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      184.7017364501953,
+      197.6863250732422,
+      264.21331787109375,
+      311.1816711425781
+    ],
+    "score": 0.815780520439148,
+    "label": 3,
+    "max_source_head_iou": 0.02930440753698349,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_00651",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00651.jpg",
+    "group_id": "80f4cfc6cb171cbf0038",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      993.67822265625,
+      5.994134426116943,
+      1148.9150390625,
+      221.38412475585938
+    ],
+    "score": 0.9360066056251526,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_00654",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00654.jpg",
+    "group_id": "80f4cfc6cb171cbf0038",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      991.8722534179688,
+      39.09757614135742,
+      1094.6097412109375,
+      181.4622039794922
+    ],
+    "score": 0.8311073184013367,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_00655",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00655.jpg",
+    "group_id": "80f4cfc6cb171cbf0038",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      87.85955810546875,
+      695.6090087890625,
+      244.4206085205078,
+      866.1221923828125
+    ],
+    "score": 0.7417502999305725,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_02253",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02253.jpg",
+    "group_id": "898bff3ef7e1d7726b6a",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      116.31314849853516,
+      283.80645751953125,
+      188.47853088378906,
+      361.0983581542969
+    ],
+    "score": 0.9466056227684021,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_02271",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02271.jpg",
+    "group_id": "898bff3ef7e1d7726b6a",
+    "run": "detector-reserve1950-n44-s20261125",
+    "checkpoint_sha256": "ddd3093f2ec0ffa4e739aeb9387813e2777d6ed3dbc6a281005b57bc8d123351",
+    "box": [
+      260.8980407714844,
+      931.149658203125,
+      390.20709228515625,
+      1058.96337890625
+    ],
+    "score": 0.9257312417030334,
+    "label": 3,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_02273",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02273.jpg",
+    "group_id": "898bff3ef7e1d7726b6a",
+    "run": "detector-reserve1950-n44-s20261125",
+    "checkpoint_sha256": "ddd3093f2ec0ffa4e739aeb9387813e2777d6ed3dbc6a281005b57bc8d123351",
+    "box": [
+      680.8914794921875,
+      202.19924926757812,
+      749.3751831054688,
+      275.19293212890625
+    ],
+    "score": 0.8249695301055908,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_01277",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01277.jpg",
+    "group_id": "9e75209c0ff4b1839e16",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      173.61671447753906,
+      1708.339599609375,
+      523.3307495117188,
+      2118.501953125
+    ],
+    "score": 0.9435317516326904,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_01278",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01278.jpg",
+    "group_id": "9e75209c0ff4b1839e16",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      2200.855712890625,
+      2942.37548828125,
+      2467.542724609375,
+      3240.7314453125
+    ],
+    "score": 0.7254341840744019,
+    "label": 3,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_01300",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01300.jpg",
+    "group_id": "9e75209c0ff4b1839e16",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      0.0,
+      1189.8282470703125,
+      292.6861267089844,
+      1624.18701171875
+    ],
+    "score": 0.6757034659385681,
+    "label": 4,
+    "max_source_head_iou": 0.0866345688700676,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_00297",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00297.jpg",
+    "group_id": "b720412ac598ac1015f3",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      241.5359344482422,
+      144.53018188476562,
+      314.69439697265625,
+      232.2061767578125
+    ],
+    "score": 0.8176413774490356,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_00281",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00281.jpg",
+    "group_id": "b720412ac598ac1015f3",
+    "run": "detector-reserve1950-n44-s20261125",
+    "checkpoint_sha256": "ddd3093f2ec0ffa4e739aeb9387813e2777d6ed3dbc6a281005b57bc8d123351",
+    "box": [
+      163.88424682617188,
+      7.164515018463135,
+      202.76406860351562,
+      55.87120819091797
+    ],
+    "score": 0.6875853538513184,
+    "label": 3,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_00280",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00280.jpg",
+    "group_id": "b720412ac598ac1015f3",
+    "run": "detector-reserve1950-n44-s20261125",
+    "checkpoint_sha256": "ddd3093f2ec0ffa4e739aeb9387813e2777d6ed3dbc6a281005b57bc8d123351",
+    "box": [
+      25.16951560974121,
+      11.388824462890625,
+      78.84398651123047,
+      64.93724060058594
+    ],
+    "score": 0.6854953169822693,
+    "label": 3,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_02215",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02215.jpg",
+    "group_id": "cc27a72bb259d7bd5159",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      1165.4786376953125,
+      288.7665100097656,
+      1358.952392578125,
+      502.9836730957031
+    ],
+    "score": 0.8431965112686157,
+    "label": 3,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_02222",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02222.jpg",
+    "group_id": "cc27a72bb259d7bd5159",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      400.3236999511719,
+      66.95331573486328,
+      448.9869079589844,
+      110.89978790283203
+    ],
+    "score": 0.7882130742073059,
+    "label": 3,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_02208",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02208.jpg",
+    "group_id": "cc27a72bb259d7bd5159",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      273.66552734375,
+      351.9320068359375,
+      700.9002075195312,
+      923.31640625
+    ],
+    "score": 0.7415998578071594,
+    "label": 3,
+    "max_source_head_iou": 0.07294414937496185,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_02230",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02230.jpg",
+    "group_id": "eb634068e87af4c13537",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      260.7929382324219,
+      154.0235595703125,
+      376.9272766113281,
+      231.38079833984375
+    ],
+    "score": 0.7372694611549377,
+    "label": 4,
+    "max_source_head_iou": 0.05085218325257301,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_02245",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02245.jpg",
+    "group_id": "eb634068e87af4c13537",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      136.3612823486328,
+      504.4886779785156,
+      327.5657653808594,
+      817.901611328125
+    ],
+    "score": 0.7301339507102966,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  },
+  {
+    "image_id": "Image_02240",
+    "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02240.jpg",
+    "group_id": "eb634068e87af4c13537",
+    "run": "detector-separate-v2-expanded-02",
+    "checkpoint_sha256": "02f975e323f83dcabd1d8fa637671ba7457ab18fd3c030944e209258e9d36b7c",
+    "box": [
+      891.9201049804688,
+      164.0101318359375,
+      1133.150634765625,
+      396.8341064453125
+    ],
+    "score": 0.661781907081604,
+    "label": 4,
+    "max_source_head_iou": 0.0,
+    "review_status": "pending"
+  }
+]

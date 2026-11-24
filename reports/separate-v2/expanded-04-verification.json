@@ -1,0 +1,22 @@
+{
+  "accepted_new_images": 6,
+  "excluded_new_images": 0,
+  "train_images": 50,
+  "train_boxes": 267,
+  "reviewed_nonhead_regions": 6,
+  "old_training_rows_unchanged": true,
+  "old_dataset_lock_verified": true,
+  "new_dataset_lock_verified": true,
+  "validation_files_unchanged": {
+    "val-manifest.jsonl": "952b7fc5d4d9815eb2a3e5a1066e0d565d9a70059ea5c59ee9f69e51f897895e",
+    "val-coco.json": "e1d53580b180a29ef092a8760e39c0622baf91976cd3d6eefbe8ec2c96ea8f01",
+    "images/val/Image_00734.jpg": "384df5573a805bc154cc925683a1db87487c0b9b9203f3cd47163a04bee807af",
+    "images/val/Image_01087.jpg": "6a28f55fcc527a58e93bb5e46a1a8aff8fd89cf30ef08da732f781213195319f",
+    "images/val/Image_01474.jpg": "43372becfc7133378663548ef9b3327746942089e17a29b9a81306ebd665cb63",
+    "images/val/Image_01756.jpg": "522440972e9685bfea004d685639e212573789dfc424768afb930acd61ee2849",
+    "images/val/Image_02284.jpg": "d88a475b6758063a2945bcd4a52dfd83ae265e852eeda7cd0735809ffff5a22b"
+  },
+  "loader_checked_images": 55,
+  "negative_region_gate_checked": true,
+  "training_started": false
+}
