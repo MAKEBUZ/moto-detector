@@ -95,6 +95,13 @@ class Tracks:
                  fotogramas_casco_verificado=t.get("helmet_checks", []))
             if t.get("patch_checks"):
                 row["comprobaciones_temporales_de_casco"] = t["patch_checks"]
+            if t.get("flow_checks"):
+                row["comprobaciones_por_movimiento"] = t["flow_checks"]
+                row["origenes_por_movimiento"] = sorted(t["flow_anchors"])
+            if t.get("flow_returns"):
+                row["reasociaciones_por_movimiento"] = t["flow_returns"]
+            if "first_context_bare" in t:
+                row["intervalo_sin_casco_relocalizado"] = [t["first_context_bare"], t["last_context_bare"]]
             if row["estado"] == "indeterminado":
                 total = sum(t["votes"].values())
                 strongest = max(t["votes"].values(), default=0)
@@ -195,6 +202,16 @@ class RiderTracks(Tracks):
             coverage = (votes["con_casco"] + extra) / track["hits"]
             if coverage >= .5 or (votes["sin_casco"] == 0 and coverage >= 1/3):
                 return "con_casco"
+        origins = track.get("flow_anchors")
+        if origins and max(origins)-min(origins) >= 5 and len(checks) >= 2:
+            support = min(track["flow_checks"], votes["con_casco"])
+            bare_span = track.get("last_context_bare", 0) - track.get("first_context_bare", 0)
+            # Missing boxes do not vote. Two separately anchored motion sequences
+            # must be corroborated by fresh head localizations; sustained bare
+            # localizations veto this additional path to a helmet confirmation.
+            if (support >= 6 and votes["con_casco"] >= 3*votes["sin_casco"]
+                    and votes["con_casco"] + support >= 4*votes["sin_casco"] and bare_span < 5):
+                return "con_casco"
         return state
 
 
@@ -204,7 +221,7 @@ PHOTO_RUN = "joint-multiscale-02"
 
 
 class Stream:
-    def __init__(self, source, run):
+    def __init__(self, source, run, *, motion_check=True):
         import cv2
         self.cv = cv2
         self.model = load_model(run)
@@ -219,6 +236,7 @@ class Stream:
         self.source, self.run = source, run
         self.wide_heads = None
         self.temporal_heads = None
+        self.motion_heads = None
         if not isinstance(source, int) and run != RAIN_VIDEO_RUN:
             width = self.cap.get(cv2.CAP_PROP_FRAME_WIDTH)
             height = self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
@@ -229,6 +247,9 @@ class Stream:
                     if run == DEFAULT_VIDEO_RUN:
                         from temporal_head_search import LiveHelmetSearch
                         self.temporal_heads = LiveHelmetSearch(self.wide_heads)
+                        if motion_check:
+                            from helmet_flow import HelmetFlow
+                            self.motion_heads = HelmetFlow(self.wide_heads, self.cap.get(cv2.CAP_PROP_FPS))
                 except Exception:
                     self.cap.release()
                     raise
@@ -239,6 +260,8 @@ class Stream:
 
     @property
     def tracking_version(self):
+        if self.motion_heads is not None:
+            return 6
         return 5 if self.temporal_heads is not None else 4
 
     def next(self, preview_size=None):
@@ -265,6 +288,8 @@ class Stream:
         people = self.people.update(assoc["ocupantes"], self.frames)
         if self.temporal_heads is not None:
             self.temporal_heads.refine(image, assoc["ocupantes"], people, self.people, self.frames)
+        if self.motion_heads is not None:
+            self.motion_heads.refine(image, assoc["ocupantes"], people, self.people, self.frames)
         assoc["ocupantes"] = [p for p in assoc["ocupantes"] if p["id"] in people]
         for bike in assoc["motos"]:
             bike["id"] = bikes[bike["id"]]
@@ -276,7 +301,7 @@ class Stream:
             person["estado"] = self.people.state(person["id"])
             if person["estado"] == "indeterminado":
                 person["cabezas"] = [h for h in person["cabezas"] if h["class_id"] == 2 and
-                                     (h.get("verified_helmet") or h.get("source") == "temporal_patch_check")]
+                                     (h.get("verified_helmet") or h.get("source") in ("temporal_patch_check", "helmet_flow"))]
             elif any(
                 (head["class_id"] == 2) != (person["estado"] == "con_casco") for head in person["cabezas"]
             ):

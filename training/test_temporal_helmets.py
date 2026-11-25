@@ -3,6 +3,7 @@ from unittest.mock import patch
 
 from traffic_video import RiderTracks, Tracks
 from temporal_head_search import LiveHelmetSearch
+from helmet_flow import HelmetFlow
 
 
 class TemporalHelmetTests(unittest.TestCase):
@@ -111,6 +112,51 @@ class RiderContinuityTests(unittest.TestCase):
         tracker.items[1]["patch_checks"] = 1
         self.assertEqual(tracker.state(1), "con_casco")
         tracker.update([self.rider(1, rider["box"], [5, 0, 25, 20], "sin_casco")], 11)
+        self.assertEqual(tracker.state(1), "indeterminado")
+
+    def test_motion_requires_body_and_current_detector_confirmation(self):
+        import numpy as np
+        from PIL import Image
+        from types import SimpleNamespace
+        texture = np.random.default_rng(53).integers(0, 255, (140, 120, 3), dtype=np.uint8)
+        images = [Image.fromarray(np.roll(texture, n, axis=1)) for n in range(6)]
+        tracker = RiderTracks()
+        flow = HelmetFlow(SimpleNamespace(head_model=None), 60)
+        for n in range(3):
+            rider = self.rider(1, [4, 10, 94, 135], [30+n, 20, 60+n, 50], "con_casco", True)
+            ids = tracker.update([rider], n+1)
+            flow.refine(images[n], [rider], ids, tracker, n+1)
+        hits = tracker.items[1]["hits"]
+        with patch("helmet_flow.verify", return_value=.99), patch("helmet_flow.redetect") as check:
+            check.return_value = False
+            body = self.rider(7, rider["box"])
+            ids = {}
+            flow.refine(images[3], [body], ids, tracker, 4)
+            self.assertFalse(body["cabezas"])
+            self.assertFalse(ids)
+            check.return_value = True
+            flow.refine(images[4], [], {}, tracker, 5)
+            self.assertEqual(tracker.items[1]["hits"], hits)
+            flow.refine(images[5], [body], ids, tracker, 6)
+            self.assertEqual(ids, {7: 1})
+            self.assertEqual(body["cabezas"][0]["source"], "helmet_flow")
+            self.assertEqual(tracker.count(), 1)
+            self.assertEqual(tracker.items[1]["flow_returns"], 1)
+            self.assertNotIn("flow_checks", tracker.items[1])
+
+    def test_contextual_bare_evidence_vetoes_sparse_motion_confirmation(self):
+        tracker = RiderTracks()
+        for n in range(1, 41):
+            rider = self.rider(1, [0, 0, 50, 100])
+            if n in (1, 2, 3, 7, 8, 9, 10):
+                rider = self.rider(1, rider["box"], [5, 0, 25, 20], "con_casco", True)
+            if n in (25, 32):
+                rider = self.rider(1, rider["box"], [5, 0, 25, 20], "sin_casco")
+            tracker.update([rider], n)
+        track = tracker.items[1]
+        track.update(flow_checks=6, flow_anchors={1, 7})
+        self.assertEqual(tracker.state(1), "con_casco")
+        track.update(first_context_bare=25, last_context_bare=32)
         self.assertEqual(tracker.state(1), "indeterminado")
 
     def test_short_burst_cannot_confirm_bare_head(self):
