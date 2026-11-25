@@ -1,6 +1,8 @@
 import unittest
+from unittest.mock import patch
 
 from traffic_video import RiderTracks, Tracks
+from temporal_head_search import LiveHelmetSearch
 
 
 class TemporalHelmetTests(unittest.TestCase):
@@ -64,6 +66,38 @@ class RiderContinuityTests(unittest.TestCase):
         for frame in range(1, 4):
             tracker.update([self.rider(1, [0, 0, 60, 120], bike=None)], frame)
         self.assertEqual(tracker.count(), 1)
+        self.assertEqual(tracker.state(1), "indeterminado")
+
+    def test_patch_recovery_uses_same_track_and_expires(self):
+        import numpy as np
+        from PIL import Image
+
+        image = Image.fromarray(np.random.default_rng(42).integers(0, 256, (100, 100, 3), dtype=np.uint8))
+        tracker = RiderTracks()
+        search = LiveHelmetSearch(None)
+        first = self.rider(1, [10, 15, 70, 95], [28, 23, 48, 43], "con_casco", verified=True)
+        for n in range(1, 4):
+            ids = tracker.update([first], n)
+            search.refine(image, [first], ids, tracker, n)
+        hidden = self.rider(1, first["box"])
+        with patch("temporal_head_search.verify", return_value=.99):
+            search.refine(image, [hidden], {1: 1}, tracker, 4)
+            self.assertEqual(hidden["cabezas"][0]["source"], "temporal_patch_check")
+            self.assertEqual(tracker.items[1]["votes"]["con_casco"], 3)
+            missing = self.rider(1, first["box"])
+            search.refine(image, [missing], {}, tracker, 5)
+            self.assertEqual(missing["cabezas"], [])
+            search.refine(image, [missing], {1: 1}, tracker, 19)
+            self.assertEqual(missing["cabezas"], [])
+
+    def test_patch_checks_cannot_confirm_a_track_from_one_verified_sighting(self):
+        tracker = RiderTracks()
+        for n in range(1, 11):
+            rider = self.rider(1, [0, 0, 50, 100])
+            if n <= 3:
+                rider = self.rider(1, rider["box"], [5, 0, 25, 20], "con_casco", n == 1)
+            tracker.update([rider], n)
+        tracker.items[1]["patch_checks"] = 7
         self.assertEqual(tracker.state(1), "indeterminado")
 
     def test_short_burst_cannot_confirm_bare_head(self):

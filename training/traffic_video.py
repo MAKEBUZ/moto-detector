@@ -93,6 +93,8 @@ class Tracks:
             row = dict(id=key, primer_fotograma=t["first"], ultimo_fotograma=t["last"],
                  detecciones=t["hits"], votos=dict(t["votes"]), estado=self.state(key),
                  fotogramas_casco_verificado=t.get("helmet_checks", []))
+            if t.get("patch_checks"):
+                row["comprobaciones_temporales_de_casco"] = t["patch_checks"]
             if row["estado"] == "indeterminado":
                 total = sum(t["votes"].values())
                 strongest = max(t["votes"].values(), default=0)
@@ -185,6 +187,13 @@ class RiderTracks(Tracks):
         if (len(checks) >= 2 and checks[0] > track.get("last_bare", -1)
                 and votes["sin_casco"] <= 1 and votes["con_casco"] >= max(6, track["hits"]/3)):
             return "con_casco"
+        # Template matches reuse direct sightings. Bound their contribution and
+        # require spaced detector verifications before they can resolve a track.
+        extra = min(track.get("patch_checks", 0), votes["con_casco"])
+        if (extra and len(checks) >= 2 and votes["con_casco"] >= 3
+                and votes["con_casco"] >= .8 * sum(votes.values())
+                and votes["con_casco"] + extra >= .5 * track["hits"]):
+            return "con_casco"
         return state
 
 
@@ -208,6 +217,7 @@ class Stream:
             raise ValueError("No se pudo abrir el video o la cámara")
         self.source, self.run = source, run
         self.wide_heads = None
+        self.temporal_heads = None
         if not isinstance(source, int) and run != RAIN_VIDEO_RUN:
             width = self.cap.get(cv2.CAP_PROP_FRAME_WIDTH)
             height = self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
@@ -215,6 +225,9 @@ class Stream:
                 from wide_video import WideVideoHeads
                 try:
                     self.wide_heads = WideVideoHeads()
+                    if run == DEFAULT_VIDEO_RUN:
+                        from temporal_head_search import LiveHelmetSearch
+                        self.temporal_heads = LiveHelmetSearch(self.wide_heads)
                 except Exception:
                     self.cap.release()
                     raise
@@ -223,7 +236,11 @@ class Stream:
         self.seconds = 0.
         self.visible_bikes = self.visible_people = 0
 
-    def next(self):
+    @property
+    def tracking_version(self):
+        return 5 if self.temporal_heads is not None else 4
+
+    def next(self, preview_size=None):
         start = time.perf_counter()
         ok, frame = self.cap.read()
         if not ok:
@@ -245,6 +262,8 @@ class Stream:
             assoc = summarize(self.helmet_matcher.recover(image, result["predictions"]))
         bikes = self.bikes.update(assoc["motos"], self.frames)
         people = self.people.update(assoc["ocupantes"], self.frames)
+        if self.temporal_heads is not None:
+            self.temporal_heads.refine(image, assoc["ocupantes"], people, self.people, self.frames)
         assoc["ocupantes"] = [p for p in assoc["ocupantes"] if p["id"] in people]
         for bike in assoc["motos"]:
             bike["id"] = bikes[bike["id"]]
@@ -262,6 +281,18 @@ class Stream:
         assoc["ocupantes"] = [p for p in assoc["ocupantes"] if self.people.confirmed(p["id"])]
         self.visible_bikes = len(assoc["motos"])
         self.visible_people = len(assoc["ocupantes"])
+        if preview_size:
+            width, height = image.size
+            image.thumbnail(preview_size)
+            sx, sy = image.width/width, image.height/height
+
+            def display_box(obj):
+                l,t,r,b = obj["box"]
+                return dict(obj, box=[l*sx, t*sy, r*sx, b*sy])
+
+            assoc = dict(motos=[display_box(b) for b in assoc["motos"]],
+                         ocupantes=[dict(display_box(p), cabezas=[display_box(h) for h in p["cabezas"]])
+                                    for p in assoc["ocupantes"]])
         annotate(image, assoc, show_track_state=True)
         self.seconds += time.perf_counter()-start
         return image
@@ -272,11 +303,12 @@ class Stream:
             return None
         folder = root/"reports"/"videos"/uuid4().hex
         folder.mkdir(parents=True)
-        data = dict(rain_helmet_matching=self.helmet_matcher is not None, tracking_version=4, head_crop_consensus=True, run=self.run, source=self.source, status=status, frames=self.frames,
+        data = dict(rain_helmet_matching=self.helmet_matcher is not None, tracking_version=self.tracking_version, head_crop_consensus=True, run=self.run, source=self.source, status=status, frames=self.frames,
                     timestamp=datetime.now().astimezone().isoformat(),
                     processing_fps=self.frames/self.seconds,
                     counts=dict(motos=self.bikes.count(), ocupantes=self.people.count(), **self.people.state_counts()))
         data["revision_video_panoramico"] = self.wide_heads is not None
+        data["verificacion_temporal_de_cascos"] = self.temporal_heads is not None
         data["trayectorias_ocupantes"] = self.people.evidence()
         tmp = folder/"video.tmp"
         tmp.write_text(json.dumps(data, indent=2), encoding="utf-8")
@@ -294,7 +326,7 @@ def video_window(parent, root, run, camera=False):
         messagebox.showerror("Video", str(error), parent=parent)
         return
     win = tk.Toplevel(parent)
-    win.title(f"Conteo de motociclistas · {run}")
+    win.title(f"Conteo de motociclistas · {run} · seguimiento v{stream.tracking_version}")
     preview = ttk.Label(win)
     preview.pack()
     note = tk.StringVar()
@@ -330,11 +362,10 @@ def video_window(parent, root, run, camera=False):
         pending = None
         start = time.perf_counter()
         try:
-            image = stream.next()
+            image = stream.next(preview_size=(850, 500))
             if image is None:
                 finish("completo")
                 return
-            image.thumbnail((850,500))
             preview.photo = ImageTk.PhotoImage(image)
             preview.configure(image=preview.photo)
             c = stream.people.state_counts()
