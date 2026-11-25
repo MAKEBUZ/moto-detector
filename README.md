@@ -2,7 +2,7 @@
 
 Proyecto académico para detectar motocicletas, asociar sus ocupantes, clasificar el uso visible del casco y consultar los conteos de fotos y videos. Los pesos proceden de entrenamientos propios. La aplicación distingue **con casco**, **sin casco** e **indeterminado**. El ajuste de la correa queda fuera de las cuatro clases anotadas.
 
-**Estado al 25 de noviembre de 2026.** El último detector para archivos de video es `joint-occupant-negatives-11`. Obtuvo **80,43 % de mAP50 en 5 imágenes de validación**. El seguimiento **v7** usa ese mismo checkpoint. En los 1.500 fotogramas del video panorámico vinculó **9 de 9 cascos revisados** a trayectorias confirmadas, frente a 7 con v6. En las ocho regiones negativas se mantuvieron dos falsos ocupantes confirmados.
+**Estado al 25 de noviembre de 2026.** El último detector para archivos de video es `joint-occupant-negatives-11`. Obtuvo **80,43 % de mAP50 en 5 imágenes de validación**. El seguimiento **v8** usa ese mismo checkpoint. En los 1.500 fotogramas del video panorámico conservó **9 de 9 cascos** de la revisión original. En cinco fotogramas de control pasó de **5 a 7 de 10 cascos** vinculados a trayectorias confirmadas. En las ocho regiones negativas se mantuvieron dos falsos ocupantes confirmados.
 
 ## Arranque rápido en el equipo del proyecto
 
@@ -13,7 +13,7 @@ Set-Location -LiteralPath "$env:USERPROFILE\Desktop\INTELIGENCI AARTIFICIAL - MO
 .\.venv\Scripts\python.exe training\photo_app.py
 ```
 
-1. Pulsa **Cargar video**. Para repetir la prueba panorámica, deja desmarcada **Video de frente con lluvia (experimental)** y selecciona `15740042_3840_2160_60fps.mp4`. El título de la ventana debe mostrar **joint-occupant-negatives-11 · seguimiento v7**. Este modo se activa en archivos de al menos 1920 píxeles de ancho con relación ancho/alto ≥ 1,45.
+1. Pulsa **Cargar video**. Para repetir la prueba panorámica, deja desmarcada **Video de frente con lluvia (experimental)** y selecciona `15740042_3840_2160_60fps.mp4`. El título de la ventana debe mostrar **joint-occupant-negatives-11 · seguimiento v8**. Este modo se activa en archivos de al menos 1920 píxeles de ancho con relación ancho/alto ≥ 1,45.
 2. Deja terminar el video para comparar sus totales con el informe completo. **Detener y guardar** genera un informe parcial. El JSON queda en `reports/videos/<id>/video.json` e incluye modelo, versión, fotogramas, velocidad, conteos y votos por trayectoria.
 3. **Cargar foto** y **Usar cámara** utilizan `joint-multiscale-02` en modo general. Las fotos se guardan en `reports/fotos/<id>/` con su imagen anotada y JSON. La casilla de lluvia selecciona `joint-rain-rider-09` para video o cámara.
 4. En **Consultar estadísticas** puedes preguntar «¿Cuántos ocupantes sin casco hubo hoy en videos?» o «Resumen en fotos». Cada ejecución guardada cuenta como un análisis, incluso si cargas el mismo archivo dos veces.
@@ -114,17 +114,20 @@ El seguimiento v6 añade flujo óptico con comprobación de ida y vuelta, clasif
 
 El seguimiento v7 conserva el vínculo al salir por un borde. Parte de un casco verificado y sigue por separado puntos del casco y del torso. Comprueba que ambas zonas siguen visibles, conservan su aspecto y se mueven juntas. Dibuja la parte visible sobre una trayectoria que ya contaba como «con casco». Estas observaciones se registran por separado de los votos del detector.
 
-| Video panorámico de 1.500 fotogramas | v4 | v5 | v6 | v7 |
-|---|---:|---:|---:|---:|
-| Cascos localizados en los 9 fotogramas marcados | 3/9 | 5/9 | 7/9 | 9/9 |
-| Cascos de esas marcas confirmados al terminar | 2/9 | 4/9 | 7/9 | 9/9 |
-| Falsos ocupantes confirmados en las 8 regiones negativas revisadas | 2/8 | 2/8 | 2/8 | 2/8 |
-| Trayectorias de moto / de ocupante | 43 / 40 | 43 / 40 | 43 / 40 | 43 / 40 |
-| Trayectorias con casco / sin casco / indeterminadas | 14 / 0 / 26 | 16 / 0 / 24 | 18 / 0 / 22 | 18 / 0 / 22 |
+| Video panorámico de 1.500 fotogramas | v4 | v5 | v6 | v7 | v8 |
+|---|---:|---:|---:|---:| ---: |
+| Cascos localizados en los 9 fotogramas marcados | 3/9 | 5/9 | 7/9 | 9/9 | 9/9 |
+| Cascos de esas marcas confirmados al terminar | 2/9 | 4/9 | 7/9 | 9/9 | 9/9 |
+| Falsos ocupantes confirmados en las 8 regiones negativas revisadas | 2/8 | 2/8 | 2/8 | 2/8 | 2/8 |
+| Trayectorias de moto / de ocupante | 43 / 40 | 43 / 40 | 43 / 40 | 43 / 40 | 43 / 40 |
+| Trayectorias con casco / sin casco / indeterminadas | 14 / 0 / 26 | 16 / 0 / 24 | 18 / 0 / 22 | 18 / 0 / 22 | 19 / 0 / 21 |
+| Cascos confirmados en los cinco fotogramas de control | 5/10 | 5/10 | 5/10 | 5/10 | 7/10 |
 
 En v6 se recuperaron las marcas de los fotogramas 352, 400 y 931. En v7, el casco del fotograma 680 vuelve a la trayectoria 27 (IoU 0,678) y el del 837 vuelve a la 31 (IoU 0,564). El mínimo exigido es 0,50. Los dos ocupantes ya contaban como «con casco» en v6. En las ocho regiones negativas, tres presentaron una asociación en el fotograma marcado y dos llegaron al conteo final en ambas versiones. Esas dos trayectorias, en los fotogramas 1001 y 1297, quedaron indeterminadas. [Comparación por marca](reports/training/tracking-occupants-v7/comparison.json) · [Vista de los dos bordes](reports/training/tracking-occupants-v7/vista-bordes.jpg)
 
-En otros cinco fotogramas del mismo video, las cuatro versiones confirmaron 5 de 10 cascos visibles. Las nueve marcas se usaron para diagnosticar los fallos, por lo que el 9/9 mide la corrección en este video. Una trayectoria puede fragmentarse y asignar dos identificadores a la misma persona. En este equipo se midieron 4,12 fotogramas/s con v6 y 2,74 con v7. [Comprobación adicional](reports/training/tracking-occupants-v7/additional-frames.json) · [Auditoría visual de las 135 asociaciones añadidas](reports/training/tracking-occupants-v7/revision-visual.md)
+En otros cinco fotogramas del mismo video, las versiones v4 a v7 confirmaron 5 de 10 cascos visibles. Las nueve marcas se usaron para diagnosticar los fallos, por lo que el 9/9 mide la corrección en este video. Una trayectoria puede fragmentarse y asignar dos identificadores a la misma persona. En este equipo se midieron 4,12 fotogramas/s con v6 y 2,74 con v7. [Comprobación adicional](reports/training/tracking-occupants-v7/additional-frames.json) · [Auditoría visual de las 135 asociaciones añadidas](reports/training/tracking-occupants-v7/revision-visual.md)
+
+En v8, dos detectores propios buscan el casco en recortes de diferente tamaño alrededor del ocupante. Durante una pérdida breve del cuerpo se exige continuidad visual del casco y del torso y se verifica la cabeza en el fotograma actual. Se recuperaron el casco del fotograma 750 (trayectoria 25) y el de la izquierda del 1350 (trayectoria 51). La trayectoria 25 ya contaba como «con casco». La 51 pasó de «indeterminado» a «con casco». Los casos pendientes son el 150, el conductor del 450 y el motorista central del 1350. Estas marcas se usaron para desarrollar el ajuste y miden el resultado sobre el mismo video. [Comparación de los cinco casos](reports/training/tracking-occupants-v8/cinco-controles.jpg) · [Resultados y revisión visual](reports/training/tracking-occupants-v8/revision.md)
 
 Para ejecutar las pruebas del proyecto y repetir las comparaciones en la máquina de trabajo, utiliza los siguientes comandos.
 
@@ -133,6 +136,7 @@ Para ejecutar las pruebas del proyecto y repetir las comparaciones en la máquin
 .\.venv\Scripts\python.exe training\evaluate_rider_tracking.py --temporal reports\videos\2da824dd4ddd4993bd19bc091c7f2c18\video.json
 .\.venv\Scripts\python.exe training\evaluate_rider_tracking.py --motion reports\training\tracking-occupants-v5\video.json
 .\.venv\Scripts\python.exe training\evaluate_rider_tracking.py --edge reports\training\tracking-occupants-v6\video.json
+.\.venv\Scripts\python.exe training\evaluate_rider_tracking.py --consensus reports\training\tracking-occupants-v7\video.json
 ```
 
 Las comparaciones requieren el video original en la ruta guardada en el informe de control, el archivo local `runs/joint-occupant-negatives-11/paired-review.json` y los pesos del modo panorámico.
