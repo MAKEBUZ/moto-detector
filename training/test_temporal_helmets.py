@@ -79,11 +79,12 @@ class RiderContinuityTests(unittest.TestCase):
         torso = Image.fromarray(rng.integers(20, 165, (48, 34, 3), dtype=np.uint8))
         search = EdgeRiders(30)
         tracker = RiderTracks()
-        for frame in range(1, 14):
+        for frame in range(1, 15):
             left = 17 - 2 * frame
             image = Image.new("RGB", (150, 120), (110, 115, 120))
             if frame < 13:
                 image.paste(torso, (left, 44))
+            if frame < 14:
                 image.paste(helmet, (left + 6, 22))
             people = []
             if frame <= 4:
@@ -95,7 +96,7 @@ class RiderContinuityTests(unittest.TestCase):
                 self.assertEqual(list(ids.values()), [1])
                 self.assertEqual(people[0]["cabezas"][0]["source"], "edge_flow")
                 self.assertEqual(people[0]["box"][0], 0)
-            if frame in (6, 13):
+            if frame in (6, 13, 14):
                 self.assertFalse(people)
         self.assertEqual(tracker.count(), 1)
         self.assertEqual(tracker.items[1]["hits"], 4)
