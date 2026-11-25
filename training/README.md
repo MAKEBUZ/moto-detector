@@ -1,85 +1,26 @@
-# Entrenamiento desde cero
+# Entrenamiento y evaluación de los modelos actuales
 
-Se usa PyTorch como biblioteca, sin pesos preentrenados. `models.py` construye una CNN y un Faster R-CNN con backbone convolucional propio inicializados aleatoriamente. No se utiliza ResNet preentrenada, COCO, ImageNet ni checkpoints externos.
+Ejecuta los comandos desde la raíz del proyecto. El [README principal](../README.md) contiene la instalación de PyTorch, la ubicación de los pesos propios y los resultados de referencia.
 
-El detector usa tres clases más fondo; las etiquetas YOLO 0/1/2 se convierten a 1/2/3 durante el entrenamiento. Su resolución de trabajo es de 384 a 640 píxeles, para una primera prueba con recursos locales. Es una arquitectura inicial; todavía no está optimizada para tiempo real ni objetos muy pequeños.
+| Qué quieres hacer | Archivo de entrada |
+|---|---|
+| Repetir el ajuste del detector de ocupantes usado por v9 | [train_occupant_regions.py](train_occupant_regions.py) |
+| Entrenar la variante reciente para conductor y pasajero solapados | [train_crowded_riders.py](train_crowded_riders.py) |
+| Entrenar el especialista que busca cabezas en recortes de ocupante | [rider_crop_heads.py](rider_crop_heads.py) |
+| Comparar las asociaciones del video con las marcas revisadas | [evaluate_rider_tracking.py](evaluate_rider_tracking.py) |
+| Probar una foto o un video en la aplicación | [photo_app.py](photo_app.py) |
 
-El clasificador recibe recortes de 96 × 96 con relación de aspecto conservada mediante relleno. Los aumentos son brillo y espejo horizontal, solo en entrenamiento. Usa pesos de clase calculados únicamente a partir del conjunto de entrenamiento.
+V9 es una versión del seguimiento. Su detector es `joint-occupant-negatives-11`. El ajuste parte de un checkpoint del proyecto. La variante de ocupantes solapados parte de ese detector y conserva su propio informe para poder comparar resultados.
 
-## Entorno
+## Antes de entrenar
 
-Python local en `.venv`. Las bibliotecas CUDA se descargan del índice oficial de PyTorch; no son pesos de modelos. No se necesita instalar globalmente un CUDA Toolkit para utilizar estas ruedas.
+Restaura los conjuntos preparados, los manifiestos revisados y los pesos de origen que lee el entrenador elegido. Comprueba el directorio de salida antes de ejecutar. Ambos entrenadores crean una carpeta nueva bajo `runs/` y se detienen si ya existe. Conserva el directorio del modelo activo cuando prepares otro experimento.
 
-```powershell
-./.venv/Scripts/python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
-./.venv/Scripts/python.exe training/test_metrics.py
-```
-
-Cada ejecución guarda versiones exactas en `runs/<nombre>/requirements.lock.txt`.
-
-La instalación utilizada también está fijada en `training/requirements-cu128.lock.txt`. Para repetirla: `./.venv/Scripts/python.exe -m pip install -r training/requirements-cu128.lock.txt --index-url https://download.pytorch.org/whl/cu128`.
-
-## Ejecuciones
-
-Desde la raíz del proyecto:
+## Comprobaciones
 
 ```powershell
-# Pruebas pequeñas; no son resultados representativos.
-./.venv/Scripts/python.exe training/train.py --task classifier --epochs 2 --limit-train 128 --limit-val 64 --run classifier-smoke
-./.venv/Scripts/python.exe training/train.py --task detector --epochs 2 --limit-train 16 --limit-val 8 --run detector-smoke
-
-# Primer entrenamiento con todos los ejemplos de train y val.
-./.venv/Scripts/python.exe training/train.py --task classifier --epochs 15 --run classifier-baseline
-./.venv/Scripts/python.exe training/train.py --task detector --epochs 5 --run detector-baseline
+.\.venv\Scripts\python.exe -m unittest discover -s training -p "test*.py"
+.\.venv\Scripts\python.exe training\evaluate_rider_tracking.py --partial reports\training\tracking-occupants-v8\video.json
 ```
 
-Los nombres de ejecución son únicos y no se sobrescriben. No hay reanudación implícita ni parámetro para cargar pesos externos. El bloqueo de las funciones de descarga de torch.hub es una comprobación adicional; la garantía principal es que los constructores no solicitan pesos y el entrenador no llama a `torch.load`.
-
-Cada carpeta contiene configuración, `history.json`, `result.json`, `best.pt` y `last.pt`. Los checkpoints generados son pesos propios aprendidos aquí. `best.pt` se elige por macro-F1 de validación para clasificación y por mAP@0.50 para detección. `last.pt` permite inspeccionar el estado de la última época; se conserva el optimizador, pero este entrenador todavía no implementa reanudación.
-
-## Métricas y reproducibilidad
-
-- Clasificación: matriz de confusión (filas reales, columnas predichas), precisión, recall y F1 de ambas clases, macro-F1 y accuracy.
-- Detección: AP interpolada en 101 puntos, IoU 0,50, máximo 100 predicciones por imagen; se informa por clase y su media. No equivale a COCO mAP@0.50:0.95.
-- No se utiliza `test`: se reserva hasta fijar el experimento y los umbrales.
-- Se registran semillas, versiones, huella de los pesos iniciales y finales y huellas del dataset. Una semilla no garantiza igualdad bit a bit entre GPUs/versiones distintas.
-- Las particiones son un baseline interno con agrupación heurística. El desempeño en cámara real necesita una prueba externa.
-
-Los resultados de un entrenamiento corto no garantizan uso fiable, conteo de pasajeros ni casco bien abrochado. Véase `docs/dataset-preparado.md` para el alcance real de las etiquetas.
-
-## Inferencia con los checkpoints propios
-
-```powershell
-./.venv/Scripts/python.exe training/predict.py --run classifier-baseline --image "ruta/al/recorte-de-cabeza.jpg" --output reports/training/mi-clasificacion
-./.venv/Scripts/python.exe training/predict.py --run detector-baseline --image "ruta/a/la/escena.jpg" --output reports/training/mi-deteccion --threshold 0.5
-```
-
-Sustituir las rutas de ejemplo por archivos existentes. Se generan resultados JSON y, para detección, una imagen anotada. El clasificador requiere un recorte de cabeza; no usar una escena completa como si fuera una cabeza. El umbral 0,5 es una opción inicial no calibrada para multas ni alertas. `predict.py` carga únicamente el checkpoint propio de la carpeta `runs` indicada; entrenar no carga ningún checkpoint.
-
-La inferencia del detector incluye ahora `association`: propuestas geométricas cabeza–moto, ambigüedades y conflictos. No son ocupantes confirmados y no habilitan conteo. La revisión y sus límites están documentados en `reports/error-review/README.md`.
-
-Referencias de las APIs: [instalación de PyTorch](https://pytorch.org/get-started/locally/) y el código instalado de `torchvision.models.detection.faster_rcnn.FasterRCNN`.
-
-## Reserva experimental de positivos RPN
-
-`training/train.py --rpn-object-reserve` activa la reserva de un positivo por objeto que disponga de anclas asignadas positivas. Es opcional y solo se permite en el detector de cuatro clases. Se mantiene el tamaño del muestreo y su proporción positiva, y se conservan las negativas del sorteo original. Se reparan omisiones intercambiando positivos redundantes; si no alcanza el presupuesto, se detiene explícitamente. Las reparaciones usan un RNG separado con semilla de ejecución +1000000.
-
-`rpn-selections.jsonl` registra todos los pasos e imágenes, identificadores de objetos, clases, positivos disponibles, selección habitual previa a reparar, selección final e índices de anclas. No registra coordenadas completas ni las imágenes aumentadas. Los checkpoints guardan pesos con el mismo esquema; la inferencia no necesita el sampler y no cambia por instalarlo. No hay reanudación implícita.
-
-Experimento reproducible: `training/run_fixed_updates.py --rpn-object-reserve`. Comparación: `training/report_object_reserve.py`. Requieren destinos nuevos si ya existen resultados. La reserva no se adoptó como configuración predeterminada: su mejora no fue consistente en las dos semillas y datasets evaluados. Ver `reports/training/object-reserve-01/README.md`.
-
-## Modo determinista estricto en GPU
-
-El argumento `--deterministic-gpu` habilita algoritmos deterministas con errores ante operaciones incompatibles, fija cuDNN determinista sin benchmark, desactiva TF32 y configura CUBLAS_WORKSPACE_CONFIG=:4096:8 antes de inicializar CUDA. El lanzador también fija PYTHONHASHSEED antes de iniciar cada proceso.
-
-En esta instalación Windows, el backward CUDA nativo de RoIAlign no es determinista y la compilación de su alternativa no está disponible. El modo nuevo usa la implementación eager de referencia incluida en torchvision, con la misma geometría de un nivel, salida7×7, sampling_ratio2 y aligned=False. Es más lenta y constituye una condición numérica nueva. No cambia las cuotas ni la selección del muestreador y no utiliza pesos externos.
-
-Prueba pareada completa:
-
-```powershell
-.venv/Scripts/python.exe training/run_gpu_reproducibility.py --deterministic
-.venv/Scripts/python.exe training/report_gpu_reproducibility_models.py --output reports/training/gpu-deterministic-01
-.venv/Scripts/python.exe training/report_gpu_reproducibility.py --output reports/training/gpu-deterministic-01
-```
-
-No sobrescribir las carpetas existentes. La inferencia con `training/predict.py` respeta `deterministic_gpu` del checkpoint; los scripts de auditoría antiguos requieren propagar esta configuración antes de usarse con checkpoints nuevos. Las arquitecturas históricas conservan el comportamiento anterior por defecto. Pruebas: geometría y gradientes frente al pooling nativo en CPU, backward repetible en GPU y dos procesos cortos con trazas/pesos idénticos.
+La segunda orden requiere el video local y las anotaciones de control. La referencia de v9 es 8/10 cascos de control, 9/9 de la revisión original y dos falsos ocupantes confirmados en ocho regiones negativas. [Informe de referencia](../reports/training/tracking-occupants-v9/revision.md)
