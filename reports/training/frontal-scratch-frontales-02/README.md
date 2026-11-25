@@ -23,3 +23,7 @@ Con el entorno del proyecto y el dataset local preparado, las siguientes órdene
 .\.venv\Scripts\python.exe training\train.py --run frontal-scratch-01 --dataset data/prepared/frontal-scratch-01 --task detector --separate-classes --epochs 60 --batch-size 4 --workers 0 --feature-stride 8 --proposal-multiplier 4 --photometric
 .\.venv\Scripts\python.exe training\train_reviewed_fronts.py
 ```
+
+## Video completo
+
+Se procesaron los mismos 1.500 fotogramas manteniendo el seguimiento y los especialistas de v9. Se sustituyó el detector principal. V9 confirmó 8/10 cascos de control y 9/9 originales. El detector nuevo confirmó 3/10 y 1/9, tanto antes como después del ajuste con frontales. En las ocho regiones negativas revisadas, los falsos ocupantes confirmados pasaron de dos a cero. El detector ajustado mantuvo el casco blanco del 150 y perdió el del borde del 750. El conductor del 450 y el motorista central del 1350 siguen pendientes. La app conserva v9. [Resultados por marca](additional-frames.json) · [Conteo y regiones negativas](comparison.json)
