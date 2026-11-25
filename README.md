@@ -31,7 +31,7 @@ py -3.14 -m venv .venv
 .\.venv\Scripts\python.exe -c "import tkinter, torch, torchvision, cv2; print(torch.__version__, torchvision.__version__, cv2.__version__, 'CUDA:', torch.cuda.is_available())"
 ```
 
-**Restaura los pesos antes de analizar una imagen o video.** Git excluye `runs/` y `data/prepared/`. Copia los archivos de la máquina del proyecto o de un respaldo propio conservando sus rutas. El cargador verifica la huella del modelo de origen. Los nombres de los archivos y de sus carpetas deben coincidir. [Dependencias fijadas](training/requirements-cu128.lock.txt) · [Carga y comprobación de pesos](training/predict.py)
+**El clon de esta rama incluye los seis archivos de pesos para foto, cámara general y video panorámico v9.** Para el modo experimental de lluvia, copia desde el equipo del proyecto los archivos indicados en la última fila. Los conjuntos de entrenamiento y las anotaciones locales de evaluación se restauran por separado. El cargador verifica la huella del modelo de origen. Los nombres de los archivos y de sus carpetas deben coincidir. [Dependencias fijadas](training/requirements-cu128.lock.txt) · [Carga y comprobación de pesos](training/predict.py)
 
 | Uso | Archivos que deben estar bajo la raíz del proyecto |
 |---|---|
