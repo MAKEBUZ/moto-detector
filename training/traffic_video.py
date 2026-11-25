@@ -102,6 +102,8 @@ class Tracks:
                 row["reasociaciones_por_movimiento"] = t["flow_returns"]
             if t.get("edge_returns"):
                 row["reapariciones_parciales_en_borde"] = t["edge_returns"]
+            if t.get("partial_checks"):
+                row["pares_casco_torso_en_borde_inferior"] = sorted(t["partial_checks"])
             if t.get("consensus_frames"):
                 row["fotogramas_con_doble_localizacion"] = t["consensus_frames"]
             if "first_context_bare" in t:
@@ -178,6 +180,9 @@ class RiderTracks(Tracks):
             track["velocity"] = (.5*vx + .5*(x+X-l-r)/(2*elapsed),
                                  .5*vy + .5*(y+Y-t-b)/(2*elapsed))
         if len(obj.get("cabezas", [])) == 1:
+            checks = obj["cabezas"][0].get("partial_checks")
+            if checks:
+                track.setdefault("partial_checks", set()).update(checks)
             track.update(head_box=obj["cabezas"][0]["box"], head_frame=frame)
         if obj.get("estado") == "sin_casco":
             track.setdefault("first_bare", frame)
@@ -235,7 +240,7 @@ PHOTO_RUN = "joint-multiscale-02"
 
 
 class Stream:
-    def __init__(self, source, run, *, motion_check=True, edge_check=True, consensus_check=True):
+    def __init__(self, source, run, *, motion_check=True, edge_check=True, consensus_check=True, partial_check=True):
         import cv2
         self.cv = cv2
         self.model = load_model(run)
@@ -253,6 +258,7 @@ class Stream:
         self.motion_heads = None
         self.edge_riders = None
         self.rider_heads = None
+        self.partial_riders = None
         if not isinstance(source, int) and run != RAIN_VIDEO_RUN:
             width = self.cap.get(cv2.CAP_PROP_FRAME_WIDTH)
             height = self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
@@ -273,6 +279,10 @@ class Stream:
                                     from video_head_consensus import VideoHeadConsensus
                                     self.rider_heads = VideoHeadConsensus(self.model, self.wide_heads, self.edge_riders,
                                                                          self.cap.get(cv2.CAP_PROP_FPS))
+                                    if partial_check:
+                                        from partial_video_riders import PartialVideoRiders
+                                        self.partial_riders = PartialVideoRiders(self.model, self.wide_heads,
+                                                                                self.cap.get(cv2.CAP_PROP_FPS))
                 except Exception:
                     self.cap.release()
                     raise
@@ -283,6 +293,8 @@ class Stream:
 
     @property
     def tracking_version(self):
+        if self.partial_riders is not None:
+            return 9
         if self.rider_heads is not None:
             return 8
         if self.edge_riders is not None:
@@ -311,6 +323,14 @@ class Stream:
             assoc = summarize(objects)
         if self.helmet_matcher is not None:
             assoc = summarize(self.helmet_matcher.recover(image, result["predictions"]))
+        if self.partial_riders is not None:
+            for (body, head), checks in self.partial_riders.find(image, assoc["ocupantes"], self.frames):
+                objects = [dict(box=b["box"], class_id=0) for b in assoc["motos"]]
+                rider = summarize(objects + [dict(box=body, class_id=1)])["ocupantes"][0]
+                rider.update(id=len(assoc["ocupantes"])+1, estado="con_casco", cabezas=[
+                    dict(box=head, class_id=2, source="partial_rider", seed_frame=checks[-1],
+                         partial_checks=checks, verified_helmet=checks[-1] == self.frames)])
+                assoc["ocupantes"].append(rider)
         bikes = self.bikes.update(assoc["motos"], self.frames)
         people = self.people.update(assoc["ocupantes"], self.frames)
         if self.temporal_heads is not None:

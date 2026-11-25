@@ -8,6 +8,28 @@ from edge_riders import EdgeRiders
 
 
 class TemporalHelmetTests(unittest.TestCase):
+    def test_partial_pair_requires_three_direct_frames_and_a_free_body(self):
+        from PIL import Image
+        from partial_video_riders import PartialVideoRiders
+
+        search = PartialVideoRiders(None, None, 24)
+        body = [18, 64, 54, 100]
+        head = [28, 65, 41, 80]
+        image = Image.new("RGB", (120, 100))
+
+        def seed(gray, image, head, body, scale, frame):
+            return dict(frame=frame, outline=[0, 0, 1, 1], face={}, torso={})
+
+        with patch.object(search, "scan", return_value=[(body, head), (body, head)]), \
+                patch("partial_video_riders.paired_seed", side_effect=seed), \
+                patch("partial_video_riders.advance", return_value=True), \
+                patch("partial_video_riders.visible_pair", return_value=(body, head)):
+            for frame in range(1, 5):
+                self.assertFalse(search.find(image, [], frame))
+            self.assertEqual(search.find(image, [], 5), [((body, head), [1, 3, 5])])
+            self.assertFalse(search.find(image, [{"box": body, "cabezas": []}], 6))
+            self.assertFalse(search.find(image, [], 7))
+
     def track(self, helmet_frames, verified_frames, bare_frames=()):
         tracker = Tracks()
         for frame in range(1, 31):

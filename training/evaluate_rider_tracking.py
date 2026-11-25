@@ -127,9 +127,11 @@ def main():
     print(totals, video["counts"], flush=True)
 
 
-def evaluate_temporal(control_path, motion=False, edge=False, consensus=False):
+def evaluate_temporal(control_path, motion=False, edge=False, consensus=False, partial=False):
     control = read(control_path)
-    if consensus:
+    if partial:
+        version, source = 8, "partial_rider"
+    elif consensus:
         version, source = 7, "rider_consensus"
     elif edge:
         version, source = 6, "edge_flow"
@@ -145,12 +147,13 @@ def evaluate_temporal(control_path, motion=False, edge=False, consensus=False):
     assert control["run"] == baseline.get("run", baseline.get("model"))
     assert control["counts"] == baseline.get("corrected_counts", baseline.get("candidate_counts"))
     stream = Stream(control["source"], control["run"], motion_check=version >= 5,
-                    edge_check=version >= 6, consensus_check=consensus)
+                    edge_check=version >= 6, consensus_check=version >= 7, partial_check=partial)
     rows = []
     added = []
     extra_frames = read(reference_dir / "additional-frames.json") if version >= 5 else None
     try:
-        search = {4: stream.temporal_heads, 5: stream.motion_heads, 6: stream.edge_riders, 7: stream.rider_heads}[version]
+        search = {4: stream.temporal_heads, 5: stream.motion_heads, 6: stream.edge_riders,
+                  7: stream.rider_heads, 8: stream.rider_heads}[version]
         refine = search.refine
 
         def capture(image, people, ids, tracker, frame):
@@ -226,8 +229,11 @@ if __name__ == "__main__":
     modes.add_argument("--motion", type=Path, metavar="VIDEO_JSON", help="compare with a saved v5 video report")
     modes.add_argument("--edge", type=Path, metavar="VIDEO_JSON", help="compare with a saved v6 video report")
     modes.add_argument("--consensus", type=Path, metavar="VIDEO_JSON", help="compare with a saved v7 video report")
+    modes.add_argument("--partial", type=Path, metavar="VIDEO_JSON", help="compare with a saved v8 video report")
     args = parser.parse_args()
-    if args.consensus:
+    if args.partial:
+        evaluate_temporal(args.partial, partial=True)
+    elif args.consensus:
         evaluate_temporal(args.consensus, consensus=True)
     elif args.edge:
         evaluate_temporal(args.edge, edge=True)
