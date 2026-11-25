@@ -4,6 +4,7 @@ from unittest.mock import patch
 from traffic_video import RiderTracks, Tracks
 from temporal_head_search import LiveHelmetSearch
 from helmet_flow import HelmetFlow
+from edge_riders import EdgeRiders
 
 
 class TemporalHelmetTests(unittest.TestCase):
@@ -68,6 +69,37 @@ class RiderContinuityTests(unittest.TestCase):
             tracker.update([self.rider(1, [0, 0, 60, 120], bike=None)], frame)
         self.assertEqual(tracker.count(), 1)
         self.assertEqual(tracker.state(1), "indeterminado")
+
+    def test_partial_rider_keeps_id_without_new_votes_and_stops_at_cut(self):
+        import numpy as np
+        from PIL import Image
+
+        rng = np.random.default_rng(715)
+        helmet = Image.fromarray(rng.integers(95, 245, (22, 23, 3), dtype=np.uint8))
+        torso = Image.fromarray(rng.integers(20, 165, (48, 34, 3), dtype=np.uint8))
+        search = EdgeRiders(30)
+        tracker = RiderTracks()
+        for frame in range(1, 14):
+            left = 17 - 2 * frame
+            image = Image.new("RGB", (150, 120), (110, 115, 120))
+            if frame < 13:
+                image.paste(torso, (left, 44))
+                image.paste(helmet, (left + 6, 22))
+            people = []
+            if frame <= 4:
+                people.append(self.rider(1, [left, 19, left + 34, 92],
+                                         [left + 3, 20, left + 32, 46], "con_casco", True))
+            ids = tracker.update(people, frame)
+            search.refine(image, people, ids, tracker, frame)
+            if frame == 12:
+                self.assertEqual(list(ids.values()), [1])
+                self.assertEqual(people[0]["cabezas"][0]["source"], "edge_flow")
+                self.assertEqual(people[0]["box"][0], 0)
+            if frame in (6, 13):
+                self.assertFalse(people)
+        self.assertEqual(tracker.count(), 1)
+        self.assertEqual(tracker.items[1]["hits"], 4)
+        self.assertEqual(tracker.items[1]["votes"], {"con_casco": 4})
 
     def test_patch_recovery_uses_same_track_and_expires(self):
         import numpy as np

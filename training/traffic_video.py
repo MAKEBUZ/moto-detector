@@ -100,6 +100,8 @@ class Tracks:
                 row["origenes_por_movimiento"] = sorted(t["flow_anchors"])
             if t.get("flow_returns"):
                 row["reasociaciones_por_movimiento"] = t["flow_returns"]
+            if t.get("edge_returns"):
+                row["reapariciones_parciales_en_borde"] = t["edge_returns"]
             if "first_context_bare" in t:
                 row["intervalo_sin_casco_relocalizado"] = [t["first_context_bare"], t["last_context_bare"]]
             if row["estado"] == "indeterminado":
@@ -221,7 +223,7 @@ PHOTO_RUN = "joint-multiscale-02"
 
 
 class Stream:
-    def __init__(self, source, run, *, motion_check=True):
+    def __init__(self, source, run, *, motion_check=True, edge_check=True):
         import cv2
         self.cv = cv2
         self.model = load_model(run)
@@ -237,6 +239,7 @@ class Stream:
         self.wide_heads = None
         self.temporal_heads = None
         self.motion_heads = None
+        self.edge_riders = None
         if not isinstance(source, int) and run != RAIN_VIDEO_RUN:
             width = self.cap.get(cv2.CAP_PROP_FRAME_WIDTH)
             height = self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
@@ -250,6 +253,9 @@ class Stream:
                         if motion_check:
                             from helmet_flow import HelmetFlow
                             self.motion_heads = HelmetFlow(self.wide_heads, self.cap.get(cv2.CAP_PROP_FPS))
+                            if edge_check:
+                                from edge_riders import EdgeRiders
+                                self.edge_riders = EdgeRiders(self.cap.get(cv2.CAP_PROP_FPS))
                 except Exception:
                     self.cap.release()
                     raise
@@ -260,6 +266,8 @@ class Stream:
 
     @property
     def tracking_version(self):
+        if self.edge_riders is not None:
+            return 7
         if self.motion_heads is not None:
             return 6
         return 5 if self.temporal_heads is not None else 4
@@ -290,6 +298,8 @@ class Stream:
             self.temporal_heads.refine(image, assoc["ocupantes"], people, self.people, self.frames)
         if self.motion_heads is not None:
             self.motion_heads.refine(image, assoc["ocupantes"], people, self.people, self.frames)
+        if self.edge_riders is not None:
+            self.edge_riders.refine(image, assoc["ocupantes"], people, self.people, self.frames)
         assoc["ocupantes"] = [p for p in assoc["ocupantes"] if p["id"] in people]
         for bike in assoc["motos"]:
             bike["id"] = bikes[bike["id"]]

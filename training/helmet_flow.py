@@ -49,6 +49,8 @@ def advance(previous, gray, anchor):
     box = anchor["box"]
     center = matrix[:, :2] @ ((box[:2]+box[2:])/2) + matrix[:, 2]
     half = (box[2:]-box[:2]) * scale/2
+    if "origins" in anchor:
+        anchor["origins"] = anchor["origins"][keep][inliers.ravel().astype(bool)]
     anchor.update(box=np.r_[center-half, center+half], points=new[inliers.ravel().astype(bool), None, :])
     return True
 
