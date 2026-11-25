@@ -191,9 +191,10 @@ class RiderTracks(Tracks):
         # require spaced detector verifications before they can resolve a track.
         extra = min(track.get("patch_checks", 0), votes["con_casco"])
         if (extra and len(checks) >= 2 and votes["con_casco"] >= 3
-                and votes["con_casco"] >= .8 * sum(votes.values())
-                and votes["con_casco"] + extra >= .5 * track["hits"]):
-            return "con_casco"
+                and votes["con_casco"] >= .8 * sum(votes.values())):
+            coverage = (votes["con_casco"] + extra) / track["hits"]
+            if coverage >= .5 or (votes["sin_casco"] == 0 and coverage >= 1/3):
+                return "con_casco"
         return state
 
 
@@ -273,7 +274,10 @@ class Stream:
             if not self.bikes.confirmed(person["moto"]):
                 person["moto"] = None
             person["estado"] = self.people.state(person["id"])
-            if person["estado"] == "indeterminado" or any(
+            if person["estado"] == "indeterminado":
+                person["cabezas"] = [h for h in person["cabezas"] if h["class_id"] == 2 and
+                                     (h.get("verified_helmet") or h.get("source") == "temporal_patch_check")]
+            elif any(
                 (head["class_id"] == 2) != (person["estado"] == "con_casco") for head in person["cabezas"]
             ):
                 person["cabezas"] = []

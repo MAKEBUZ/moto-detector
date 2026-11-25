@@ -100,6 +100,19 @@ class RiderContinuityTests(unittest.TestCase):
         tracker.items[1]["patch_checks"] = 7
         self.assertEqual(tracker.state(1), "indeterminado")
 
+    def test_short_unanimous_track_needs_a_separately_checked_frame(self):
+        tracker = RiderTracks()
+        for n in range(1, 11):
+            rider = self.rider(1, [0, 0, 50, 100])
+            if n in (1, 6, 7):
+                rider = self.rider(1, rider["box"], [5, 0, 25, 20], "con_casco", n != 7)
+            tracker.update([rider], n)
+        self.assertEqual(tracker.state(1), "indeterminado")
+        tracker.items[1]["patch_checks"] = 1
+        self.assertEqual(tracker.state(1), "con_casco")
+        tracker.update([self.rider(1, rider["box"], [5, 0, 25, 20], "sin_casco")], 11)
+        self.assertEqual(tracker.state(1), "indeterminado")
+
     def test_short_burst_cannot_confirm_bare_head(self):
         tracker = RiderTracks()
         rider = self.rider(1, [0, 0, 50, 140], [5, 0, 25, 20], "sin_casco")

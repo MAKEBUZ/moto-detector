@@ -39,7 +39,7 @@ def summarize(predictions):
                        for i,p in enumerate(bikes,1)], ocupantes=riders, counts=counts)
 
 
-def annotate(image, summary):
+def annotate(image, summary, show_track_state=False):
     draw = ImageDraw.Draw(image)
     def label(box, text, color):
         x,y = box[:2]
@@ -51,4 +51,13 @@ def annotate(image, summary):
         label(bike['box'], f"Moto {bike['id']}", 'lime')
     for r in summary['ocupantes']:
         moto = f"M{r['moto']}" if r['moto'] else 'moto ?'
-        label(r['box'], f"P{r['id']} / {moto} / {r['estado'].replace('_',' ')}", 'yellow')
+        caption = f"P{r['id']} / {moto}"
+        if show_track_state:
+            caption += " / " + r["estado"].replace("_", " ")
+        label(r['box'], caption, 'yellow')
+        for head in r['cabezas']:
+            color = 'cyan' if head['class_id']==2 else 'orange'
+            state = r["estado"].replace("_", " ")
+            if show_track_state and r["estado"] == "indeterminado" and head["class_id"] == 2:
+                state = "casco visible"
+            label(head['box'], f"P{r['id']} {state}", color)
