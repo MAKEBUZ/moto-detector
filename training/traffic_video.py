@@ -26,13 +26,19 @@ class Tracks:
     def __init__(self):
         self.items = {}
 
+    def match_score(self, track, obj, gap):
+        return overlap(track["box"], obj["box"])
+
+    def observe(self, track, obj, frame):
+        track.update(last=frame, box=obj["box"])
+
     def update(self, objects, frame):
         candidates = []
         for key, track in self.items.items():
             gap = frame - track["last"]
             if gap <= 8 or (track["hits"] >= 3 and gap <= 24):
                 for index, obj in enumerate(objects):
-                    score = overlap(track["box"], obj["box"])
+                    score = self.match_score(track, obj, gap)
                     if score >= (.3 if gap <= 8 else .65):
                         candidates.append((gap <= 8, score, key, index))
         assigned, used = {}, set()
@@ -45,7 +51,7 @@ class Tracks:
             key = assigned.get(index, len(self.items)+1)
             track = self.items.setdefault(key, dict(first=frame, hits=0, votes=Counter()))
             track["hits"] += 1
-            track.update(last=frame, box=obj["box"])
+            self.observe(track, obj, frame)
             if obj.get("estado") in ("con_casco", "sin_casco"):
                 track["votes"][obj["estado"]] += 1
             if obj.get("estado") == "con_casco" and any(h.get("verified_helmet") for h in obj.get("cabezas", [])):
@@ -105,6 +111,78 @@ class Tracks:
         return rows
 
 
+def competing_riders(first, second):
+    """Two body hypotheses for the same space, with no distinct bike to disambiguate."""
+    if first.get("moto") and second.get("moto") and first["moto"] != second["moto"]:
+        return False
+    l,t,r,b = first["box"]
+    x,y,X,Y = second["box"]
+    intersection = max(0, min(r,X)-max(l,x)) * max(0, min(b,Y)-max(t,y))
+    smaller = min((r-l)*(b-t), (X-x)*(Y-y))
+    return (smaller > 0 and intersection >= .75 * smaller
+            and abs((l+r-X-x)/2) <= .35 * max(r-l, X-x))
+
+
+class RiderTracks(Tracks):
+    """Track visible occupants through short gaps and abstain on competing body boxes."""
+    def update(self, objects, frame):
+        supported = [
+            person for person in objects
+            if person.get("cabezas") or not any(
+                other is not person and competing_riders(person, other) for other in objects
+            )
+        ]
+        return super().update(supported, frame)
+
+    def match_score(self, track, obj, gap):
+        dx, dy = track.get("velocity", (0., 0.))
+        l,t,r,b = track["box"]
+        # Limit extrapolation when a detection has been absent for several frames.
+        steps = min(8, gap)
+        predicted = [l+dx*steps, t+dy*steps, r+dx*steps, b+dy*steps]
+        body_score = .7*overlap(predicted, obj["box"]) + .3*overlap(track["box"], obj["box"])
+        heads = obj.get("cabezas", [])
+        if len(heads) == 1 and "head_frame" in track:
+            elapsed = track["last"] + gap - track["head_frame"]
+            if elapsed <= 5:
+                x,y,X,Y = track["head_box"]
+                head_score = overlap([x+dx*elapsed, y+dy*elapsed, X+dx*elapsed, Y+dy*elapsed],
+                                     heads[0]["box"])
+                # A different head inside an overlapping body should start its own track.
+                if head_score == 0:
+                    return 0.
+                return max(body_score, head_score)
+        return body_score
+
+    def observe(self, track, obj, frame):
+        if "last" in track:
+            l,t,r,b = track["box"]
+            x,y,X,Y = obj["box"]
+            elapsed = frame-track["last"]
+            vx,vy = track.get("velocity", (0., 0.))
+            track["velocity"] = (.5*vx + .5*(x+X-l-r)/(2*elapsed),
+                                 .5*vy + .5*(y+Y-t-b)/(2*elapsed))
+        if len(obj.get("cabezas", [])) == 1:
+            track.update(head_box=obj["cabezas"][0]["box"], head_frame=frame)
+        if obj.get("estado") == "sin_casco":
+            track["last_bare"] = frame
+        super().observe(track, obj, frame)
+
+    def state(self, key):
+        state = super().state(key)
+        if state != "indeterminado":
+            return state
+        track = self.items[key]
+        votes = track["votes"]
+        checks = track.get("helmet_checks", [])
+        # A short track can end before a third spaced verification is possible.
+        # Require two independent checks after any isolated opposite reading.
+        if (len(checks) >= 2 and checks[0] > track.get("last_bare", -1)
+                and votes["sin_casco"] <= 1 and votes["con_casco"] >= max(6, track["hits"]/3)):
+            return "con_casco"
+        return state
+
+
 RAIN_VIDEO_RUN = "joint-rain-rider-09"
 
 
@@ -133,7 +211,7 @@ class Stream:
                 except Exception:
                     self.cap.release()
                     raise
-        self.bikes, self.people = Tracks(), Tracks()
+        self.bikes, self.people = Tracks(), RiderTracks()
         self.frames = 0
         self.seconds = 0.
         self.visible_bikes = self.visible_people = 0
@@ -160,6 +238,7 @@ class Stream:
             assoc = summarize(self.helmet_matcher.recover(image, result["predictions"]))
         bikes = self.bikes.update(assoc["motos"], self.frames)
         people = self.people.update(assoc["ocupantes"], self.frames)
+        assoc["ocupantes"] = [p for p in assoc["ocupantes"] if p["id"] in people]
         for bike in assoc["motos"]:
             bike["id"] = bikes[bike["id"]]
         for person in assoc["ocupantes"]:
@@ -186,7 +265,7 @@ class Stream:
             return None
         folder = root/"reports"/"videos"/uuid4().hex
         folder.mkdir(parents=True)
-        data = dict(rain_helmet_matching=self.helmet_matcher is not None, tracking_version=3, head_crop_consensus=True, run=self.run, source=self.source, status=status, frames=self.frames,
+        data = dict(rain_helmet_matching=self.helmet_matcher is not None, tracking_version=4, head_crop_consensus=True, run=self.run, source=self.source, status=status, frames=self.frames,
                     timestamp=datetime.now().astimezone().isoformat(),
                     processing_fps=self.frames/self.seconds,
                     counts=dict(motos=self.bikes.count(), ocupantes=self.people.count(), **self.people.state_counts()))
