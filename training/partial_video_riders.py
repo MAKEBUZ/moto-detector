@@ -71,7 +71,10 @@ class PartialVideoRiders:
         active = []
         for item in self.seeds:
             anchor = item["anchor"]
-            if (frame-anchor["frame"] > 4*self.interval or not advance(self.previous, gray, anchor["face"])
+            # After three independent sightings keep following both regions across
+            # a short detector gap, as long as their appearance and motion agree.
+            max_age = (9 if len(item["checks"]) == 3 else 4) * self.interval
+            if (frame-anchor["frame"] > max_age or not advance(self.previous, gray, anchor["face"])
                     or not advance(self.previous, gray, anchor["torso"])):
                 continue
             pair = visible_pair(gray, anchor, scale, bounds, require_edge=False)
@@ -101,6 +104,12 @@ class PartialVideoRiders:
                     active.append(dict(anchor=anchor, pair=pair, checks=[frame]))
         self.previous = gray
         self.seeds = active
-        return [(item["pair"], item["checks"]) for item in active if len(item["checks"]) == 3
-                and not any(other is not item and box_overlap(other["pair"][1], item["pair"][1]) > .3
-                            for other in active)]
+        results = []
+        for item in active:
+            if len(item["checks"]) < 3 or any(
+                    other is not item and box_overlap(other["pair"][1], item["pair"][1]) > .3 for other in active):
+                continue
+            if frame-item["anchor"]["frame"] > 4*self.interval and verify(image, item["pair"][1], self.verifier) < .90:
+                continue
+            results.append((item["pair"], item["checks"]))
+        return results

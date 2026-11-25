@@ -31,6 +31,24 @@ class TemporalHelmetTests(unittest.TestCase):
             self.assertFalse(search.find(image, [{"box": body, "cabezas": []}], 6))
             self.assertFalse(search.find(image, [], 7))
 
+    def test_partial_rider_can_bridge_a_gap_only_with_current_helmet_evidence(self):
+        from PIL import Image
+        from partial_video_riders import PartialVideoRiders
+
+        search = PartialVideoRiders(None, None, 12)
+        image = Image.new("RGB", (120, 100))
+        pair = ([18, 64, 54, 100], [28, 65, 41, 80])
+        search.seeds = [dict(anchor=dict(frame=3, face={}, torso={}), checks=[1, 2, 3], pair=pair)]
+        with patch.object(search, "scan", return_value=[]), \
+                patch("partial_video_riders.advance", return_value=True), \
+                patch("partial_video_riders.visible_pair", return_value=pair), \
+                patch("partial_video_riders.verify", side_effect=[.4, .98]) as classifier:
+            self.assertFalse(search.find(image, [], 8))
+            self.assertEqual(search.find(image, [], 9), [(pair, [1, 2, 3])])
+            self.assertFalse(search.find(image, [], 13))
+            self.assertEqual(classifier.call_count, 2)
+            self.assertFalse(search.seeds)
+
     def track(self, helmet_frames, verified_frames, bare_frames=()):
         tracker = Tracks()
         for frame in range(1, 31):
