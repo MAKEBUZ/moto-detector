@@ -1,0 +1,28 @@
+{
+  "validation": {
+    "reference": {
+      "class_id": 3,
+      "tp": 3,
+      "fp": 4,
+      "fn": 3,
+      "precision": 0.42857142857142855,
+      "recall": 0.5
+    },
+    "agreement": {
+      "class_id": 3,
+      "tp": 3,
+      "fp": 4,
+      "fn": 3,
+      "precision": 0.42857142857142855,
+      "recall": 0.5
+    },
+    "strict_agreement": {
+      "class_id": 3,
+      "tp": 3,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.75,
+      "recall": 0.5
+    }
+  }
+}
