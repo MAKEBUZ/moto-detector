@@ -329,7 +329,7 @@ class Stream:
                 rider = summarize(objects + [dict(box=body, class_id=1)])["ocupantes"][0]
                 rider.update(id=len(assoc["ocupantes"])+1, estado="con_casco", cabezas=[
                     dict(box=head, class_id=2, source="partial_rider", seed_frame=checks[-1],
-                         partial_checks=checks, verified_helmet=checks[-1] == self.frames)])
+                         partial_checks=checks)])
                 assoc["ocupantes"].append(rider)
         bikes = self.bikes.update(assoc["motos"], self.frames)
         people = self.people.update(assoc["ocupantes"], self.frames)

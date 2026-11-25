@@ -25,7 +25,7 @@ def helmet_outline(image, box):
     return (np.array([l, t, l+width, t+height]) - 24)/96
 
 
-def paired_seed(gray, image, head, body, scale, frame):
+def paired_seed(gray, image, head, body, scale, frame, *, segment=True):
     head = np.asarray(head)*scale
     body = np.asarray(body)*scale
     x, y, right, bottom = head
@@ -57,7 +57,8 @@ def paired_seed(gray, image, head, body, scale, frame):
     right, bottom = np.ceil(np.maximum(head[2:], torso_box[2:]) + 5).astype(int)
     return dict(face=face, torso=torso, torso_origin=torso_box.copy(), initial=head,
                 body=body, frame=frame, patch=gray[top:bottom, left:right].copy(),
-                offset=np.array([left, top]), outline=helmet_outline(image, head/scale))
+                offset=np.array([left, top]),
+                outline=helmet_outline(image, head/scale) if segment else np.array([0., 0., 1., 1.]))
 
 
 def same_features(gray, region, anchor):

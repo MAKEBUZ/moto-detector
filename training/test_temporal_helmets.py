@@ -17,7 +17,8 @@ class TemporalHelmetTests(unittest.TestCase):
         head = [28, 65, 41, 80]
         image = Image.new("RGB", (120, 100))
 
-        def seed(gray, image, head, body, scale, frame):
+        def seed(gray, image, head, body, scale, frame, *, segment):
+            self.assertFalse(segment)
             return dict(frame=frame, outline=[0, 0, 1, 1], face={}, torso={})
 
         with patch.object(search, "scan", return_value=[(body, head), (body, head)]), \

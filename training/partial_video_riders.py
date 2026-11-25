@@ -80,14 +80,19 @@ class PartialVideoRiders:
                 active.append(item)
         if (frame-1) % self.interval == 0:
             for body, head in self.scan(image, people):
-                anchor = paired_seed(gray, image, head, body, scale, frame)
-                if anchor is None or anchor["outline"] is None:
+                matches = [item for item in active if box_overlap(head,item["pair"][1]) >= .45
+                           and box_overlap(body,item["pair"][0]) >= .35]
+                if len(matches) > 1 or (matches and matches[0]["anchor"]["frame"] == frame):
+                    continue
+                if matches:
+                    # Fuse this localization with the independently tracked box in this frame.
+                    head = np.mean([head, matches[0]["pair"][1]], axis=0).tolist()
+                anchor = paired_seed(gray, image, head, body, scale, frame, segment=False)
+                if anchor is None:
                     continue
                 pair = visible_pair(gray, anchor, scale, bounds, require_edge=False)
                 if pair is None:
                     continue
-                matches = [item for item in active if box_overlap(pair[1],item["pair"][1]) >= .45
-                           and box_overlap(pair[0],item["pair"][0]) >= .35]
                 if len(matches) == 1 and matches[0]["anchor"]["frame"] < frame:
                     item = matches[0]
                     # Evidence from overlapping tiles in one frame counts once.
