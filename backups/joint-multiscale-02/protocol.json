@@ -1,0 +1,13 @@
+{
+  "parent": "runs/joint-clean640-01/best.pt",
+  "consistency_examples": 7222,
+  "training_sizes": [
+    576,
+    640,
+    768
+  ],
+  "epochs": 24,
+  "primary": 73,
+  "auxiliary": 1627,
+  "selection": "highest validation four-class mAP50"
+}
