@@ -1,10 +1,140 @@
 # moto-detector
 
-Proyecto académico de detección de motocicletas y ocupantes, clasificación de casco, conteo y consulta de estadísticas. Todos los modelos se han entrenado desde cero, sin pesos preentrenados.
+Proyecto académico para detectar motocicletas, asociar sus ocupantes, clasificar el uso visible del casco y consultar los conteos de fotos y videos. Los pesos proceden de entrenamientos propios. La aplicación distingue **con casco**, **sin casco** e **indeterminado**. El ajuste de la correa queda fuera de las cuatro clases anotadas.
 
-## Estado
+**Estado al 25 de noviembre de 2026.** El último detector para archivos de video es `joint-occupant-negatives-11`. Obtuvo **80,43 % de mAP50 en 5 imágenes de validación**. El seguimiento **v5** usa ese mismo checkpoint. En los 1.500 fotogramas del video panorámico confirmó **4 de 9 cascos revisados**, frente a 2 con v4. La primera cifra mide detección de cajas en imágenes y la segunda mide el resultado final por trayectoria.
 
-Actualizado al **24 de noviembre de 2026**. Se completaron la depuración de datos, revisiones humanas de cajas y relaciones, entrenamientos desde cero y experimentos de generalización en la RTX 3060. El último experimento de 150 épocas del detector de cuatro clases usa **paso 8, propuestas ×4 y 44 imágenes de entrenamiento**, con mAP@0,50 de validación de **47,26 %**. Sin casco sube de 37,87 % a 43,76 % frente al modelo de 35 imágenes, cuyo mAP global de 64,44 % sigue siendo superior. El conteo, video y asistente de estadísticas siguen pendientes. Un checkpoint anterior ya fue evaluado en el lote test; ese lote no se utilizó en el nuevo entrenamiento ni en esta comparación.
+## Arranque rápido en el equipo del proyecto
+
+Abre PowerShell y ejecuta estos comandos. La carpeta del escritorio ya contiene el entorno y los pesos.
+
+```powershell
+Set-Location -LiteralPath "$env:USERPROFILE\Desktop\INTELIGENCI AARTIFICIAL - MOTOS"
+.\.venv\Scripts\python.exe training\photo_app.py
+```
+
+1. Pulsa **Cargar video**. Para repetir la prueba panorámica, deja desmarcada **Video de frente con lluvia (experimental)** y selecciona `15740042_3840_2160_60fps.mp4`. El título de la ventana debe mostrar **joint-occupant-negatives-11 · seguimiento v5**. Este modo se activa en archivos de al menos 1920 píxeles de ancho con relación ancho/alto ≥ 1,45.
+2. Deja terminar el video para comparar sus totales con el informe completo. **Detener y guardar** genera un informe parcial. El JSON queda en `reports/videos/<id>/video.json` e incluye modelo, versión, fotogramas, velocidad, conteos y votos por trayectoria.
+3. **Cargar foto** y **Usar cámara** utilizan `joint-multiscale-02` en modo general. Las fotos se guardan en `reports/fotos/<id>/` con su imagen anotada y JSON. La casilla de lluvia selecciona `joint-rain-rider-09` para video o cámara.
+4. En **Consultar estadísticas** puedes preguntar «¿Cuántos ocupantes sin casco hubo hoy en videos?» o «Resumen en fotos». Cada ejecución guardada cuenta como un análisis, incluso si cargas el mismo archivo dos veces.
+
+## Instalación en otro equipo Windows
+
+El entorno comprobado usa **Python 3.14.5 de 64 bits**, Tkinter, PyTorch 2.11.0+cu128, torchvision 0.26.0+cu128, Pillow 13.0.0 y OpenCV headless 5.1.0.95. La GPU utilizada fue una NVIDIA GeForce RTX 3060. Desde PowerShell, con Git y Python 3.14 instalados, ejecuta:
+
+```powershell
+git clone --branch codex/frozen-inference-review-20261124 https://github.com/MAKEBUZ/moto-detector.git
+Set-Location moto-detector
+py -3.14 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r training\requirements-cu128.lock.txt --extra-index-url https://download.pytorch.org/whl/cu128
+.\.venv\Scripts\python.exe -m pip install opencv-python-headless==5.1.0.95
+.\.venv\Scripts\python.exe -c "import tkinter, torch, torchvision, cv2; print(torch.__version__, torchvision.__version__, cv2.__version__, 'CUDA:', torch.cuda.is_available())"
+```
+
+**Restaura los pesos antes de analizar una imagen o video.** Git excluye `runs/` y `data/prepared/`. Copia los archivos de la máquina del proyecto o de un respaldo propio conservando sus rutas. El cargador verifica la huella del modelo de origen. Los nombres de los archivos y de sus carpetas deben coincidir. [Dependencias fijadas](training/requirements-cu128.lock.txt) · [Carga y comprobación de pesos](training/predict.py)
+
+| Uso | Archivos que deben estar bajo la raíz del proyecto |
+|---|---|
+| Foto y cámara generales | `runs/joint-multiscale-02/best.pt` y su origen `runs/joint-clean640-01/best.pt` |
+| Archivo de video general | `runs/joint-occupant-negatives-11/best.pt` y su origen `runs/joint-reviewed-08-10/best.pt` |
+| Verificación adicional del video panorámico | `runs/rider-crop-heads-01/best.pt`, su origen `runs/joint-multiscale-02/best.pt` y el clasificador `runs/crop-specialist-01/best.pt` |
+| Modo de lluvia opcional | `runs/joint-rain-rider-09/best.pt`, su origen `runs/joint-multiscale-02/best.pt` y la carpeta `data/prepared/rain-rider-02/` con su manifiesto e imágenes |
+
+Una vez copiados, puedes comprobar la carga del detector de video y abrir la ventana. Los comandos se ejecutan desde la raíz del clon.
+
+```powershell
+.\.venv\Scripts\python.exe -c "import sys; sys.path.insert(0, 'training'); from predict import load_model; m = load_model('joint-occupant-negatives-11'); print(m[3], m[2], m[5])"
+.\.venv\Scripts\python.exe training\photo_app.py
+```
+
+## Último entrenamiento del detector
+
+**Objetivo.** Reducir las piezas de moto clasificadas como ocupantes. El modelo base `joint-multiscale-02` pasó por un ajuste con 10 fotos revisadas adicionales (`joint-reviewed-08-10`, 6 épocas, tasa 0,000008, mejor época 3). El último ajuste partió de esos pesos propios y actualizó exclusivamente los pesos y el sesgo de la salida «ocupante». El extractor de características, el RPN y la regresión de cajas permanecieron congelados. [Código del ajuste](training/train_occupant_regions.py) · [Arquitectura](training/models.py)
+
+| Dato | Valor del último ajuste |
+|---|---|
+| Entrenamiento | 83 fotos, 73 de `helmet-separate-v2-expanded-09` y 10 de `reviewed-08-addon`. En total, 428 cajas: 118 motos, 155 ocupantes, 67 cabezas con casco y 88 sin casco. |
+| Negativos revisados | 34 regiones de 25 fotos de entrenamiento, con ruedas, faros, carenados y otras piezas. El conjunto incluye 7 propuestas de ocupante sobre recortes. |
+| Entradas al ajuste | Regiones originales y reflejadas horizontalmente. En total, 310 ejemplos de ocupante, 546 de las otras clases y 68 de piezas de moto. |
+| Detector | Faster R-CNN con CNN propia de 128 canales de salida, paso espacial 8, tamaño configurado de 640 píxeles y presupuesto de propuestas ×4. RoIAlign obtiene características de 7 × 7 por región. |
+| Optimización | Adam, tasa 0,00035, 100 actualizaciones sobre el banco completo de características. La pérdida penaliza aceptar piezas como ocupantes y descartar personas reales. Dos términos regularizan el cambio de puntuación en las otras clases (0,1) y en personas (0,05). |
+| Selección | Validación cada 10 pasos. Se priorizó F1 de ocupante, después mAP50 y finalmente el primer paso en caso de empate. **Paso elegido 60**, F1 **82,35 %**, pérdida **0,11674**. El mayor mAP50 observado fue 81,44 % en los pasos 10 a 40. |
+| Pesos finales | `runs/joint-occupant-negatives-11/best.pt`. SHA-256 `0fcf5d2ed15c220eed2732f86c93cb7f2a63e624f7e792bdc7a03a0e291909ed`. |
+
+El historial de los diez controles está en `runs/joint-occupant-negatives-11/history.json`. En la misma carpeta están `protocol.json`, con la procedencia de las regiones, y `photo-comparison.json`, con la comparación de las fotos reservadas. El ajuste usa CUDA y crea su carpeta de salida solo si está libre. Para reproducirlo en una **copia de trabajo separada**, restaura el modelo padre y su origen, los dos datasets preparados con sus imágenes y manifiestos, y ejecuta el comando siguiente. [Regiones utilizadas](reports/training/occupant-negatives-01/selected.json)
+
+```powershell
+.\.venv\Scripts\python.exe training\train_occupant_regions.py
+```
+
+### Evolución durante el ajuste
+
+Cada paso de Adam utiliza el banco de regiones completo. La pérdida corresponde al objetivo de entrenamiento y las dos métricas se calculan en las cinco imágenes de validación. El paso 60 fue el que mejor equilibró precisión y recobrado para ocupantes.
+
+| Paso | Pérdida | F1 de ocupante | mAP50 |
+|---:|---:|---:|---:|
+| 10 | 0,16540 | 75,00 % | 81,44 % |
+| 20 | 0,15175 | 75,00 % | 81,44 % |
+| 30 | 0,14054 | 75,00 % | 81,44 % |
+| 40 | 0,13120 | 75,00 % | 81,44 % |
+| 50 | 0,12336 | 75,00 % | 80,01 % |
+| **60** | **0,11674** | **82,35 %** | **80,43 %** |
+| 70 | 0,11112 | 77,78 % | 80,43 % |
+| 80 | 0,10630 | 77,78 % | 80,43 % |
+| 90 | 0,10214 | 77,78 % | 80,43 % |
+| 100 | 0,09852 | 73,68 % | 80,43 % |
+
+### Validación del checkpoint seleccionado
+
+Cinco imágenes contienen 25 cajas. AP50 integra la curva precisión–recobrado en 101 puntos con IoU ≥ 0,50. El mAP50 es la media de las cuatro AP. Para los aciertos, falsos positivos y omisiones de la tabla se usó además confianza ≥ 0,50. [Cálculo de AP](training/metrics.py) · [Conteos por clase](training/evaluate_reserved.py)
+
+| Clase | Cajas reales | AP50 | Aciertos | Falsos positivos | Omisiones | Precisión | Recobrado |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Motocicleta | 7 | 80,53 % | 5 | 2 | 2 | 71,43 % | 71,43 % |
+| Persona ocupante | 9 | 78,01 % | 7 | 1 | 2 | 87,50 % | 77,78 % |
+| Cabeza con casco | 3 | 100,00 % | 3 | 1 | 0 | 75,00 % | 100,00 % |
+| Cabeza sin casco | 6 | 63,17 % | 3 | 1 | 3 | 75,00 % | 50,00 % |
+
+**mAP50 global: 80,43 %.** En las **14 fotos reservadas**, con el flujo de asociación, el resultado fue:
+
+| Clase | Aciertos | Falsos positivos | Omisiones |
+|---|---:|---:|---:|
+| Motocicleta | 16 | 3 | 1 |
+| Persona ocupante | 17 | 5 | 3 |
+| Cabeza con casco | 5 | 0 | 3 |
+| Cabeza sin casco | 8 | 1 | 4 |
+
+El detector enlazó correctamente **11 de 20** relaciones completas moto–persona–cabeza. Frente al modelo padre conservó los 17 ocupantes correctos y redujo de 7 a 5 los falsos ocupantes. En esas mismas fotos, el modelo general de fotografía obtuvo 18 ocupantes correctos, 3 falsos ocupantes y 12 relaciones completas.
+
+### Prueba de video con los mismos pesos
+
+El seguimiento v5 busca en el fotograma actual un casco verificado recientemente en la misma trayectoria y comprueba el recorte con el clasificador local. La app puede mostrar «casco visible» mientras espera evidencia para clasificar la trayectoria. El cambio se aplicó durante la inferencia con los pesos del paso 60.
+
+| Video panorámico de 1.500 fotogramas | v4 | v5 |
+|---|---:|---:|
+| Cascos localizados en los 9 fotogramas marcados | 3/9 | 5/9 |
+| Cascos de esas marcas confirmados al terminar | 2/9 | 4/9 |
+| Falsos ocupantes confirmados en las 8 regiones negativas revisadas | 2/8 | 2/8 |
+| Trayectorias de moto / de ocupante | 43 / 40 | 43 / 40 |
+| Trayectorias con casco / sin casco / indeterminadas | 14 / 0 / 26 | 16 / 0 / 24 |
+
+Una trayectoria cuenta desde tres detecciones y puede fragmentarse si se pierde al ocupante. En cinco fotogramas adicionales del mismo video, las dos versiones localizaron 5 de 10 cascos visibles. La ejecución v5 procesó aproximadamente **5,77 fotogramas/s** en el equipo de prueba. Estas mediciones corresponden a ese clip y a esas marcas. [Comparación por trayectoria](reports/training/tracking-occupants-v5/comparison.json) · [Comprobación adicional](reports/training/tracking-occupants-v5/additional-frames.json)
+
+Para ejecutar las pruebas del proyecto o repetir la comparación con el informe v4 original en la máquina de trabajo:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s training -p "test*.py"
+.\.venv\Scripts\python.exe training\evaluate_rider_tracking.py --temporal reports\videos\2da824dd4ddd4993bd19bc091c7f2c18\video.json
+```
+
+La segunda orden requiere el video original en la ruta guardada en el informe, el archivo local `runs/joint-occupant-negatives-11/paired-review.json` y los pesos del modo panorámico.
+
+## Historial de experimentos anteriores
+
+Las conclusiones que siguen describen el estado del proyecto en la fecha de cada experimento.
+
+<details>
+<summary>Ver datasets, entrenamientos y auditorías anteriores</summary>
 
 ## Resultados acumulados
 
@@ -19,7 +149,7 @@ El detector inicial reconoce **moto con ocupante** como una sola clase, además 
 
 ### Detector de cuatro clases
 
-Clases: **motocicleta, persona ocupante, cabeza con casco y cabeza sin casco**. El último dataset ampliado tiene 44 imágenes de entrenamiento, 246 cajas y 89 cabezas; la validación contiene 5 imágenes, 25 cajas y 9 cabezas (3 con casco y 6 sin casco). Se conservaron las particiones originales y se excluyeron imágenes con cobertura incompleta o incertidumbre.
+Clases: **motocicleta, persona ocupante, cabeza con casco y cabeza sin casco**. El dataset de esta etapa tiene 44 imágenes de entrenamiento, 246 cajas y 89 cabezas; la validación contiene 5 imágenes, 25 cajas y 9 cabezas (3 con casco y 6 sin casco). Se conservaron las particiones originales y se excluyeron imágenes con cobertura incompleta o incertidumbre.
 
 Las cifras siguientes corresponden al checkpoint seleccionado por **mAP global de validación**, no al máximo independiente de cada clase.
 
@@ -36,7 +166,7 @@ Las cifras siguientes corresponden al checkpoint seleccionado por **mAP global d
 
 Todos estos experimentos usan la misma validación de cinco imágenes. Los de 150 épocas mantienen tasa de aprendizaje constante de 0,0003; los de 20 épocas usaban planificación coseno. La política fotométrica aplica brillo y contraste entre 0,85 y 1,15 y desenfoque suave con probabilidad del 25 %, exclusivamente en entrenamiento. El experimento de paso 8 mantiene esa política y los demás parámetros; duplica la resolución espacial del mapa de características por eje.
 
-**Conclusión actual:** con 44 imágenes mejora el AP sin casco de 37,87 % a 43,76 %, pero el mAP global cae de 64,44 % a 47,26 %. A confianza ≥0,5 sigue habiendo cero aciertos sin casco; desaparece el único falso positivo por encima de ese umbral. A confianza 0,05 se mantienen 3/6 aciertos, con un mejor orden de puntuaciones y 8 falsos positivos frente a 7. No basta para habilitar conteo. Se mantienen 150 épocas, pero las actualizaciones suben de 2700 a 3300; no se aisló el efecto de los datos del número de pasos.
+**Conclusión de esta etapa:** con 44 imágenes mejora el AP sin casco de 37,87 % a 43,76 %, pero el mAP global cae de 64,44 % a 47,26 %. A confianza ≥0,5 sigue habiendo cero aciertos sin casco; desaparece el único falso positivo por encima de ese umbral. A confianza 0,05 se mantienen 3/6 aciertos, con un mejor orden de puntuaciones y 8 falsos positivos frente a 7. No basta para habilitar conteo. Se mantienen 150 épocas, pero las actualizaciones suben de 2700 a 3300; no se aisló el efecto de los datos del número de pasos.
 
 El checkpoint anterior de propuestas ×4 obtuvo mAP@0,50 de 26,55 % en ocho imágenes test, con recall sin casco de 0 % a confianza 0,5. Ese resultado pertenece al modelo anterior; el nuevo no se evaluó en test. [Evaluación independiente](reports/independent-evaluation/results-01/README.md).
 
@@ -103,7 +233,7 @@ Se verificaron inicialización aleatoria, hashes de datos y checkpoints, métric
 
 La mejora global todavía no resuelve la detección sin casco. El siguiente análisis es revisar sus fallos en la validación original y ampliar diversidad de entrenamiento; una confirmación independiente requerirá una nueva reserva. No se ha implementado la asociación de cuatro clases ni habilitado conteo, video, asistente de estadísticas o evaluación del casco correctamente abrochado.
 
-## Dataset del último entrenamiento
+## Dataset histórico del lote 05
 
 El lote 05 aportó 9 imágenes completas (3 excluidas por cobertura no declarada). La nueva versión `helmet-separate-v2-expanded-03` contiene **44 imágenes train, 246 cajas y 89 cabezas**; mantiene las mismas 5 imágenes de validación. Se completó un entrenamiento desde cero de 150 épocas sobre esta versión; mejor checkpoint en la época 75. Los modelos anteriores permanecen disponibles. [Detalle y reproducción](docs/dataset-separado-v2-lote-05.md).
 
@@ -211,18 +341,14 @@ Pre-NMS 2000 → 4000, post-NMS fijo en 800: a confianza 0,05, sin casco, contro
 
 Con las mismas nueve cajas reales de cabeza, ambos modelos eligen fondo en 7/9. Al comparar solo casco/sin casco, el control acierta 6/9 y la variante 7/9; es una prueba condicionada, no precisión de detección. Sugiere investigar reconocimiento cabeza/fondo y contexto, además de propuestas. Sin entrenamiento ni cambios de pesos. [Diagnóstico y nueva línea de trabajo](reports/training/reviewed-negative-reserve-01/oracle-heads/README.md).
 
-## Analizar una foto
+### Prueba anterior en lluvia
 
-Desde la raíz del repositorio, ejecutar en PowerShell:
-
-```powershell
-.\.venv\Scripts\python.exe training\photo_app.py
-```
-
-Seleccionar **Cargar foto**. La ventana presenta las detecciones del control determinista entrenado desde cero (checkpoint final, umbral 0,5). Cada análisis guarda la foto anotada y su JSON en una carpeta propia de `reports/fotos/`. El conteo corresponde a personas detectadas en esa imagen. Una cabeza ausente o ambigua deja el estado indeterminado. Las asociaciones a motos son estimaciones geométricas y una persona puede quedar sin moto asignada.
+- **Video de frente con lluvia (experimental)** activa el detector local entrenado con escenas de lluvia y la comparación visual con seis ejemplos de casco del primer clip. Marca la casilla antes de cargar un video o abrir la cámara. En el segundo clip de prueba se localizaron 6 de 16 apariciones marcadas en ocho fotogramas y se dibujaron otras dos cajas fuera de esas referencias.
 
 ### Detector de 70 fotos y especialista de recortes
 
 Respaldo de pesos propios en [backups/detector70-especialista](backups/detector70-especialista). Para reproducir los scripts, copiar detector-last.pt a runs/paired-n70-s20261124/last.pt y especialista-best.pt a runs/crop-specialist-01/best.pt. Se usan los checkpoints del detector al paso 1950 y del especialista en la época 20.
 
 El detector solo obtuvo 53,72 % de mAP50 en validación y 45,84 % en seis escenas reservadas. A confianza 0,5, el especialista con 2000 propuestas recuperó 4/9 cabezas en validación con dos falsos positivos. Con 4000 recuperó 5/9 con cuatro falsos positivos. Se conserva 2000 como referencia y 4000 como variante de mayor cobertura. El cambio de presupuesto usa los mismos pesos. [Comparación](reports/training/paired-70-73/rpn-trace/specialist-4000.json).
+
+</details>
