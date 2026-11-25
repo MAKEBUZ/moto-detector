@@ -66,6 +66,16 @@ class RiderContinuityTests(unittest.TestCase):
         self.assertEqual(tracker.count(), 1)
         self.assertEqual(tracker.state(1), "indeterminado")
 
+    def test_short_burst_cannot_confirm_bare_head(self):
+        tracker = RiderTracks()
+        rider = self.rider(1, [0, 0, 50, 140], [5, 0, 25, 20], "sin_casco")
+        for frame in (1, 3, 4):
+            tracker.update([rider], frame)
+        self.assertEqual(tracker.state(1), "indeterminado")
+        self.assertEqual(tracker.evidence()[0]["motivos"], ["votos_sin_casco_demasiado_proximos"])
+        tracker.update([rider], 7)
+        self.assertEqual(tracker.state(1), "sin_casco")
+
     def test_sparse_final_helmet_requires_spaced_checks_and_no_later_conflict(self):
         tracker = RiderTracks()
         for frame in range(1, 19):

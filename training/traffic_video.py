@@ -106,6 +106,8 @@ class Tracks:
                         reasons.append("cobertura_insuficiente")
                     if strongest < .8 * total:
                         reasons.append("votos_contradictorios")
+                    if not reasons and "first_bare" in t and t["last_bare"] - t["first_bare"] < 5:
+                        reasons.append("votos_sin_casco_demasiado_proximos")
                 row["motivos"] = reasons
             rows.append(row)
         return rows
@@ -165,14 +167,17 @@ class RiderTracks(Tracks):
         if len(obj.get("cabezas", [])) == 1:
             track.update(head_box=obj["cabezas"][0]["box"], head_frame=frame)
         if obj.get("estado") == "sin_casco":
+            track.setdefault("first_bare", frame)
             track["last_bare"] = frame
         super().observe(track, obj, frame)
 
     def state(self, key):
         state = super().state(key)
+        track = self.items[key]
+        if state == "sin_casco" and track["last_bare"] - track["first_bare"] < 5:
+            return "indeterminado"
         if state != "indeterminado":
             return state
-        track = self.items[key]
         votes = track["votes"]
         checks = track.get("helmet_checks", [])
         # A short track can end before a third spaced verification is possible.
