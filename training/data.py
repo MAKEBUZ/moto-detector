@@ -39,11 +39,17 @@ class HelmetDataset(Dataset):
                 image = ImageEnhance.Brightness(image).enhance(random.uniform(.85, 1.15))
             return pil_to_tensor(image).float().div(255).sub(.5).div(.5), r['classId']
         old_w, old_h = image.size
-        scale = min(1., 640 / max(old_w, old_h))
+        scale = min(1., getattr(self, 'image_size', 640) / max(old_w, old_h))
         w, h = max(1, round(old_w * scale)), max(1, round(old_h * scale))
         image = image.resize((w, h), Image.Resampling.BILINEAR)
         boxes = torch.tensor([a['box'] for a in r['annotations']], dtype=torch.float32)
         boxes *= torch.tensor([w / old_w, h / old_h, w / old_w, h / old_h])
+        if self.augment and getattr(self, "low_detail", False) and random.random() < .5:
+            # Simulate a low-resolution camera before the detector enlarges the frame.
+            cap = random.randint(192, 352)
+            factor = min(1., cap / max(w, h))
+            small = (max(1, round(w*factor)), max(1, round(h*factor)))
+            image = image.resize(small, Image.Resampling.BILINEAR).resize((w,h), Image.Resampling.BILINEAR)
         regions = None
         if getattr(self, 'exposure_regions', False):
             regions = torch.tensor([n['bbox'] for n in r.get('reviewed_nonhead_regions', [])], dtype=torch.float32).reshape(-1, 4)

@@ -25,7 +25,7 @@ def evaluate(model, samples, names):
                 counts=counts_at_threshold(predictions,targets,.5),
                 images={name:counts_at_threshold([p],[t],.5) for name,p,t in zip(names,predictions,targets)})
 
-def reserve():
+def reserve(image_size=640):
     root = Path("data/prepared/helmet-separate-v2-test-02")
     rows = [json.loads(line) for line in (root/"test-manifest.jsonl").read_text().splitlines()]
     samples = []
@@ -35,7 +35,7 @@ def reserve():
         assert hashlib.sha256(path.read_bytes()).hexdigest()==row["sha256"] and row["split"]=="test"
         with Image.open(path) as im:
             w,h=im.size
-            scale=min(1,640/max(w,h))
+            scale=min(1,image_size/max(w,h))
             size=max(1,round(w*scale)),max(1,round(h*scale))
             image=pil_to_tensor(im.convert("RGB").resize(size,Image.Resampling.BILINEAR)).float()/255
         boxes=torch.tensor([a["box"] for a in row["annotations"]])*torch.tensor([size[0]/w,size[1]/h]*2)

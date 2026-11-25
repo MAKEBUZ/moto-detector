@@ -1,0 +1,520 @@
+[
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_01140.jpg",
+    "image_id": "Image_01140",
+    "box": [
+      1072.7320000000002,
+      2646.8408,
+      1273.548,
+      2823.0688
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 1
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_01140.jpg",
+    "image_id": "Image_01140",
+    "box": [
+      1198.2420000000002,
+      2712.9263,
+      1399.058,
+      2889.1543
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 2
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00051.jpg",
+    "image_id": "Image_00051",
+    "box": [
+      191.91199999999998,
+      1787.4165000000003,
+      1145.288,
+      2509.5565
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 3
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00880.jpg",
+    "image_id": "Image_00880",
+    "box": [
+      66.8485,
+      219.0555,
+      110.6765,
+      300.0355
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 4
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00880.jpg",
+    "image_id": "Image_00880",
+    "box": [
+      94.24099999999999,
+      219.0555,
+      138.069,
+      300.0355
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 5
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_01245.jpg",
+    "image_id": "Image_01245",
+    "box": [
+      1099.2385000000002,
+      2226.5824000000002,
+      1163.7865,
+      2307.5264
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 8
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00086.jpg",
+    "image_id": "Image_00086",
+    "box": [
+      87.81849999999999,
+      330.2661,
+      269.9665,
+      438.1821
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 9
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00980.jpg",
+    "image_id": "Image_00980",
+    "box": [
+      1035.9385,
+      2031.1452,
+      1226.1265,
+      2155.7772
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 14
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00456.jpg",
+    "image_id": "Image_00456",
+    "box": [
+      12.387999999999996,
+      377.9672,
+      111.492,
+      512.4712
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 15
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00456.jpg",
+    "image_id": "Image_00456",
+    "box": [
+      12.387999999999996,
+      502.38340000000005,
+      111.492,
+      636.8874000000001
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 16
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00709.jpg",
+    "image_id": "Image_00709",
+    "box": [
+      215.14499999999998,
+      1293.6411,
+      355.68499999999995,
+      1506.1571
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 18
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_02129.jpg",
+    "image_id": "Image_02129",
+    "box": [
+      576.2645,
+      350.9346,
+      934.6605,
+      584.3066
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 23
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_02129.jpg",
+    "image_id": "Image_02129",
+    "box": [
+      576.2645,
+      566.8037,
+      934.6605,
+      800.1757
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 24
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00616.jpg",
+    "image_id": "Image_00616",
+    "box": [
+      213.401,
+      572.8432,
+      358.22900000000004,
+      798.1552
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 26
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_02208.jpg",
+    "image_id": "Image_02208",
+    "box": [
+      857.4155000000002,
+      826.0542,
+      1381.6595,
+      1411.4982
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 27
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_02208.jpg",
+    "image_id": "Image_02208",
+    "box": [
+      857.4155000000002,
+      1367.5899000000002,
+      1381.6595,
+      1953.0339000000001
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 28
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_01133.jpg",
+    "image_id": "Image_01133",
+    "box": [
+      1768.0275,
+      2182.9103999999998,
+      2162.4875,
+      2694.1744
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 29
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_01133.jpg",
+    "image_id": "Image_01133",
+    "box": [
+      1528.789,
+      2155.9664,
+      1853.5810000000001,
+      2582.1904
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 30
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00916.jpg",
+    "image_id": "Image_00916",
+    "box": [
+      62.9965,
+      197.03730000000002,
+      102.9685,
+      288.42529999999994
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 35
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00916.jpg",
+    "image_id": "Image_00916",
+    "box": [
+      87.979,
+      197.03730000000002,
+      127.951,
+      288.42529999999994
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 36
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/hv_7be47e39ce5e9d69.jpg",
+    "image_id": "hv_7be47e39ce5e9d69",
+    "box": [
+      64.1585,
+      83.83359999999999,
+      116.10650000000001,
+      130.6856
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 37
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/hv_7be47e39ce5e9d69.jpg",
+    "image_id": "hv_7be47e39ce5e9d69",
+    "box": [
+      64.1585,
+      127.1717,
+      116.10650000000001,
+      174.0237
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 38
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/hv_10584c9520b0b69a.jpg",
+    "image_id": "hv_10584c9520b0b69a",
+    "box": [
+      124.79950000000001,
+      120.7633,
+      184.7155,
+      160.5113
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 39
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/hv_73b2c84440e5d42d.jpg",
+    "image_id": "hv_73b2c84440e5d42d",
+    "box": [
+      310.8665,
+      282.7075,
+      397.7585,
+      383.0075
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 42
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/hv_73b2c84440e5d42d.jpg",
+    "image_id": "hv_73b2c84440e5d42d",
+    "box": [
+      365.174,
+      282.7075,
+      452.06600000000003,
+      383.0075
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 43
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00686.jpg",
+    "image_id": "Image_00686",
+    "box": [
+      117.68799999999999,
+      403.9274,
+      247.03199999999998,
+      614.7954
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 44
+  },
+  {
+    "ds": "reviewed-08-addon",
+    "image": "Image_00044.jpg",
+    "image_id": "Image_00044",
+    "box": [
+      245.99499999999995,
+      2086.9911,
+      1154.435,
+      2967.9071
+    ],
+    "kind": "bike_region",
+    "score": 0,
+    "index": 48
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00523.jpg",
+    "image_id": "Image_00523",
+    "crop": [
+      369,
+      184,
+      534,
+      459
+    ],
+    "box": [
+      20.746761322021484,
+      0.15263229608535767,
+      138.75601196289062,
+      106.41616821289062
+    ],
+    "kind": "truncated_detector",
+    "score": 0.26786744594573975,
+    "index": 11
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_00778.jpg",
+    "image_id": "Image_00778",
+    "crop": [
+      0,
+      701,
+      953,
+      1435
+    ],
+    "box": [
+      549.755126953125,
+      20.55467987060547,
+      707.7220458984375,
+      433.9952392578125
+    ],
+    "kind": "truncated_detector",
+    "score": 0.37533897161483765,
+    "index": 17
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_01829.jpg",
+    "image_id": "Image_01829",
+    "crop": [
+      0,
+      437,
+      703,
+      861
+    ],
+    "box": [
+      399.3895568847656,
+      0.0,
+      650.424072265625,
+      314.1090393066406
+    ],
+    "kind": "truncated_detector",
+    "score": 0.5762688517570496,
+    "index": 20
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_01995.jpg",
+    "image_id": "Image_01995",
+    "crop": [
+      0,
+      553,
+      538,
+      1188
+    ],
+    "box": [
+      21.06026268005371,
+      0.0,
+      408.2030944824219,
+      586.2445678710938
+    ],
+    "kind": "truncated_detector",
+    "score": 0.7447459101676941,
+    "index": 21
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_02245.jpg",
+    "image_id": "Image_02245",
+    "crop": [
+      1746,
+      377,
+      2142,
+      722
+    ],
+    "box": [
+      88.50320434570312,
+      7.892687797546387,
+      154.1350860595703,
+      147.31488037109375
+    ],
+    "kind": "truncated_detector",
+    "score": 0.4122373163700104,
+    "index": 23
+  },
+  {
+    "ds": "helmet-separate-v2-expanded-09",
+    "image": "images/train/Image_01162.jpg",
+    "image_id": "Image_01162",
+    "crop": [
+      267,
+      2662,
+      1210,
+      3326
+    ],
+    "box": [
+      118.9603500366211,
+      0.0,
+      943.0,
+      582.8626708984375
+    ],
+    "kind": "truncated_detector",
+    "score": 0.35967230796813965,
+    "index": 27
+  },
+  {
+    "ds": "reviewed-08-addon",
+    "image": "Image_01788.jpg",
+    "image_id": "Image_01788",
+    "crop": [
+      0,
+      664,
+      1299,
+      1348
+    ],
+    "box": [
+      620.3381958007812,
+      0.0,
+      1150.556396484375,
+      448.4820556640625
+    ],
+    "kind": "truncated_detector",
+    "score": 0.310108482837677,
+    "index": 44
+  }
+]

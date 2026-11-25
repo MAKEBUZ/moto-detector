@@ -23,18 +23,19 @@ class HelmetCNN(nn.Module):
         return self.head(self.features(images))
 
 
-def build_detector(num_classes=4, feature_stride=16, proposal_multiplier=1, deterministic_roi=False):
+def build_detector(num_classes=4, feature_stride=16, proposal_multiplier=1, deterministic_roi=False, small_head_anchors=False, image_size=640):
     if proposal_multiplier not in (1,4): raise ValueError('Proposal multiplier must be 1 or 4')
     if feature_stride not in (8,16): raise ValueError('Feature stride must be 8 or 16')
     backbone = nn.Sequential(block(3, 16), block(16, 32), block(32, 64), block(64, 128, stride=1 if feature_stride==8 else 2))
     backbone.out_channels = 128
-    anchors = AnchorGenerator(sizes=((16, 32, 64, 128, 256),), aspect_ratios=((.5, 1., 2.),))
+    sizes = (16, 32, 64, 128, 256) + ((8,) if small_head_anchors else ())
+    anchors = AnchorGenerator(sizes=(sizes,), aspect_ratios=((.5, 1., 2.),))
     pool_class = MultiScaleRoIAlign
     if deterministic_roi:
         from deterministic_gpu import DeterministicRoIAlign
         pool_class = DeterministicRoIAlign
     return FasterRCNN(backbone, num_classes=num_classes,  # includes background
-                      min_size=384, max_size=640,
+                      min_size=round(image_size*.6), max_size=image_size,
                       image_mean=[.5, .5, .5], image_std=[.5, .5, .5],
                       rpn_anchor_generator=anchors,
                       box_roi_pool=pool_class(featmap_names=['0'], output_size=7, sampling_ratio=2),

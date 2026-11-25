@@ -52,7 +52,13 @@ def main():
     p.add_argument('--separate-classes', action='store_true', help='Use reviewed four-class dataset')
     p.add_argument('--constant-lr', action='store_true')
     p.add_argument('--photometric', action='store_true')
+    p.add_argument('--image-size', type=int, choices=(640, 960), default=640)
     p.add_argument('--feature-stride', type=int, choices=[8,16], default=16)
+    p.add_argument('--own-localization-transfer', action='store_true')
+    p.add_argument('--all-photos-transfer', action='store_true')
+    p.add_argument('--own-clean-transfer', action='store_true')
+    p.add_argument('--double-head-objectness', action='store_true')
+    p.add_argument('--small-head-anchors', action='store_true', help='Add an 8-pixel RPN anchor scale')
     p.add_argument('--proposal-multiplier', type=int, choices=[1,4], default=1)
     p.add_argument('--head-probe-every', type=int, default=0)
     p.add_argument('--max-updates', type=int, help='Stop after exactly this many optimizer updates; requires constant LR and sufficient epochs')
@@ -108,9 +114,53 @@ def main():
         torch.cuda.manual_seed_all(a.seed)
     forbid_external_weights()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = HelmetCNN() if a.task == 'classifier' else build_detector(num_classes=len(classes)+1, feature_stride=a.feature_stride, proposal_multiplier=a.proposal_multiplier, deterministic_roi=a.deterministic_gpu)
+    model = HelmetCNN() if a.task == 'classifier' else build_detector(num_classes=len(classes)+1, feature_stride=a.feature_stride, proposal_multiplier=a.proposal_multiplier, deterministic_roi=a.deterministic_gpu, small_head_anchors=a.small_head_anchors, image_size=a.image_size)
+    transfer_digest = None
+    if a.all_photos_transfer and not a.own_clean_transfer:
+        p.error('All-photo transfer requires own-clean-transfer')
+    if a.own_clean_transfer:
+        if a.own_localization_transfer or not (a.separate_classes and a.deterministic_gpu and a.feature_stride == 8 and a.proposal_multiplier == 4):
+            p.error("Clean transfer requires the reviewed stride-8 deterministic detector")
+        source = Path(f"runs/edge-clean-{a.seed}/transfer.pt")
+        if a.all_photos_transfer:
+            source = Path("runs/clean-heads960-12/best.pt")
+        payload = torch.load(source, map_location="cpu", weights_only=True)
+        assert payload["initialization"] == "random" and payload["external_weights"] is False
+        if a.all_photos_transfer:
+            assert payload["image_size"] == a.image_size and payload["images"] >= 1583
+        else:
+            assert payload["epoch"] == 4 and payload["images"] == 1583
+        assert payload["classes"] == ["BikeWithRider", "NoHelmet", "Helmet"]
+        state = model.state_dict()
+        for key, value in payload["model"].items():
+            if not key.startswith("roi_heads.box_predictor."):
+                state[key] = value
+                continue
+            width = 4 if ".bbox_pred." in key else 1
+            # Only background, helmet and no-helmet have corresponding output rows.
+            for old, new in ((0, 0), (3, 3), (2, 4)):
+                state[key][new*width:(new+1)*width] = value[old*width:(old+1)*width]
+        model.load_state_dict(state)
+        transfer_digest = hashlib.sha256(source.read_bytes()).hexdigest()
+    if a.own_localization_transfer:
+        if not (a.separate_classes and a.deterministic_gpu and a.feature_stride==8 and a.proposal_multiplier==4):
+            p.error("Local transfer requires the four-class deterministic stride-8 detector")
+        source = Path(f"runs/edge-localization-{a.seed}/transfer.pt")
+        payload = torch.load(source,map_location="cpu",weights_only=True)
+        assert payload["initialization"]=="random" and payload["external_weights"] is False and payload["images"]==1583
+        transferred = payload["transfer"]
+        state = model.state_dict()
+        assert set(transferred)=={k for k in state if k.startswith(("backbone.","rpn."))}
+        model.load_state_dict({**state,**transferred})
+        transfer_digest = hashlib.sha256(source.read_bytes()).hexdigest()
     initial = fingerprint(model)
     model.to(device)
+    head_stats = None
+    if a.double_head_objectness:
+        if not a.separate_classes or a.rpn_object_reserve or a.log_negative_exposure or a.log_reproducibility:
+            p.error("Head weighting requires the four-class detector and original sampler")
+        from rpn_head_weight import install_head_weight
+        head_stats = install_head_weight(model.rpn)
     reservation = None
     if a.rpn_object_reserve:
         from rpn_object_sampler import install_object_sampler
@@ -123,7 +173,9 @@ def main():
         train.exposure_regions = True
         exposure = ExposureObserver(model, reserve=a.reserve_reviewed_negatives)
         assert fingerprint(model) == initial
+    train.image_size = a.image_size
     val = SeparateHelmetDataset(a.dataset, 'val', a.limit_val, augment=False) if a.separate_classes else HelmetDataset(a.dataset, a.task, 'val', a.limit_val, augment=False)
+    val.image_size = a.image_size
     sampler_trace=[]
     if a.log_reproducibility:
         from reproducibility_trace import SamplerTrace, tensors_hash, rng_hashes
@@ -140,10 +192,15 @@ def main():
     validation = DataLoader(val, batch_size=batch, shuffle=False, **kwargs)
     lr = .001 if a.task == 'classifier' else .0003
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=.0001)
+    if a.own_localization_transfer or a.own_clean_transfer:
+        groups = [{"params":[v for k,v in model.named_parameters() if k.startswith(("backbone.","rpn."))],"lr":lr/3},
+                  {"params":model.roi_heads.parameters(),"lr":lr}]
+        optimizer = torch.optim.AdamW(groups,lr=lr,weight_decay=.0001)
     scheduler = None if a.constant_lr else torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=a.epochs)
     if a.head_probe_every:
         from overfit_heads import probe
         diagnostic_train = SeparateHelmetDataset(a.dataset, 'train', augment=False)
+        diagnostic_train.image_size = a.image_size
         probe_samples = {'train': [diagnostic_train[i] for i in range(len(diagnostic_train))],
                          'val': [val[i] for i in range(len(val))]}
         (out/'head-probes').mkdir()
@@ -157,6 +214,11 @@ def main():
               'train_examples': len(train), 'validation_examples': len(val), 'test_used': False,
               'learning_rate': lr, 'batch_size': batch, 'classes': classes, 'num_classes_including_background': len(classes)+1,
               'pilot': bool(a.separate_classes or a.limit_train or a.limit_val)}
+    if transfer_digest:
+        config.update(initialization="own_localization_transfer", pretrained=True, external_pretrained=False,
+                      transfer_sha256=transfer_digest, transferred_learning_rate=lr/3)
+        if a.own_clean_transfer:
+            config["initialization"] = "all_photos_transfer" if a.all_photos_transfer else "own_clean_transfer"
     config['source_sha256'] = {str(f): hashlib.sha256(f.read_bytes()).hexdigest()
                               for f in sorted(Path('training').glob('*.py'))}
     config['dataset_lock_sha256'] = hashlib.sha256(lock_path.read_bytes()).hexdigest()
@@ -168,7 +230,7 @@ def main():
         cublas_workspace_config=os.environ.get('CUBLAS_WORKSPACE_CONFIG'),pythonhashseed=os.environ.get('PYTHONHASHSEED'),
         roi_align_implementation='torchvision_reference_eager' if a.deterministic_gpu else 'torchvision_default')
     config['photometric_policy'] = ({'brightness':[.85,1.15],'contrast':[.85,1.15],'blur_probability':.25,'blur_radius_pixels':[.2,.8],
-                                     'stage':'after 640px cap, before model transform','rng':'independent Python Random seeded with run seed'} if a.photometric else None)
+                                     'stage':f'after {a.image_size}px cap, before model transform','rng':'independent Python Random seeded with run seed'} if a.photometric else None)
     (out / 'config.json').write_text(json.dumps(config, indent=2))
     with (out / 'requirements.lock.txt').open('w') as requirements:
         subprocess.run([str(Path('.venv/Scripts/python.exe').resolve()), '-m', 'pip', 'freeze'], stdout=requirements, check=True)
@@ -254,6 +316,8 @@ def main():
         if trace_log: trace_log.flush()
         if reached_limit: break
     if a.max_updates is not None: assert updates == a.max_updates
+    if head_stats is not None:
+        (out / "head-weight-stats.json").write_text(json.dumps(head_stats, indent=2))
     if selection_log: selection_log.close()
     if exposure_log: exposure_log.close()
     if trace_log: trace_log.close()
