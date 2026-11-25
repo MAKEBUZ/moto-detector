@@ -1,0 +1,22 @@
+{
+  "run": "joint-multiscale-02",
+  "source": "15740042_3840_2160_60fps.mp4",
+  "input": "reports/training/wide-zero-heads/baseline.jsonl",
+  "frames": 1500,
+  "original": {
+    "occupants": 66,
+    "con_casco": 14,
+    "sin_casco": 0,
+    "indeterminado": 52,
+    "helmet_final": 0,
+    "false_final": 8
+  },
+  "corrected": {
+    "occupants": 39,
+    "con_casco": 14,
+    "sin_casco": 0,
+    "indeterminado": 25,
+    "helmet_final": 0,
+    "false_final": 2
+  }
+}

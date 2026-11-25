@@ -1,0 +1,329 @@
+{
+  "run": "joint-occupant-negatives-11",
+  "source": "15740042_3840_2160_60fps.mp4",
+  "frames": 1500,
+  "original_version": 3,
+  "corrected_version": 4,
+  "criterion": "IoU >= 0.5 at the marked frame; confirmed at end of video; helmet requires final con_casco",
+  "totals": {
+    "original": {
+      "helmet_at_frame": 3,
+      "helmet_final": 1,
+      "false_at_frame": 8,
+      "false_final": 7,
+      "distinct_confirmed_helmet_tracks": 1
+    },
+    "corrected": {
+      "helmet_at_frame": 3,
+      "helmet_final": 2,
+      "false_at_frame": 3,
+      "false_final": 2,
+      "distinct_confirmed_helmet_tracks": 2
+    }
+  },
+  "original_counts": {
+    "motos": 43,
+    "ocupantes": 62,
+    "con_casco": 15,
+    "sin_casco": 0,
+    "indeterminado": 47
+  },
+  "corrected_counts": {
+    "motos": 43,
+    "ocupantes": 40,
+    "con_casco": 14,
+    "sin_casco": 0,
+    "indeterminado": 26
+  },
+  "marks": [
+    {
+      "frame": 25,
+      "review_id": 3,
+      "category": "con_casco",
+      "original": {
+        "iou": 0.6870933369530894,
+        "track": 1,
+        "confirmed": true,
+        "final_state": "con_casco"
+      },
+      "corrected": {
+        "iou": 0.6870933369530894,
+        "track": 1,
+        "confirmed": true,
+        "final_state": "con_casco"
+      }
+    },
+    {
+      "frame": 75,
+      "review_id": 11,
+      "category": "no_persona",
+      "original": {
+        "iou": 0.9306486046107133,
+        "track": 10,
+        "confirmed": false,
+        "final_state": null
+      },
+      "corrected": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 352,
+      "review_id": 36,
+      "category": "con_casco",
+      "original": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      },
+      "corrected": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 400,
+      "review_id": 45,
+      "category": "con_casco",
+      "original": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      },
+      "corrected": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 652,
+      "review_id": 64,
+      "category": "con_casco",
+      "original": {
+        "iou": 0.6860405710877614,
+        "track": 57,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      },
+      "corrected": {
+        "iou": 0.6860405710877614,
+        "track": 25,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      }
+    },
+    {
+      "frame": 680,
+      "review_id": 70,
+      "category": "con_casco",
+      "original": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      },
+      "corrected": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 837,
+      "review_id": 75,
+      "category": "con_casco",
+      "original": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      },
+      "corrected": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 931,
+      "review_id": 81,
+      "category": "con_casco",
+      "original": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      },
+      "corrected": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 933,
+      "review_id": 82,
+      "category": "no_persona",
+      "original": {
+        "iou": 0.9582267434612461,
+        "track": 73,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      },
+      "corrected": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 1001,
+      "review_id": 85,
+      "category": "no_persona",
+      "original": {
+        "iou": 0.9890057803841944,
+        "track": 75,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      },
+      "corrected": {
+        "iou": 0.9890057803841944,
+        "track": 38,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      }
+    },
+    {
+      "frame": 1297,
+      "review_id": 106,
+      "category": "no_persona",
+      "original": {
+        "iou": 0.9543659482885124,
+        "track": 93,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      },
+      "corrected": {
+        "iou": 0.9543659482885124,
+        "track": 49,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      }
+    },
+    {
+      "frame": 1307,
+      "review_id": 108,
+      "category": "no_persona",
+      "original": {
+        "iou": 0.9510643860729084,
+        "track": 96,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      },
+      "corrected": {
+        "iou": 0.9510643860729084,
+        "track": 52,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 1465,
+      "review_id": 118,
+      "category": "no_persona",
+      "original": {
+        "iou": 0.9770660162877868,
+        "track": 106,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      },
+      "corrected": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 1467,
+      "review_id": 119,
+      "category": "no_persona",
+      "original": {
+        "iou": 0.8319623078720169,
+        "track": 107,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      },
+      "corrected": {
+        "iou": 0.2049783468295428,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 1467,
+      "review_id": 120,
+      "category": "con_casco",
+      "original": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      },
+      "corrected": {
+        "iou": 0.0,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 1467,
+      "review_id": 121,
+      "category": "no_persona",
+      "original": {
+        "iou": 0.9605950049595193,
+        "track": 105,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      },
+      "corrected": {
+        "iou": 0.022459168188840174,
+        "track": null,
+        "confirmed": false,
+        "final_state": null
+      }
+    },
+    {
+      "frame": 1499,
+      "review_id": 123,
+      "category": "con_casco",
+      "original": {
+        "iou": 0.5389253494011835,
+        "track": 107,
+        "confirmed": true,
+        "final_state": "indeterminado"
+      },
+      "corrected": {
+        "iou": 0.5389253494011835,
+        "track": 62,
+        "confirmed": true,
+        "final_state": "con_casco"
+      }
+    }
+  ]
+}

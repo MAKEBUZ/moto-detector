@@ -1,0 +1,21 @@
+{
+  "source": "5195174-uhd_2160_4096_25fps.mp4",
+  "frames": 490,
+  "run": "joint-rain-rider-09",
+  "reviewed_observations": 16,
+  "frames_reviewed": 8,
+  "original": {
+    "occupants": 4,
+    "con_casco": 3,
+    "sin_casco": 0,
+    "indeterminado": 1,
+    "reviewed_helmet_final": 4
+  },
+  "corrected": {
+    "occupants": 6,
+    "con_casco": 4,
+    "sin_casco": 0,
+    "indeterminado": 2,
+    "reviewed_helmet_final": 5
+  }
+}
