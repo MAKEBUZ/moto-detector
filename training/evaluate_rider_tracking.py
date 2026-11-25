@@ -65,7 +65,7 @@ def main():
     for mark in marks:
         by_frame[mark["frame"]].append(mark)
 
-    stream = Stream(prior["source"], run)
+    stream = Stream(prior["source"], run, motion_check=False)
     stream.temporal_heads = None  # Preserve the version 4 benchmark when replayed.
     old = Tracks()
     update = stream.people.update
@@ -127,30 +127,46 @@ def main():
     print(totals, video["counts"], flush=True)
 
 
-def evaluate_temporal(control_path):
+def evaluate_temporal(control_path, motion=False):
     control = read(control_path)
-    baseline = read(Path("reports/training/tracking-occupants-v4/comparison.json"))
+    version = 5 if motion else 4
+    baseline = read(Path(f"reports/training/tracking-occupants-v{version}/comparison.json"))
     marks = read(Path("runs") / control["run"] / "paired-review.json")["review"]
-    assert control["tracking_version"] == 4 and baseline["source"] == Path(control["source"]).name
-    assert control["run"] == baseline["run"] and control["counts"] == baseline["corrected_counts"]
-    stream = Stream(control["source"], control["run"])
+    assert control["tracking_version"] == version and baseline["source"] == Path(control["source"]).name
+    assert control["run"] == baseline.get("run", baseline.get("model"))
+    assert control["counts"] == baseline.get("corrected_counts", baseline.get("candidate_counts"))
+    stream = Stream(control["source"], control["run"], motion_check=motion)
     rows = []
     added = []
+    extra_frames = read(Path("reports/training/tracking-occupants-v5/additional-frames.json")) if motion else None
     try:
-        refine = stream.temporal_heads.refine
+        search = stream.motion_heads if motion else stream.temporal_heads
+        refine = search.refine
 
         def capture(image, people, ids, tracker, frame):
             refine(image, people, ids, tracker, frame)
             for rider in people:
                 for head in rider["cabezas"]:
-                    if head.get("source") == "temporal_patch_check":
-                        added.append(dict(frame=frame, key=ids[rider["id"]], box=head["box"], score=head["score"]))
+                    if head.get("source") == ("helmet_flow" if motion else "temporal_patch_check"):
+                        added.append(dict(frame=frame, key=ids[rider["id"]], box=head["box"], score=head["score"],
+                                          seed_frame=head["seed_frame"]))
+            if extra_frames is not None and frame in extra_frames["frames"]:
+                # Match distinct riders to distinct visible helmets in each annotated frame.
+                remaining = dict(ids)
+                for row in extra_frames["rows"]:
+                    if row["frame"] == frame:
+                        sx = image.width/extra_frames["coordinate_space"][0]
+                        sy = image.height/extra_frames["coordinate_space"][1]
+                        box = [v*s for v,s in zip(row["box"], (sx,sy,sx,sy))]
+                        row["v6"] = match(dict(category="con_casco", reference=box), people, remaining)
+                        key = row["v6"]["track"]
+                        remaining = {i:k for i,k in remaining.items() if k != key}
             for mark in marks:
                 if mark["frame"] == frame:
                     rows.append(dict(frame=frame, category=mark["category"], review_id=mark["track"],
                                      **match(mark, people, ids)))
 
-        stream.temporal_heads.refine = capture
+        search.refine = capture
         while stream.next() is not None:
             pass
         with TemporaryDirectory() as tmp:
@@ -170,10 +186,16 @@ def evaluate_temporal(control_path):
                   false_final=sum(r["confirmed"] for r in false_people),
                   distinct_confirmed_helmet_tracks=len({r["track"] for r in helmets if r["final_state"] == "con_casco"}))
     report = dict(model=control["run"], source=baseline["source"], frames=video["frames"],
-                  control=baseline["totals"]["corrected"], candidate=scores,
+                  control=baseline["candidate"] if motion else baseline["totals"]["corrected"], candidate=scores,
                   control_counts=control["counts"], candidate_counts=video["counts"], marks=rows)
-    output = Path("reports/training/tracking-occupants-v5")
+    output = Path(f"reports/training/tracking-occupants-v{version+1}")
     output.mkdir(parents=True, exist_ok=True)
+    if extra_frames is not None:
+        matches = [r["v6"]["track"] for r in extra_frames["rows"] if r["v6"]["track"] is not None]
+        extra_frames["scores"]["v6"] = dict(visible=len(extra_frames["rows"]), at_frame=len(matches),
+            final=sum(stream.people.confirmed(k) and stream.people.state(k) == "con_casco" for k in matches))
+        (output / "additional-frames.json").write_text(json.dumps(extra_frames, indent=2), encoding="utf-8")
+        report["false_regions_with_final_helmet"] = sum(r["final_state"] == "con_casco" for r in false_people)
     for name, data in (("comparison", report), ("video", video), ("candidates", added)):
         (output / f"{name}.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
     print(scores, video["counts"])
@@ -181,9 +203,13 @@ def evaluate_temporal(control_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--temporal", type=Path, metavar="VIDEO_JSON", help="compare with a saved v4 video report")
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("--temporal", type=Path, metavar="VIDEO_JSON", help="compare with a saved v4 video report")
+    modes.add_argument("--motion", type=Path, metavar="VIDEO_JSON", help="compare with a saved v5 video report")
     args = parser.parse_args()
-    if args.temporal:
+    if args.motion:
+        evaluate_temporal(args.motion, motion=True)
+    elif args.temporal:
         evaluate_temporal(args.temporal)
     else:
         main()
