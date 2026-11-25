@@ -367,3 +367,11 @@ Respaldo de pesos propios en [backups/detector70-especialista](backups/detector7
 El detector solo obtuvo 53,72 % de mAP50 en validación y 45,84 % en seis escenas reservadas. A confianza 0,5, el especialista con 2000 propuestas recuperó 4/9 cabezas en validación con dos falsos positivos. Con 4000 recuperó 5/9 con cuatro falsos positivos. Se conserva 2000 como referencia y 4000 como variante de mayor cobertura. El cambio de presupuesto usa los mismos pesos. [Comparación](reports/training/paired-70-73/rpn-trace/specialist-4000.json).
 
 </details>
+
+### Ajuste con ocupantes solapados
+
+Se entrenó `joint-crowded-riders-12` a partir de los pesos propios del detector de v9. Durante 60 actualizaciones se combinaron una imagen con varios ocupantes confirmados sobre la misma moto y una imagen aleatoria del conjunto de 73. Se ajustaron la red de propuestas y el predictor de cajas y clases. El paso 30 se seleccionó por F1 de ocupante y después por mAP50 en validación.
+
+En seis fotos reservadas el mAP50 pasó de 80,57 % a 74,94 %. Ambas variantes acertaron cinco de nueve vínculos de cabeza y ocupante. En los 1.500 fotogramas del video, los cascos de control pasaron de 8/10 a 7/10 y los originales confirmados de 9/9 a 4/9. Los falsos ocupantes confirmados siguieron en 2/8. Se conservó el casco blanco del 150, se perdió el del borde en el 750 y quedaron pendientes el conductor del 450 y el centro del 1350. La app sigue usando v9.
+
+Solo dos de las 25 fotos de entrenamiento con varios ocupantes tenían dos cajas de persona sobre la misma moto con IoU de al menos 0,50. [Entrenamiento y validación](reports/training/joint-crowded-riders-12/training.json) · [Repetición del video](reports/training/joint-crowded-riders-12/additional-frames.json)

@@ -1,0 +1,189 @@
+{
+  "model": "joint-crowded-riders-12",
+  "source": "15740042_3840_2160_60fps.mp4",
+  "frames": 1500,
+  "control": {
+    "helmet_at_frame": 9,
+    "helmet_final": 9,
+    "false_at_frame": 3,
+    "false_final": 2,
+    "distinct_confirmed_helmet_tracks": 9
+  },
+  "candidate": {
+    "helmet_at_frame": 6,
+    "helmet_final": 4,
+    "false_at_frame": 3,
+    "false_final": 2,
+    "distinct_confirmed_helmet_tracks": 4
+  },
+  "control_counts": {
+    "motos": 43,
+    "ocupantes": 41,
+    "con_casco": 20,
+    "sin_casco": 0,
+    "indeterminado": 21
+  },
+  "candidate_counts": {
+    "motos": 44,
+    "ocupantes": 42,
+    "con_casco": 17,
+    "sin_casco": 0,
+    "indeterminado": 25
+  },
+  "marks": [
+    {
+      "frame": 25,
+      "category": "con_casco",
+      "review_id": 3,
+      "iou": 0.6753162699567533,
+      "track": 2,
+      "confirmed": true,
+      "final_state": "con_casco"
+    },
+    {
+      "frame": 75,
+      "category": "no_persona",
+      "review_id": 11,
+      "iou": 0.3799474431542988,
+      "track": null,
+      "confirmed": false,
+      "final_state": null
+    },
+    {
+      "frame": 352,
+      "category": "con_casco",
+      "review_id": 36,
+      "iou": 0.0,
+      "track": null,
+      "confirmed": false,
+      "final_state": null
+    },
+    {
+      "frame": 400,
+      "category": "con_casco",
+      "review_id": 45,
+      "iou": 0.7821341251952232,
+      "track": 12,
+      "confirmed": true,
+      "final_state": "indeterminado"
+    },
+    {
+      "frame": 652,
+      "category": "con_casco",
+      "review_id": 64,
+      "iou": 0.0,
+      "track": null,
+      "confirmed": false,
+      "final_state": null
+    },
+    {
+      "frame": 680,
+      "category": "con_casco",
+      "review_id": 70,
+      "iou": 0.6668299574199579,
+      "track": 26,
+      "confirmed": true,
+      "final_state": "con_casco"
+    },
+    {
+      "frame": 837,
+      "category": "con_casco",
+      "review_id": 75,
+      "iou": 0.0,
+      "track": null,
+      "confirmed": false,
+      "final_state": null
+    },
+    {
+      "frame": 931,
+      "category": "con_casco",
+      "review_id": 81,
+      "iou": 0.7830546485313488,
+      "track": 36,
+      "confirmed": true,
+      "final_state": "con_casco"
+    },
+    {
+      "frame": 933,
+      "category": "no_persona",
+      "review_id": 82,
+      "iou": 0.0,
+      "track": null,
+      "confirmed": false,
+      "final_state": null
+    },
+    {
+      "frame": 1001,
+      "category": "no_persona",
+      "review_id": 85,
+      "iou": 0.9768032107622145,
+      "track": 37,
+      "confirmed": true,
+      "final_state": "indeterminado"
+    },
+    {
+      "frame": 1297,
+      "category": "no_persona",
+      "review_id": 106,
+      "iou": 0.9720784450950835,
+      "track": 46,
+      "confirmed": true,
+      "final_state": "indeterminado"
+    },
+    {
+      "frame": 1307,
+      "category": "no_persona",
+      "review_id": 108,
+      "iou": 0.9593050530840472,
+      "track": 50,
+      "confirmed": false,
+      "final_state": null
+    },
+    {
+      "frame": 1465,
+      "category": "no_persona",
+      "review_id": 118,
+      "iou": 0.0,
+      "track": null,
+      "confirmed": false,
+      "final_state": null
+    },
+    {
+      "frame": 1467,
+      "category": "no_persona",
+      "review_id": 119,
+      "iou": 0.20529272100654686,
+      "track": null,
+      "confirmed": false,
+      "final_state": null
+    },
+    {
+      "frame": 1467,
+      "category": "con_casco",
+      "review_id": 120,
+      "iou": 0.7132992824476176,
+      "track": 55,
+      "confirmed": true,
+      "final_state": "indeterminado"
+    },
+    {
+      "frame": 1467,
+      "category": "no_persona",
+      "review_id": 121,
+      "iou": 0.021710626805856906,
+      "track": null,
+      "confirmed": false,
+      "final_state": null
+    },
+    {
+      "frame": 1499,
+      "category": "con_casco",
+      "review_id": 123,
+      "iou": 0.5514139674320032,
+      "track": 59,
+      "confirmed": true,
+      "final_state": "con_casco"
+    }
+  ],
+  "false_regions_with_final_helmet": 0
+}

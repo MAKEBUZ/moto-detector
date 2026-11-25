@@ -1,0 +1,102 @@
+[
+  {
+    "image": "Image_00033",
+    "max_body_iou": 0.25882687439706165
+  },
+  {
+    "image": "Image_00051",
+    "max_body_iou": 0.11590158197646164
+  },
+  {
+    "image": "Image_01265",
+    "max_body_iou": 0.40318987589357913
+  },
+  {
+    "image": "Image_00185",
+    "max_body_iou": 0.3615174871393859
+  },
+  {
+    "image": "Image_01607",
+    "max_body_iou": 0.27806389542512255
+  },
+  {
+    "image": "Image_01306",
+    "max_body_iou": 0.261413706282838
+  },
+  {
+    "image": "Image_01954",
+    "max_body_iou": 0.4624295152991254
+  },
+  {
+    "image": "Image_01634",
+    "max_body_iou": 0.39131993197284276
+  },
+  {
+    "image": "Image_02312",
+    "max_body_iou": 0.34720274934103523
+  },
+  {
+    "image": "Image_00945",
+    "max_body_iou": 0.9630079476010925
+  },
+  {
+    "image": "Image_01223",
+    "max_body_iou": 0.3085369241736808
+  },
+  {
+    "image": "Image_01183",
+    "max_body_iou": 0.34410198411871307
+  },
+  {
+    "image": "Image_02044",
+    "max_body_iou": 0.5141091261938886
+  },
+  {
+    "image": "Image_00709",
+    "max_body_iou": 0.46755214949157314
+  },
+  {
+    "image": "Image_00778",
+    "max_body_iou": 0.15590555163378414
+  },
+  {
+    "image": "Image_01917",
+    "max_body_iou": 0.44568644059145596
+  },
+  {
+    "image": "Image_02129",
+    "max_body_iou": 0.19113153101906383
+  },
+  {
+    "image": "Image_01829",
+    "max_body_iou": 0.36252736447064027
+  },
+  {
+    "image": "Image_00247",
+    "max_body_iou": 0.2584606926031316
+  },
+  {
+    "image": "Image_01073",
+    "max_body_iou": 0.05612064410298982
+  },
+  {
+    "image": "Image_00287",
+    "max_body_iou": 0.16159568038912064
+  },
+  {
+    "image": "Image_00041",
+    "max_body_iou": 0.3597883404452757
+  },
+  {
+    "image": "Image_00092",
+    "max_body_iou": 0.260979054351139
+  },
+  {
+    "image": "Image_00111",
+    "max_body_iou": 0.30661841330794476
+  },
+  {
+    "image": "Image_02310",
+    "max_body_iou": 0.32839142426627727
+  }
+]
