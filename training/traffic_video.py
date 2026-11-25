@@ -240,10 +240,10 @@ PHOTO_RUN = "joint-multiscale-02"
 
 
 class Stream:
-    def __init__(self, source, run, *, motion_check=True, edge_check=True, consensus_check=True, partial_check=True):
+    def __init__(self, source, run, *, motion_check=True, edge_check=True, consensus_check=True, partial_check=True, detector_run=None):
         import cv2
         self.cv = cv2
-        self.model = load_model(run)
+        self.model = load_model(detector_run or run)
         self.helmet_matcher = None
         if run == RAIN_VIDEO_RUN:
             from rain_helmet_matcher import RainHelmetMatcher
@@ -252,7 +252,7 @@ class Stream:
         if not self.cap.isOpened():
             self.cap.release()
             raise ValueError("No se pudo abrir el video o la cámara")
-        self.source, self.run = source, run
+        self.source, self.run = source, detector_run or run
         self.wide_heads = None
         self.temporal_heads = None
         self.motion_heads = None

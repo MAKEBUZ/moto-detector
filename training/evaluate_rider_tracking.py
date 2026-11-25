@@ -127,9 +127,11 @@ def main():
     print(totals, video["counts"], flush=True)
 
 
-def evaluate_temporal(control_path, motion=False, edge=False, consensus=False, partial=False):
+def evaluate_temporal(control_path, motion=False, edge=False, consensus=False, partial=False, candidate_run=None):
     control = read(control_path)
-    if partial:
+    if candidate_run:
+        version, source = 9, "partial_rider"
+    elif partial:
         version, source = 8, "partial_rider"
     elif consensus:
         version, source = 7, "rider_consensus"
@@ -139,7 +141,7 @@ def evaluate_temporal(control_path, motion=False, edge=False, consensus=False, p
         version, source = 5, "helmet_flow"
     else:
         version, source = 4, "temporal_patch_check"
-    label = f"v{version+1}"
+    label = candidate_run or f"v{version+1}"
     reference_dir = Path(f"reports/training/tracking-occupants-v{version}")
     baseline = read(reference_dir / "comparison.json")
     marks = read(Path("runs") / control["run"] / "paired-review.json")["review"]
@@ -147,13 +149,13 @@ def evaluate_temporal(control_path, motion=False, edge=False, consensus=False, p
     assert control["run"] == baseline.get("run", baseline.get("model"))
     assert control["counts"] == baseline.get("corrected_counts", baseline.get("candidate_counts"))
     stream = Stream(control["source"], control["run"], motion_check=version >= 5,
-                    edge_check=version >= 6, consensus_check=version >= 7, partial_check=partial)
+                    edge_check=version >= 6, consensus_check=version >= 7, partial_check=partial or bool(candidate_run), detector_run=candidate_run)
     rows = []
     added = []
     extra_frames = read(reference_dir / "additional-frames.json") if version >= 5 else None
     try:
         search = {4: stream.temporal_heads, 5: stream.motion_heads, 6: stream.edge_riders,
-                  7: stream.rider_heads, 8: stream.rider_heads}[version]
+                  7: stream.rider_heads, 8: stream.rider_heads, 9: stream.rider_heads}[version]
         refine = search.refine
 
         def capture(image, people, ids, tracker, frame):
@@ -203,10 +205,10 @@ def evaluate_temporal(control_path, motion=False, edge=False, consensus=False, p
                   false_at_frame=sum(r["track"] is not None for r in false_people),
                   false_final=sum(r["confirmed"] for r in false_people),
                   distinct_confirmed_helmet_tracks=len({r["track"] for r in helmets if r["final_state"] == "con_casco"}))
-    report = dict(model=control["run"], source=baseline["source"], frames=video["frames"],
+    report = dict(model=candidate_run or control["run"], source=baseline["source"], frames=video["frames"],
                   control=baseline["candidate"] if version >= 5 else baseline["totals"]["corrected"], candidate=scores,
                   control_counts=control["counts"], candidate_counts=video["counts"], marks=rows)
-    output = Path(f"reports/training/tracking-occupants-v{version+1}")
+    output = Path("reports/training") / (candidate_run or f"tracking-occupants-v{version+1}")
     output.mkdir(parents=True, exist_ok=True)
     if extra_frames is not None:
         for row in extra_frames["rows"]:

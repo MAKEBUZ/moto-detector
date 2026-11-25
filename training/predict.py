@@ -58,6 +58,7 @@ def load_model(run_name, checkpoint_name='best.pt'):
                "project_consistency": "runs/joint-clean640-01/best.pt",
                "joint_multiscale_transfer": "runs/joint-clean640-01/best.pt"}
     parents["joint_context_transfer"] = "runs/joint-multiscale-02/best.pt"
+    parents["crowded_rider_transfer"] = "runs/joint-occupant-negatives-11/best.pt"
     parents["occupant_region_transfer"] = "runs/joint-reviewed-08-10/best.pt"
     if config.get("parent_run") in ("joint-occupants-04","joint-multiscale-02"):
         parents["joint_lowrate_transfer"]=f"runs/{config['parent_run']}/best.pt"
