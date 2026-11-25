@@ -70,6 +70,55 @@ class RiderContinuityTests(unittest.TestCase):
         self.assertEqual(tracker.count(), 1)
         self.assertEqual(tracker.state(1), "indeterminado")
 
+    def test_consensus_requires_spaced_detections_and_respects_bare_evidence(self):
+        tracker = RiderTracks()
+        for frame in range(1, 31):
+            tracker.update([self.rider(1, [0, 0, 40, 120])], frame)
+        track = tracker.items[1]
+        track["consensus_frames"] = [1, 2, 3, 4, 5, 6]
+        self.assertEqual(tracker.state(1), "indeterminado")
+        track["consensus_frames"][-1] = 15
+        self.assertEqual(tracker.state(1), "con_casco")
+        self.assertEqual(tracker.detector_state(1), "indeterminado")
+        track["last_context_bare"] = 13
+        self.assertEqual(tracker.state(1), "indeterminado")
+
+    def test_consensus_rejects_ambiguous_crop_and_low_classifier_score(self):
+        from video_head_consensus import agreed_head
+
+        box = [14, 10, 34, 28]
+        body = [0, 0, 60, 100]
+        verifier = type("Verifier", (), {"head_model": None})()
+        with patch("video_head_consensus.helmet_candidates", side_effect=[[box], [box, box]]):
+            self.assertIsNone(agreed_head(None, body, None, verifier))
+        with patch("video_head_consensus.helmet_candidates", side_effect=[[box], [box]]), \
+                patch("video_head_consensus.verify", return_value=.6):
+            self.assertIsNone(agreed_head(None, body, None, verifier))
+
+    def test_reacquiring_a_lost_torso_requires_the_same_helmet_in_current_pixels(self):
+        import numpy as np
+        from PIL import Image
+        from types import SimpleNamespace
+        from video_head_consensus import VideoHeadConsensus
+
+        tracker = RiderTracks()
+        body, head = [0, 0, 35, 90], [7, 7, 26, 29]
+        rider = self.rider(1, body, head, "con_casco", True)
+        for frame in range(1, 4):
+            tracker.update([rider], frame)
+        edges = SimpleNamespace(previous=np.zeros((100, 100), np.uint8),
+                                anchors={1: dict(outline=[0, 0, 1, 1], frame=3)})
+        search = VideoHeadConsensus(None, SimpleNamespace(head_model=None), edges, 30)
+        with patch("video_head_consensus.visible_pair", return_value=(body, head)), \
+                patch("video_head_consensus.redetect", return_value=True), \
+                patch("video_head_consensus.verify", return_value=.2), \
+                patch("video_head_consensus.agreed_head", side_effect=[[60, 30, 90, 50], head]):
+            for frame in (4, 5):
+                people, ids = [], {}
+                search.refine(Image.new("RGB", (100, 100)), people, ids, tracker, frame)
+                self.assertEqual(list(ids.values()), [] if frame == 4 else [1])
+        self.assertEqual(tracker.items[1]["hits"], 3)
+
     def test_partial_rider_keeps_id_without_new_votes_and_stops_at_cut(self):
         import numpy as np
         from PIL import Image

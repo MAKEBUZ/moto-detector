@@ -76,7 +76,7 @@ def same_features(gray, region, anchor):
     return len(scores) >= 3 and (np.median(scores) >= .80 or np.count_nonzero(np.asarray(scores) >= .85) >= 6)
 
 
-def visible_pair(gray, anchor, scale, bounds):
+def visible_pair(gray, anchor, scale, bounds, *, require_edge=True):
     face = anchor["face"]["box"]
     size = face[2:] - face[:2]
     initial = anchor["initial"]
@@ -85,7 +85,7 @@ def visible_pair(gray, anchor, scale, bounds):
     position = np.tile(face[:2], 2)
     body = position + (anchor["body"] - origin) * magnification
     clipped = np.clip(body, 0, bounds)
-    if np.array_equal(body, clipped) or min(clipped[2:] - clipped[:2]) < 8:
+    if (require_edge and np.array_equal(body, clipped)) or min(clipped[2:] - clipped[:2]) < 8:
         return None
     # Independent motion and appearance checks on the head and upper body.
     expected = position + (anchor["torso_origin"] - origin) * magnification
@@ -125,7 +125,7 @@ class EdgeRiders:
                 if current[key]["estado"] == "sin_casco":
                     del self.anchors[key]
                 continue
-            if tracker.state(key) != "con_casco" or anchor["outline"] is None:
+            if tracker.detector_state(key) != "con_casco" or anchor["outline"] is None:
                 continue
             boxes = visible_pair(gray, anchor, scale, bounds)
             if boxes is None:

@@ -127,9 +127,11 @@ def main():
     print(totals, video["counts"], flush=True)
 
 
-def evaluate_temporal(control_path, motion=False, edge=False):
+def evaluate_temporal(control_path, motion=False, edge=False, consensus=False):
     control = read(control_path)
-    if edge:
+    if consensus:
+        version, source = 7, "rider_consensus"
+    elif edge:
         version, source = 6, "edge_flow"
     elif motion:
         version, source = 5, "helmet_flow"
@@ -142,12 +144,13 @@ def evaluate_temporal(control_path, motion=False, edge=False):
     assert control["tracking_version"] == version and baseline["source"] == Path(control["source"]).name
     assert control["run"] == baseline.get("run", baseline.get("model"))
     assert control["counts"] == baseline.get("corrected_counts", baseline.get("candidate_counts"))
-    stream = Stream(control["source"], control["run"], motion_check=motion or edge, edge_check=edge)
+    stream = Stream(control["source"], control["run"], motion_check=version >= 5,
+                    edge_check=version >= 6, consensus_check=consensus)
     rows = []
     added = []
-    extra_frames = read(reference_dir / "additional-frames.json") if motion or edge else None
+    extra_frames = read(reference_dir / "additional-frames.json") if version >= 5 else None
     try:
-        search = {4: stream.temporal_heads, 5: stream.motion_heads, 6: stream.edge_riders}[version]
+        search = {4: stream.temporal_heads, 5: stream.motion_heads, 6: stream.edge_riders, 7: stream.rider_heads}[version]
         refine = search.refine
 
         def capture(image, people, ids, tracker, frame):
@@ -156,7 +159,7 @@ def evaluate_temporal(control_path, motion=False, edge=False):
                 for head in rider["cabezas"]:
                     if head.get("source") == source:
                         evidence = dict(frame=frame, key=ids[rider["id"]], box=head["box"], seed_frame=head["seed_frame"])
-                        if edge:
+                        if version >= 6:
                             evidence["body"] = rider["box"]
                         else:
                             evidence["score"] = head["score"]
@@ -179,7 +182,8 @@ def evaluate_temporal(control_path, motion=False, edge=False):
 
         search.refine = capture
         while stream.next() is not None:
-            pass
+            if stream.frames % 250 == 0:
+                print(f"{stream.frames} frames", flush=True)
         with TemporaryDirectory() as tmp:
             video = read(stream.save(Path(tmp), "completo") / "video.json")
     finally:
@@ -197,11 +201,14 @@ def evaluate_temporal(control_path, motion=False, edge=False):
                   false_final=sum(r["confirmed"] for r in false_people),
                   distinct_confirmed_helmet_tracks=len({r["track"] for r in helmets if r["final_state"] == "con_casco"}))
     report = dict(model=control["run"], source=baseline["source"], frames=video["frames"],
-                  control=baseline["candidate"] if motion or edge else baseline["totals"]["corrected"], candidate=scores,
+                  control=baseline["candidate"] if version >= 5 else baseline["totals"]["corrected"], candidate=scores,
                   control_counts=control["counts"], candidate_counts=video["counts"], marks=rows)
     output = Path(f"reports/training/tracking-occupants-v{version+1}")
     output.mkdir(parents=True, exist_ok=True)
     if extra_frames is not None:
+        for row in extra_frames["rows"]:
+            key = row[label]["track"]
+            row[label]["final_state"] = stream.people.state(key) if stream.people.confirmed(key) else None
         matches = [r[label]["track"] for r in extra_frames["rows"] if r[label]["track"] is not None]
         extra_frames["scores"][label] = dict(visible=len(extra_frames["rows"]), at_frame=len(matches),
             final=sum(stream.people.confirmed(k) and stream.people.state(k) == "con_casco" for k in matches))
@@ -218,8 +225,11 @@ if __name__ == "__main__":
     modes.add_argument("--temporal", type=Path, metavar="VIDEO_JSON", help="compare with a saved v4 video report")
     modes.add_argument("--motion", type=Path, metavar="VIDEO_JSON", help="compare with a saved v5 video report")
     modes.add_argument("--edge", type=Path, metavar="VIDEO_JSON", help="compare with a saved v6 video report")
+    modes.add_argument("--consensus", type=Path, metavar="VIDEO_JSON", help="compare with a saved v7 video report")
     args = parser.parse_args()
-    if args.edge:
+    if args.consensus:
+        evaluate_temporal(args.consensus, consensus=True)
+    elif args.edge:
         evaluate_temporal(args.edge, edge=True)
     elif args.motion:
         evaluate_temporal(args.motion, motion=True)

@@ -102,6 +102,8 @@ class Tracks:
                 row["reasociaciones_por_movimiento"] = t["flow_returns"]
             if t.get("edge_returns"):
                 row["reapariciones_parciales_en_borde"] = t["edge_returns"]
+            if t.get("consensus_frames"):
+                row["fotogramas_con_doble_localizacion"] = t["consensus_frames"]
             if "first_context_bare" in t:
                 row["intervalo_sin_casco_relocalizado"] = [t["first_context_bare"], t["last_context_bare"]]
             if row["estado"] == "indeterminado":
@@ -183,6 +185,16 @@ class RiderTracks(Tracks):
         super().observe(track, obj, frame)
 
     def state(self, key):
+        state = self.detector_state(key)
+        track = self.items[key]
+        checks = track.get("consensus_frames", [])
+        if (state == "indeterminado" and "last_context_bare" not in track
+                and len(checks) >= max(6, 2*track["votes"]["sin_casco"], .15*track["hits"])
+                and checks[-1]-checks[0] >= 10):
+            return "con_casco"
+        return state
+
+    def detector_state(self, key):
         state = super().state(key)
         track = self.items[key]
         if state == "sin_casco" and track["last_bare"] - track["first_bare"] < 5:
@@ -223,7 +235,7 @@ PHOTO_RUN = "joint-multiscale-02"
 
 
 class Stream:
-    def __init__(self, source, run, *, motion_check=True, edge_check=True):
+    def __init__(self, source, run, *, motion_check=True, edge_check=True, consensus_check=True):
         import cv2
         self.cv = cv2
         self.model = load_model(run)
@@ -240,6 +252,7 @@ class Stream:
         self.temporal_heads = None
         self.motion_heads = None
         self.edge_riders = None
+        self.rider_heads = None
         if not isinstance(source, int) and run != RAIN_VIDEO_RUN:
             width = self.cap.get(cv2.CAP_PROP_FRAME_WIDTH)
             height = self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
@@ -256,6 +269,10 @@ class Stream:
                             if edge_check:
                                 from edge_riders import EdgeRiders
                                 self.edge_riders = EdgeRiders(self.cap.get(cv2.CAP_PROP_FPS))
+                                if consensus_check:
+                                    from video_head_consensus import VideoHeadConsensus
+                                    self.rider_heads = VideoHeadConsensus(self.model, self.wide_heads, self.edge_riders,
+                                                                         self.cap.get(cv2.CAP_PROP_FPS))
                 except Exception:
                     self.cap.release()
                     raise
@@ -266,6 +283,8 @@ class Stream:
 
     @property
     def tracking_version(self):
+        if self.rider_heads is not None:
+            return 8
         if self.edge_riders is not None:
             return 7
         if self.motion_heads is not None:
@@ -300,6 +319,8 @@ class Stream:
             self.motion_heads.refine(image, assoc["ocupantes"], people, self.people, self.frames)
         if self.edge_riders is not None:
             self.edge_riders.refine(image, assoc["ocupantes"], people, self.people, self.frames)
+        if self.rider_heads is not None:
+            self.rider_heads.refine(image, assoc["ocupantes"], people, self.people, self.frames)
         assoc["ocupantes"] = [p for p in assoc["ocupantes"] if p["id"] in people]
         for bike in assoc["motos"]:
             bike["id"] = bikes[bike["id"]]
