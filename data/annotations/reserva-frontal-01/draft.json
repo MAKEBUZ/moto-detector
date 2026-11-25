@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "batch_id": "reserva-frontal-01",
+  "provenance": "existing_source_annotations_only; no model-generated labels",
+  "human_reviewed": false,
+  "training_ready": false,
+  "held_out_usage": "Original test only; preserve groups and splits.",
+  "excluded_prior_batch_ids": [
+    "ocupantes-solapados-01",
+    "relations-pilot-v2",
+    "test-separate-v2-01",
+    "test-separate-v2-02",
+    "train-hard-negatives-v2-01",
+    "train-separate-v2-01",
+    "train-separate-v2-02",
+    "train-separate-v2-03",
+    "train-separate-v2-04",
+    "train-separate-v2-05",
+    "train-separate-v2-06",
+    "train-separate-v2-07",
+    "train-separate-v2-08",
+    "val-separate-v2-01",
+    "visores-frontales-01"
+  ],
+  "scenes": [
+    {
+      "image_id": "Image_00354",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00354.jpg",
+      "sha256": "5cbd9e6cdfecfefbda3bd43590a9b6dc3f887382fb78dc0ff95e21ef64f0ab88",
+      "width": 481,
+      "height": 667,
+      "split": "test",
+      "group_id": "b594d2f7dbb39393555c",
+      "selection_reason": "Prueba reservada: revisar todos los ocupantes y sus cabezas",
+      "selection_features": {
+        "min_head_side_at_640": 59.49025487256372,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "EVALUACIÓN TEST: no trasladar a entrenamiento. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": null,
+          "context_bbox": [
+            56.0,
+            60.0,
+            381.0,
+            595.0
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            239.0,
+            63.0,
+            301.0,
+            140.0
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "NoHelmet"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": null,
+          "role": "unknown",
+          "review_status": "pending"
+        },
+        {
+          "id": "h1",
+          "kind": "head",
+          "bbox": [
+            188.0,
+            68.0,
+            265.0,
+            155.0
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 2,
+            "class": "NoHelmet"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "o1",
+          "kind": "occupant",
+          "bbox": null,
+          "role": "unknown",
+          "review_status": "pending"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": null,
+          "status": "pending"
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": null,
+          "status": "pending"
+        }
+      ],
+      "reviewed": false,
+      "annotation_complete": false
+    },
+    {
+      "image_id": "Image_02025",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02025.jpg",
+      "sha256": "83a2f2a21bc451310793c870aae0ca22c0fd06eb1780fcecd45f7c159a400885",
+      "width": 546,
+      "height": 763,
+      "split": "test",
+      "group_id": "a32338de6852eb545d0a",
+      "selection_reason": "Prueba reservada: revisar todos los ocupantes y sus cabezas",
+      "selection_features": {
+        "min_head_side_at_640": 74.6526867627785,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "EVALUACIÓN TEST: no trasladar a entrenamiento. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": null,
+          "context_bbox": [
+            38.0,
+            25.0,
+            499.0,
+            717.0
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            180.0,
+            55.0,
+            270.0,
+            159.0
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "NoHelmet"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": null,
+          "role": "unknown",
+          "review_status": "pending"
+        },
+        {
+          "id": "h1",
+          "kind": "head",
+          "bbox": [
+            96.0,
+            35.0,
+            185.0,
+            130.0
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 2,
+            "class": "NoHelmet"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "o1",
+          "kind": "occupant",
+          "bbox": null,
+          "role": "unknown",
+          "review_status": "pending"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": null,
+          "status": "pending"
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": null,
+          "status": "pending"
+        }
+      ],
+      "reviewed": false,
+      "annotation_complete": false
+    },
+    {
+      "image_id": "Image_01598",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01598.jpg",
+      "sha256": "d0194ac619f7855a03205aae1a655a453c356f3e0237ca80b7e71a02b79691fd",
+      "width": 873,
+      "height": 1940,
+      "split": "test",
+      "group_id": "621177863f97db963989",
+      "selection_reason": "Prueba reservada: revisar todos los ocupantes y sus cabezas",
+      "selection_features": {
+        "min_head_side_at_640": 93.03092783505154,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "EVALUACIÓN TEST: no trasladar a entrenamiento. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": null,
+          "context_bbox": [
+            33.0,
+            43.0,
+            831.0,
+            1897.0
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            260.0,
+            45.0,
+            542.0,
+            358.0
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": null,
+          "role": "unknown",
+          "review_status": "pending"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": null,
+          "status": "pending"
+        }
+      ],
+      "reviewed": false,
+      "annotation_complete": false
+    },
+    {
+      "image_id": "Image_02385",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02385.jpg",
+      "sha256": "9dee119c27ea5abe718032055ec1f035c0539bbeb115c29dd6801b6753c9fd91",
+      "width": 1773,
+      "height": 2431,
+      "split": "test",
+      "group_id": "047db2aac5b7666d4ae7",
+      "selection_reason": "Prueba reservada: revisar todos los ocupantes y sus cabezas",
+      "selection_features": {
+        "min_head_side_at_640": 112.94117647058823,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "EVALUACIÓN TEST: no trasladar a entrenamiento. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            472.0,
+            44.0,
+            901.0,
+            484.0
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "Helmet"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": null,
+          "role": "unknown",
+          "review_status": "pending"
+        },
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": null,
+          "context_bbox": [
+            42.0,
+            33.0,
+            1600.0,
+            2369.0
+          ],
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "BikeWithRider"
+          },
+          "review_status": "pending"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": null,
+          "status": "pending"
+        }
+      ],
+      "reviewed": false,
+      "annotation_complete": false
+    },
+    {
+      "image_id": "Image_00017",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00017.jpg",
+      "sha256": "8e9929c7ae0315224963ed06e20ce600710c68b9689b7b8799cf666b28979e99",
+      "width": 1301,
+      "height": 1146,
+      "split": "test",
+      "group_id": "408512536fb76b872297",
+      "selection_reason": "Prueba reservada: revisar todos los ocupantes y sus cabezas",
+      "selection_features": {
+        "min_head_side_at_640": 86.08762490392006,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "EVALUACIÓN TEST: no trasladar a entrenamiento. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": null,
+          "context_bbox": [
+            77.0,
+            72.0,
+            1251.0,
+            1113.0
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            409.0,
+            90.0,
+            592.0,
+            288.0
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "NoHelmet"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": null,
+          "role": "unknown",
+          "review_status": "pending"
+        },
+        {
+          "id": "h1",
+          "kind": "head",
+          "bbox": [
+            148.0,
+            100.0,
+            323.0,
+            303.0
+          ],
+          "helmet": "sin_casco",
+          "origin": {
+            "source_annotation_index": 2,
+            "class": "NoHelmet"
+          },
+          "review_status": "pending"
+        },
+        {
+          "id": "o1",
+          "kind": "occupant",
+          "bbox": null,
+          "role": "unknown",
+          "review_status": "pending"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": null,
+          "status": "pending"
+        },
+        {
+          "head_id": "h1",
+          "person_id": "o1",
+          "motorcycle_id": null,
+          "status": "pending"
+        }
+      ],
+      "reviewed": false,
+      "annotation_complete": false
+    }
+  ],
+  "selection_file": "data\\annotations\\reserva-frontal-01\\selection.json",
+  "selection_sha256": "2948d34ac4a457974ea41d7316747bb481c23e7668fcb8a9f496176795e30756"
+}

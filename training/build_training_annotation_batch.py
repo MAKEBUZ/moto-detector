@@ -21,8 +21,8 @@ def main():
     args = parser.parse_args()
     if args.reuse_train_groups and args.split != 'train':
         parser.error('Group reuse applies only to training')
-    if args.selection_file and (args.split != 'train' or args.focus_heads or args.focus_nohelmet):
-        raise ValueError('Explicit selection requires train without other focus flags')
+    if args.selection_file and (args.focus_heads or args.focus_nohelmet):
+        raise ValueError('Explicit selection cannot combine with other focus flags')
     if args.focus_nohelmet and (args.split != 'train' or args.focus_heads):
         raise ValueError('NoHelmet focus requires train and cannot combine with focus-heads')
     if Path(args.batch_id).name != args.batch_id or args.per_stratum < 1:
@@ -39,6 +39,10 @@ def main():
     if args.reuse_train_groups:
         excluded_groups = {s['group_id'] for b in previous for s in b['scenes'] if s['split'] != 'train'}
         excluded_groups.update(r['groupId'] for r in decisions.values() if r.get('split') in ('val','test'))
+    if args.split == "test" and args.selection_file:
+        # Existing test groups may supply new images, but never borrow a training or validation group.
+        excluded_groups = {s["group_id"] for b in previous for s in b["scenes"] if s["split"] != "test"}
+        excluded_groups.update(r["groupId"] for r in decisions.values() if r.get("split") in ("train", "val"))
     candidates = []
     for raw in originals:
         d = decisions.get(raw['image'], {})
