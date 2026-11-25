@@ -8,9 +8,9 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from PIL import Image, ImageTk
 from predict import predict
+from traffic_video import DEFAULT_VIDEO_RUN, PHOTO_RUN, RAIN_VIDEO_RUN, statistics_window, video_window
 
 ROOT = Path(__file__).resolve().parents[1]
-RUN = 'detector-gpu-deterministic1950-s20261124-r1'
 
 
 def analyze(path):
@@ -19,7 +19,7 @@ def analyze(path):
     with TemporaryDirectory(dir=directory) as temporary:
         folder = Path(temporary) / 'resultado'
         folder.mkdir()
-        result = predict(RUN, path, folder/'foto', .5, 'last.pt')
+        result = predict(PHOTO_RUN, path, folder/'foto', .5, 'best.pt')
         destination = directory / uuid4().hex
         folder.rename(destination)
     return result, destination
@@ -47,13 +47,21 @@ def main():
             lines = [f"Motos: {c['motos']}   Ocupantes: {c['ocupantes']}   Con casco: {c['con_casco']}   Sin casco: {c['sin_casco']}   Indeterminados: {c['indeterminado']}"]
             for rider in result['association']['ocupantes']:
                 moto = rider['moto'] or 'sin asignar'
-                lines.append(f"Persona {rider['id']} · Moto {moto} · {rider['estado'].replace('_',' ')}")
+                detalle = " (confirmado en dos vistas)" if any(h.get("source") in ("padded_consensus","upper_body_consensus") for h in rider["cabezas"]) else ""
+                lines.append(f"Persona {rider['id']} · Moto {moto} · {rider['estado'].replace('_',' ')}{detalle}")
             lines.append(f'Guardado en {folder}')
             status.set('\n'.join(lines))
         except Exception as error:
             status.set('No se pudo analizar la foto.')
             messagebox.showerror('Error de análisis', str(error))
     ttk.Button(window,text='Cargar foto',command=choose).pack(pady=8)
+    rain = tk.BooleanVar(value=False)
+    ttk.Checkbutton(window, text="Video de frente con lluvia (experimental)", variable=rain).pack()
+    def video_run(default=DEFAULT_VIDEO_RUN):
+        return RAIN_VIDEO_RUN if rain.get() else default
+    ttk.Button(window,text="Cargar video",command=lambda: video_window(window, ROOT, video_run())).pack()
+    ttk.Button(window,text="Usar cámara",command=lambda: video_window(window, ROOT, video_run(PHOTO_RUN), camera=True)).pack()
+    ttk.Button(window,text="Consultar estadísticas",command=lambda: statistics_window(window, ROOT, video_run())).pack()
     preview.pack()
     ttk.Label(window,textvariable=status,justify='left',wraplength=800).pack(padx=12,pady=8)
     window.mainloop()

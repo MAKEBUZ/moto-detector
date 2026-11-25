@@ -189,6 +189,8 @@ class RiderTracks(Tracks):
 
 
 RAIN_VIDEO_RUN = "joint-rain-rider-09"
+DEFAULT_VIDEO_RUN = "joint-occupant-negatives-11"
+PHOTO_RUN = "joint-multiscale-02"
 
 
 class Stream:
@@ -292,7 +294,7 @@ def video_window(parent, root, run, camera=False):
         messagebox.showerror("Video", str(error), parent=parent)
         return
     win = tk.Toplevel(parent)
-    win.title("Conteo de motociclistas")
+    win.title(f"Conteo de motociclistas · {run}")
     preview = ttk.Label(win)
     preview.pack()
     note = tk.StringVar()
@@ -366,8 +368,12 @@ def query(root, run, question):
             continue
         for path in (root/"reports").glob(pattern):
             data = json.loads(path.read_text(encoding="utf-8-sig"))
-            selected_run = "joint-multiscale-02" if kind == "foto" and run == RAIN_VIDEO_RUN else run
-            if data.get("run") != selected_run:
+            selected_runs = {run}
+            if kind == "foto" and run in (RAIN_VIDEO_RUN, DEFAULT_VIDEO_RUN):
+                selected_runs = {PHOTO_RUN}
+            elif kind == "video" and run == DEFAULT_VIDEO_RUN:
+                selected_runs.add(PHOTO_RUN)  # Earlier general videos and camera recordings.
+            if data.get("run") not in selected_runs:
                 continue
             date = datetime.fromisoformat(data["timestamp"]) if "timestamp" in data else datetime.fromtimestamp(path.stat().st_mtime)
             if "hoy" in q and date.date()!=datetime.now().date():
@@ -380,7 +386,7 @@ def query(root, run, question):
     return f"{files} análisis guardados · {values}"
 
 
-def statistics_window(parent,root,run="joint-multiscale-02"):
+def statistics_window(parent,root,run=DEFAULT_VIDEO_RUN):
     win=tk.Toplevel(parent)
     win.title("Asistente de estadísticas")
     ttk.Label(win,text="Ejemplo: ¿Cuántos ocupantes sin casco hubo hoy en videos?").pack(padx=12,pady=6)
