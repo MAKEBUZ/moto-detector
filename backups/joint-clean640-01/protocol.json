@@ -1,0 +1,7 @@
+{
+  "parent": "runs/detector-clean-full-01/last.pt",
+  "epochs": 12,
+  "primary": 73,
+  "auxiliary": 1627,
+  "selection": "highest validation four-class mAP50"
+}
