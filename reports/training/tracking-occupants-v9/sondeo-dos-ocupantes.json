@@ -1,0 +1,152 @@
+{
+  "frame": 450,
+  "casco_delantero": [
+    2116.542110621929,
+    543.4626168012619,
+    2367.8468239307404,
+    814.6762491464615
+  ],
+  "iou_referencia": 0.47537119362695773,
+  "score_especialista": 0.42479804158210754,
+  "casco_asociado_en_v8": [
+    2202.4240112304688,
+    429.544921875,
+    2430.301025390625,
+    644.9865112304688
+  ],
+  "caja_compartida": [
+    1986.0941162109375,
+    413.1902160644531,
+    2594.96142578125,
+    1378.7674560546875
+  ],
+  "propuestas": [
+    {
+      "factor": 1.4,
+      "score": 0.9692333340644836,
+      "box": [
+        2035.9569091796875,
+        516.0,
+        2572.885009765625,
+        1347.6624755859375
+      ],
+      "iou_caja_compartida": 0.7595450940453148,
+      "admite_casco_pasajero": true
+    },
+    {
+      "factor": 2.2,
+      "score": 0.9890714883804321,
+      "box": [
+        2019.0971374511719,
+        518.7406930923462,
+        2607.5922241210938,
+        1236.7315673828125
+      ],
+      "iou_caja_compartida": 0.6925981327082914,
+      "admite_casco_pasajero": true
+    },
+    {
+      "factor": 3.0,
+      "score": 0.983248233795166,
+      "box": [
+        1995.537109375,
+        526.805290222168,
+        2606.482666015625,
+        1389.4144897460938
+      ],
+      "iou_caja_compartida": 0.8451877985187255,
+      "admite_casco_pasajero": true
+    }
+  ],
+  "recortes_desde_casco_pasajero": [
+    {
+      "corte": 0.4,
+      "margen": 0.25,
+      "persona": 0.9834145903587341,
+      "iou_cuerpo_compartido": 0.6965015853547415,
+      "admite_casco_pasajero": true,
+      "cascos": []
+    },
+    {
+      "corte": 0.4,
+      "margen": 0.65,
+      "persona": 0.9902051687240601,
+      "iou_cuerpo_compartido": 0.8510791929822646,
+      "admite_casco_pasajero": true,
+      "cascos": [
+        {
+          "score": 0.41873568296432495,
+          "iou_manual": 0.0,
+          "overlap_passenger": 0.0,
+          "p_helmet": 0.9956900477409363
+        },
+        {
+          "score": 0.4080405831336975,
+          "iou_manual": 0.1557189401739521,
+          "overlap_passenger": 0.08600039888089925,
+          "p_helmet": 0.6378566026687622
+        }
+      ]
+    },
+    {
+      "corte": 0.65,
+      "margen": 0.25,
+      "persona": 0.9511979222297668,
+      "iou_cuerpo_compartido": 0.7675791112109364,
+      "admite_casco_pasajero": true,
+      "cascos": [
+        {
+          "score": 0.610776424407959,
+          "iou_manual": 0.14418806806747791,
+          "overlap_passenger": 0.11159975506027467,
+          "p_helmet": 0.9931262731552124
+        }
+      ]
+    },
+    {
+      "corte": 0.65,
+      "margen": 0.65,
+      "persona": 0.9590842127799988,
+      "iou_cuerpo_compartido": 0.5417506308818314,
+      "admite_casco_pasajero": true,
+      "cascos": [
+        {
+          "score": 0.46861332654953003,
+          "iou_manual": 0.0,
+          "overlap_passenger": 0.0,
+          "p_helmet": 0.9277543425559998
+        }
+      ]
+    },
+    {
+      "corte": 0.9,
+      "margen": 0.25,
+      "persona": 0.9656503200531006,
+      "iou_cuerpo_compartido": 0.5387105520230691,
+      "admite_casco_pasajero": true,
+      "cascos": [
+        {
+          "score": 0.5225606560707092,
+          "iou_manual": 0.0,
+          "overlap_passenger": 0.0,
+          "p_helmet": 0.7417452931404114
+        }
+      ]
+    },
+    {
+      "corte": 0.9,
+      "margen": 0.65,
+      "persona": 0.9659456014633179,
+      "iou_cuerpo_compartido": 0.5423054210136117,
+      "admite_casco_pasajero": true,
+      "cascos": [
+        {
+          "score": 0.5355750918388367,
+          "iou_manual": 0.0,
+          "overlap_passenger": 0.0,
+          "p_helmet": 0.6825506091117859
+        }
+      ]
+    }
+  ]
+}

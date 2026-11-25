@@ -1,0 +1,126 @@
+{
+  "diagnostico": "Clasificación del mismo motorista central en fotogramas próximos al 1350 con caja de persona de v8.",
+  "criterio": "Dos detectores locales con puntuación >=0,65, IoU mutua >=0,55 y probabilidad de la misma clase >0,92 en el recorte original y su reflejo. Máximo una concordancia por fotograma.",
+  "fotogramas_evaluados": [
+    1276,
+    1284,
+    1286,
+    1288,
+    1290,
+    1292,
+    1294,
+    1298,
+    1300,
+    1302,
+    1304,
+    1306,
+    1308,
+    1310,
+    1312,
+    1314,
+    1316,
+    1318,
+    1320,
+    1322,
+    1324,
+    1326,
+    1328,
+    1330,
+    1332,
+    1334,
+    1336,
+    1338,
+    1340,
+    1342,
+    1344,
+    1350,
+    1352,
+    1354,
+    1356,
+    1358,
+    1360,
+    1362,
+    1368,
+    1370,
+    1372,
+    1374,
+    1376,
+    1378,
+    1380,
+    1382,
+    1384,
+    1386,
+    1388,
+    1390,
+    1392,
+    1394
+  ],
+  "concordancias": [
+    {
+      "frame": 1314,
+      "clase": "sin_casco",
+      "probabilidad_minima_redondeada": 1.0,
+      "caja_en_640x360": [
+        346,
+        0,
+        379,
+        30
+      ]
+    },
+    {
+      "frame": 1322,
+      "clase": "con_casco",
+      "probabilidad_minima_redondeada": 0.97,
+      "caja_en_640x360": [
+        330,
+        8,
+        369,
+        44
+      ]
+    },
+    {
+      "frame": 1328,
+      "clase": "sin_casco",
+      "probabilidad_minima_redondeada": 0.94,
+      "caja_en_640x360": [
+        316,
+        17,
+        359,
+        73
+      ]
+    },
+    {
+      "frame": 1342,
+      "clase": "con_casco",
+      "probabilidad_minima_redondeada": 0.97,
+      "caja_en_640x360": [
+        285,
+        44,
+        324,
+        79
+      ]
+    },
+    {
+      "frame": 1376,
+      "clase": "sin_casco",
+      "probabilidad_minima_redondeada": 0.95,
+      "caja_en_640x360": [
+        178,
+        111,
+        225,
+        162
+      ]
+    },
+    {
+      "frame": 1388,
+      "clase": "sin_casco",
+      "probabilidad_minima_redondeada": 0.95,
+      "caja_en_640x360": [
+        134,
+        136,
+        184,
+        191
+      ]
+    }
+  ]
+}
