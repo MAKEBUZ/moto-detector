@@ -1,0 +1,694 @@
+{
+  "schema_version": 1,
+  "batch_id": "visores-frontales-01",
+  "provenance": "existing_source_annotations_only; no model-generated labels",
+  "human_reviewed": true,
+  "training_ready": false,
+  "held_out_usage": "Original train only; preserve groups and splits.",
+  "excluded_prior_batch_ids": [
+    "ocupantes-solapados-01",
+    "relations-pilot-v2",
+    "test-separate-v2-01",
+    "test-separate-v2-02",
+    "train-hard-negatives-v2-01",
+    "train-separate-v2-01",
+    "train-separate-v2-02",
+    "train-separate-v2-03",
+    "train-separate-v2-04",
+    "train-separate-v2-05",
+    "train-separate-v2-06",
+    "train-separate-v2-07",
+    "train-separate-v2-08",
+    "val-separate-v2-01"
+  ],
+  "scenes": [
+    {
+      "image_id": "Image_02073",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_02073.jpg",
+      "sha256": "6ce73c983015205b760301ea220810ad3561ea00cb19eddff448195b3e94d50b",
+      "width": 473,
+      "height": 772,
+      "split": "train",
+      "group_id": "d0061eb8d949e6ce711c",
+      "selection_reason": "Revisar casco, visor y frontal de la moto",
+      "selection_features": {
+        "min_head_side_at_640": 84.55958549222797,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            48.49,
+            257.14,
+            426.19,
+            730.14
+          ],
+          "context_bbox": [
+            49,
+            52,
+            421,
+            733
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            167,
+            51,
+            269,
+            185
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            66.04,
+            32.82,
+            407.66,
+            722.34
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "frontal_negativo": [
+        225,
+        313,
+        380,
+        461
+      ]
+    },
+    {
+      "image_id": "Image_01835",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01835.jpg",
+      "sha256": "eb0b6d76d184ba4d45a5c2e6d18d39480f306b241f2e4c6d0951c5c524c8c601",
+      "width": 612,
+      "height": 1146,
+      "split": "train",
+      "group_id": "0bae35dbad225c034c18",
+      "selection_reason": "Revisar casco, visor y frontal de la moto",
+      "selection_features": {
+        "min_head_side_at_640": 111.13438045375219,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            30.28,
+            328.92,
+            568.74,
+            1115.06
+          ],
+          "context_bbox": [
+            35,
+            42,
+            565,
+            1110
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            132,
+            47,
+            331,
+            253
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            60.21,
+            51.3,
+            543.86,
+            944.71
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "frontal_negativo": [
+        228,
+        444,
+        464,
+        643
+      ]
+    },
+    {
+      "image_id": "Image_01923",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01923.jpg",
+      "sha256": "f8fb0d639ab78f3bb392f0940e093545e16514df15a2e67d1cc12da195e99ebb",
+      "width": 314,
+      "height": 450,
+      "split": "train",
+      "group_id": "e6a8bd2a990c3703daa2",
+      "selection_reason": "Revisar casco, visor y frontal de la moto",
+      "selection_features": {
+        "min_head_side_at_640": 72,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            38.02,
+            140.27,
+            264.8,
+            408.95
+          ],
+          "context_bbox": [
+            42,
+            41,
+            263,
+            407
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            91,
+            42,
+            163,
+            117
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            59.38,
+            38.62,
+            231.78,
+            344.21
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "frontal_negativo": [
+        141,
+        134,
+        213,
+        191
+      ]
+    },
+    {
+      "image_id": "Image_01220",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01220.jpg",
+      "sha256": "c5642970542fa5f51a743277508b6567e57441391e595b683c4e0b8f9bcaf97c",
+      "width": 351,
+      "height": 587,
+      "split": "train",
+      "group_id": "2b409007c70b37c5680b",
+      "selection_reason": "Revisar casco, visor y frontal de la moto",
+      "selection_features": {
+        "min_head_side_at_640": 88,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            41.05,
+            158.97,
+            303.96,
+            543.98
+          ],
+          "context_bbox": [
+            41,
+            45,
+            305,
+            543
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            120,
+            46,
+            208,
+            144
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            61.31,
+            43.9,
+            286.59,
+            465.1
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "frontal_negativo": [
+        153,
+        184,
+        266,
+        262
+      ]
+    },
+    {
+      "image_id": "Image_00995",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00995.jpg",
+      "sha256": "22a33259daf3b5db1168e91568a163c532e60767e17ac8e10920ab7b2eaad19b",
+      "width": 726,
+      "height": 1613,
+      "split": "train",
+      "group_id": "7ec527f0a909ee76a661",
+      "selection_reason": "Revisar casco, visor y frontal de la moto",
+      "selection_features": {
+        "min_head_side_at_640": 71.02293862368258,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            353,
+            0,
+            532,
+            181
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            233.1,
+            3.98,
+            642.17,
+            770.24
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        },
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            144.78,
+            177.58,
+            726,
+            988.75
+          ],
+          "context_bbox": [
+            155,
+            0,
+            725,
+            988
+          ],
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "frontal_negativo": [
+        271,
+        209,
+        494,
+        380
+      ]
+    },
+    {
+      "image_id": "Image_01962",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_01962.jpg",
+      "sha256": "a6918b63c1a35137f9f05e470dfeccc73be1ec2ded5d9c1d98ef3599c3a0c83a",
+      "width": 224,
+      "height": 325,
+      "split": "train",
+      "group_id": "e5a27d7d427434ca208d",
+      "selection_reason": "Revisar casco, visor y frontal de la moto",
+      "selection_features": {
+        "min_head_side_at_640": 47,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            49.75,
+            104.68,
+            181.51,
+            280.19
+          ],
+          "context_bbox": [
+            52,
+            46,
+            179,
+            278
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            93,
+            47,
+            140,
+            94
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            68.69,
+            40.02,
+            175.04,
+            249.25
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "frontal_negativo": [
+        113,
+        135,
+        163,
+        177
+      ]
+    },
+    {
+      "image_id": "Image_00336",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00336.jpg",
+      "sha256": "cef8866a29d86af3894388d414f912b2ea3baf74efacd4b402a4514738776a5c",
+      "width": 228,
+      "height": 276,
+      "split": "train",
+      "group_id": "5b6cc8b33cbce1a2720d",
+      "selection_reason": "Revisar casco, visor y frontal de la moto",
+      "selection_features": {
+        "min_head_side_at_640": 37,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            38.89,
+            128.18,
+            158.89,
+            245.24
+          ],
+          "context_bbox": [
+            41,
+            53,
+            158,
+            245
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            81,
+            58,
+            123,
+            95
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            51.71,
+            60.48,
+            148.89,
+            224.55
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "frontal_negativo": [
+        55,
+        129,
+        103,
+        170
+      ]
+    },
+    {
+      "image_id": "Image_00517",
+      "image": "data/sources/originals/edgevision-v1/EdgeVision Dataset/EdgeVision-Dataset/images/Image_00517.jpg",
+      "sha256": "d3bf97d98ab75f1dc734ba9ac9afe5e8827ec633083b6e472e688e758f8adfde",
+      "width": 412,
+      "height": 580,
+      "split": "train",
+      "group_id": "8e48a65daa11993520fc",
+      "selection_reason": "Revisar casco, visor y frontal de la moto",
+      "selection_features": {
+        "min_head_side_at_640": 93,
+        "max_context_iou": 0,
+        "mixed_source_labels": false
+      },
+      "note": "ENTRENAMIENTO. Revisar etiquetas originales, dibujar moto y persona separadas y elegir la moto de cada ocupante. Si faltan entidades, no declarar cobertura completa; solicitar ampliar el lote.",
+      "entities": [
+        {
+          "id": "m0",
+          "kind": "motorcycle",
+          "bbox": [
+            56.92,
+            244.36,
+            340.4,
+            576.51
+          ],
+          "context_bbox": [
+            57,
+            49,
+            339,
+            580
+          ],
+          "origin": {
+            "source_annotation_index": 0,
+            "class": "BikeWithRider"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "h0",
+          "kind": "head",
+          "bbox": [
+            154,
+            50,
+            247,
+            158
+          ],
+          "helmet": "con_casco",
+          "origin": {
+            "source_annotation_index": 1,
+            "class": "Helmet"
+          },
+          "review_status": "confirmed"
+        },
+        {
+          "id": "o0",
+          "kind": "occupant",
+          "bbox": [
+            84.1,
+            56.62,
+            311.52,
+            520.44
+          ],
+          "role": "unknown",
+          "review_status": "confirmed"
+        }
+      ],
+      "links": [
+        {
+          "head_id": "h0",
+          "person_id": "o0",
+          "motorcycle_id": "m0",
+          "status": "confirmed"
+        }
+      ],
+      "reviewed": true,
+      "annotation_complete": true,
+      "frontal_negativo": [
+        103,
+        281,
+        218,
+        394
+      ]
+    }
+  ],
+  "selection_file": "data\\annotations\\visores-frontales-01\\selection.json",
+  "selection_sha256": "062d1e6bdc5331df6c31ac40fbd2f98584629fde3e7a657a457c4cd8435ea92b",
+  "reviewer": "Alejandro",
+  "reviewed_at": "2026-11-25T23:28:19.283Z"
+}
