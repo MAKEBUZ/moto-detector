@@ -1,0 +1,11 @@
+{
+  "native_strict_backward_error": "roi_align_backward_kernel does not have a deterministic implementation",
+  "compile_supported_cuda": false,
+  "triton_installed": false,
+  "fallback": "Installed torchvision reference _roi_align.__wrapped__, eager, single feature level, sampling_ratio=2, aligned=False",
+  "reference_source_sha256": "78bfbe8decdfb86a488cd87d15936b2fed6d8c65971d9089dad94dfbadd5be49",
+  "smoke_verification": "../deterministic-smoke-verification.json",
+  "unit_tests_passed": 46,
+  "pretrained": false,
+  "sampler_changed": false
+}

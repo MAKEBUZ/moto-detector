@@ -1,0 +1,8 @@
+{
+  "predictions_byte_equal": true,
+  "dataset_lock_verified_by_evaluator": true,
+  "optimizer_updates_each": 1950,
+  "pretrained": false,
+  "sampler_changed": false,
+  "tests_passed": 46
+}

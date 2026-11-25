@@ -1,0 +1,40 @@
+{
+  "task": "detector",
+  "epochs": 78,
+  "optimizer_updates": 1950,
+  "image_presentations": 3900,
+  "final_validation": {
+    "map50": 0.37565717318713077,
+    "per_class": [
+      {
+        "class_id": 0,
+        "ap50": 0.590637486759979,
+        "ground_truth_boxes": 7
+      },
+      {
+        "class_id": 1,
+        "ap50": 0.43949395462427987,
+        "ground_truth_boxes": 9
+      },
+      {
+        "class_id": 2,
+        "ap50": 0.08415841584158416,
+        "ground_truth_boxes": 3
+      },
+      {
+        "class_id": 3,
+        "ap50": 0.38833883552268,
+        "ground_truth_boxes": 6
+      }
+    ],
+    "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+  },
+  "best_epoch": 64,
+  "best_validation_score": 0.5188884984443684,
+  "selection_metric": "map50",
+  "initial_state_sha256": "bee4319d89fe9d87c13fded45354bdfdafa64f2034eec0b332eb160804347014",
+  "final_state_sha256": "a2919a38f64f190dd5c9c885d575605937fd2a5ca7f4875f4c6e38a82431e6e6",
+  "test_used": false,
+  "pilot": true,
+  "seconds": 2109.1
+}

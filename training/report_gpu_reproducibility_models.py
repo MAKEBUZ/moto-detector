@@ -1,5 +1,6 @@
 """Evaluate all prespecified final checkpoints on unchanged validation only."""
 import hashlib
+import argparse
 import json
 import shutil
 from pathlib import Path
@@ -12,9 +13,13 @@ from evaluate_reserved import counts_at_threshold
 
 @torch.inference_mode()
 def main():
-    out = Path('reports/training/gpu-reproducibility-01')
+    parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=Path('reports/training/gpu-reproducibility-01'));args=parser.parse_args()
+    out = args.output
     read = lambda p: json.loads(p.read_text(encoding='utf-8'))
     protocol = read(out/'protocol.json')
+    if protocol.get('deterministic_gpu'):
+        from deterministic_gpu import configure_deterministic_gpu
+        configure_deterministic_gpu()
     torch.set_num_threads(4); forbid_external_weights()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     records = []; configs = []; initial_by_seed = {}
@@ -37,7 +42,7 @@ def main():
         assert steps=={1950},steps
         ds = SeparateHelmetDataset(root,'val',augment=False)
         samples=[ds[i] for i in range(len(ds))];targets=[t for _,t in samples]
-        model=build_detector(5,c['feature_stride'],c['proposal_multiplier'])
+        model=build_detector(5,c['feature_stride'],c['proposal_multiplier'],deterministic_roi=c.get('deterministic_gpu',False))
         model.load_state_dict(ck['model']);model.to(device).eval();preds=[]
         for start in range(0,len(samples),2):
             preds.extend([{k:v.cpu() for k,v in p.items()} for p in model([x.to(device) for x,_ in samples[start:start+2]])])

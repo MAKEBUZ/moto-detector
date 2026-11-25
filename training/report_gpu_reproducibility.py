@@ -1,5 +1,6 @@
 """Locate divergences in two fresh same-seed GPU training traces."""
 import gzip
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -20,7 +21,8 @@ def tensor_differences(a,b):
 
 
 def main():
-    out=Path('reports/training/gpu-reproducibility-01');read=lambda p:json.loads(p.read_text(encoding='utf-8'))
+    parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=Path('reports/training/gpu-reproducibility-01'));args=parser.parse_args()
+    out=args.output;read=lambda p:json.loads(p.read_text(encoding='utf-8'))
     protocol=read(out/'protocol.json');jobs=protocol['jobs'];assert len(jobs)==2
     folders=[Path('runs')/j['run'] for j in jobs]
     traces=[[json.loads(l) for l in (f/'reproducibility.jsonl').read_text().splitlines()] for f in folders]
@@ -30,6 +32,12 @@ def main():
     assert configs[0]['gpu_reproducibility_settings']==configs[1]['gpu_reproducibility_settings']
     for name in ('train.py','models.py','data.py','negative_exposure.py','reproducibility_trace.py','metrics.py','overfit_heads.py'):
         key=str(Path('training')/name);assert configs[0]['source_sha256'][key]==configs[1]['source_sha256'][key]
+    if protocol.get('deterministic_gpu'):
+        key=str(Path('training')/'deterministic_gpu.py');assert configs[0]['source_sha256'][key]==configs[1]['source_sha256'][key]
+        flags=configs[0]['gpu_reproducibility_settings']
+        assert flags['deterministic_algorithms'] and flags['cudnn_deterministic'] and not flags['deterministic_warn_only']
+        assert not flags['cudnn_benchmark'] and not flags['cudnn_allow_tf32'] and not flags['matmul_allow_tf32']
+        assert flags['cublas_workspace_config']==':4096:8' and flags['roi_align_implementation']=='torchvision_reference_eager'
     fields=['image_indices','inputs_sha256','targets_sha256','rng_before','losses','samplers','rng_after_forward','rng_after_step','gradient_sha256','model_sha256']
     differences={}
     for key in fields:
@@ -48,6 +56,12 @@ def main():
     first_differences={k:tensor_differences(first[0][k],first[1][k]) for k in ('model','clipped_gradients')}
     final=[torch.load(f/'last.pt',map_location='cpu',weights_only=True) for f in folders]
     final_differences=tensor_differences(final[0]['model'],final[1]['model'])
+    def equal_nested(a,b):
+        if isinstance(a,torch.Tensor):return isinstance(b,torch.Tensor) and torch.equal(a,b)
+        if isinstance(a,dict):return isinstance(b,dict) and a.keys()==b.keys() and all(equal_nested(a[k],b[k]) for k in a)
+        if isinstance(a,(list,tuple)):return type(a)==type(b) and len(a)==len(b) and all(equal_nested(x,y) for x,y in zip(a,b))
+        return a==b
+    optimizer_equal=equal_nested(final[0]['optimizer'],final[1]['optimizer'])
     assert all(c['optimizer_updates']==1950 and c['image_presentations']==3900 for c in final)
     comparison=read(out/'comparison.json')
     logs={}
@@ -58,10 +72,13 @@ def main():
             with gzip.open(out/(job['run']+'-'+name+'.gz'),'wb') as f:f.write(raw)
     summary={'same_initial_state':True,'same_source_code':True,'settings':configs[0]['gpu_reproducibility_settings'],
              'fields':differences,'sampler_fields':sampler_fields,'first_step_differences':first_differences,
-             'final_model_differences':final_differences,'log_hashes':logs,'metrics':comparison['records']}
+             'final_model_differences':final_differences,'final_optimizer_equal':optimizer_equal,
+             'negative_exposure_logs_equal':(folders[0]/'negative-exposure.jsonl').read_bytes()==(folders[1]/'negative-exposure.jsonl').read_bytes(),
+             'full_step_traces_equal':traces[0]==traces[1],'log_hashes':logs,'metrics':comparison['records']}
     (out/'reproducibility-summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
     lines=['# Reproducibilidad GPU: misma semilla, dos procesos nuevos','',
-           'Semilla20261124, dataset50,1950 actualizaciones y3900 presentaciones por proceso. Inicialización aleatoria idéntica; sin pesos preentrenados, reanudación, reserva de positivos/negativos ni cambios al muestreador. Ambos procesos usan los mismos aumentos y registros pasivos. Configuración fijada antes de entrenar en protocol.json. Se mantuvieron las opciones actuales de GPU; no se activó un modo determinista nuevo.', '',
+           'Semilla20261124, dataset50,1950 actualizaciones y3900 presentaciones por proceso. Inicialización aleatoria idéntica; sin pesos preentrenados, reanudación, reserva de positivos/negativos ni cambios al muestreador. Ambos procesos usan los mismos aumentos y registros pasivos. Configuración fijada antes de entrenar en protocol.json.',
+           'Condición nueva: determinismo estricto, TF32 desactivado y RoIAlign de referencia eager; no se compara causalmente su precisión con la condición anterior.' if protocol.get('deterministic_gpu') else 'Se mantuvieron las opciones anteriores de GPU, sin activar modo determinista.', '',
            '## Primera divergencia observada', '', '| Elemento | Primer paso distinto | Pasos distintos / comparados |','|---|---:|---:|']
     for key,value in differences.items():lines.append(f"| {key} | {value['first_difference'] if value['first_difference'] is not None else 'ninguno'} | {value['different_steps']}/{value['compared_steps']} |")
     lines+=['', 'Entradas, pérdidas, RNG y máscaras se registran en cada paso. Gradientes antes del recorte y estado del modelo se comparan en pasos1–10 y cada25; la tabla distingue primera divergencia observada de pasos no observados. Los RNG incluyen CPU, CUDA, Python y NumPy.', '',
@@ -79,6 +96,8 @@ def main():
             'Hashes de inicialización, datos, código relevante y configuración comparados; contador AdamW1950 y3900 presentaciones verificados. La reevaluación reproduce las métricas de ambos checkpoints. Las pruebas de observación pasiva conservan máscaras y RNG; no se modifica el entrenamiento para elegir un resultado favorable.', '',
             'reproducibility-summary.json detalla diferencias por tensor y por etapa del muestreador. Las trazas completas y los registros de exposición se conservan comprimidos aquí; first-step.pt y last.pt están en los directorios de ejecución. Modelo y gradientes del primer paso permiten separar diferencias en la propagación hacia atrás de diferencias posteriores del optimizador.', '',
             'Reproducción: training/run_gpu_reproducibility.py; training/report_gpu_reproducibility_models.py; training/report_gpu_reproducibility.py. Usar destinos nuevos; no sobrescribir el protocolo ni ejecuciones.']
+    lines+=['','## Igualdad completa','',f"Trazas completas iguales: {summary['full_step_traces_equal']}. Estado AdamW final igual: {optimizer_equal}. Registros de exposición iguales: {summary['negative_exposure_logs_equal']}.", '',
+            'Esta prueba comprueba reproducibilidad en esta máquina y versiones instaladas; no garantiza igualdad entre otros dispositivos, versiones ni sistemas operativos. Determinismo no significa mayor precisión ni valida el detector para uso real.']
     (out/'README.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print(json.dumps({'fields':differences,'sampler_fields':sampler_fields,'first_gradient_max_abs':first_differences['clipped_gradients']['max_abs'],'final_model_max_abs':final_differences['max_abs']},indent=2))
 

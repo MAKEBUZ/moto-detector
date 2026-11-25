@@ -33,6 +33,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--include-batch-03', action='store_true')
     parser.add_argument('--include-batch-04', action='store_true')
+    parser.add_argument('--include-batch-06', action='store_true')
     parser.add_argument('--include-batch-05', action='store_true')
     parser.add_argument('--include-hard-negatives-01', action='store_true')
     parser.add_argument('--output', type=Path, default=Path('data/prepared/helmet-separate-v2'))
@@ -47,6 +48,10 @@ def main():
         sources.append(('helmet-separate-v2-staging-05', 'train-separate-v2-05', 'train-separate-v2-05-reviewed.json', 'train'))
     if args.include_hard_negatives_01:
         sources.append(('helmet-separate-v2-hard-negatives-staging-01', 'train-hard-negatives-v2-01', 'train-hard-negatives-v2-01-reviewed.json', 'train'))
+    if args.include_batch_06:
+        revision = Path('data/prepared/helmet-separate-v2-staging-06-r2')
+        stage = revision.name if revision.is_dir() else 'helmet-separate-v2-staging-06'
+        sources.append((stage, 'train-separate-v2-06', 'train-separate-v2-06-reviewed.json', 'train'))
     if root.exists(): raise FileExistsError('Do not overwrite existing dataset')
     decisions = {r['image']: r for r in map(json.loads, Path('reports/preparation/image-decisions.jsonl').read_text().splitlines())}
     rows = []; excluded = []; provenance = {}

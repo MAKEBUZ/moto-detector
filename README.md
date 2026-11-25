@@ -184,3 +184,45 @@ Implementado `--log-negative-exposure`: observa las selecciones reales RPN/RoI s
 ### Reproducibilidad GPU: dos repeticiones con la misma semilla
 
 Dos procesos nuevos con semilla20261124,50 imágenes,1950 actualizaciones y muestreador original confirman falta de reproducibilidad bit a bit en la configuración actual. Entradas, orden, aumentos y etiquetas idénticos durante los1950 pasos; primera diferencia de gradientes/estado en paso1 y pérdidas/RoI en paso2. AP50 sin casco8.42% frente a4.21%; aconfianza0.05,1 TP/1 FP frente a1 TP/5 FP. No se selecciona el resultado favorable. Antes de modificar el muestreo se recomienda un control explícitamente determinista. Sin pesos preentrenados ni cambios de validación. [Informe, protocolo y trazas](reports/training/gpu-reproducibility-01/README.md).
+
+### GPU determinista: dos ejecuciones completas desde cero
+
+Activado el modo determinista estricto, TF32 desactivado y RoIAlign de referencia eager de torchvision: el backward CUDA nativo no admite determinismo estricto en esta instalación Windows. Se mantiene el muestreador original. Dos procesos nuevos con semilla 20261124, 50 imágenes y 1950 actualizaciones cada uno producen pérdidas, entradas, RNG y selecciones idénticos en todos los pasos; gradientes y estado coinciden en los 88 puntos registrados. Pesos finales, estado AdamW, predicciones y registros de exposición también son exactamente iguales. Sin pesos preentrenados ni cambios en validación o test.
+
+Ambas repeticiones: AP50 sin casco **38,83 %**, mAP50 global **37,57 %**. Sin casco, a confianza 0,05: 4 TP, 8 FP y 2 FN; a 0,5: 1 TP, 3 FP y 5 FN. Se compara last.pt a 1950 pasos, sin seleccionar una época favorable. El determinismo queda comprobado para esta máquina y versiones; no demuestra generalización ni preparación para uso real. Esta condición numérica nueva será el control para un futuro cambio de muestreo. 46 pruebas pasan. [Informe y trazas](reports/training/gpu-deterministic-01/README.md).
+
+### Reserva de negativos revisados en modo determinista
+
+Variante desde cero, semilla 20261124 y 1950 pasos: exposición RPN cercana 32/468 → 468/468. Sin casco, AP50 38,83% → 8,42%; a confianza 0,05 los TP/FP/FN pasan de 4/8/2 a 1/5/5. Con casco, AP50 8,42% → 66,34%, TP/FP/FN 1/5/2 → 2/2/1. No se adopta: pierde detecciones sin casco. Muestreador nuevo opcional, sin pesos preentrenados ni cambios de validación. [Informe](reports/training/reviewed-negative-reserve-01/README.md).
+
+### Diagnóstico congelado de la reserva de negativos
+
+Las tres detecciones sin casco perdidas ya carecen de propuestas RPN con IoU ≥0,5: cobertura 4/6 → 1/6. No existen candidatos ajustados suficientes antes de NMS para recuperarlas. Aumenta la puntuación de fondo sobre propuestas distintas, lo que no aísla un deterioro del clasificador. Pesos y buffers intactos, sin entrenamiento ni cambios de validación. [Informe por cabeza](reports/training/reviewed-negative-reserve-01/head-diagnosis/README.md).
+
+### Localización de pérdidas RPN con pesos congelados
+
+Las tres cabezas perdidas por la reserva aún tienen 11, 87 y 107 cajas ajustadas cercanas, pero sus mejores puestos de objectness son 2095, 2435 y 2132: quedan fuera del top-2000 antes de NMS. La supresión no es el punto de pérdida. Propuestas reconstruidas exactamente, pesos y buffers intactos; sin entrenamiento ni cambios de configuración. [Diagnóstico por etapa](reports/training/reviewed-negative-reserve-01/rpn-diagnosis/README.md).
+
+### Presupuesto RPN congelado: control y reserva de negativos
+
+Pre-NMS 2000 → 4000, post-NMS fijo en 800: a confianza 0,05, sin casco, control TP/FP/FN 4/8/2 → 4/14/2; variante 1/5/5 → 3/12/3. AP50 variante 8,42% → 33,66%; control 38,83% sin cambio. A 0,5 la variante pasa de 0/0/6 a 2/1/4. Se recuperan dos cabezas, con más FP. No se activa por defecto; pesos intactos, sin entrenamiento. [Informe](reports/training/reviewed-negative-reserve-01/budget-comparison/README.md).
+
+### Diagnóstico con localización conocida
+
+Con las mismas nueve cajas reales de cabeza, ambos modelos eligen fondo en 7/9. Al comparar solo casco/sin casco, el control acierta 6/9 y la variante 7/9; es una prueba condicionada, no precisión de detección. Sugiere investigar reconocimiento cabeza/fondo y contexto, además de propuestas. Sin entrenamiento ni cambios de pesos. [Diagnóstico y nueva línea de trabajo](reports/training/reviewed-negative-reserve-01/oracle-heads/README.md).
+
+## Analizar una foto
+
+Desde la raíz del repositorio, ejecutar en PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe training\photo_app.py
+```
+
+Seleccionar **Cargar foto**. La ventana presenta las detecciones del control determinista entrenado desde cero (checkpoint final, umbral 0,5). Cada análisis guarda la foto anotada y su JSON en una carpeta propia de `reports/fotos/`. El conteo corresponde a personas detectadas en esa imagen. Una cabeza ausente o ambigua deja el estado indeterminado. Las asociaciones a motos son estimaciones geométricas y una persona puede quedar sin moto asignada.
+
+### Detector de 70 fotos y especialista de recortes
+
+Respaldo de pesos propios en [backups/detector70-especialista](backups/detector70-especialista). Para reproducir los scripts, copiar detector-last.pt a runs/paired-n70-s20261124/last.pt y especialista-best.pt a runs/crop-specialist-01/best.pt. Se usan los checkpoints del detector al paso 1950 y del especialista en la época 20.
+
+El detector solo obtuvo 53,72 % de mAP50 en validación y 45,84 % en seis escenas reservadas. A confianza 0,5, el especialista con 2000 propuestas recuperó 4/9 cabezas en validación con dos falsos positivos. Con 4000 recuperó 5/9 con cuatro falsos positivos. Se conserva 2000 como referencia y 4000 como variante de mayor cobertura. El cambio de presupuesto usa los mismos pesos. [Comparación](reports/training/paired-70-73/rpn-trace/specialist-4000.json).

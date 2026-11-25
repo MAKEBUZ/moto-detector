@@ -1,0 +1,6 @@
+{
+  "winner": 70,
+  "checkpoint": "runs\\paired-n70-s20261124\\last.pt",
+  "sha256": "e05605b68d681ef41f406b157affc03f2d4f363ae60b12f35405575c04bbf040",
+  "threshold": 0.5
+}

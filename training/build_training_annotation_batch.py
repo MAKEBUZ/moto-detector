@@ -17,7 +17,10 @@ def main():
     parser.add_argument('--focus-heads', action='store_true', help='Prioritize larger labeled helmet/no-helmet heads, mixed scenes and small heads')
     parser.add_argument('--focus-nohelmet', action='store_true', help='Train queue emphasizing source NoHelmet at varied sizes')
     parser.add_argument('--selection-file', type=Path, help='Explicit visually screened train candidates, still pending human annotation')
+    parser.add_argument('--reuse-train-groups', action='store_true', help='Allow new images from groups already in training only')
     args = parser.parse_args()
+    if args.reuse_train_groups and args.split != 'train':
+        parser.error('Group reuse applies only to training')
     if args.selection_file and (args.split != 'train' or args.focus_heads or args.focus_nohelmet):
         raise ValueError('Explicit selection requires train without other focus flags')
     if args.focus_nohelmet and (args.split != 'train' or args.focus_heads):
@@ -33,6 +36,9 @@ def main():
     previous = [json.loads(p.read_text(encoding='utf-8')) for p in Path('data/annotations').glob('*/draft.json')]
     excluded_groups = {s['group_id'] for b in previous for s in b['scenes']}
     excluded_hashes = {s['sha256'] for b in previous for s in b['scenes']}
+    if args.reuse_train_groups:
+        excluded_groups = {s['group_id'] for b in previous for s in b['scenes'] if s['split'] != 'train'}
+        excluded_groups.update(r['groupId'] for r in decisions.values() if r.get('split') in ('val','test'))
     candidates = []
     for raw in originals:
         d = decisions.get(raw['image'], {})

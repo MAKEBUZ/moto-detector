@@ -2,6 +2,7 @@ import argparse
 import hashlib
 import json
 import random
+import os
 import subprocess
 import time
 from pathlib import Path
@@ -58,7 +59,15 @@ def main():
     p.add_argument('--rpn-object-reserve', action='store_true', help='Reserve one existing positive anchor per GT object; log actual selections')
     p.add_argument('--log-negative-exposure', action='store_true', help='Passively record actual sampler selections near reviewed nonhead regions')
     p.add_argument('--log-reproducibility', action='store_true', help='Record passive step hashes; retain first-step model and gradients')
+    p.add_argument('--deterministic-gpu', action='store_true', help='Strict deterministic algorithms and reference RoIAlign; fail on unsupported operations')
+    p.add_argument('--reserve-reviewed-negatives', action='store_true')
     a = p.parse_args()
+    if a.reserve_reviewed_negatives and not (a.log_negative_exposure and a.deterministic_gpu):
+        p.error('Reviewed negative reservation requires exposure logging and deterministic GPU')
+    if a.deterministic_gpu:
+        from deterministic_gpu import configure_deterministic_gpu
+        configure_deterministic_gpu()
+        if not torch.cuda.is_available():p.error('Deterministic GPU experiment requires CUDA')
     if a.log_negative_exposure and (not a.separate_classes or a.rpn_object_reserve):
         p.error('Exposure audit requires four classes and unchanged original sampler')
     if a.log_reproducibility and (not a.separate_classes or a.rpn_object_reserve):
@@ -99,7 +108,7 @@ def main():
         torch.cuda.manual_seed_all(a.seed)
     forbid_external_weights()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = HelmetCNN() if a.task == 'classifier' else build_detector(num_classes=len(classes)+1, feature_stride=a.feature_stride, proposal_multiplier=a.proposal_multiplier)
+    model = HelmetCNN() if a.task == 'classifier' else build_detector(num_classes=len(classes)+1, feature_stride=a.feature_stride, proposal_multiplier=a.proposal_multiplier, deterministic_roi=a.deterministic_gpu)
     initial = fingerprint(model)
     model.to(device)
     reservation = None
@@ -112,7 +121,7 @@ def main():
     if a.log_negative_exposure:
         from negative_exposure import ExposureObserver
         train.exposure_regions = True
-        exposure = ExposureObserver(model)
+        exposure = ExposureObserver(model, reserve=a.reserve_reviewed_negatives)
         assert fingerprint(model) == initial
     val = SeparateHelmetDataset(a.dataset, 'val', a.limit_val, augment=False) if a.separate_classes else HelmetDataset(a.dataset, a.task, 'val', a.limit_val, augment=False)
     sampler_trace=[]
@@ -155,6 +164,9 @@ def main():
         'cudnn_deterministic':torch.backends.cudnn.deterministic,'cudnn_benchmark':torch.backends.cudnn.benchmark,
         'cudnn_allow_tf32':torch.backends.cudnn.allow_tf32,'matmul_allow_tf32':torch.backends.cuda.matmul.allow_tf32,
         'cudnn_version':torch.backends.cudnn.version(),'cuda_version':torch.version.cuda,'threads':torch.get_num_threads()}
+    config['gpu_reproducibility_settings'].update(deterministic_warn_only=torch.is_deterministic_algorithms_warn_only_enabled(),
+        cublas_workspace_config=os.environ.get('CUBLAS_WORKSPACE_CONFIG'),pythonhashseed=os.environ.get('PYTHONHASHSEED'),
+        roi_align_implementation='torchvision_reference_eager' if a.deterministic_gpu else 'torchvision_default')
     config['photometric_policy'] = ({'brightness':[.85,1.15],'contrast':[.85,1.15],'blur_probability':.25,'blur_radius_pixels':[.2,.8],
                                      'stage':'after 640px cap, before model transform','rng':'independent Python Random seeded with run seed'} if a.photometric else None)
     (out / 'config.json').write_text(json.dumps(config, indent=2))

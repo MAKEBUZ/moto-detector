@@ -18,6 +18,23 @@ class ObservedSampler:
                 regions=t.get('negative_regions')
                 if regions is None or not len(regions):continue
                 overlap=box_iou(regions,b.detach())
+                before=n.clone()
+                if self.owner.reserve:
+                    # Preserve positives and quotas; replace only background selections.
+                    protected=torch.zeros_like(n,dtype=torch.bool)
+                    for row in overlap:
+                        candidates=torch.where((row>=.5)&(lab==0))[0]
+                        if not len(candidates):continue
+                        chosen=candidates[torch.argmax(row[candidates])]
+                        if n[chosen]:protected[chosen]=True;continue
+                        removable=torch.where(n.bool()&~protected)[0]
+                        if not len(removable):continue
+                        # Remove the selected background least related to any reviewed region.
+                        relevance=overlap[:,removable].max(dim=0).values
+                        victim=removable[torch.argmin(relevance)]
+                        n[victim]=0;n[chosen]=1;protected[chosen]=True
+                    assert int(n.sum())==int(before.sum())
+                    assert not bool((n.bool()&(lab!=0)).any())
                 for j,region in enumerate(regions):
                     details={}
                     for threshold in (.3,.5):
@@ -28,15 +45,15 @@ class ObservedSampler:
                             'selected':{str(k):int((near&selected&(lab==k)).sum()) for k in (-1,0,1,2,3,4)},
                             'selected_indices':torch.where(near&selected)[0].cpu().tolist()}
                     self.owner.records.append({'stage':self.stage,'image_index':int(t['image_id']),'region_index':j,
-                        'region_box_model':region.cpu().tolist(),'total_candidates':len(b),
+                        'region_box_model':region.cpu().tolist(),'total_candidates':len(b),'reserved_negative_changes':int((n!=before).sum())//2,
                         'total_selected_positive':int(p.sum()),'total_selected_negative':int(n.sum()),'thresholds':details})
         self.context=None
         return positive,negative
 
 
 class ExposureObserver:
-    def __init__(self, model):
-        self.records=[]
+    def __init__(self, model, reserve=False):
+        self.records=[];self.reserve=reserve
         # torchvision transforms standard boxes only; resize diagnostic metadata separately.
         resize=model.transform.resize
         def observed_resize(transform,image,target=None):

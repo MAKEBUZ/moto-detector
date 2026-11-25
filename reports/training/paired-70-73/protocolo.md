@@ -1,0 +1,1 @@
+Comparar last.pt al paso 1950. Mayor mAP50 de cuatro clases en validación; empate favorece 70. Confianza operativa 0,5 e IoU 0,5. Evaluar solo el ganador en test-separate-v2-02. Semilla 20261124. Inicialización aleatoria.

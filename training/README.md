@@ -67,3 +67,19 @@ Referencias de las APIs: [instalación de PyTorch](https://pytorch.org/get-start
 `rpn-selections.jsonl` registra todos los pasos e imágenes, identificadores de objetos, clases, positivos disponibles, selección habitual previa a reparar, selección final e índices de anclas. No registra coordenadas completas ni las imágenes aumentadas. Los checkpoints guardan pesos con el mismo esquema; la inferencia no necesita el sampler y no cambia por instalarlo. No hay reanudación implícita.
 
 Experimento reproducible: `training/run_fixed_updates.py --rpn-object-reserve`. Comparación: `training/report_object_reserve.py`. Requieren destinos nuevos si ya existen resultados. La reserva no se adoptó como configuración predeterminada: su mejora no fue consistente en las dos semillas y datasets evaluados. Ver `reports/training/object-reserve-01/README.md`.
+
+## Modo determinista estricto en GPU
+
+El argumento `--deterministic-gpu` habilita algoritmos deterministas con errores ante operaciones incompatibles, fija cuDNN determinista sin benchmark, desactiva TF32 y configura CUBLAS_WORKSPACE_CONFIG=:4096:8 antes de inicializar CUDA. El lanzador también fija PYTHONHASHSEED antes de iniciar cada proceso.
+
+En esta instalación Windows, el backward CUDA nativo de RoIAlign no es determinista y la compilación de su alternativa no está disponible. El modo nuevo usa la implementación eager de referencia incluida en torchvision, con la misma geometría de un nivel, salida7×7, sampling_ratio2 y aligned=False. Es más lenta y constituye una condición numérica nueva. No cambia las cuotas ni la selección del muestreador y no utiliza pesos externos.
+
+Prueba pareada completa:
+
+```powershell
+.venv/Scripts/python.exe training/run_gpu_reproducibility.py --deterministic
+.venv/Scripts/python.exe training/report_gpu_reproducibility_models.py --output reports/training/gpu-deterministic-01
+.venv/Scripts/python.exe training/report_gpu_reproducibility.py --output reports/training/gpu-deterministic-01
+```
+
+No sobrescribir las carpetas existentes. La inferencia con `training/predict.py` respeta `deterministic_gpu` del checkpoint; los scripts de auditoría antiguos requieren propagar esta configuración antes de usarse con checkpoints nuevos. Las arquitecturas históricas conservan el comportamiento anterior por defecto. Pruebas: geometría y gradientes frente al pooling nativo en CPU, backward repetible en GPU y dos procesos cortos con trazas/pesos idénticos.
