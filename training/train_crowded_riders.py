@@ -18,8 +18,12 @@ from train_joint_clean import evaluate
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--frontal-review", action="store_true")
-    frontal = parser.parse_args().frontal_review
+    parser.add_argument("--transformer", action="store_true", help="One spatial attention experiment starting at v9")
+    args = parser.parse_args()
+    frontal = args.frontal_review or args.transformer
     run = "joint-v9-frontal-13" if frontal else "joint-crowded-riders-12"
+    if args.transformer:
+        run = "joint-v9-transformer-01"
     parent = "joint-occupant-negatives-11"
     torch.manual_seed(321)
     rng = random.Random(321)
@@ -62,11 +66,18 @@ def main():
     reference = evaluate(model, reserved)
     model.requires_grad_(False)
     modules = (model.roi_heads.box_predictor,) if frontal else (model.rpn.head, model.roi_heads.box_predictor)
+    if args.transformer:
+        from models import SpatialContext
+        context = SpatialContext(model.backbone.out_channels).cuda()
+        model.backbone.add_module("context", context)
+        modules = (context,)
     for m in modules:
         m.requires_grad_(True)
-    optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=.000004 if frontal else .000025)
+    optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=(.0001 if args.transformer else .000004 if frontal else .000025))
     cfg = dict(cfg, run=run, parent_run=parent, initialization="crowded_rider_transfer",
                parent_sha256=hashlib.sha256((Path("runs")/parent/"best.pt").read_bytes()).hexdigest())
+    if args.transformer:
+        cfg["spatial_context"] = True
     history = []
     best = None
     for step in range(1, 65 if frontal else 61):
@@ -100,7 +111,7 @@ def main():
     report = dict(parent=parent, train_images=len(train), crowded=[train.rows[i]["image_id"] for i in crowded],
                   history=history, baseline=baseline, reserved_baseline=reference, reserved_candidate=evaluate(chosen, reserved))
     if frontal:
-        report.update(selected_step=best_step, learning_rate=.000004, seed=321, parent_sha256=cfg["parent_sha256"])
+        report.update(selected_step=best_step, learning_rate=optimizer.param_groups[0]["lr"], seed=321, parent_sha256=cfg["parent_sha256"])
         report["reviewed_images"] = [train.rows[i]["image_id"] for i in reviewed]
     (out/"training.json").write_text(json.dumps(report, indent=2))
     evaluate_temporal(Path("reports/training/tracking-occupants-v9/video.json"), candidate_run=run)

@@ -72,6 +72,9 @@ def load_model(run_name, checkpoint_name='best.pt'):
         from deterministic_gpu import configure_deterministic_gpu
         configure_deterministic_gpu()
     model = HelmetCNN() if task == 'classifier' else build_detector(config.get('num_classes_including_background', 4), config.get('feature_stride',16), config.get('proposal_multiplier',1), deterministic_roi=config.get('deterministic_gpu',False), small_head_anchors=config.get('small_head_anchors',False), image_size=config.get('image_size',640))
+    if config.get("spatial_context"):
+        from models import SpatialContext
+        model.backbone.add_module("context", SpatialContext(model.backbone.out_channels))
     model.load_state_dict(checkpoint['model'])
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model.to(device).eval()

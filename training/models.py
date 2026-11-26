@@ -23,6 +23,29 @@ class HelmetCNN(nn.Module):
         return self.head(self.features(images))
 
 
+class SpatialContext(nn.Module):
+    """Add scene context to the CNN feature map before proposal and ROI detection."""
+    def __init__(self, channels):
+        super().__init__()
+        self.pool = nn.AdaptiveAvgPool2d((12, 12))
+        self.position = nn.Parameter(torch.empty(1, 144, channels))
+        nn.init.normal_(self.position, std=.02)
+        self.encoder = nn.TransformerEncoderLayer(channels, 4, 256, dropout=0.,
+                                                   batch_first=True, norm_first=True)
+        self.projection = nn.Conv2d(channels, channels, 1)
+        # The new branch starts as an exact identity on the parent's features.
+        nn.init.zeros_(self.projection.weight)
+        nn.init.zeros_(self.projection.bias)
+
+    def forward(self, features):
+        pooled = self.pool(features)
+        tokens = pooled.flatten(2).transpose(1, 2) + self.position
+        encoded = self.encoder(tokens).transpose(1, 2).reshape_as(pooled)
+        correction = nn.functional.interpolate(self.projection(encoded), size=features.shape[-2:],
+                                               mode="bilinear", align_corners=False)
+        return features + correction
+
+
 def build_detector(num_classes=4, feature_stride=16, proposal_multiplier=1, deterministic_roi=False, small_head_anchors=False, image_size=640):
     if proposal_multiplier not in (1,4): raise ValueError('Proposal multiplier must be 1 or 4')
     if feature_stride not in (8,16): raise ValueError('Feature stride must be 8 or 16')
