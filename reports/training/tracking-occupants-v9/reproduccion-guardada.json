@@ -1,0 +1,15 @@
+{
+  "frames": 1500,
+  "counts": {
+    "motos": 43,
+    "ocupantes": 41,
+    "con_casco": 20,
+    "sin_casco": 0,
+    "indeterminado": 21
+  },
+  "fps": 59.94,
+  "playback_seconds": 25.311481800003094,
+  "trajectory_evidence_matches": true,
+  "replay_loaded_detector": false,
+  "additional_reports": 0
+}

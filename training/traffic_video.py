@@ -509,8 +509,18 @@ def video_window(parent, root, run, camera=False):
     source = 0 if camera else filedialog.askopenfilename(filetypes=[("Videos", "*.mp4 *.avi *.mov *.mkv"), ("Todos", "*.*")])
     if source == "":
         return
+    recording = None
     try:
+        if not camera:
+            from video_recording import Recording, analysis_key, cached_video, play_saved
+            directory = root/"reports"/"videos"
+            key = analysis_key(root, source, run)
+            cached = cached_video(directory, key)
+            if cached:
+                return play_saved(parent, *cached)
         stream = Stream(source, run)
+        if not camera:
+            recording = Recording(directory, stream.cap.get(stream.cv.CAP_PROP_FPS))
     except Exception as error:
         messagebox.showerror("Video", str(error), parent=parent)
         return
@@ -537,13 +547,19 @@ def video_window(parent, root, run, camera=False):
         try:
             folder = stream.save(root, status)
             if folder:
+                if recording and status == "completo" and (not total or stream.frames == total):
+                    recording.finish(folder, key, stream.frames)
                 c = stream.people.state_counts()
                 messagebox.showinfo("Resultado",
                     f"{stream.frames} fotogramas procesados\n"
                     f"Trayectorias: {stream.bikes.count()} de moto y {stream.people.count()} de ocupante\n"
                     f"Con casco: {c['con_casco']} | Sin casco: {c['sin_casco']} | Indeterminados: {c['indeterminado']}\n"
                     f"Guardado en {folder}", parent=win)
+        except Exception as error:
+            messagebox.showerror("Video", str(error), parent=win)
         finally:
+            if recording:
+                recording.close()
             win.destroy()
 
     def tick():
@@ -555,6 +571,8 @@ def video_window(parent, root, run, camera=False):
             if image is None:
                 finish("completo")
                 return
+            if recording:
+                recording.append(image)
             preview.photo = ImageTk.PhotoImage(image)
             preview.configure(image=preview.photo)
             c = stream.people.state_counts()
@@ -572,6 +590,7 @@ def video_window(parent, root, run, camera=False):
     ttk.Button(win,text="Detener y guardar",command=lambda:finish("detenido")).pack()
     win.protocol("WM_DELETE_WINDOW", lambda:finish("detenido"))
     pending = win.after(1,tick)
+    return win
 
 
 def query(root, run, question):

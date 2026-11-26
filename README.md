@@ -15,8 +15,9 @@ Set-Location -LiteralPath "$env:USERPROFILE\Desktop\INTELIGENCI AARTIFICIAL - MO
 
 1. Pulsa **Cargar video**. Para repetir la prueba panorámica, deja desmarcada **Video de frente con lluvia (experimental)** y selecciona `15740042_3840_2160_60fps.mp4`. El título de la ventana debe mostrar **joint-occupant-negatives-11 · seguimiento v9**. Este modo se activa en archivos de al menos 1920 píxeles de ancho con relación ancho/alto ≥ 1,45.
 2. Deja terminar el video para comparar sus totales con el informe completo. **Detener y guardar** genera un informe parcial. El JSON queda en `reports/videos/<id>/video.json` e incluye modelo, versión, fotogramas, velocidad, conteos y votos por trayectoria.
-3. **Cargar foto** y **Usar cámara** utilizan `joint-multiscale-02` en modo general. Las fotos se guardan en `reports/fotos/<id>/` con su imagen anotada y JSON. La casilla de lluvia selecciona `joint-rain-rider-09` para video o cámara.
-4. En **Consultar estadísticas** puedes preguntar «¿Cuántos ocupantes sin casco hubo hoy en videos?» o «Resumen en fotos». Cada ejecución guardada cuenta como un análisis, incluso si cargas el mismo archivo dos veces.
+3. Al terminar el análisis de un archivo, la app guarda `anotado.avi` junto al JSON. Contiene las cajas a la resolución de la vista previa y se reproduce a los FPS de origen, sin audio. Vuelve a elegir el archivo original en **Cargar video** con el mismo modo para abrir **Reproducción guardada**. Los informes antiguos o parciales requieren un análisis completo para generar el video.
+4. **Cargar foto** y **Usar cámara** utilizan `joint-multiscale-02` en modo general. Las fotos se guardan en `reports/fotos/<id>/` con su imagen anotada y JSON. La casilla de lluvia selecciona `joint-rain-rider-09` para video o cámara.
+5. En **Consultar estadísticas** puedes preguntar «¿Cuántos ocupantes sin casco hubo hoy en videos?» o «Resumen en fotos». Volver a reproducir un análisis guardado conserva sus conteos y su informe original.
 
 ## Instalación en otro equipo Windows
 
