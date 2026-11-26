@@ -197,7 +197,7 @@ def evaluate_temporal(control_path, motion=False, edge=False, consensus=False, p
     for row in rows:
         key = row["track"]
         row["confirmed"] = stream.people.confirmed(key)
-        row["final_state"] = stream.people.state(key) if row["confirmed"] else None
+        row["final_state"] = stream.people.reported_state(key) if row["confirmed"] else None
     helmets = [r for r in rows if r["category"] == "con_casco"]
     false_people = [r for r in rows if r["category"] == "no_persona"]
     scores = dict(helmet_at_frame=sum(r["track"] is not None for r in helmets),
@@ -213,10 +213,10 @@ def evaluate_temporal(control_path, motion=False, edge=False, consensus=False, p
     if extra_frames is not None:
         for row in extra_frames["rows"]:
             key = row[label]["track"]
-            row[label]["final_state"] = stream.people.state(key) if stream.people.confirmed(key) else None
+            row[label]["final_state"] = stream.people.reported_state(key) if stream.people.confirmed(key) else None
         matches = [r[label]["track"] for r in extra_frames["rows"] if r[label]["track"] is not None]
         extra_frames["scores"][label] = dict(visible=len(extra_frames["rows"]), at_frame=len(matches),
-            final=sum(stream.people.confirmed(k) and stream.people.state(k) == "con_casco" for k in matches))
+            final=sum(stream.people.confirmed(k) and stream.people.reported_state(k) == "con_casco" for k in matches))
         (output / "additional-frames.json").write_text(json.dumps(extra_frames, indent=2), encoding="utf-8")
         report["false_regions_with_final_helmet"] = sum(r["final_state"] == "con_casco" for r in false_people)
     for name, data in (("comparison", report), ("video", video), ("candidates", added)):

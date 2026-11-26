@@ -8,6 +8,24 @@ from edge_riders import EdgeRiders
 
 
 class TemporalHelmetTests(unittest.TestCase):
+    def test_spaced_interior_checks_resolve_reporting_without_feeding_tracker(self):
+        from collections import Counter
+        tracks = RiderTracks()
+        track = dict(hits=86, votes=Counter(con_casco=34, sin_casco=5),
+                     interior_checks=[11, 17], flow_checks=3)
+        tracks.items[1] = track
+        self.assertEqual(tracks.reported_state(1), "con_casco")
+        self.assertEqual(tracks.state(1), "indeterminado")
+        track["interior_checks"] = [11]
+        self.assertEqual(tracks.reported_state(1), "indeterminado")
+        track["interior_checks"].append(17)
+        track.update(first_context_bare=3, last_context_bare=25)
+        self.assertEqual(tracks.reported_state(1), "indeterminado")
+        track.pop("last_context_bare")
+        track.pop("first_context_bare")
+        track["votes"]["sin_casco"] = 15
+        self.assertEqual(tracks.reported_state(1), "indeterminado")
+
     def test_moving_bike_reappears_with_nested_box_after_gap(self):
         tracks = MotorcycleTracks()
         for frame in (1, 2, 3, 7):

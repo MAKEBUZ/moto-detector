@@ -82,8 +82,11 @@ class Tracks:
         states = dict(con_casco=0, sin_casco=0, indeterminado=0)
         for key in self.items:
             if self.confirmed(key):
-                states[self.state(key)] += 1
+                states[self.reported_state(key)] += 1
         return states
+
+    def reported_state(self, key):
+        return self.state(key)
 
     def evidence(self):
         rows = []
@@ -91,10 +94,12 @@ class Tracks:
             if not self.confirmed(key):
                 continue
             row = dict(id=key, primer_fotograma=t["first"], ultimo_fotograma=t["last"],
-                 detecciones=t["hits"], votos=dict(t["votes"]), estado=self.state(key),
+                 detecciones=t["hits"], votos=dict(t["votes"]), estado=self.reported_state(key),
                  fotogramas_casco_verificado=t.get("helmet_checks", []))
             if t.get("patch_checks"):
                 row["comprobaciones_temporales_de_casco"] = t["patch_checks"]
+            if t.get("interior_checks"):
+                row["verificaciones_interiores"] = t["interior_checks"]
             if t.get("flow_checks"):
                 row["comprobaciones_por_movimiento"] = t["flow_checks"]
                 row["origenes_por_movimiento"] = sorted(t["flow_anchors"])
@@ -197,6 +202,21 @@ def competing_riders(first, second):
 
 class RiderTracks(Tracks):
     """Track visible occupants through short gaps and abstain on competing body boxes."""
+    def reported_state(self, key):
+        state = self.state(key)
+        track = self.items[key]
+        votes = track["votes"]
+        helmets = votes["con_casco"]
+        bare_span = track.get("last_context_bare", 0) - track.get("first_context_bare", 0)
+        if (state == "indeterminado" and len(track.get("interior_checks", [])) >= 2
+                and bare_span < 5
+                and helmets >= max(12, .25*track["hits"])
+                and helmets >= .85*sum(votes.values())
+                and (track.get("consensus_frames") or track.get("flow_checks", 0) >= 3)):
+            return "con_casco"
+        return state
+
+
     def update(self, objects, frame):
         supported = [
             person for person in objects
@@ -437,6 +457,17 @@ class Stream:
                     l,t,r,b = self.bikes.items[key]["box"]
                     person["bike_anchor"] = (key, (l+r)/2, (t+b)/2)
         people = self.people.update(assoc["ocupantes"], self.frames)
+        if self.tracking_version == 9:
+            for rider in assoc["ocupantes"]:
+                key = people.get(rider["id"])
+                if key is None or rider["estado"] != "con_casco" or len(rider["cabezas"]) != 1:
+                    continue
+                head = rider["cabezas"][0]
+                l,t,r,b = head["box"]
+                if head.get("verified_helmet") and min(l,t,image.width-r,image.height-b) > 2:
+                    checks = self.people.items[key].setdefault("interior_checks", [])
+                    if len(checks) < 3 and (not checks or self.frames-checks[-1] >= 5):
+                        checks.append(self.frames)
         if self.temporal_heads is not None:
             self.temporal_heads.refine(image, assoc["ocupantes"], people, self.people, self.frames)
         if self.motion_heads is not None:
@@ -453,7 +484,7 @@ class Stream:
             person["moto"] = bikes.get(person["moto"])
             if not self.bikes.confirmed(person["moto"]):
                 person["moto"] = None
-            person["estado"] = self.people.state(person["id"])
+            person["estado"] = self.people.reported_state(person["id"])
             if person["estado"] == "indeterminado":
                 person["cabezas"] = [h for h in person["cabezas"] if h["class_id"] == 2 and
                                      (h.get("verified_helmet") or h.get("source") in ("temporal_patch_check", "helmet_flow"))]

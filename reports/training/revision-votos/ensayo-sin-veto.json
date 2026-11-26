@@ -1,0 +1,165 @@
+{
+  "frames": 1500,
+  "antes": {
+    "motos": 43,
+    "ocupantes": 41,
+    "con_casco": 20,
+    "sin_casco": 0,
+    "indeterminado": 21
+  },
+  "despues": {
+    "motos": 43,
+    "ocupantes": 41,
+    "con_casco": 22,
+    "sin_casco": 0,
+    "indeterminado": 19
+  },
+  "cambios": {
+    "34": [
+      "indeterminado",
+      "con_casco"
+    ],
+    "38": [
+      "indeterminado",
+      "con_casco"
+    ]
+  },
+  "cambios_durante_reproduccion": [
+    8,
+    21,
+    31,
+    34,
+    38
+  ],
+  "mismas_trayectorias": true,
+  "controles": {
+    "cascos_originales": 9,
+    "total_originales": 9,
+    "ocupantes_falsos": 2,
+    "cascos_falsos": 1,
+    "regiones_negativas": 8,
+    "cascos_adicionales": 8,
+    "total_adicionales": 10
+  },
+  "marcas": [
+    {
+      "category": "con_casco",
+      "frame": 25,
+      "iou": 0.6870933369530894,
+      "track": 1,
+      "estado": "con_casco"
+    },
+    {
+      "category": "no_persona",
+      "frame": 75,
+      "iou": 0.3746698355070136,
+      "track": null,
+      "estado": null
+    },
+    {
+      "category": "con_casco",
+      "frame": 352,
+      "iou": 0.769928239949919,
+      "track": 14,
+      "estado": "con_casco"
+    },
+    {
+      "category": "con_casco",
+      "frame": 400,
+      "iou": 0.8047849704395081,
+      "track": 16,
+      "estado": "con_casco"
+    },
+    {
+      "category": "con_casco",
+      "frame": 652,
+      "iou": 0.6860405710877614,
+      "track": 25,
+      "estado": "con_casco"
+    },
+    {
+      "category": "con_casco",
+      "frame": 680,
+      "iou": 0.6778826757798847,
+      "track": 27,
+      "estado": "con_casco"
+    },
+    {
+      "category": "con_casco",
+      "frame": 837,
+      "iou": 0.5640474754766092,
+      "track": 31,
+      "estado": "con_casco"
+    },
+    {
+      "category": "con_casco",
+      "frame": 931,
+      "iou": 0.7697365672196238,
+      "track": 37,
+      "estado": "con_casco"
+    },
+    {
+      "category": "no_persona",
+      "frame": 933,
+      "iou": 0.0,
+      "track": null,
+      "estado": null
+    },
+    {
+      "category": "no_persona",
+      "frame": 1001,
+      "iou": 0.9890057803841944,
+      "track": 38,
+      "estado": "con_casco"
+    },
+    {
+      "category": "no_persona",
+      "frame": 1297,
+      "iou": 0.9543659482885124,
+      "track": 49,
+      "estado": "indeterminado"
+    },
+    {
+      "category": "no_persona",
+      "frame": 1307,
+      "iou": 0.9510643860729084,
+      "track": 52,
+      "estado": null
+    },
+    {
+      "category": "no_persona",
+      "frame": 1465,
+      "iou": 0.0,
+      "track": null,
+      "estado": null
+    },
+    {
+      "category": "no_persona",
+      "frame": 1467,
+      "iou": 0.2049783468295428,
+      "track": null,
+      "estado": null
+    },
+    {
+      "category": "con_casco",
+      "frame": 1467,
+      "iou": 0.8875818586651905,
+      "track": 59,
+      "estado": "con_casco"
+    },
+    {
+      "category": "no_persona",
+      "frame": 1467,
+      "iou": 0.022459168188840174,
+      "track": null,
+      "estado": null
+    },
+    {
+      "category": "con_casco",
+      "frame": 1499,
+      "iou": 0.5389253494011835,
+      "track": 62,
+      "estado": "con_casco"
+    }
+  ]
+}
