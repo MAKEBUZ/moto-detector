@@ -158,6 +158,17 @@ class RiderTracks(Tracks):
         steps = min(8, gap)
         predicted = [l+dx*steps, t+dy*steps, r+dx*steps, b+dy*steps]
         body_score = .7*overlap(predicted, obj["box"]) + .3*overlap(track["box"], obj["box"])
+        # A rider leaning into a turn can move faster than the body predictor.
+        # Use position relative to a confirmed moving motorcycle as a second cue.
+        anchor = obj.get("bike_anchor")
+        previous = track.get("bike_anchor")
+        if anchor and previous and anchor[0] == previous[0] and gap <= 8:
+            bx, by = anchor[1:]
+            px, py = previous[1:]
+            translated = [l+bx-px, t+by-py, r+bx-px, b+by-py]
+            bike_score = overlap(translated, obj["box"])
+            if bike_score >= .48:
+                return max(body_score, bike_score)
         heads = obj.get("cabezas", [])
         if len(heads) == 1 and "head_frame" in track:
             elapsed = track["last"] + gap - track["head_frame"]
@@ -172,6 +183,18 @@ class RiderTracks(Tracks):
         return body_score
 
     def observe(self, track, obj, frame):
+        track["bike_anchor"] = obj.get("bike_anchor")
+        if obj.get("bike_anchor") and obj.get("estado") == "con_casco":
+            sightings = track.setdefault("recent_anchored_helmets", [])
+            sightings[:] = [f for f in sightings if frame-f <= 12]
+            sightings.append(frame)
+            if any(h.get("verified_helmet") for h in obj.get("cabezas", [])):
+                earlier = track.get("anchored_check", frame)
+                if (5 <= frame-earlier <= 12 and earlier > track.get("last_bare", -1)
+                        and sum(f >= earlier for f in sightings) >= 6):
+                    track["anchored_helmet_frame"] = frame
+                if frame-earlier >= 5 or "anchored_check" not in track:
+                    track["anchored_check"] = frame
         if "last" in track:
             l,t,r,b = track["box"]
             x,y,X,Y = obj["box"]
@@ -202,6 +225,9 @@ class RiderTracks(Tracks):
     def detector_state(self, key):
         state = super().state(key)
         track = self.items[key]
+        if (state == "indeterminado" and track.get("anchored_helmet_frame", -1)
+                > track.get("last_bare", -1) and track["votes"]["con_casco"] >= 3*track["votes"]["sin_casco"]):
+            return "con_casco"
         if state == "sin_casco" and track["last_bare"] - track["first_bare"] < 5:
             return "indeterminado"
         if state != "indeterminado":
@@ -338,6 +364,12 @@ class Stream:
                          partial_checks=checks)])
                 assoc["ocupantes"].append(rider)
         bikes = self.bikes.update(assoc["motos"], self.frames)
+        if self.portrait_views:
+            for person in assoc["ocupantes"]:
+                key = bikes.get(person["moto"])
+                if self.bikes.confirmed(key):
+                    l,t,r,b = self.bikes.items[key]["box"]
+                    person["bike_anchor"] = (key, (l+r)/2, (t+b)/2)
         people = self.people.update(assoc["ocupantes"], self.frames)
         if self.temporal_heads is not None:
             self.temporal_heads.refine(image, assoc["ocupantes"], people, self.people, self.frames)
