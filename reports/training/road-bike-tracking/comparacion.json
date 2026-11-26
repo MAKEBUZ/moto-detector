@@ -1,0 +1,51 @@
+{
+  "video": "12893008_1080_2320_29fps.mp4",
+  "fotogramas": 285,
+  "antes": {
+    "motos": 9,
+    "ocupantes": 5,
+    "con_casco": 5,
+    "sin_casco": 0,
+    "indeterminado": 0
+  },
+  "despues": {
+    "motos": 5,
+    "ocupantes": 5,
+    "con_casco": 5,
+    "sin_casco": 0,
+    "indeterminado": 0
+  },
+  "intervalos_y_cascos_verificados_de_los_ocupantes_coinciden": true,
+  "trayectorias_motos": [
+    {
+      "id": 1,
+      "inicio": 1,
+      "fin": 40,
+      "detecciones": 39
+    },
+    {
+      "id": 2,
+      "inicio": 41,
+      "fin": 106,
+      "detecciones": 60
+    },
+    {
+      "id": 4,
+      "inicio": 55,
+      "fin": 99,
+      "detecciones": 37
+    },
+    {
+      "id": 5,
+      "inicio": 89,
+      "fin": 144,
+      "detecciones": 27
+    },
+    {
+      "id": 7,
+      "inicio": 196,
+      "fin": 230,
+      "detecciones": 25
+    }
+  ]
+}

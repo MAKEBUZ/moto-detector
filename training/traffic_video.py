@@ -128,6 +128,61 @@ class Tracks:
         return rows
 
 
+class MotorcycleTracks(Tracks):
+    """Associate moving bikes in portrait video through short detection gaps."""
+
+    def update(self, objects, frame):
+        def area(obj):
+            l,t,r,b = obj["box"]
+            return (r-l)*(b-t)
+
+        kept, aliases = [], {}
+        for obj in sorted(objects, key=area, reverse=True):
+            x,y,X,Y = obj["box"]
+            for other in kept:
+                if obj.get("ocupantes") and other.get("ocupantes"):
+                    continue
+                l,t,r,b = other["box"]
+                intersection = max(0,min(X,r)-max(x,l))*max(0,min(Y,b)-max(y,t))
+                if (intersection >= .65*area(obj) and abs(x+X-l-r) <= .45*(r-l)
+                        and abs(y+Y-t-b) <= .65*(b-t)):
+                    aliases[obj["id"]] = other["id"]
+                    break
+            else:
+                kept.append(obj)
+        mapping = super().update(kept, frame)
+        mapping.update({key: mapping[parent] for key,parent in aliases.items()})
+        return mapping
+
+    def observe(self, track, obj, frame):
+        if "box" in track:
+            l,t,r,b = track["box"]
+            x,y,X,Y = obj["box"]
+            elapsed = frame-track["last"]
+            vx,vy = track.get("velocity", (0., 0.))
+            track["velocity"] = (.4*vx + .6*(x+X-l-r)/(2*elapsed),
+                                 .4*vy + .6*(y+Y-t-b)/(2*elapsed))
+        super().observe(track, obj, frame)
+
+    def match_score(self, track, obj, gap):
+        l,t,r,b = track["box"]
+        vx,vy = track.get("velocity", (0., 0.))
+        dx,dy = vx*min(gap, 8), vy*min(gap, 8)
+        predicted = [l+dx, t+dy, r+dx, b+dy]
+        score = overlap(predicted, obj["box"])
+        if gap > 8 and track["hits"] >= 3:
+            if abs(vx) < .05*(r-l) and abs(vy) < .05*(b-t):
+                dx = dy = 0.
+                score = max(score, overlap(track["box"], obj["box"]))
+            # Long gaps need stronger evidence. Permit moderate scale growth
+            # when the new center agrees with the predicted position.
+            x,y,X,Y = obj["box"]
+            if (abs(x+X-l-r-2*dx) < .6*(r-l) and abs(y+Y-t-b-2*dy) < .6*(b-t)
+                    and score >= .45):
+                return max(.65, score)
+        return score
+
+
 def competing_riders(first, second):
     """Two body hypotheses for the same space, with no distinct bike to disambiguate."""
     if first.get("moto") and second.get("moto") and first["moto"] != second["moto"]:
@@ -314,7 +369,8 @@ class Stream:
                 except Exception:
                     self.cap.release()
                     raise
-        self.bikes, self.people = Tracks(), RiderTracks()
+        self.bikes = MotorcycleTracks() if self.portrait_views else Tracks()
+        self.people = RiderTracks()
         self.frames = 0
         self.seconds = 0.
         self.visible_bikes = self.visible_people = 0
@@ -406,6 +462,10 @@ class Stream:
             ):
                 person["cabezas"] = []
         assoc["motos"] = [b for b in assoc["motos"] if self.bikes.confirmed(b["id"])]
+        if self.portrait_views:
+            for bike in assoc["motos"]:
+                bike["box"] = self.bikes.items[bike["id"]]["box"]
+            assoc["motos"] = list({b["id"]: b for b in assoc["motos"]}.values())
         assoc["ocupantes"] = [p for p in assoc["ocupantes"] if self.people.confirmed(p["id"])]
         self.visible_bikes = len(assoc["motos"])
         self.visible_people = len(assoc["ocupantes"])

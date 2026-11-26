@@ -1,13 +1,31 @@
 import unittest
 from unittest.mock import patch
 
-from traffic_video import RiderTracks, Tracks
+from traffic_video import MotorcycleTracks, RiderTracks, Tracks
 from temporal_head_search import LiveHelmetSearch
 from helmet_flow import HelmetFlow
 from edge_riders import EdgeRiders
 
 
 class TemporalHelmetTests(unittest.TestCase):
+    def test_moving_bike_reappears_with_nested_box_after_gap(self):
+        tracks = MotorcycleTracks()
+        for frame in (1, 2, 3, 7):
+            x = 12*frame
+            boxes = [dict(id=1, box=[x, 0, x+40, 50])]
+            if frame == 7:
+                boxes.append(dict(id=2, box=[x+5, 5, x+35, 45]))
+            mapping = tracks.update(boxes, frame)
+        self.assertEqual(mapping, {1: 1, 2: 1})
+        self.assertEqual(tracks.items[1]["hits"], 4)
+
+    def test_overlapping_bikes_with_distinct_riders_stay_separate(self):
+        tracks = MotorcycleTracks()
+        for frame in (1, 2, 3):
+            tracks.update([dict(id=1, box=[0, 0, 50, 60], ocupantes=[1]),
+                           dict(id=2, box=[6, 4, 48, 56], ocupantes=[2])], frame)
+        self.assertEqual(tracks.count(), 2)
+
     def test_partial_pair_requires_three_direct_frames_and_a_free_body(self):
         from PIL import Image
         from partial_video_riders import PartialVideoRiders
