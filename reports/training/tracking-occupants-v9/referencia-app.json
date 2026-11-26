@@ -1,0 +1,27 @@
+{
+  "tag": "v9-referencia",
+  "commit": "bb8765da2b136d854e19ad8fa2722d08d4506382",
+  "video_run": "joint-occupant-negatives-11",
+  "tracking_version": 9,
+  "weights": {
+    "runs/crop-specialist-01/best.pt": "ccd9849df6873c29e35b3e401739a95576b94a55a2392aa49127b3a26907dd49",
+    "runs/joint-clean640-01/best.pt": "1a591d5ca3a5a208fdc41c90ec9149dd08b6b1313158272c4cd52ba936a35b0f",
+    "runs/joint-multiscale-02/best.pt": "1deafbdf86538001a611bc6f0b6bf98b70cdab40ba4ac985bd3dd88ac88060c4",
+    "runs/joint-occupant-negatives-11/best.pt": "0fcf5d2ed15c220eed2732f86c93cb7f2a63e624f7e792bdc7a03a0e291909ed",
+    "runs/joint-reviewed-08-10/best.pt": "3d20d396b9dc89b2b8104ab51ffb646f219f648a91cb6b92fc3dc3dd63388428",
+    "runs/rider-crop-heads-01/best.pt": "7ffc3880e47862bd720d1a61691e9fc9c7230f0b62e26099baebb812ddcbd483"
+  },
+  "prueba_app": {
+    "status": "completo",
+    "frames": 1500,
+    "counts": {
+      "motos": 43,
+      "ocupantes": 41,
+      "con_casco": 20,
+      "sin_casco": 0,
+      "indeterminado": 21
+    },
+    "timestamp": "2026-11-25T20:36:52.652576-05:00",
+    "coincidencia_trayectorias": true
+  }
+}
