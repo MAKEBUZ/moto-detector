@@ -1,0 +1,50 @@
+[
+  {
+    "model": "joint-occupant-negatives-11",
+    "frame": 450,
+    "personas_candidatas": 1,
+    "estado": [
+      "con_casco"
+    ],
+    "iou_cabeza": {
+      "con": 0.116702613076121,
+      "sin": 0.0
+    }
+  },
+  {
+    "model": "joint-occupant-negatives-11",
+    "frame": 1350,
+    "personas_candidatas": 1,
+    "estado": [
+      "indeterminado"
+    ],
+    "iou_cabeza": {
+      "con": 0.0,
+      "sin": 0.0
+    }
+  },
+  {
+    "model": "joint-v9-frontal-13",
+    "frame": 450,
+    "personas_candidatas": 1,
+    "estado": [
+      "con_casco"
+    ],
+    "iou_cabeza": {
+      "con": 0.11637814012492095,
+      "sin": 0.0
+    }
+  },
+  {
+    "model": "joint-v9-frontal-13",
+    "frame": 1350,
+    "personas_candidatas": 1,
+    "estado": [
+      "indeterminado"
+    ],
+    "iou_cabeza": {
+      "con": 0.0,
+      "sin": 0.0
+    }
+  }
+]
