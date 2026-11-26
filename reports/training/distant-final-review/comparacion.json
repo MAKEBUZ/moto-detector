@@ -1,0 +1,34 @@
+{
+  "video": "12893008_1080_2320_29fps.mp4",
+  "frames": 285,
+  "antes": {
+    "motos": 10,
+    "ocupantes": 4,
+    "con_casco": 4,
+    "sin_casco": 0,
+    "indeterminado": 0
+  },
+  "despues": {
+    "motos": 9,
+    "ocupantes": 5,
+    "con_casco": 5,
+    "sin_casco": 0,
+    "indeterminado": 0
+  },
+  "cuatro_trayectorias_previas_reproducidas": true,
+  "ocupante_recuperado": {
+    "id": 5,
+    "primer_fotograma": 108,
+    "ultimo_fotograma": 127,
+    "detecciones": 5,
+    "votos": {
+      "con_casco": 5
+    },
+    "estado": "con_casco",
+    "fotogramas_casco_verificado": [
+      108,
+      113,
+      121
+    ]
+  }
+}

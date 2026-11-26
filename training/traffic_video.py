@@ -347,11 +347,21 @@ class Stream:
             from predict import detector_objects
             with torch.inference_mode():
                 proposals = result["predictions"]
+                detect = lambda view, cutoff: detector_objects(*self.model[:3], view, cutoff)
                 if self.portrait_views:
-                    from overlapping_views import recover_views
-                    proposals = recover_views(image, proposals, lambda view, cutoff: detector_objects(*self.model[:3], view, cutoff))
-                objects = self.wide_heads.refine(image, proposals,
-                    lambda view, cutoff: detector_objects(*self.model[:3], view, cutoff))
+                    from overlapping_views import recover_views, resolved_helmet
+                    proposals = recover_views(image, proposals, detect)
+                objects = self.wide_heads.refine(image, proposals, detect)
+                if self.portrait_views and not summarize(objects)["ocupantes"]:
+                    recent = max(self.people.items.values(), key=lambda track: track["last"], default=None)
+                    if recent and self.frames-recent["last"] >= 4:
+                        box = recent["box"]
+                        expanded = recover_views(image, proposals, detect, search_row=(box[1]+box[3])/2)
+                        if len(expanded) > len(proposals):
+                            checked = self.wide_heads.refine(image, expanded, detect)
+                            riders = summarize(checked)["ocupantes"]
+                            if riders and all(resolved_helmet(rider) for rider in riders):
+                                objects = checked
             assoc = summarize(objects)
         if self.helmet_matcher is not None:
             assoc = summarize(self.helmet_matcher.recover(image, result["predictions"]))

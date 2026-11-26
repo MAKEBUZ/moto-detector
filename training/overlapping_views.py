@@ -3,13 +3,30 @@ from PIL import Image
 from photo_results import box_overlap, summarize
 
 
-def recover_views(image, base, detect):
+def resolved_helmet(rider):
+    """Avoid starting a distant identity from a heavily enlarged head patch."""
+    if not rider["moto"] or len(rider["cabezas"]) != 1:
+        return False
+    head = rider["cabezas"][0]
+    left, top, right, bottom = head["box"]
+    return head.get("verified_helmet", False) and min(right-left, bottom-top) >= 24
+
+
+def recover_views(image, base, detect, *, search_row=None):
     w, h = image.size
     if min(w, h) < 32:
         return base
     if h > w:
         windows = [(0, top, w, min(h, top+w)) for top in range(0, h-w+1, max(1,w//2))]
         windows.append((0,h-w,w,h))
+        if search_row is not None:
+            # Search around the most recently observed road user at native detail.
+            for fraction in (.22, .30):
+                side = max(32, round(w*fraction))
+                top = max(0, min(h-side, round(search_row-side/2)))
+                for left in range(0, w, side//2):
+                    left = min(left, w-side)
+                    windows.append((left, top, left+side, top+side))
     else:
         windows = [(0,0,w,h)]
         for frac in (.67,.50):
