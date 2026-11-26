@@ -258,11 +258,13 @@ class Stream:
         self.motion_heads = None
         self.edge_riders = None
         self.rider_heads = None
+        self.portrait_views = False
         self.partial_riders = None
         if not isinstance(source, int) and run != RAIN_VIDEO_RUN:
             width = self.cap.get(cv2.CAP_PROP_FRAME_WIDTH)
             height = self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
-            if height > 0 and width >= 1920 and width/height >= 1.45:
+            self.portrait_views = run == DEFAULT_VIDEO_RUN and height > width >= 720
+            if self.portrait_views or (height > 0 and width >= 1920 and width/height >= 1.45):
                 from wide_video import WideVideoHeads
                 try:
                     self.wide_heads = WideVideoHeads()
@@ -279,7 +281,7 @@ class Stream:
                                     from video_head_consensus import VideoHeadConsensus
                                     self.rider_heads = VideoHeadConsensus(self.model, self.wide_heads, self.edge_riders,
                                                                          self.cap.get(cv2.CAP_PROP_FPS))
-                                    if partial_check:
+                                    if partial_check and not self.portrait_views:
                                         from partial_video_riders import PartialVideoRiders
                                         self.partial_riders = PartialVideoRiders(self.model, self.wide_heads,
                                                                                 self.cap.get(cv2.CAP_PROP_FPS))
@@ -318,7 +320,11 @@ class Stream:
             import torch
             from predict import detector_objects
             with torch.inference_mode():
-                objects = self.wide_heads.refine(image, result["predictions"],
+                proposals = result["predictions"]
+                if self.portrait_views:
+                    from overlapping_views import recover_views
+                    proposals = recover_views(image, proposals, lambda view, cutoff: detector_objects(*self.model[:3], view, cutoff))
+                objects = self.wide_heads.refine(image, proposals,
                     lambda view, cutoff: detector_objects(*self.model[:3], view, cutoff))
             assoc = summarize(objects)
         if self.helmet_matcher is not None:
@@ -387,7 +393,8 @@ class Stream:
                     timestamp=datetime.now().astimezone().isoformat(),
                     processing_fps=self.frames/self.seconds,
                     counts=dict(motos=self.bikes.count(), ocupantes=self.people.count(), **self.people.state_counts()))
-        data["revision_video_panoramico"] = self.wide_heads is not None
+        data["revision_video_panoramico"] = self.wide_heads is not None and not self.portrait_views
+        data["revision_video_vertical"] = self.portrait_views
         data["verificacion_temporal_de_cascos"] = self.temporal_heads is not None
         data["trayectorias_ocupantes"] = self.people.evidence()
         tmp = folder/"video.tmp"

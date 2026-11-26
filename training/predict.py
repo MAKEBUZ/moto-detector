@@ -127,6 +127,9 @@ def analyze_image(loaded, image, threshold=.5, draw_boxes=True, border_check=Tru
             if video_heads and config.get('separate_classes'):
                 from video_heads import add_heads
                 objects = add_heads(image, objects, lambda view: detect(view, max(.75, threshold)))
+            if run_name == 'joint-multiscale-02' and not video_heads and config.get('separate_classes'):
+                from overlapping_views import recover_views
+                objects = recover_views(image, objects, detect)
             result['predictions'] = objects
             if draw_boxes and not config.get('separate_classes'):
                 draw = ImageDraw.Draw(image)
