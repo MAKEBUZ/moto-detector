@@ -13,7 +13,7 @@ V9 es una versión del seguimiento. Su detector es `joint-occupant-negatives-11`
 
 ## Antes de entrenar
 
-Restaura los conjuntos preparados, los manifiestos revisados y los pesos de origen que lee el entrenador elegido. Comprueba el directorio de salida antes de ejecutar. Los entrenadores crean una carpeta nueva bajo `runs/` y se detienen si ya existe. Conserva el directorio del modelo activo cuando prepares otro experimento.
+Para repetir el ajuste final de v9, el clon de `main` incluye los pesos de origen, las imágenes, los manifiestos y las regiones revisadas. Desde la raíz, ejecuta `.\.venv\Scripts\python.exe training\train_occupant_regions.py --output runs\reentrenamiento-01`. El entrenador requiere CUDA y crea una carpeta nueva; elige otro nombre si ya existe.
 
 ## Comprobaciones
 

@@ -61,6 +61,18 @@ La configuración publicada necesita **seis archivos** `runs/<nombre>/best.pt`. 
 | Detector de foto y cámara y su origen verificado | `joint-multiscale-02`, `joint-clean640-01` |
 | Localización de cabezas y verificación del recorte | `rider-crop-heads-01`, `crop-specialist-01` |
 
+## Cómo repetir el ajuste final
+
+Desde la raíz del clon, con el entorno anterior y una GPU compatible con CUDA, ejecuta:
+
+```powershell
+.\.venv\Scripts\python.exe training\train_occupant_regions.py --output runs\reentrenamiento-01
+```
+
+Elige una carpeta de salida nueva en cada ejecución. El ajuste comienza con los pesos propios de `joint-reviewed-08-10`, ejecuta 100 actualizaciones y guarda `best.pt`, `history.json` y `protocol.json` en la carpeta elegida. La app sigue usando el detector de referencia hasta que se evalúe y seleccione otro resultado.
+
+El clon incluye las 73 fotos de entrenamiento y las 5 de validación de `data/prepared/helmet-separate-v2-expanded-09/`, las 10 fotos adicionales de `data/prepared/reviewed-08-addon/` y sus tres manifiestos con cajas y huellas SHA-256. Las 34 regiones negativas proceden de las imágenes de entrenamiento. Para repetir esta etapa bastan los pesos publicados; los checkpoints de experimentos anteriores ya se retiraron. [Regiones revisadas](reports/training/occupant-negatives-01/selected.json) · [Entrenador](training/train_occupant_regions.py)
+
 ## Estructura del repositorio
 
 | Ruta | Qué encontrarás |

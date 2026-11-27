@@ -1,5 +1,6 @@
 """Tune the occupant logit on inspected parts while replaying reviewed ground truth."""
 import hashlib
+import argparse
 import json
 from collections import OrderedDict, defaultdict
 from pathlib import Path
@@ -31,7 +32,10 @@ def features(model, im, boxes):
 
 def main():
     parent="joint-reviewed-08-10"
-    folder=Path("runs/joint-occupant-negatives-11")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=Path("runs/joint-occupant-negatives-11"),
+                        help="Directorio nuevo para el resultado del ajuste.")
+    folder = parser.parse_args().output
     folder.mkdir(exist_ok=False)
     model,cfg,*_=load_model(parent)
     region_path=Path("reports/training/occupant-negatives-01/selected.json")
