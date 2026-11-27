@@ -1,8 +1,0 @@
-{"run": "detector-fixed1950-n35-s20261124", "AP_nohelmet": {"2000": 0.08415841584158416, "4000": 0.2805280561494355}, "runtime_change_pct": 20.58136595110488}
-{"run": "detector-reserve1950-n35-s20261124", "AP_nohelmet": {"2000": 0.16831683168316833, "4000": 0.08415841584158416}, "runtime_change_pct": 14.13359393879795}
-{"run": "detector-fixed1950-n44-s20261124", "AP_nohelmet": {"2000": 0.16831683168316833, "4000": 0.4087694490900134}, "runtime_change_pct": 14.299812783303967}
-{"run": "detector-reserve1950-n44-s20261124", "AP_nohelmet": {"2000": 0.0, "4000": 0.13465346735302763}, "runtime_change_pct": 5.919140735579309}
-{"run": "detector-fixed1950-n35-s20261125", "AP_nohelmet": {"2000": 0.0, "4000": 0.0}, "runtime_change_pct": 15.301917980185564}
-{"run": "detector-reserve1950-n35-s20261125", "AP_nohelmet": {"2000": 0.0, "4000": 0.0}, "runtime_change_pct": 11.933009353884705}
-{"run": "detector-fixed1950-n44-s20261125", "AP_nohelmet": {"2000": 0.0, "4000": 0.0}, "runtime_change_pct": 9.47339662406831}
-{"run": "detector-reserve1950-n44-s20261125", "AP_nohelmet": {"2000": 0.08415841584158416, "4000": 0.1122112244662672}, "runtime_change_pct": 3.0254309217234154}

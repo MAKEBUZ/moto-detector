@@ -1,7 +1,0 @@
-{
-  "initial_random_state_reproduced": true,
-  "final_weights_verified": true,
-  "best_epoch": 105,
-  "pretrained": false,
-  "test_used": false
-}

@@ -5,16 +5,15 @@ Ejecuta los comandos desde la raíz del proyecto. El [README principal](../READM
 | Qué quieres hacer | Archivo de entrada |
 |---|---|
 | Repetir el ajuste del detector de ocupantes usado por v9 | [train_occupant_regions.py](train_occupant_regions.py) |
-| Entrenar la variante reciente para conductor y pasajero solapados | [train_crowded_riders.py](train_crowded_riders.py) |
 | Entrenar el especialista que busca cabezas en recortes de ocupante | [rider_crop_heads.py](rider_crop_heads.py) |
 | Comparar las asociaciones del video con las marcas revisadas | [evaluate_rider_tracking.py](evaluate_rider_tracking.py) |
 | Probar una foto o un video en la aplicación | [photo_app.py](photo_app.py) |
 
-V9 es una versión del seguimiento. Su detector es `joint-occupant-negatives-11`. El ajuste parte de un checkpoint del proyecto. La variante de ocupantes solapados parte de ese detector y conserva su propio informe para poder comparar resultados.
+V9 es una versión del seguimiento. Su detector es `joint-occupant-negatives-11`. El ajuste parte de un checkpoint del proyecto.
 
 ## Antes de entrenar
 
-Restaura los conjuntos preparados, los manifiestos revisados y los pesos de origen que lee el entrenador elegido. Comprueba el directorio de salida antes de ejecutar. Ambos entrenadores crean una carpeta nueva bajo `runs/` y se detienen si ya existe. Conserva el directorio del modelo activo cuando prepares otro experimento.
+Restaura los conjuntos preparados, los manifiestos revisados y los pesos de origen que lee el entrenador elegido. Comprueba el directorio de salida antes de ejecutar. Los entrenadores crean una carpeta nueva bajo `runs/` y se detienen si ya existe. Conserva el directorio del modelo activo cuando prepares otro experimento.
 
 ## Comprobaciones
 
