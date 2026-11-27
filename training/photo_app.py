@@ -8,7 +8,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from PIL import Image, ImageTk
 from predict import predict
-from traffic_video import DEFAULT_VIDEO_RUN, PHOTO_RUN, RAIN_VIDEO_RUN, statistics_window, video_window
+from traffic_video import DEFAULT_VIDEO_RUN, PHOTO_RUN, statistics_window, video_window
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -55,13 +55,9 @@ def main():
             status.set('No se pudo analizar la foto.')
             messagebox.showerror('Error de análisis', str(error))
     ttk.Button(window,text='Cargar foto',command=choose).pack(pady=8)
-    rain = tk.BooleanVar(value=False)
-    ttk.Checkbutton(window, text="Video de frente con lluvia (experimental)", variable=rain).pack()
-    def video_run(default=DEFAULT_VIDEO_RUN):
-        return RAIN_VIDEO_RUN if rain.get() else default
-    ttk.Button(window,text="Cargar video",command=lambda: video_window(window, ROOT, video_run())).pack()
-    ttk.Button(window,text="Usar cámara",command=lambda: video_window(window, ROOT, video_run(PHOTO_RUN), camera=True)).pack()
-    ttk.Button(window,text="Consultar estadísticas",command=lambda: statistics_window(window, ROOT, video_run())).pack()
+    ttk.Button(window,text="Cargar video",command=lambda: video_window(window, ROOT, DEFAULT_VIDEO_RUN)).pack()
+    ttk.Button(window,text="Usar cámara",command=lambda: video_window(window, ROOT, PHOTO_RUN, camera=True)).pack()
+    ttk.Button(window,text="Consultar estadísticas",command=lambda: statistics_window(window, ROOT, DEFAULT_VIDEO_RUN)).pack()
     preview.pack()
     ttk.Label(window,textvariable=status,justify='left',wraplength=800).pack(padx=12,pady=8)
     window.mainloop()

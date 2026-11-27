@@ -1,0 +1,552 @@
+{
+  "rpn_heads": [
+    {
+      "image": "Image_01474",
+      "index": 2,
+      "label": 4,
+      "max_iou": 0.6621142029762268
+    },
+    {
+      "image": "Image_01474",
+      "index": 4,
+      "label": 3,
+      "max_iou": 0.7246766090393066
+    },
+    {
+      "image": "Image_00734",
+      "index": 1,
+      "label": 3,
+      "max_iou": 0.7888801097869873
+    },
+    {
+      "image": "Image_01087",
+      "index": 1,
+      "label": 4,
+      "max_iou": 0.8240615129470825
+    },
+    {
+      "image": "Image_01087",
+      "index": 3,
+      "label": 3,
+      "max_iou": 0.7285702228546143
+    },
+    {
+      "image": "Image_01087",
+      "index": 6,
+      "label": 4,
+      "max_iou": 0.006567952688783407
+    },
+    {
+      "image": "Image_02284",
+      "index": 1,
+      "label": 4,
+      "max_iou": 0.8016050457954407
+    },
+    {
+      "image": "Image_01756",
+      "index": 1,
+      "label": 4,
+      "max_iou": 0.16459466516971588
+    },
+    {
+      "image": "Image_01756",
+      "index": 3,
+      "label": 4,
+      "max_iou": 0.12021221965551376
+    }
+  ],
+  "detector": {
+    "metrics": {
+      "map50": 0.7449119906909395,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6897689741436798,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.8690869094121574,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 0.9158415841584159,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.504950495049505,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "counts": [
+      {
+        "class_id": 0,
+        "tp": 5,
+        "fp": 3,
+        "fn": 2,
+        "precision": 0.625,
+        "recall": 0.7142857142857143
+      },
+      {
+        "class_id": 1,
+        "tp": 8,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.8888888888888888
+      },
+      {
+        "class_id": 2,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.75,
+        "recall": 1.0
+      },
+      {
+        "class_id": 3,
+        "tp": 3,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.75,
+        "recall": 0.5
+      }
+    ],
+    "per_image": {
+      "Image_01474": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        {
+          "class_id": 1,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 3,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        }
+      ],
+      "Image_00734": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 1,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 3,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null
+        }
+      ],
+      "Image_01087": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.3333333333333333,
+          "recall": 0.5
+        },
+        {
+          "class_id": 1,
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.6666666666666666
+        },
+        {
+          "class_id": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        {
+          "class_id": 3,
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5
+        }
+      ],
+      "Image_02284": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 1,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        {
+          "class_id": 2,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "class_id": 3,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      ],
+      "Image_01756": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 1,
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0
+        },
+        {
+          "class_id": 2,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "class_id": 3,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        }
+      ]
+    }
+  },
+  "specialist": {
+    "metrics": {
+      "map50": 0.7659515946513356,
+      "per_class": [
+        {
+          "class_id": 0,
+          "ap50": 0.6897689741436798,
+          "ground_truth_boxes": 7
+        },
+        {
+          "class_id": 1,
+          "ap50": 0.8690869094121574,
+          "ground_truth_boxes": 9
+        },
+        {
+          "class_id": 2,
+          "ap50": 1.0,
+          "ground_truth_boxes": 3
+        },
+        {
+          "class_id": 3,
+          "ap50": 0.504950495049505,
+          "ground_truth_boxes": 6
+        }
+      ],
+      "definition": "101-point AP at IoU=0.50; not COCO mAP50:95"
+    },
+    "counts": [
+      {
+        "class_id": 0,
+        "tp": 5,
+        "fp": 3,
+        "fn": 2,
+        "precision": 0.625,
+        "recall": 0.7142857142857143
+      },
+      {
+        "class_id": 1,
+        "tp": 8,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.8888888888888888
+      },
+      {
+        "class_id": 2,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 3,
+        "tp": 3,
+        "fp": 4,
+        "fn": 3,
+        "precision": 0.42857142857142855,
+        "recall": 0.5
+      }
+    ],
+    "per_image": {
+      "Image_01474": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        {
+          "class_id": 1,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 3,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        }
+      ],
+      "Image_00734": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 1,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 3,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null
+        }
+      ],
+      "Image_01087": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.3333333333333333,
+          "recall": 0.5
+        },
+        {
+          "class_id": 1,
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.6666666666666666
+        },
+        {
+          "class_id": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 3,
+          "tp": 1,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.25,
+          "recall": 0.5
+        }
+      ],
+      "Image_02284": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 1,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        {
+          "class_id": 2,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "class_id": 3,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      ],
+      "Image_01756": [
+        {
+          "class_id": 0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "class_id": 1,
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0
+        },
+        {
+          "class_id": 2,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "class_id": 3,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        }
+      ]
+    }
+  },
+  "crop_validation": {
+    "accuracy": 0.9203821420669556,
+    "macro_f1": 0.9134271144866943,
+    "precision": [
+      0.8928571343421936,
+      0.9356435537338257
+    ],
+    "recall": [
+      0.8849557638168335,
+      0.9402984976768494
+    ],
+    "f1": [
+      0.8888888955116272,
+      0.9379652738571167
+    ],
+    "confusion_matrix_true_rows": [
+      [
+        200,
+        26
+      ],
+      [
+        24,
+        378
+      ]
+    ]
+  }
+}
